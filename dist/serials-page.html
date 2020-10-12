@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ShowJet</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    
+<div class="container-fluid">
+	<div class="row">
+
+		
+		<div class="header-margin-bottom-block"></div>
+<header class="header container">
+	<nav class="nav">
+		<div class="nav__logo">
+			<a href="index.html" class="link">
+				<img src="img/logo.svg" alt="">
+			</a>
+		</div>
+		<div class="nav__menu">
+			<a href="./index.html" class="nav__menu-item">Лента</a>
+			<a href="serials-page.html" class="nav__menu-item">Сериалы</a>
+			<a href="collections-page.html" class="nav__menu-item">Коллекции</a>
+			<a href="news-page.html" class="nav__menu-item">Новости</a>
+			<a href="#" class="nav__menu-item">Мое</a>
+		</div>
+	</nav>
+	<div class="header__search-wrap">
+		<div class="header__search">
+			<input type="text" class="header__search-input" placeholder="Название фильма или сериала">
+			<div class="header__search-underline"></div>
+			<a href="search-page.html" class="header__search-link">
+				<div class="header__search-icon-wrap">
+					<svg class="header__search-icon" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M27.4773 25.356C28.4371 23.9794 29 22.3054 29 20.5C29 15.8056 25.1944 12 20.5 12C15.8056 12 12 15.8056 12 20.5C12 25.1944 15.8056 29 20.5 29C22.3054 29 23.9794 28.4371 25.356 27.4773L30.5 32.6213L32.6213 30.5L27.4773 25.356ZM27 20.5C27 24.0899 24.0899 27 20.5 27C16.9101 27 14 24.0899 14 20.5C14 16.9101 16.9101 14 20.5 14C24.0899 14 27 16.9101 27 20.5Z" fill="white"/>
+						</g>
+						<defs>
+							<filter id="filter0_d" x="0" y="0" width="44.6213" height="44.6213" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="6"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.95 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+							</filter>
+						</defs>
+					</svg>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="header__user">
+		<a href="profile-page.html" class="link">
+			<div class="header__user-icon">
+				<img src="img/userpic-icon.svg" alt="">
+			</div>
+			<div class="header__user-name">Роман</div>
+		</a>
+	</div>
+
+	<div class="header__popups">
+		
+		
+
+		
+		
+
+		
+		
+
+		
+		
+	</div>
+</header>
+		
+		<div class="container">
+			<div class="serials-page__filters-wrap">
+				<div class="serials-page__filter-wrap">
+					<div class="filter">
+	<select>
+		<option>Жанр</option>
+		<option value="all">Все</option>
+		<option value="thriller">Триллер</option>
+		<option value="comedy">Комедия</option>
+		<option value="adventure">Приключения</option>
+		<option value="war">Военный</option>
+	</select>
+</div>
+				</div>
+				<div class="serials-page__filter-wrap">
+					<div class="filter">
+	<select>
+		<option>Жанр</option>
+		<option value="all">Все</option>
+		<option value="thriller">Триллер</option>
+		<option value="comedy">Комедия</option>
+		<option value="adventure">Приключения</option>
+		<option value="war">Военный</option>
+	</select>
+</div>
+				</div>
+				<div class="serials-page__filter-wrap">
+					<div class="filter">
+	<select>
+		<option>Жанр</option>
+		<option value="all">Все</option>
+		<option value="thriller">Триллер</option>
+		<option value="comedy">Комедия</option>
+		<option value="adventure">Приключения</option>
+		<option value="war">Военный</option>
+	</select>
+</div>
+				</div>
+			</div>
+
+			
+			<div class="serials-page__six-tiles-wrap tiles-wrap">
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video101" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video102" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video103" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video104" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video105" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video106" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			</div>
+
+			
+			<div class="serials-page__three-tiles-wrap">
+				
+				<div class="tile "  data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				
+				<div class="tile "  data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				
+				<div class="tile "  data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				
+			</div>
+
+			
+			<div class="serials-page__six-tiles-wrap tiles-wrap">
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video107" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video108" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video109" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video110" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video111" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				<div class="tile innerInfo"  data-videourl="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="video112" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			</div>
+
+			<!-- SERIALS PAGE ABOUT SERIAL -->
+			<div class="serials-page__about-serial">
+				<!-- ABOUT SERIAL -->
+				<div class="about-serial">
+	<div class="about-serial__bg" style="background-image: url(img/about-serial-1.jpg);"></div>
+	<div class="container">
+		<div class="about-serial__top-wrap">
+			<div class="about-serial__title">
+				<img src="img/home-page-banner-title.png" alt="" class="about-serial__title-img">
+			</div>
+			<div class="about-serial__title-text">
+				the new pope
+			</div>
+			<div class="about-serial__text">
+				Продолжение скандального сериала "Молодой Папа" с Джудом Лоу и Джоном Малковичем.
+			</div>
+			<div class="about-serial__genre">
+				Драма
+			</div>
+			<div class="about-serial__meta-info">
+				<div class="meta-info">
+	<div class="meta-info__left-wrap">
+		<div class="meta-info__item meta-info__item_18">
+			18+
+		</div>
+		<div class="meta-info__item">
+			<img src="img/kinopoisk-icon.svg" alt="" class="meta-info__item-icon">
+			8,8
+		</div>
+		<div class="meta-info__item">
+			<img src="img/imdb-icon.svg" alt="" class="meta-info__item-icon">
+			8,5
+		</div>
+	</div>
+	<div class="meta-info__right-wrap">
+		<div class="meta-info__item">
+			<img src="img/heart-icon.svg" alt="" class="meta-info__item-icon">
+		</div>
+		<div class="meta-info__item">
+			<img src="img/share-icon.svg" alt="" class="meta-info__item-icon">
+		</div>
+	</div>
+</div>
+			</div>
+			<a href="#" class="about-serial__button-watch">
+				<img src="img/play-icon.svg" alt="" class="about-serial__button-watch-icon">
+				Смотреть сериал
+			</a>
+		</div>
+	</div>
+	<div class="about-serial__navigation">
+		<div class="about-serial__navigation-item active" data-target="aboutSerialTrailer">Трейлер</div>
+		<div class="about-serial__navigation-item" data-target="aboutSerialText">О сериале</div>
+		<div class="about-serial__navigation-item" data-target="aboutSerialActors">Актеры и создатели</div>
+	</div>
+	<div id="aboutSerialTrailer" class="about-serial__trailer about-serial__tab" style="background-image: url(img/tile-bg.png);">
+		<div class="about-serial__trailer-icons">
+			<div class="about-serial__trailer-icon">
+				<img src="img/fullscreen-icon.svg" alt="" class="about-serial__trailer-icon-img">
+			</div>
+			<div class="about-serial__trailer-icon">
+				<img src="img/sound-off-icon.svg" alt="" class="about-serial__trailer-icon-img">
+			</div>
+		</div>
+	</div>
+	<div id="aboutSerialText" class="about-serial__text-about about-serial__tab">
+		<div class="text-about">
+	<div class="text-about__title">
+		Информация
+	</div>
+	<div class="text-about__text-block">
+		Яркое, но короткое правление в Ватикане молодого Папы Пия XIII завершилось трагически: он впал в кому. Видимым главой всей Католической церкви становится британский аристократ и богач, урожденный сэр Джон Брэннокс. Взяв себе имя Иоанн Павел III, новый Папа устанавливает новые порядки. После молодого несговорчивого американца он кажется безупречным понтификом. Жаль, что «кажется» – здесь ключевое слово. Под белым одеянием Иоанна Павла III тоже скрываются внутренние демоны. Ему будет непросто заменить своего блистательного предшественника, тем более что кома – еще не конец.
+	</div>
+	<div class="text-about__title">
+		Интересные факты
+	</div>
+	<div class="text-about__text-block">
+		Яркое, но короткое правление в Ватикане молодого Папы Пия XIII завершилось трагически: он впал в кому. 
+	</div>
+</div>
+	</div>
+	<div id="aboutSerialActors" class="about-serial__actors-creators about-serial__tab">
+		<div class="actors-creators">
+	<div class="actors-creators__wrap">
+		<div class="actors-creators__title">
+			В ролях
+		</div>
+		<div class="actors-creators__items-wrap">
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+				<span class="actors-creators__item-role">
+					Алфи Соломонс
+				</span>
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+				<span class="actors-creators__item-role">
+					Алфи Соломонс
+				</span>
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+				<span class="actors-creators__item-role">
+					Алфи Соломонс
+				</span>
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+				<span class="actors-creators__item-role">
+					Алфи Соломонс
+				</span>
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+				<span class="actors-creators__item-role">
+					Алфи Соломонс
+				</span>
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+				<span class="actors-creators__item-role">
+					Алфи Соломонс
+				</span>
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+				<span class="actors-creators__item-role">
+					Алфи Соломонс
+				</span>
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+				<span class="actors-creators__item-role">
+					Алфи Соломонс
+				</span>
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+				<span class="actors-creators__item-role">
+					Алфи Соломонс
+				</span>
+			</div>
+			
+		</div>
+	</div>
+	<div class="actors-creators__wrap">
+		<div class="actors-creators__title">
+			Режиссеры
+		</div>
+		<div class="actors-creators__items-wrap">
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+			</div>
+			
+		</div>
+	</div>
+	<div class="actors-creators__wrap">
+		<div class="actors-creators__title">
+			Продюссеры
+		</div>
+		<div class="actors-creators__items-wrap">
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+			</div>
+			
+			<div class="actors-creators__item">
+				Аннабель Уоллис
+			</div>
+			
+		</div>
+	</div>
+	<!-- <div class="actors-creators__person">
+		<div class="actors-creators__person-back-button">
+			<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M21.3914 42L4.00006 22L21.3914 2" stroke="white" stroke-width="5"/>
+				<line x1="4" y1="22.5" x2="44" y2="22.5" stroke="white" stroke-width="5"/>
+			</svg>
+			Назад
+		</div>
+		<div class="actors-creators__person-wrap">
+			<div class="actors-creators__person-img">
+				<img src="img/person.jpg" alt="">
+			</div>
+			<div class="actors-creators__person-text-wrap">
+				<div class="actors-creators__person-title">
+					Том Харди
+				</div>
+				<div class="actors-creators__person-subtitle">
+					Tom Hardi
+				</div>
+				<div class="actors-creators__person-info">
+					Английский актёр, продюсер и сценарист. Обладатель премии BAFTA и номинант на премию «Оскар». Прославился благодаря фильму «Стюарт: Прошлая жизнь», где он сыграл роль наркомана и бездомного Стюарта Шортера, принёсшую ему номинацию на премию BAFTA. 
+				</div>
+			</div>
+		</div>
+	</div> -->
+</div>
+	</div>
+	<div class="about-serial__video-list">
+		<div class="video-list">
+	<div class="video-list container home-page-tiles-list">
+		<h3 class="video-list home-page-tiles-list__title">
+			Сезон
+		</h3>
+		<div class="video-list__tiles-wrap">
+			
+			
+			<div class="tile video-list-tile" data-progress="20" data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			<div class="tile video-list-tile" data-progress="50" data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			
+			<div class="tile video-list-tile" data-progress="20" data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			<div class="tile video-list-tile" data-progress="50" data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			
+			<div class="tile video-list-tile" data-progress="20" data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			<div class="tile video-list-tile" data-progress="50" data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			
+			<div class="tile video-list-tile" data-progress="20" data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			<div class="tile video-list-tile" data-progress="50" data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			
+			<div class="tile video-list-tile" data-progress="20" data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			<div class="tile video-list-tile" data-progress="50" data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+			
+		</div>
+	</div>
+</div>
+	</div>
+</div>
+			</div>
+
+			
+			<div class="serials-page__two-tiles-wrap">
+				
+				<div class="tile "  data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				
+				<div class="tile "  data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				
+			</div>
+
+			
+			<div class="serials-page__four-tiles-wrap">
+				
+				<div class="tile "  data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				
+				<div class="tile "  data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				
+				<div class="tile "  data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				
+				<div class="tile "  data-videourl="">
+	<div class="tile__bg">
+		<img src="img/tile-bg.png" alt="" class="tile__bg-img">
+	</div>
+	<video id="" class="tile__video video-js" preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8" type="application/x-mpegURL" />
+	</video>
+
+	<div class="tile__video-list-title">
+		Серия 1
+	</div>
+	<div class="tile__video-list-episode">
+		Ужин в саду
+	</div>
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__top-wrap">
+		<div class="tile__top-wrap-item">
+			<img src="img/play-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item">
+			<img src="img/info-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+		<div class="tile__top-wrap-item tile__top-wrap-item_like">
+			<img src="img/heart-icon.svg" alt="" class="tile__top-wrap-item-icon">
+		</div>
+	</div>
+	<div class="tile__bottom-wrap">
+		<div class="tile__title">
+			Новый папа
+		</div>
+		<div class="tile__meta-info">
+			<div class="tile__meta-info-item tile__meta-info-item_18">
+				18+
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,8
+			</div>
+			<div class="tile__meta-info-item">
+				<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+				8,5
+			</div>
+		</div>
+		<div class="tile__text">
+			<div class="tile__text-item">lavish</div>
+			<div class="tile__text-item">Exiting</div>
+			<div class="tile__text-item">Fantasy tv</div>
+		</div>
+	</div>
+	<div class="tile__sound-button">
+		<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+		<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+	</div>
+</div>
+				
+			</div>
+		</div>
+
+	</div>
+</div> 
+
+
+
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    <script src='js/main.js'></script>
+</body>
+</html>

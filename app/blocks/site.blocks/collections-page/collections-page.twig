@@ -1,0 +1,37 @@
+{% extends 'blocks/base.blocks/base/base.twig' %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+
+		{# HEADER #}
+		{% include 'blocks/common.blocks/header/header.twig'%}
+		
+		<div class="container">
+			<div class="collection-page__tiles-wrap">
+				{% for item in 0..3 %}
+				{% include 'blocks/common.blocks/collection-tile/collection-tile.twig'%}
+				{% endfor %}
+			</div>
+			<div class="collection-page__tiles-wrap">
+				{% for item in 0..3 %}
+				{% include 'blocks/common.blocks/collection-tile/collection-tile.twig'%}
+				{% endfor %}
+			</div>
+			<div class="collection-page__tiles-wrap">
+				{% for item in 0..3 %}
+				{% include 'blocks/common.blocks/collection-tile/collection-tile.twig'%}
+				{% endfor %}
+			</div>
+			<div class="collection-page__tiles-wrap">
+				{% for item in 0..3 %}
+				{% include 'blocks/common.blocks/collection-tile/collection-tile.twig'%}
+				{% endfor %}
+			</div>
+		</div>
+
+		{# FOOTER #}
+		{% include 'blocks/common.blocks/footer/footer.twig'%}
+	</div>
+</div> 
+{% endblock %}

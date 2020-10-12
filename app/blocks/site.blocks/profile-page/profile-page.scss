@@ -1,0 +1,212 @@
+.profile-page{
+
+	&__wrap{
+		width: 968px;	
+		height: calc(100vh - 208px);
+		margin-top: 115px;
+	}
+	&__settings{
+		padding-bottom: 44px;
+		border-bottom: 1px solid #fff;
+		margin: 40px 0;
+	}
+	&__title{
+		font-family: $bebas;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 35px;
+		color: #FFFFFF;
+		margin-bottom: 24px;
+	}
+	&__input-wrap{
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+	&__label{
+		width: 124px;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+	}
+	&__input{
+		width: 300px;
+		height: 36px;
+		background-color: transparent;
+		border: 2px solid rgba(255,255,255,.5);
+		border-radius: 4px;
+		padding: 0 14px;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+
+		&[type=password]{
+			font-size: 50px;
+		}
+	}
+	&__checkbox-wrap{
+		margin-top: 30px;
+	}
+	&__checkbox{
+		opacity: 0;
+		position: absolute;
+	}
+	&__checkbox-label{
+		cursor: pointer;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		color: #FFFFFF;
+		padding-left: 29px;
+
+		&:before{
+			content: '';
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: transparent;
+			border: 2px solid #FFFFFF;
+			border-radius: 4px;
+			transition: all ease .3s;
+		}
+
+		&:hover,
+		&:active,
+		&:focus{
+			&:before{
+				box-shadow: 0 0px 6px 3px rgba(255,255,255,0.2),
+				inset 0 0 6px 7px rgba(255,255,255,0.2);
+			}
+		}
+	}
+	&__checkbox:checked + .profile-page__checkbox-label:before{
+		background-color: #30C1D2;
+		background-image: url("../img/ok-icon.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&__text{
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba(255,255,255,.5);
+		margin-bottom: 20px;
+	}
+	&__device-wrap{
+		display: flex;
+		align-items: center;
+		margin-bottom: 14px;
+
+		&_active .profile-page__device-title:before{
+			display: block;
+		}
+	}
+	&__device-title{
+		width: 225px;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+
+		&:before{
+			display: none;
+			content: 'Это устройство';
+			position: absolute;
+			bottom: -15px;
+			left: 0;
+			font-family: $stem;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 15px;
+			color: rgba(255,255,255,.5);
+		}
+	}
+	&__device-delete{
+		cursor: pointer;
+		width: 32px;
+		height: 32px;
+
+		&:hover,
+		&:active,
+		&:focus{
+			& .profile-page__device-delete-img{
+				& g{
+					// filter: url(#filter0_d);
+				}
+			}
+		}	
+	}
+	&__buttons{
+		display: flex;
+	}
+	&__button{
+		width: 191px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255,255,255,.5);
+		clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+		font-family: $bebas;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 23px;
+		color: #FFFFFF;
+		text-decoration: none;
+		transition: all ease .3s;
+	}
+	&__button-save{
+		background-color: #30C1D2;
+
+		&:hover,
+		&:active,
+		&:focus{
+			background-color: rgba(48,193,210,.6);
+		}
+	}
+	&__button-exit{
+
+		&:hover,
+		&:active,
+		&:focus{
+			background-color: rgba(255,255,255,.65);
+		}
+	}
+	&__support{
+		display: flex;
+		margin-left: auto;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba(255,255,255,.5);
+
+		& a{
+			color: #fff;
+			text-decoration: none;
+			margin-left: 12px;
+
+			&:hover,
+			&:active,
+			&:focus{
+				text-decoration: underline;
+			}
+		}
+	}
+}

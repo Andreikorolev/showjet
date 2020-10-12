@@ -1,0 +1,11 @@
+<div class="watching-now container home-page-tiles-list">
+	<h3 class="watching-now__title home-page-tiles-list__title">
+		Сейчас смотрят
+	</h3>
+	<div class="watching-now__tiles-wrap home-page-tiles-list__tiles-wrap tiles-wrap">
+		{% for item in 0..5 %}
+		{# TILE #}
+		{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo'} %}
+		{% endfor %}
+	</div>
+</div>

@@ -1,0 +1,163 @@
+.popup{
+	width: 360px;
+	height: 305px;
+	padding: 30px 0;
+	background-color: rgba(0,0,0,.9);
+	border: 1px solid #fff;
+
+	&__form{
+		padding: 0 30px;
+	}
+	&__input-wrap{
+
+		&.error{
+
+			&:before{
+				content: 'Неверный пароль';
+				position: absolute;
+				bottom: 7px;
+				left: 0;
+				font-family: $stem;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 12px;
+				line-height: 14px;
+				color: #FF0000;
+			}
+
+			& .popup__input{
+				border: 2px solid #FF0000;
+				color: #f00;
+			}
+		}
+	}
+	&__input{
+		outline: none;
+		width: 100%;
+		height: 36px;
+		background-color: transparent;
+		border: 2px solid rgba(255,255,255,.5);
+		border-radius: 4px;
+		margin-bottom: 10px;
+		padding: 0 13px;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+
+		&::placeholder{
+			color: #fff;
+			transition: color ease .3s;
+		}
+		&:focus{
+			&::placeholder{
+				color: transparent;
+				font-size: 14px;
+			}
+		}
+		&[type=password]{
+			margin-bottom: 25px;
+
+			&:not(:placeholder-shown) {
+				font-size: 40px;
+			}
+		}
+	}
+	&__text{
+		margin-bottom: 20px;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+	}
+	&__button{
+		cursor: pointer;
+		width: auto;
+		height: 44px;
+		display: inline-block;
+		padding: 2px 20px 0; 
+		margin: 0 0 15px;
+		background-color: #30C1D2;
+		border: none;
+		clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+		font-family: $bebas;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 23px;
+		color: #FFFFFF;
+		text-decoration: none;
+		transition: all ease .3s;
+
+		&:hover,
+		&:active,
+		&:focus{
+			background-color: rgba(48,193,210,.6);
+		}
+	}
+	&__button-text{
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+		margin-bottom: 20px;
+		border-bottom: 1px solid transparent;
+		transition: all ease .3s;
+
+		&:hover,
+		&:active,
+		&:focus{
+			border-bottom: 1px solid transparent;
+		}
+	}
+	&__soc-buttons{
+		width: 100%;
+		display: flex;
+		padding: 25px 33px 0;
+		border-top: 1px solid #fff;
+	}
+	&__soc-button{
+		cursor: pointer;
+		height: 22px;
+		display: flex;
+		align-items: center;
+		
+		&:not(:last-child){
+			margin-right: 10px;
+		}		
+
+		&:hover,
+		&:active,
+		&:focus{
+			& .popup__soc-button-icon{
+				& g{
+					filter: url(#filter0_d);
+				}
+			}
+		}	
+	}
+	&__password-success-send{
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+		padding-left: 20px;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 17px;
+		color: #76FF57;
+
+		& svg{
+			margin-right: 10px;
+		}
+	}
+}

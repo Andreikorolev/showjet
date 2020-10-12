@@ -1,0 +1,75 @@
+{% extends 'blocks/base.blocks/base/base.twig' %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+
+		{# HEADER #}
+		{% include 'blocks/common.blocks/header/header.twig'%}
+		
+		<div class="container">
+			<div class="serials-page__filters-wrap">
+				<div class="serials-page__filter-wrap">
+					{% include 'blocks/common.blocks/filter/filter.twig'%}
+				</div>
+				<div class="serials-page__filter-wrap">
+					{% include 'blocks/common.blocks/filter/filter.twig'%}
+				</div>
+				<div class="serials-page__filter-wrap">
+					{% include 'blocks/common.blocks/filter/filter.twig'%}
+				</div>
+			</div>
+
+			{# SERIALS PAGE SIX TILE WRAP #}
+			<div class="serials-page__six-tiles-wrap tiles-wrap">
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video101' }%}
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8', 'videoID':'video102'  }%}
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video103' }%}
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8', 'videoID':'video104'  }%}
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video105' }%}
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8', 'videoID':'video106'  }%}
+			</div>
+
+			{# SERAILS PAGE THREE TILE WRAP #}
+			<div class="serials-page__three-tiles-wrap">
+				{% for item in 0..2 %}
+				{% include 'blocks/common.blocks/tile/tile.twig'%}
+				{% endfor %}
+			</div>
+
+			{# SERIALS PAGE SIX TILE WRAP #}
+			<div class="serials-page__six-tiles-wrap tiles-wrap">
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video107' }%}
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8', 'videoID':'video108'  }%}
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video109' }%}
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8', 'videoID':'video110'  }%}
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video111' }%}
+				{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/fe2d3192-55ef-498c-9335-8adb11bbf0bc.ism/.m3u8', 'videoID':'video112'  }%}
+			</div>
+
+			<!-- SERIALS PAGE ABOUT SERIAL -->
+			<div class="serials-page__about-serial">
+				<!-- ABOUT SERIAL -->
+				{% include 'blocks/common.blocks/about-serial/about-serial.twig'%}
+			</div>
+
+			{# SERIALS PAGE TWO TILE WRAP #}
+			<div class="serials-page__two-tiles-wrap">
+				{% for item in 0..1 %}
+				{% include 'blocks/common.blocks/tile/tile.twig'%}
+				{% endfor %}
+			</div>
+
+			{# SERIALS PAGE four TILE WRAP #}
+			<div class="serials-page__four-tiles-wrap">
+				{% for item in 0..3 %}
+				{% include 'blocks/common.blocks/tile/tile.twig'%}
+				{% endfor %}
+			</div>
+		</div>
+
+	</div>
+</div> 
+
+
+{% endblock %}

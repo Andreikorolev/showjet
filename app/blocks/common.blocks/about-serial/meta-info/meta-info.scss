@@ -1,0 +1,39 @@
+.meta-info{
+	display: flex;
+
+	&__left-wrap,
+	&__right-wrap{
+		height: 45px;
+		display: flex;
+		align-items: center;
+	}
+	&__left-wrap{
+
+		& .meta-info__item-icon{
+			height: 24px;
+			margin-right: 6px;
+		}
+	}
+	&__right-wrap{
+		border-left: 4px solid #fff;
+		padding-left: 44px;
+	}
+	&__item{
+		margin-right: 45px;
+		font-family: $bebas;
+		font-weight: bold;
+		font-size: 33px;
+		line-height: 39px;
+		text-align: center;
+		color: #FFFFFF;
+
+		&_18{
+			width: 48px;
+			height: 37px;
+			display: flex;
+			align-items: center;
+			border: 3px solid #FFFFFF;
+			border-radius: 6px;
+		}
+	}
+}

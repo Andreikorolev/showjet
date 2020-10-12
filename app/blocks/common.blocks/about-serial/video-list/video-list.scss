@@ -1,0 +1,65 @@
+.video-list{
+
+	&__tiles-wrap{
+		display: flex;
+	}
+	& .slick-arrow{
+		z-index: 100;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		width: 28px;
+		height: 50px;
+		background: none;
+		border: none;
+		color: transparent;
+		outline: none;
+	}
+	& .slick-prev{
+		left: 25px;
+		background-image: url("../img/prev-arrow.svg");
+	}
+	& .slick-next{
+		right: 25px;
+		background-image: url("../img/next-arrow.svg");
+	}
+	& .slick-disabled{
+		display: none !important;
+	}
+	& .slick-list{
+		overflow: visible;
+	}
+	& .slick-track{
+		overflow: visible;
+	}
+	& .slick-slide{
+		cursor: pointer;
+		width: 330px;
+		height: 184px;
+		padding-bottom: 10px;
+		top: 0;
+		clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+		transition: all ease .5s;
+
+		&:not(:last-child){
+			margin-right: -30px;
+		}
+		&:first-child{
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+
+			& .tile__video-list-title,
+			& .tile__video-list-episode{
+				left: 10px;
+			}
+
+		}
+		&:last-child{	
+			clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
+		}
+
+		&>div{
+			height: 100%;
+		}
+	}
+}

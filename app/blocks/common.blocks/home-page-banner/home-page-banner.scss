@@ -1,0 +1,159 @@
+.home-page-banner{
+	width: 100%;
+	height: 1080px;
+	overflow: hidden;
+
+	&:before{
+		content: '';
+		width: 100%;
+		height: 1080px;
+		z-index: 1;
+		position: absolute;
+		top: 234px;
+		left: -960px;
+		background: radial-gradient(48.66% 48.66% at 49.28% 50%, #141414 0%, rgba(20, 20, 20, 0.79) 57.81%, rgba(20, 20, 20, 0.0001) 100%);
+		mix-blend-mode: normal;
+		opacity: 0.8;
+	}
+	&:after{
+		content: '';
+		width: 100%;
+		height: 461px;
+		z-index: 1;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+		opacity: 0.9;
+	}
+
+	&__image{
+		width: 100%;
+		min-height: 100%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&__description{
+		z-index: 2;
+		position: absolute;
+		bottom: 300px;
+		left: 30px;
+	}
+	&__title{
+		margin-bottom: 17px;
+	}
+	&__title-img{
+
+	}
+	&__text{
+		width: 744px;
+		margin-bottom: 8px;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		line-height: 39px;
+		color: #fff;
+	}
+	&__genre{
+		margin-bottom: 50px;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		line-height: 39px;
+		color: #fff;
+		opacity: 0.5;
+	}
+	&__buttons{
+		display: flex;
+	}
+	&__button{
+		width: 360px;
+		height: 78px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255,255,255,.5);
+		clip-path: polygon(calc(0% + 15px) 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
+		font-family: $bebas;
+		font-weight: normal;
+		font-size: 40px;
+		line-height: 47px;
+		color: #FFFFFF;
+		text-decoration: none;
+		transition: all ease .3s;
+	}
+	&__button-icon{
+		margin-right: 13px;
+	}
+	&__button-watch{
+		background-color: #30C1D2;
+		font-family: $bebas;
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 47px;
+		color: #FFFFFF;
+
+		&:hover,
+		&:active,
+		&:focus{
+			background-color: rgba(48,193,210,.6);
+		}
+	}
+	&__button-about{
+
+		&:hover,
+		&:active,
+		&:focus{
+			background-color: rgba(255,255,255,.65);
+		}
+	}
+	&__meta-info{
+		z-index: 2;
+		position: absolute;
+		bottom: 300px;
+		right: 30px;
+		display: flex;
+		align-items: center;
+	}
+	&__meta-info-item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $bebas;
+		font-weight: bold;
+		font-size: 26px;
+		line-height: 30px;
+		text-align: center;
+		color: #fff;
+		text-shadow: 0 0 2px #000;
+
+		&:not(:last-child){
+			margin-right: 45px;
+		}
+		&_imdb,
+		&_kinopoisk{
+			font-size: 39px;
+			line-height: 46px;
+		}
+		&_18{
+			width: 61px;
+			height: 48px;
+
+			border: 3px solid #FFFFFF;
+			border-radius: 4px
+		}
+		&_sound{
+			width: 93px;
+			height: 104px;
+			padding-left: 42px;
+			border-left: 3px solid #fff;
+		}
+	}
+	&__meta-info-item-icon{
+		margin-right: 10px;
+	}
+}

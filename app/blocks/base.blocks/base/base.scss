@@ -1,0 +1,28 @@
+/* base */
+@import "compass/reset";
+@import "compass/css3";
+
+// FONTS
+$bebas: 'Bebas Neue';
+$stem: 'Stem';
+
+// COLOR
+body{
+	background-color: #141414;
+
+	&.light{
+		background-color: #fff;
+	}
+}
+div{
+	position: relative;
+}
+.container-fluid{
+	overflow: hidden;
+}
+.light-page{
+
+	.header{
+		filter: invert(1);
+	}
+}

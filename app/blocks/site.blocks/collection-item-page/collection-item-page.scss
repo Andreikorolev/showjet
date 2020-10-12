@@ -1,0 +1,41 @@
+.collection-item-page{
+
+	&__top-banner{
+		width: 100%;
+		height: 1080px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-top: -115px;
+	}
+	&__top-banner-info-wrap{
+		position: absolute;
+		bottom: 304px;
+		left: 30px;
+	}
+	&__top-banner-title{
+		font-family: $bebas;
+		font-weight: bold;
+		font-size: 100px;
+		line-height: 117px;
+		color: #FFFFFF;
+		margin-bottom: 10px;
+	}
+	&__top-banner-subtitle{
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		line-height: 39px;
+		color: #FFFFFF;
+	}
+	&__other-collections-title{
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 40px;
+		line-height: 52px;
+		color: rgba(255,255,255,.5);
+		margin-bottom: 14px;
+	}
+}

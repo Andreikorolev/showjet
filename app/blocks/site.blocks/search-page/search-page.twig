@@ -1,0 +1,53 @@
+{% extends 'blocks/base.blocks/base/base.twig' %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+
+		{# HEADER #}
+		{% include 'blocks/common.blocks/header/header.twig'%}
+		
+		<div class="container">
+			<h1 class="search-page__title">
+				Поиск
+			</h1>
+			<input type="text" class="search-page__search-input" value="Йеллоустоун">
+			<div class="search-page__search-result">
+				<div class="search-page__search-result-tiles-wrap tiles-wrap home-page-tiles-list__tiles-wrap">
+					{% for item in 0..1 %} 
+					{# TILE #}
+					{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo'} %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="search-page__maybe-like">	
+			{# МОЖЕТ ПОНРАВИТСЯ #}
+			{% include 'blocks/common.blocks/watching-now/watching-now.twig'%}
+		</div>
+		<div class="container">
+			<div class="search-page__often-search">
+				<div class="search-page__often-search-title home-page-tiles-list__title">
+					Часто ищут
+				</div>
+				<div class="search-page__often-search-items-wrap">
+					<a href="#" class="search-page__often-search-item">Новый папа</a>
+					<a href="#" class="search-page__often-search-item">Сын</a>
+					<a href="#" class="search-page__often-search-item">Под прикрытием</a>
+					<a href="#" class="search-page__often-search-item">Порох</a>
+					<a href="#" class="search-page__often-search-item">Хокинг</a>
+					<a href="#" class="search-page__often-search-item">Подводная лодка</a>
+					<a href="#" class="search-page__often-search-item">Склонность</a>
+					<a href="#" class="search-page__often-search-item">И никого не стало</a>
+					<a href="#" class="search-page__often-search-item">Острые козырьки</a>
+					<a href="#" class="search-page__often-search-item">Шестой отряд</a>
+				</div>
+			</div>
+		</div>
+
+		{# FOOTER #}
+		{% include 'blocks/common.blocks/footer/footer.twig'%}
+
+	</div>
+</div> 
+{% endblock %}

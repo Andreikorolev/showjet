@@ -1,0 +1,1 @@
+$(".light-page").parent("body").addClass("light");

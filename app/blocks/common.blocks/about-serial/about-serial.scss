@@ -1,0 +1,165 @@
+.about-serial{
+	width: 100%;
+	height: 794px;
+	&__bg{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		opacity: .2;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	& .container{
+		height: 100%;	
+	}
+	&__top-wrap{
+		position: absolute;
+		bottom: 260px;
+		left: 30px;
+	}
+	&__title{
+		width: 500px;
+		margin-bottom: 17px;
+	}
+	&__title-img{
+		width: 100%;
+	}
+	&__title-text{
+		font-family: $bebas;
+		font-size: 40px;
+		line-height: 47px;
+		color: #FFFFFF;
+		opacity: 0.5;
+		text-transform: uppercase;
+		margin-bottom: 12px;
+	}
+	&__text{
+		width: 744px;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		line-height: 32px;
+		color: #FFFFFF;
+		margin-bottom: 15px;
+	}
+	&__genre{
+		margin-bottom: 35px;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		line-height: 32px;
+		color: #FFFFFF;
+		opacity: 0.5;
+	}
+	&__meta-info{
+		margin-bottom: 62px;
+	}
+	&__button-watch{
+		width: 360px;
+		height: 78px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #30C1D2;
+		clip-path: polygon(calc(0% + 15px) 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
+		font-family: $bebas;
+		font-weight: normal;
+		font-size: 40px;
+		line-height: 47px;
+		color: #FFFFFF;
+		text-decoration: none;
+		transition: all ease .3s;
+
+		&:hover,
+		&:active,
+		&:focus{
+			background-color: rgba(48,193,210,.6);
+		}
+	}
+	&__button-watch-icon{
+		margin-right: 13px;
+	}
+	&__navigation{
+		position: absolute;
+		bottom: 206px;
+		right: 641px;
+		display: flex;
+	}
+	&__navigation-item{
+		font-family: $bebas;
+		cursor: pointer;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 28px;
+		color: #FFFFFF;
+		opacity: 0.4;
+		border-bottom: 1px solid transparent;
+		transition: all ease .3s;
+
+		&:not(:last-child){
+			margin-right: 30px;
+		}
+
+		&:hover,
+		&:active,
+		&:focus{
+			opacity: 1;
+		}
+
+		&.active{
+			opacity: 1;
+			border-bottom: 1px solid #fff;
+		}
+	}
+
+	&__trailer{
+		width: 1129px;
+		height: 539px;
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	&__trailer-icons{
+		position: absolute;
+		bottom: 20px;
+		right: 25px;
+		display: flex;
+		background-color: rgba(0,0,0,.1);
+		padding: 5px;
+	}
+	&__trailer-icon{
+		cursor: pointer;
+
+		&:not(:last-child){
+			margin-right: 45px;
+		}
+	}
+	&__text-about{
+		display: none;
+		position: absolute;
+		top: 30px;
+		right: 30px;
+	}
+	&__actors-creators{
+		display: none;
+		position: absolute;
+		top: 30px;
+		right: 30px;
+	}
+	&__video-list{
+		width: 100%;
+		position: absolute;
+		bottom: -20px;
+		left: 0;
+	}
+}

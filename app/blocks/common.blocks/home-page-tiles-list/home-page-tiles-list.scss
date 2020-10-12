@@ -1,0 +1,16 @@
+.home-page-tiles-list{
+	padding: 0 0 0 30px;
+
+	&__title{
+		font-family: $stem;
+		font-size: 30px;
+		font-weight: normal;
+		color: rgba(255,255,255,.5);
+		line-height: 39px;
+		margin-bottom: 10px;
+		z-index: 0;
+	}
+	&__tiles-wrap{
+		display: flex;
+	}
+}

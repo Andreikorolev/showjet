@@ -1,0 +1,50 @@
+<div class="about-serial">
+	<div class="about-serial__bg" style="background-image: url(img/about-serial-1.jpg);"></div>
+	<div class="container">
+		<div class="about-serial__top-wrap">
+			<div class="about-serial__title">
+				<img src="img/home-page-banner-title.png" alt="" class="about-serial__title-img">
+			</div>
+			<div class="about-serial__title-text">
+				the new pope
+			</div>
+			<div class="about-serial__text">
+				Продолжение скандального сериала "Молодой Папа" с Джудом Лоу и Джоном Малковичем.
+			</div>
+			<div class="about-serial__genre">
+				Драма
+			</div>
+			<div class="about-serial__meta-info">
+				{% include 'blocks/common.blocks/about-serial/meta-info/meta-info.twig'%}
+			</div>
+			<a href="#" class="about-serial__button-watch">
+				<img src="img/play-icon.svg" alt="" class="about-serial__button-watch-icon">
+				Смотреть сериал
+			</a>
+		</div>
+	</div>
+	<div class="about-serial__navigation">
+		<div class="about-serial__navigation-item active" data-target="aboutSerialTrailer">Трейлер</div>
+		<div class="about-serial__navigation-item" data-target="aboutSerialText">О сериале</div>
+		<div class="about-serial__navigation-item" data-target="aboutSerialActors">Актеры и создатели</div>
+	</div>
+	<div id="aboutSerialTrailer" class="about-serial__trailer about-serial__tab" style="background-image: url(img/tile-bg.png);">
+		<div class="about-serial__trailer-icons">
+			<div class="about-serial__trailer-icon">
+				<img src="img/fullscreen-icon.svg" alt="" class="about-serial__trailer-icon-img">
+			</div>
+			<div class="about-serial__trailer-icon">
+				<img src="img/sound-off-icon.svg" alt="" class="about-serial__trailer-icon-img">
+			</div>
+		</div>
+	</div>
+	<div id="aboutSerialText" class="about-serial__text-about about-serial__tab">
+		{% include 'blocks/common.blocks/about-serial/text-about/text-about.twig'%}
+	</div>
+	<div id="aboutSerialActors" class="about-serial__actors-creators about-serial__tab">
+		{% include 'blocks/common.blocks/about-serial/actors-creators/actors-creators.twig'%}
+	</div>
+	<div class="about-serial__video-list">
+		{% include 'blocks/common.blocks/about-serial/video-list/video-list.twig'%}
+	</div>
+</div>

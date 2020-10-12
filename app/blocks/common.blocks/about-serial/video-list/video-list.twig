@@ -1,0 +1,14 @@
+<div class="video-list">
+	<div class="video-list container home-page-tiles-list">
+		<h3 class="video-list home-page-tiles-list__title">
+			Сезон
+		</h3>
+		<div class="video-list__tiles-wrap">
+			{# TILE #}
+			{% for item in 0..4 %}
+			{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'video-list-tile', 'dataProgress':'data-progress="20"'}%}
+			{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'video-list-tile', 'dataProgress':'data-progress="50"'}%}
+			{% endfor %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,63 @@
+{% extends 'blocks/base.blocks/base/base.twig' %}
+
+{% block content %}
+<div class="container-fluid light-page">
+	<div class="row">
+
+		{# HEADER #}
+		{% include 'blocks/common.blocks/header/header.twig'%}
+
+		<div class="news-page__feed">
+			<div class="news-page__navigation">
+				<div class="news-page__navigation-item active" data-target="newsPageNewsTab">Новости</div>
+				<div class="news-page__navigation-item" data-target="newsPageCompilationTab">Подборки</div>
+				<div class="news-page__navigation-item" data-target="newsPageArticleTab">Статьи</div>
+			</div>
+			<div id="newsPageNewsTab" class="news-page__news-tab news-page__tab active-tab ">
+				<div class="news-page__news-tiles-wrap">
+					{# NEWS-TILE #}
+					{% for item in 0..3 %}
+					{% include 'blocks/common.blocks/news-tile/news-tile.twig'%}
+					{% endfor %}
+				</div>
+			</div>
+			<div id="newsPageCompilationTab" class="news-page__compilation-tab news-page__tab">
+				<div class="news-page__news-tiles-wrap">
+					{# NEWS-TILE #}
+					{% for item in 0..3 %}
+					{% include 'blocks/common.blocks/news-tile/news-tile.twig'%}
+					{% endfor %}
+				</div>
+				<div class="news-page__news-tiles-wrap">
+					{# NEWS-TILE #}
+					{% for item in 0..3 %}
+					{% include 'blocks/common.blocks/news-tile/news-tile.twig'%}
+					{% endfor %}
+				</div>
+			</div>
+			<div id="newsPageArticleTab" class="news-page__articles-tab news-page__tab">
+				<div class="news-page__news-tiles-wrap">
+					{# NEWS-TILE #}
+					{% for item in 0..3 %}
+					{% include 'blocks/common.blocks/news-tile/news-tile.twig'%}
+					{% endfor %}
+				</div>
+				<div class="news-page__news-tiles-wrap">
+					{# NEWS-TILE #}
+					{% for item in 0..3 %}
+					{% include 'blocks/common.blocks/news-tile/news-tile.twig'%}
+					{% endfor %}
+				</div>
+				<div class="news-page__news-tiles-wrap">
+					{# NEWS-TILE #}
+					{% for item in 0..3 %}
+					{% include 'blocks/common.blocks/news-tile/news-tile.twig'%}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		{# FOOTER #}
+	</div>
+</div> 
+{% endblock %}

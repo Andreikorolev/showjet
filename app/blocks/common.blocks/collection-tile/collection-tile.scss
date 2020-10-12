@@ -1,0 +1,71 @@
+.collection-tile{
+	width: 501px;
+	height: 265px;
+	background-size: cover;
+	background-position: center;
+	clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+	transition: all ease .1s;
+
+	&:not(:last-child){
+		margin-right: -48px;
+	}
+	&:first-child{
+		clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+
+		& .collection-tile__text-wrap{
+			left: 51px;
+		}
+	}
+	&:last-child{	
+		clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+	}
+
+	&:hover,
+	&:active,
+	&:focus{
+		transform: scale(1.4);
+		z-index: 100;
+		clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
+		transition: all ease .3s;
+
+		&:not(:first-child){
+			margin-left: -14px;
+		}
+		&:not(:last-child){
+			margin-right: -43px;
+		}
+		&:first-child{
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
+			transform: scale(1.4) translateX(71px);
+		}
+		&:last-child{	
+			clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			transform: scale(1.4) translateX(-71px);
+		}
+
+		& .collection-tile__subtitle{
+			display: block;
+		}
+	}
+	&__text-wrap{
+		position: absolute;
+		bottom: 20px;
+		left: 51px;
+	}
+	&__title{
+		font-family: $bebas;
+		font-weight: bold;
+		font-size: 35px;
+		line-height: 41px;
+		color: #FFFFFF;
+	}
+	&__subtitle{
+		display: none;
+		font-family: $stem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 23px;
+		color: #FFFFFF;
+	}
+}

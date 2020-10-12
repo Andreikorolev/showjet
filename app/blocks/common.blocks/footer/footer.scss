@@ -1,0 +1,88 @@
+.footer{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 50px;
+
+	&__menu{
+		display: flex;
+		margin-right: 40px;
+	}
+	&__menu-item{
+		font-family: $bebas;
+		font-weight: bold;
+		font-size:12px;
+		line-height: 14px;
+		color: #FFFFFF;
+		text-decoration: none;
+		transition: all ease .3s;
+
+		@include breakpoint(md){
+			font-size: 15px;
+			line-height: 18px;
+		}
+		@include breakpoint(lg){
+			font-size: 16px;
+			line-height: 19px;
+		}
+
+		&:not(:last-child){
+			margin-right: 20px;
+			@include breakpoint(md){
+				margin-right: 30px;
+			}
+		}
+
+		&:hover,
+		&:active,
+		&:focus{
+			opacity: .5;
+		}
+	}
+	&__soc-buttons{
+		display: flex;
+		margin-right: 40px;
+	}
+	&__soc-item{
+		height: 22px;
+		display: flex;
+		align-items: center;
+		
+		&:not(:last-child){
+			margin-right: 10px;
+		}		
+
+		&:hover,
+		&:active,
+		&:focus{
+			& .footer__soc-item-icon{
+				& g{
+					filter: url(#filter0_d);
+				}
+			}
+		}	
+	}
+	&__soc-item-icon{
+		transition: all ease .3s;
+		filter: none;
+	}
+	&__stores-icon{
+		display: flex;
+	}
+	&__store-item{
+		border-radius: 6px;
+		transition: all ease .3s;
+
+		&:not(:last-child){
+			margin-right: 10px;
+		}
+
+		&:hover,
+		&:active,
+		&:focus{
+			box-shadow: 0px 0px 9px rgba(255, 243, 243, 0.75);
+		}
+	}
+}
