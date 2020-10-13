@@ -2221,6 +2221,20 @@ svg
     background-color: #141414;
 }
 
+.header.header-search-page .header__search:hover .header__search-input,
+.header.header-search-page .header__search:active .header__search-input,
+.header.header-search-page .header__search:focus .header__search-input
+{
+    width: 0;
+}
+
+.header.header-search-page .header__search:hover .header__search-underline,
+.header.header-search-page .header__search:active .header__search-underline,
+.header.header-search-page .header__search:focus .header__search-underline
+{
+    width: 0;
+}
+
 .header__popups
 {
     position: absolute;
@@ -4441,6 +4455,18 @@ svg
     text-decoration: underline;
 }
 
+.search-page__fixed-wrap
+{
+    position: fixed;
+    z-index: 1000;
+    top: 86px;
+
+    width: 100%;
+    padding-top: 27px;
+
+    background-color: #141414;
+}
+
 .search-page__title
 {
     font-family: 'Bebas Neue';
@@ -4448,7 +4474,6 @@ svg
     font-weight: bold;
     line-height: 53px;
 
-    margin-top: 33px;
     margin-bottom: 11px;
 
     text-transform: uppercase;
@@ -4479,6 +4504,7 @@ svg
 
 .search-page__search-result
 {
+    margin-top: 135px;
     margin-bottom: 40px;
 }
 
@@ -4491,6 +4517,11 @@ svg
 .search-page__often-search
 {
     width: 100%;
+}
+
+.search-page__often-search-title
+{
+    margin-bottom: 30px;
 }
 
 .search-page__often-search-items-wrap

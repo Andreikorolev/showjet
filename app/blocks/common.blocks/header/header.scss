@@ -15,6 +15,22 @@
 	&.fixed{
 		background-color: #141414;
 	}
+	&.header-search-page{
+
+		& .header__search{
+			&:hover,
+			&:active,
+			&:focus{
+
+				& .header__search-input{
+					width: 0;
+				}
+				& .header__search-underline{
+					width: 0;
+				}
+			}
+		}
+	}
 
 	&__popups{
 		position: absolute;

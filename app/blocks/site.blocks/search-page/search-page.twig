@@ -5,13 +5,15 @@
 	<div class="row">
 
 		{# HEADER #}
-		{% include 'blocks/common.blocks/header/header.twig'%}
+		{% include 'blocks/common.blocks/header/header.twig' with {'headerSearchPage':'header-search-page'} %}
 		
 		<div class="container">
-			<h1 class="search-page__title">
-				Поиск
-			</h1>
-			<input type="text" class="search-page__search-input" value="Йеллоустоун">
+			<div class="search-page__fixed-wrap">
+				<h1 class="search-page__title">
+					Поиск
+				</h1>
+				<input type="text" class="search-page__search-input" value="">
+			</div>
 			<div class="search-page__search-result">
 				<div class="search-page__search-result-tiles-wrap tiles-wrap home-page-tiles-list__tiles-wrap">
 					{% for item in 0..1 %} 
@@ -23,7 +25,7 @@
 		</div>
 		<div class="search-page__maybe-like">	
 			{# МОЖЕТ ПОНРАВИТСЯ #}
-			{% include 'blocks/common.blocks/watching-now/watching-now.twig'%}
+			{% include 'blocks/common.blocks/watching-now/watching-now.twig' with {'title': 'Может понравиться'} %}
 		</div>
 		<div class="container">
 			<div class="search-page__often-search">
