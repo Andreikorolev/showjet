@@ -4470,9 +4470,9 @@ svg
 .search-page__title
 {
     font-family: 'Bebas Neue';
-    font-size: 45px;
+    font-size: 30px;
     font-weight: bold;
-    line-height: 53px;
+    line-height: 35px;
 
     margin-bottom: 11px;
 
@@ -4484,10 +4484,10 @@ svg
 .search-page__search-input
 {
     font-family: 'Stem';
-    font-size: 25px;
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
-    line-height: 32px;
+    line-height: 21px;
 
     width: 100%;
     height: 42px;
@@ -4539,13 +4539,13 @@ svg
 .search-page__often-search-item
 {
     font-family: 'Stem';
-    font-size: 25px;
+    font-size: 14px;
     font-weight: normal;
     font-style: normal;
-    line-height: 32px;
+    line-height: 18px;
 
     width: calc(100% / 5);
-    margin-bottom: 21px;
+    margin-bottom: 10px;
 
     text-decoration: none;
 
@@ -6422,6 +6422,26 @@ svg
         width: 1281px;
         padding: 0 28px;
     }
+
+    .search-page__title
+    {
+        font-size: 35px;
+        line-height: 41px;
+    }
+
+    .search-page__search-input
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .search-page__often-search-item
+    {
+        font-size: 18px;
+        line-height: 23px;
+
+        margin-bottom: 15px;
+    }
 }
 
 @media (min-width: 1440px)
@@ -7043,6 +7063,26 @@ svg
     .news-page__feed
     {
         width: 1284px;
+    }
+
+    .search-page__title
+    {
+        font-size: 45px;
+        line-height: 53px;
+    }
+
+    .search-page__search-input
+    {
+        font-size: 25px;
+        line-height: 32px;
+    }
+
+    .search-page__often-search-item
+    {
+        font-size: 25px;
+        line-height: 32px;
+
+        margin-bottom: 21px;
     }
 }
 
