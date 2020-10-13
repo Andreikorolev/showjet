@@ -4144,9 +4144,8 @@ svg
 
 .profile-page__wrap
 {
-    width: 968px;
+    width: 988px;
     height: calc(100vh - 208px);
-    margin-top: 115px;
 }
 
 .profile-page__settings
