@@ -1,0 +1,25 @@
+.tiles-list{
+	padding: 0 0 0 30px;
+
+	&__title{
+		font-family: $stem;
+		font-size: 16px;
+		line-height: 21px;
+		font-weight: normal;
+		color: rgba(255,255,255,.5);
+		margin-bottom: 10px;
+		z-index: 0;
+
+		@include breakpoint(md){
+			font-size: 20px;
+			line-height: 26px;
+		}
+		@include breakpoint(lg){
+			font-size: 30px;
+			line-height: 39px;
+		}
+	}
+	&__tiles-wrap{
+		display: flex;
+	}
+}

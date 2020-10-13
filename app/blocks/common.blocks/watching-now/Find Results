@@ -1,0 +1,42 @@
+Searching 48 files for "home-page-tiles-list"
+
+D:\WEB\showjet\app\blocks\common.blocks\about-serial\video-list\video-list.twig:
+    1  <div class="video-list">
+    2: 	<div class="video-list container home-page-tiles-list">
+    3: 		<h3 class="video-list home-page-tiles-list__title">
+    4  			Сезон
+    5  		</h3>
+
+D:\WEB\showjet\app\blocks\common.blocks\continue-watching\continue-watching.twig:
+    1: <div class="continue-watching container home-page-tiles-list">
+    2: 	<h3 class="continue-watching__title home-page-tiles-list__title">
+    3  		Продолжить просмотр
+    4  	</h3>
+    5: 	<div class="continue-watching__tiles-wrap home-page-tiles-list__tiles-wrap tiles-wrap">
+    6  		{# TILE #}
+    7  		{% include 'blocks/common.blocks/tile/tile.twig' with {'dataProgress':'data-progress="20"', 'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video9' }%}
+
+D:\WEB\showjet\app\blocks\common.blocks\home-page-tiles-list\home-page-tiles-list.scss:
+    1: .home-page-tiles-list{
+    2  	padding: 0 0 0 30px;
+    3  
+
+D:\WEB\showjet\app\blocks\common.blocks\recommended-serials\recommended-serials.twig:
+    1: <div class="recommended-serials container home-page-tiles-list">
+    2: 	<h3 class="recommended-serials__title home-page-tiles-list__title">
+    3  		Рекомендуемые сериалы
+    4  	</h3>
+    5: 	<div class="recommended-serials__tiles-wrap home-page-tiles-list__tiles-wrap tiles-wrap">
+    6  		{# TILE #}
+    7  		{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+
+D:\WEB\showjet\app\blocks\common.blocks\watching-now\watching-now.twig:
+    1: <div class="watching-now container home-page-tiles-list">
+    2: 	<h3 class="watching-now__title home-page-tiles-list__title">
+    3  		{{title}}
+    4  	</h3>
+    5: 	<div class="watching-now__tiles-wrap home-page-tiles-list__tiles-wrap tiles-wrap">
+    6  		{% for item in 0..5 %}
+    7  		{# TILE #}
+
+12 matches across 5 files

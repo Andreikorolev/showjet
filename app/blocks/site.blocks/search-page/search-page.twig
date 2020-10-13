@@ -15,7 +15,7 @@
 				<input type="text" class="search-page__search-input" value="">
 			</div>
 			<div class="search-page__search-result">
-				<div class="search-page__search-result-tiles-wrap tiles-wrap home-page-tiles-list__tiles-wrap">
+				<div class="search-page__search-result-tiles-wrap tiles-wrap tiles-list__tiles-wrap">
 					{% for item in 0..1 %} 
 					{# TILE #}
 					{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'innerInfo'} %}
@@ -29,7 +29,7 @@
 		</div>
 		<div class="container">
 			<div class="search-page__often-search">
-				<div class="search-page__often-search-title home-page-tiles-list__title">
+				<div class="search-page__often-search-title tiles-list__title">
 					Часто ищут
 				</div>
 				<div class="search-page__often-search-items-wrap">
