@@ -1924,6 +1924,7 @@ svg
     line-height: 41px;
 
     color: #fff;
+    text-shadow: 0 0 20px black;
 }
 
 .collection-tile__subtitle
@@ -1937,6 +1938,7 @@ svg
     display: none;
 
     color: #fff;
+    text-shadow: 0 0 4px black;
 }
 
 /* The container must be positioned relative: */
