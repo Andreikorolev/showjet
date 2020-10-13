@@ -201,6 +201,7 @@
 		color: rgba(255,255,255,.4);
 		text-decoration: none;
 		letter-spacing: 0.1rem;
+		border-bottom: 2px solid transparent;
 		transition: all ease .3s;
 		&:not(:last-child){
 			margin-right: 20px;
@@ -229,7 +230,7 @@
 
 		&.active{
 			color: #fff;
-			text-decoration: underline;
+			border-bottom: 2px solid #fff;
 		}
 	}
 }

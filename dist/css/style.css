@@ -2445,6 +2445,7 @@ svg
     letter-spacing: .1rem;
 
     color: rgba(255, 255, 255, .4);
+    border-bottom: 2px solid transparent;
 }
 
 .nav__menu-item:not(:last-child)
@@ -2467,9 +2468,8 @@ svg
 
 .nav__menu-item.active
 {
-    text-decoration: underline;
-
     color: #fff;
+    border-bottom: 2px solid #fff;
 }
 
 .home-page-banner
