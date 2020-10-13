@@ -37,6 +37,7 @@
 		clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
 		// transition: width 1s ease .1s, height 1s ease .1s, top 1s ease .1s, clip-path 1s ease .1s, margin 1s ease .1s;
 		transition: all ease .1s;
+		transition-delay: 0s;
 
 		&:not(:last-child){
 			margin-right: -30px;
@@ -55,12 +56,17 @@
 			z-index: 100;
 			clip-path: polygon(calc(0% + 32px) 0%, 100% 0%, calc(100% - 32px) 100%, 0% 100%);
 			transition: all ease .3s;
+			transition-delay: .5s;
 
 			&:not(:first-child){
 				margin-left: -14px;
+				// стиль на случай если надо будет сделать чтобы соседние карточки разъезжались
+				// margin-left: 106px;
 			}
 			&:not(:last-child){
 				margin-right: -43px;
+				// стиль на случай если надо будет сделать чтобы соседние карточки разъезжались
+				// margin-right: 77px;
 			}
 			&:first-child{
 				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 32px) 100%, 0% 100%);

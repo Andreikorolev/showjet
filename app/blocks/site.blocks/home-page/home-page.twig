@@ -7,9 +7,34 @@
 		{# HEADER #}
 		{% include 'blocks/common.blocks/header/header.twig'%}
 
+		<div class="home-page__banner">
+			<!-- HOME-PAGE-BANNER -->
+			{% include 'blocks/common.blocks/home-page-banner/home-page-banner.twig'%}
+		</div>
+
+		<div class="home-page__recommended-serials">
+			{# РЕКОМЕНДАВАННЫЕ СЕРИАЛЫ #}
+			{% include 'blocks/common.blocks/recommended-serials/recommended-serials.twig'%}
+		</div>
+
+		<div class="home-page__continue-watching">
+			<!-- ПРОДОЛЖИТЬ ПРОСМОТР -->
+			{% include 'blocks/common.blocks/continue-watching/continue-watching.twig'%}
+		</div>
+
+		<div class="home-page__about-serial">
+			<!-- ABOUT SERIAL -->
+			{% include 'blocks/common.blocks/about-serial/about-serial.twig'%}
+		</div>
+
+		<div class="home-page__watching-now">	
+			{# СЕЙЧАС СМОТРЯТ #}
+			{% include 'blocks/common.blocks/watching-now/watching-now.twig'%}
+		</div>
 
 		{# FOOTER #}
 		{% include 'blocks/common.blocks/footer/footer.twig'%}
 	</div>
 </div> 
 {% endblock %}
+
