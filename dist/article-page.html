@@ -7,7 +7,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ShowJet</title>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- SLICK-SLIDER STYLES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- SWIPER SLIDER STYLEs -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
@@ -147,11 +153,27 @@
 		</div>
 	</div>
 </div> 
+<script>
+	$(window).scroll(function(){
+		var windowScrollTop = $(window).scrollTop();
+		if (windowScrollTop > 250 && windowScrollTop < ($('.article').height() + $(".article").offset().top) - $(".header").height() - $(".article__soc-buttons").height()) {
+			$(".article__soc-buttons").addClass('fixed');
+		} else {
+			$(".article__soc-buttons").removeClass('fixed');
+		}
+	});
+</script>
 
 
     <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- SLICK-SLIDER SCRIPTS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+    <!-- SWIPER-SLIDER SCRIPTS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
     <script src='js/main.js'></script>
 </body>

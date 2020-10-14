@@ -1,0 +1,32 @@
+{% extends 'blocks/base.blocks/base/base.twig' %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+
+
+		<div class="test-page__recommended-serials">
+			<div class="tiles-list">
+				<h3 class="tiles-list__title">
+					Рекомендуемые сериалы
+				</h3>
+				<div class="tiles-list__slider">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						{% for item in 0..8 %}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'infoClass':'tile-info', 'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+
+						{% endfor %}
+					</div>
+					<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+					<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div> 
+{% endblock %}
+

@@ -1,10 +1,11 @@
-$('.video-list__tiles-wrap').slick({
-	dots: false,
-	infinite: false,
-	cssEase: 'linear',
-	swipe: true,
-	slidesToShow: 5,
-	slidesToScroll: 4,
-	arrows: true,
-	variableWidth: true,
+var aboutSerialSlider = new Swiper('.video-list__tiles-wrap', {
+  direction: 'horizontal',
+  speed: 1000,
+  slidesPerView: 5,
+  slidesPerGroup: 5,
+  navigation: {
+    nextEl: '.slider-button-next',
+    prevEl: '.slider-button-prev',
+  },
 });
+

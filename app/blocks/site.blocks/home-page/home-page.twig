@@ -13,23 +13,65 @@
 		</div>
 
 		<div class="home-page__recommended-serials">
-			{# РЕКОМЕНДАВАННЫЕ СЕРИАЛЫ #}
-			{% include 'blocks/common.blocks/recommended-serials/recommended-serials.twig'%}
+			<div class="tiles-list">
+				<h3 class="tiles-list__title">
+					Рекомендуемые сериалы
+				</h3>
+				<div class="tiles-list__slider home-page__recommended-serials-slider">
+					<div class="swiper-wrapper">
+						{% for item in 0..8 %}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+
+						{% endfor %}
+					</div>
+					<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+					<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+				</div>
+			</div>
 		</div>
 
 		<div class="home-page__continue-watching">
 			<!-- ПРОДОЛЖИТЬ ПРОСМОТР -->
-			{% include 'blocks/common.blocks/continue-watching/continue-watching.twig'%}
+			<div class="tiles-list">
+				<h3 class="tiles-list__title">
+					Продолжить просмотр
+				</h3>
+				<div class="tiles-list__slider home-page__continue-watching-slider">
+					<div class="swiper-wrapper">
+						{% for item in 0..8 %}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'dataProgress':'data-progress="20"', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+
+						{% endfor %}
+					</div>
+					<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+					<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+				</div>
+			</div>
 		</div>
 
 		<div class="home-page__about-serial">
 			<!-- ABOUT SERIAL -->
-			{% include 'blocks/common.blocks/about-serial/about-serial.twig'%}
+			
 		</div>
 
 		<div class="home-page__watching-now">	
-			{# СЕЙЧАС СМОТРЯТ #}
-			{% include 'blocks/common.blocks/watching-now/watching-now.twig'%}
+			<div class="tiles-list">
+				<h3 class="tiles-list__title">
+					Сейчас смотрят
+				</h3>
+				<div class="tiles-list__slider home-page__watching-now-slider">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						{% for item in 0..8 %}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+
+						{% endfor %}
+					</div>
+					<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+					<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+				</div>
+			</div>
 		</div>
 
 		{# FOOTER #}

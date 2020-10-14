@@ -7,99 +7,14 @@
 	&__filter-wrap{
 		margin-right: 20px;
 	}
-	&__six-tiles-wrap{
-		width: 100%;
-		display: flex;
-		margin-bottom: 90px;
-
-		& .tile{
-			width: 330px;
-			height: 174px;
-			top: 0;
-			clip-path: polygon(calc(0% + 20px) 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
-
-			&:not(:last-child){
-				margin-right: -17px;
-			}
-			&:first-child{
-				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
-			}
-			&:last-child{	
-				clip-path: polygon(calc(0% + 20px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			}
-		}
-	}
-	&__two-tiles-wrap{
-		width: 100%;
-		display: flex;
-		overflow: hidden;
-		margin-bottom: 50px;
-
-		& .tile{
-			width: 977px;
-			height: 518px;
-			top: 0;
-			clip-path: polygon(calc(0% + 63px) 0%, 100% 0%, calc(100% - 63px) 100%, 0% 100%);
-
-			&:not(:last-child){
-				margin-right: -60px;
-			}
-			&:first-child{
-				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 63px) 100%, 0% 100%);
-			}
-			&:last-child{	
-				clip-path: polygon(calc(0% + 63px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			}
-		}
-	}
-	&__three-tiles-wrap{
-		width: 100%;
-		display: flex;
-		overflow: hidden;
-		margin-bottom: 50px;
-
-		& .tile{
-			width: 700px;
-			height: 363px;
-			top: 0;
-			clip-path: polygon(calc(0% + 44px) 0%, 100% 0%, calc(100% - 44px) 100%, 0% 100%);
-
-			&:not(:last-child){
-				margin-right: -41px;
-			}
-			&:first-child{
-				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 44px) 100%, 0% 100%);
-			}
-			&:last-child{	
-				clip-path: polygon(calc(0% + 44px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			}
-		}
-	}
-	&__four-tiles-wrap{
-		width: 100%;
-		display: flex;
-		overflow: hidden;
-		margin-bottom: 50px;
-
-		& .tile{
-			width: 500px;
-			height: 265px;
-			top: 0;
-			clip-path: polygon(calc(0% + 32px) 0%, 100% 0%, calc(100% - 32px) 100%, 0% 100%);
-
-			&:not(:last-child){
-				margin-right: -29px;
-			}
-			&:first-child{
-				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 32px) 100%, 0% 100%);
-			}
-			&:last-child{	
-				clip-path: polygon(calc(0% + 32px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			}
-		}
+	&__two-tiles,
+	&__three-tiles,
+	&__four-tiles,
+	&__six-tiles{
+		margin-bottom: 80px;
 	}
 	&__about-serial{
 		width: 100%;
-		margin-bottom: 50px;
+		margin-bottom: 80px;
 	}
 }

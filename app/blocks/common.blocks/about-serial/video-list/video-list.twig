@@ -3,12 +3,15 @@
 		<h3 class="video-list tiles-list__title">
 			Сезон
 		</h3>
-		<div class="video-list__tiles-wrap">
-			{# TILE #}
-			{% for item in 0..4 %}
-			{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'video-list-tile', 'dataProgress':'data-progress="20"'}%}
-			{% include 'blocks/common.blocks/tile/tile.twig' with {'className':'video-list-tile', 'dataProgress':'data-progress="50"'}%}
-			{% endfor %}
+		<div class="video-list__tiles-wrap tiles-list__slider">
+			<div class="swiper-wrapper">
+				{# TILE #}
+				{% for item in 0..8 %}
+				{% include 'blocks/common.blocks/tiles/tile-episode/tile-episode.twig' with {'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"'}%}
+				{% endfor %}
+			</div>
+			<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+			<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
 		</div>
 	</div>
 </div>
