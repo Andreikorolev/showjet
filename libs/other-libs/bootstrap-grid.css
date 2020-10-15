@@ -21,6 +21,7 @@ html {
 
 .container {
   width: 100%;
+  max-width: 2500px;
   padding-right: 30px;
   padding-left: 30px;
   margin-right: auto;

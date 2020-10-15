@@ -1,23 +1,57 @@
 .collection-tile{
-	width: 501px;
-	height: 265px;
+	// width: 258px;
+	flex: 1 0 auto;
+	height: 134px;
 	background-size: cover;
 	background-position: center;
-	clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+	clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
 	transition: all ease .1s;
+	@include breakpoint(md){
+		// width: 327px;
+		flex: 1 0 auto;
+		height: 174px;
+		clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+	}
+	@include breakpoint(lg){
+		// width: 501px;
+		flex: 1 0 auto;
+		height: 265px;
+		clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+	}
 
 	&:not(:last-child){
-		margin-right: -48px;
+		margin-right: -24px;
+		@include breakpoint(md){
+			margin-right: -30px;			
+		}
+		@include breakpoint(lg){
+			margin-right: -48px;
+		}
 	}
 	&:first-child{
-		clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+		clip-path: polygon(0% 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
+		@include breakpoint(md){
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+		}
+		@include breakpoint(lg){
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+		}
 
 		& .collection-tile__text-wrap{
-			left: 51px;
+			left: 10px;
+			@include breakpoint(md){
+				left: 20px;
+			}
 		}
 	}
 	&:last-child{	
-		clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, 100% 100%, 0% 100%);
+		@include breakpoint(md){
+			clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
+		}
+		@include breakpoint(lg){
+			clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+		}
 	}
 
 	&:hover,
@@ -25,22 +59,38 @@
 	&:focus{
 		transform: scale(1.4);
 		z-index: 100;
-		clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
+		clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
 		transition: all ease .3s;
+		@include breakpoint(md){
+			clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+		}
+		@include breakpoint(lg){
+			clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
+		}
 
-		&:not(:first-child){
-			margin-left: -14px;
-		}
-		&:not(:last-child){
-			margin-right: -43px;
-		}
 		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
-			transform: scale(1.4) translateX(71px);
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
+			transform: scale(1.4) translateX(37px);
+			@include breakpoint(md){
+				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+				transform: scale(1.4) translateX(46px);
+			}
+			@include breakpoint(lg){
+				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
+				transform: scale(1.4) translateX(71px);
+			}
 		}
 		&:last-child{	
-			clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			transform: scale(1.4) translateX(-71px);
+			clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			transform: scale(1.4) translateX(-37px);
+			@include breakpoint(md){
+				clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+				transform: scale(1.4) translateX(-46px);
+			}
+			@include breakpoint(lg){
+				clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, 100% 100%, 0% 100%);
+				transform: scale(1.4) translateX(-71px);
+			}
 		}
 
 		& .collection-tile__subtitle{
@@ -50,24 +100,35 @@
 	&__text-wrap{
 		position: absolute;
 		bottom: 20px;
-		left: 51px;
+		left: 20px;
+		@include breakpoint(md){
+			left: 51px;
+		}
 	}
 	&__title{
 		font-family: $bebas;
 		font-weight: bold;
-		font-size: 35px;
-		line-height: 41px;
+		font-size: 23px;
+		line-height: 27px;
 		color: #FFFFFF;
 		text-shadow: 0 0 20px rgba(0,0,0,1);
+		@include breakpoint(lg){
+			font-size: 35px;
+			line-height: 41px;
+		}
 	}
 	&__subtitle{
 		display: none;
 		font-family: $stem;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 16px;
-		line-height: 23px;
+		font-size: 14px;
+		line-height: 18px;
 		color: #FFFFFF;
 		text-shadow: 0 0 4px rgba(0,0,0,1);
+		@include breakpoint(md){
+			font-size: 16px;
+			line-height: 23px;
+		}
 	}
 }

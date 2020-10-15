@@ -30,10 +30,18 @@
 	&__top-banner-title{
 		font-family: $bebas;
 		font-weight: bold;
-		font-size: 100px;
-		line-height: 117px;
+		font-size: 47px;
+		line-height: 55px;
 		color: #FFFFFF;
 		margin-bottom: 10px;
+		@include breakpoint(md){
+			font-size: 60px;
+			line-height: 70px;
+		}
+		@include breakpoint(lg){
+			font-size: 100px;
+			line-height: 117px;
+		}
 	}
 	&__top-banner-subtitle{
 		font-family: $stem;

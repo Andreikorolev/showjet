@@ -60,54 +60,136 @@
 		}
 	}
 	&__md{
-		width: 466px;
-		flex: 0 0 496px;
-		height: 265px;
-		clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+		// width: 466px;
+		flex: 1 0 auto;
+		height: 174px;
+		clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+		@include breakpoint(md){
+			// width: 327px;
+			height: 174px;
+			clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+		}
+		@include breakpoint(lg){
+			// width: 466px;
+			height: 265px;
+			clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+		}
 
 		&:not(:last-child){
-			margin-right: -48px;
+			margin-right: -30px;
+			@include breakpoint(md){
+				margin-right: -30px;
+			}
+			@include breakpoint(lg){
+				margin-right: -48px;
+			}
 		}
 		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+			@include breakpoint(md){
+				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+			}
+			@include breakpoint(lg){
+				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+			}
 		}
 		&:last-child{	
-			clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			left: 0;
+			clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			@include breakpoint(md){
+				clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			}
+			@include breakpoint(lg){
+				clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			}
 		}	
 	}
 	&__lg{
-		width: 656px;
-		flex: 0 0 656px;
-		height: 361px;
-		clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
+		// width: 342px;
+		flex: 1 0 auto;
+		height: 181px;
+		clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+		@include breakpoint(md){
+			// width: 435px;
+			height: 230px;
+			clip-path: polygon(calc(0% + 44px) 0%, 100% 0%, calc(100% - 44px) 100%, 0% 100%);
+		}
+		@include breakpoint(lg){
+			// width: 656px;
+			height: 361px;
+			clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
+		}
 
 		&:not(:last-child){
-			margin-right: -64px;
+			margin-right: -33px;
+			@include breakpoint(md){
+				margin-right: -41px;
+			}
+			@include breakpoint(lg){
+				margin-right: -64px;
+			}
 		}
 		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+			@include breakpoint(md){
+				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 44px) 100%, 0% 100%);
+			}
+			@include breakpoint(lg){
+				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
+			}
 		}
 		&:last-child{	
-			clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			left: 0;
+			clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			@include breakpoint(md){
+				clip-path: polygon(calc(0% + 44px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			}
+			@include breakpoint(lg){
+				clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, 100% 100%, 0% 100%);
+				
+			}
 		}	
 	}
 	&__xl{
-		width: 968px;
-		flex: 0 0 968px;
-		height: 518px;
-		clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
+		// width: 506px;
+		flex: 1 0 auto;
+		height: 268px;
+		clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+		@include breakpoint(md){	
+			// width: 640px;
+			height: 340px;		
+			clip-path: polygon(calc(0% + 65px) 0%, 100% 0%, calc(100% - 65px) 100%, 0% 100%);
+		}
+		@include breakpoint(lg){
+			// width: 968px;
+			height: 518px;
+			clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
+		}
 
 		&:not(:last-child){
-			margin-right: -96px;
+			margin-right: -48px;
+			@include breakpoint(md){			
+				margin-right: -62px;
+			}
+			@include breakpoint(lg){
+				margin-right: -96px;
+			}
 		}
 		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+			@include breakpoint(md){			
+				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 65px) 100%, 0% 100%);
+			}
+			@include breakpoint(lg){
+				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
+			}
 		}
 		&:last-child{	
-			clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			left: 0;
+			clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			@include breakpoint(md){			
+				clip-path: polygon(calc(0% + 65px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			}
+			@include breakpoint(lg){
+				clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			}
 		}	
 
 		& .tile__buttons-wrap,
@@ -122,17 +204,6 @@
 			right: 120px;
 		}
 	}
-	// &:not(:last-child){
-	// 	margin-right: -30px;
-	// }
-	// &:first-child{
-	// 	clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-	// }
-	// &:last-child{	
-	// 	clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
-	// 	left: 0;
-	// }
-
 
 	&__bg{
 		position: absolute;

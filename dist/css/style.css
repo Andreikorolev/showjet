@@ -271,6 +271,7 @@ html
 .container
 {
     width: 100%;
+    max-width: 2500px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 30px;
@@ -1724,8 +1725,7 @@ svg
 
 .collection-tile
 {
-    width: 501px;
-    height: 265px;
+    height: 134px;
 
     -webkit-transition: all ease .1s;
          -o-transition: all ease .1s;
@@ -1734,30 +1734,33 @@ svg
     background-position: center;
     background-size: cover;
 
-    -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    -webkit-clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
 }
 
 .collection-tile:not(:last-child)
 {
-    margin-right: -48px;
+    margin-right: -24px;
 }
 
 .collection-tile:first-child
 {
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
 }
 
 .collection-tile:first-child .collection-tile__text-wrap
 {
-    left: 51px;
+    left: 10px;
 }
 
 .collection-tile:last-child
 {
-    -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .collection-tile:hover,
@@ -1773,46 +1776,32 @@ svg
         -ms-transform: scale(1.4);
             transform: scale(1.4);
 
-    -webkit-clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
-}
-
-.collection-tile:hover:not(:first-child),
-.collection-tile:active:not(:first-child),
-.collection-tile:focus:not(:first-child)
-{
-    margin-left: -14px;
-}
-
-.collection-tile:hover:not(:last-child),
-.collection-tile:active:not(:last-child),
-.collection-tile:focus:not(:last-child)
-{
-    margin-right: -43px;
+    -webkit-clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
 }
 
 .collection-tile:hover:first-child,
 .collection-tile:active:first-child,
 .collection-tile:focus:first-child
 {
-    -webkit-transform: scale(1.4) translateX(71px);
-        -ms-transform: scale(1.4) translateX(71px);
-            transform: scale(1.4) translateX(71px);
+    -webkit-transform: scale(1.4) translateX(37px);
+        -ms-transform: scale(1.4) translateX(37px);
+            transform: scale(1.4) translateX(37px);
 
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
 }
 
 .collection-tile:hover:last-child,
 .collection-tile:active:last-child,
 .collection-tile:focus:last-child
 {
-    -webkit-transform: scale(1.4) translateX(-71px);
-        -ms-transform: scale(1.4) translateX(-71px);
-            transform: scale(1.4) translateX(-71px);
+    -webkit-transform: scale(1.4) translateX(-37px);
+        -ms-transform: scale(1.4) translateX(-37px);
+            transform: scale(1.4) translateX(-37px);
 
-    -webkit-clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .collection-tile:hover .collection-tile__subtitle,
@@ -1826,15 +1815,15 @@ svg
 {
     position: absolute;
     bottom: 20px;
-    left: 51px;
+    left: 20px;
 }
 
 .collection-tile__title
 {
     font-family: 'Bebas Neue';
-    font-size: 35px;
+    font-size: 23px;
     font-weight: bold;
-    line-height: 41px;
+    line-height: 27px;
 
     color: #fff;
     text-shadow: 0 0 20px black;
@@ -1843,10 +1832,10 @@ svg
 .collection-tile__subtitle
 {
     font-family: 'Stem';
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
     font-style: normal;
-    line-height: 23px;
+    line-height: 18px;
 
     display: none;
 
@@ -3434,95 +3423,86 @@ svg
 
 .tile__md
 {
-    width: 466px;
-    height: 265px;
+    height: 174px;
 
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 496px;
-        flex: 0 0 496px;
-    -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    -webkit-clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
 }
 
 .tile__md:not(:last-child)
 {
-    margin-right: -48px;
+    margin-right: -30px;
 }
 
 .tile__md:first-child
+{
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+}
+
+.tile__md:last-child
+{
+    -webkit-clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.tile__lg
+{
+    height: 181px;
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+}
+
+.tile__lg:not(:last-child)
+{
+    margin-right: -33px;
+}
+
+.tile__lg:first-child
+{
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+}
+
+.tile__lg:last-child
+{
+    -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.tile__xl
+{
+    height: 268px;
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+}
+
+.tile__xl:not(:last-child)
+{
+    margin-right: -48px;
+}
+
+.tile__xl:first-child
 {
     -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
             clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
 }
 
-.tile__md:last-child
-{
-    left: 0;
-
-    -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-.tile__lg
-{
-    width: 656px;
-    height: 361px;
-
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 656px;
-        flex: 0 0 656px;
-    -webkit-clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
-}
-
-.tile__lg:not(:last-child)
-{
-    margin-right: -64px;
-}
-
-.tile__lg:first-child
-{
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
-}
-
-.tile__lg:last-child
-{
-    left: 0;
-
-    -webkit-clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-.tile__xl
-{
-    width: 968px;
-    height: 518px;
-
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 968px;
-        flex: 0 0 968px;
-    -webkit-clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
-}
-
-.tile__xl:not(:last-child)
-{
-    margin-right: -96px;
-}
-
-.tile__xl:first-child
-{
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
-}
-
 .tile__xl:last-child
 {
-    left: 0;
-
-    -webkit-clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .tile__xl .tile__buttons-wrap,
@@ -4017,9 +3997,9 @@ svg
 .collection-item-page__top-banner-title
 {
     font-family: 'Bebas Neue';
-    font-size: 100px;
+    font-size: 47px;
     font-weight: bold;
-    line-height: 117px;
+    line-height: 55px;
 
     margin-bottom: 10px;
 
@@ -6239,6 +6219,82 @@ svg
 
 @media (min-width: 1280px)
 {
+    .collection-tile
+    {
+        height: 174px;
+
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+        -webkit-clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+    }
+
+    .collection-tile:not(:last-child)
+    {
+        margin-right: -30px;
+    }
+
+    .collection-tile:first-child
+    {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+    }
+
+    .collection-tile:first-child .collection-tile__text-wrap
+    {
+        left: 20px;
+    }
+
+    .collection-tile:last-child
+    {
+        -webkit-clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .collection-tile:hover,
+    .collection-tile:active,
+    .collection-tile:focus
+    {
+        -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+    }
+
+    .collection-tile:hover:first-child,
+    .collection-tile:active:first-child,
+    .collection-tile:focus:first-child
+    {
+        -webkit-transform: scale(1.4) translateX(46px);
+            -ms-transform: scale(1.4) translateX(46px);
+                transform: scale(1.4) translateX(46px);
+
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+    }
+
+    .collection-tile:hover:last-child,
+    .collection-tile:active:last-child,
+    .collection-tile:focus:last-child
+    {
+        -webkit-transform: scale(1.4) translateX(-46px);
+            -ms-transform: scale(1.4) translateX(-46px);
+                transform: scale(1.4) translateX(-46px);
+
+        -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .collection-tile__text-wrap
+    {
+        left: 51px;
+    }
+
+    .collection-tile__subtitle
+    {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
     .footer__menu-item
     {
         font-size: 15px;
@@ -6283,6 +6339,87 @@ svg
     {
         font-size: 20px;
         line-height: 26px;
+    }
+
+    .tile__md
+    {
+        height: 174px;
+
+        -webkit-clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+    }
+
+    .tile__md:not(:last-child)
+    {
+        margin-right: -30px;
+    }
+
+    .tile__md:first-child
+    {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
+    }
+
+    .tile__md:last-child
+    {
+        -webkit-clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .tile__lg
+    {
+        height: 230px;
+
+        -webkit-clip-path: polygon(calc(0% + 44px) 0%, 100% 0%, calc(100% - 44px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 44px) 0%, 100% 0%, calc(100% - 44px) 100%, 0% 100%);
+    }
+
+    .tile__lg:not(:last-child)
+    {
+        margin-right: -41px;
+    }
+
+    .tile__lg:first-child
+    {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 44px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 44px) 100%, 0% 100%);
+    }
+
+    .tile__lg:last-child
+    {
+        -webkit-clip-path: polygon(calc(0% + 44px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 44px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .tile__xl
+    {
+        height: 340px;
+
+        -webkit-clip-path: polygon(calc(0% + 65px) 0%, 100% 0%, calc(100% - 65px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 65px) 0%, 100% 0%, calc(100% - 65px) 100%, 0% 100%);
+    }
+
+    .tile__xl:not(:last-child)
+    {
+        margin-right: -62px;
+    }
+
+    .tile__xl:first-child
+    {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 65px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 65px) 100%, 0% 100%);
+    }
+
+    .tile__xl:last-child
+    {
+        -webkit-clip-path: polygon(calc(0% + 65px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 65px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .collection-item-page__top-banner-title
+    {
+        font-size: 60px;
+        line-height: 70px;
     }
 
     .news-page__feed
@@ -6860,6 +6997,72 @@ svg
 
 @media (min-width: 1920px)
 {
+    .collection-tile
+    {
+        height: 265px;
+
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+        -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+    }
+
+    .collection-tile:not(:last-child)
+    {
+        margin-right: -48px;
+    }
+
+    .collection-tile:first-child
+    {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+    }
+
+    .collection-tile:last-child
+    {
+        -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .collection-tile:hover,
+    .collection-tile:active,
+    .collection-tile:focus
+    {
+        -webkit-clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
+    }
+
+    .collection-tile:hover:first-child,
+    .collection-tile:active:first-child,
+    .collection-tile:focus:first-child
+    {
+        -webkit-transform: scale(1.4) translateX(71px);
+            -ms-transform: scale(1.4) translateX(71px);
+                transform: scale(1.4) translateX(71px);
+
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
+    }
+
+    .collection-tile:hover:last-child,
+    .collection-tile:active:last-child,
+    .collection-tile:focus:last-child
+    {
+        -webkit-transform: scale(1.4) translateX(-71px);
+            -ms-transform: scale(1.4) translateX(-71px);
+                transform: scale(1.4) translateX(-71px);
+
+        -webkit-clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .collection-tile__title
+    {
+        font-size: 35px;
+        line-height: 41px;
+    }
+
     .footer__menu-item
     {
         font-size: 16px;
@@ -6912,6 +7115,81 @@ svg
         line-height: 39px;
     }
 
+    .tile__md
+    {
+        height: 265px;
+
+        -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+    }
+
+    .tile__md:not(:last-child)
+    {
+        margin-right: -48px;
+    }
+
+    .tile__md:first-child
+    {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
+    }
+
+    .tile__md:last-child
+    {
+        -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .tile__lg
+    {
+        height: 361px;
+
+        -webkit-clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
+    }
+
+    .tile__lg:not(:last-child)
+    {
+        margin-right: -64px;
+    }
+
+    .tile__lg:first-child
+    {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 69px) 100%, 0% 100%);
+    }
+
+    .tile__lg:last-child
+    {
+        -webkit-clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 69px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .tile__xl
+    {
+        height: 518px;
+
+        -webkit-clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
+    }
+
+    .tile__xl:not(:last-child)
+    {
+        margin-right: -96px;
+    }
+
+    .tile__xl:first-child
+    {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 99px) 100%, 0% 100%);
+    }
+
+    .tile__xl:last-child
+    {
+        -webkit-clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 99px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
     .article-page__article
     {
         padding: 0 30px;
@@ -6926,6 +7204,12 @@ svg
     .article__soc-buttons.fixed
     {
         right: calc(50% - 668px);
+    }
+
+    .collection-item-page__top-banner-title
+    {
+        font-size: 100px;
+        line-height: 117px;
     }
 
     .news-page__feed
