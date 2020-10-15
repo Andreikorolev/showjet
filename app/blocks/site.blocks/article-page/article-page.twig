@@ -67,16 +67,26 @@
 				</div>
 			</div>
 		</div>
+		<div class="article-page__tiles-wrap">
+			<div class="tiles-list">
+				<h3 class="tiles-list__title">
+					7 детективов, которые стоит посмотреть
+				</h3>
+				<div class="tiles-list__slider article-page__tiles-slider">
+					<div class="swiper-wrapper">
+						{% for item in 0..8 %}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+
+						{% endfor %}
+					</div>
+					<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+					<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+				</div>
+			</div>
+		</div>
+
+		{# FOOTER #}
+		{% include 'blocks/common.blocks/footer/footer.twig'%}
 	</div>
 </div> 
-<script>
-	$(window).scroll(function(){
-		var windowScrollTop = $(window).scrollTop();
-		if (windowScrollTop > 250 && windowScrollTop < ($('.article').height() + $(".article").offset().top) - $(".header").height() - $(".article__soc-buttons").height()) {
-			$(".article__soc-buttons").addClass('fixed');
-		} else {
-			$(".article__soc-buttons").removeClass('fixed');
-		}
-	});
-</script>
 {% endblock %}

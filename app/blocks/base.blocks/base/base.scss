@@ -22,7 +22,11 @@ div{
 }
 .light-page{
 
-	.header{
+	& .header,
+	& .footer{
+		filter: invert(1);
+	}
+	& .footer__stores-icon{
 		filter: invert(1);
 	}
 }

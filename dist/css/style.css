@@ -227,7 +227,14 @@ div
     overflow: hidden;
 }
 
-.light-page .header
+.light-page .header,
+.light-page .footer
+{
+    -webkit-filter: invert(1);
+            filter: invert(1);
+}
+
+.light-page .footer__stores-icon
 {
     -webkit-filter: invert(1);
             filter: invert(1);
@@ -2006,6 +2013,7 @@ svg
          -o-transition: all ease .3s;
             transition: all ease .3s;
     text-decoration: none;
+    letter-spacing: .1rem;
 
     color: #fff;
 }
@@ -3792,15 +3800,46 @@ svg
     opacity: 1;
 }
 
-.watching-now
-{
-    padding: 0 30px;
-}
-
 .article-page__article
 {
     width: 1280px;
+    margin-bottom: 100px;
     padding: 0;
+}
+
+.article-page__tiles-wrap
+{
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.article-page__tiles-wrap .tiles-list__title
+{
+    color: rgba(0, 0, 0, .5);
+}
+
+.article-page__tiles-slider:before
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+
+    width: 100px;
+    height: 100%;
+
+    content: '';
+
+    background: -webkit-gradient(linear, left top, right top, from(transparent), to(white));
+    background: -o-linear-gradient(left, transparent, white);
+    background:    linear-gradient(to right, transparent, white);
+}
+
+.article-page .slider-button-prev,
+.article-page .slider-button-next
+{
+    -webkit-filter: invert(1);
+            filter: invert(1);
 }
 
 .article__title
@@ -3940,8 +3979,9 @@ svg
 .collection-item-page__top-banner
 {
     width: 100%;
-    height: 1080px;
+    height: 100vh;
     margin-top: -115px;
+    margin-bottom: -200px;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -3953,6 +3993,25 @@ svg
     position: absolute;
     bottom: 304px;
     left: 30px;
+}
+
+.collection-item-page__top-banner-info-wrap:before
+{
+    position: absolute;
+    z-index: 0;
+    top: -300px;
+    left: -640px;
+
+    width: 1920px;
+    height: 1080px;
+
+    content: '';
+
+    opacity: .8;
+    background: -o-radial-gradient(49.28% 50%, 48.66% 48.66%, #141414 0%, rgba(20, 20, 20, .79) 57.81%, rgba(20, 20, 20, .0001) 100%);
+    background:    radial-gradient(48.66% 48.66% at 49.28% 50%, #141414 0%, rgba(20, 20, 20, .79) 57.81%, rgba(20, 20, 20, .0001) 100%);
+
+    mix-blend-mode: normal;
 }
 
 .collection-item-page__top-banner-title
@@ -3976,6 +4035,11 @@ svg
     line-height: 39px;
 
     color: #fff;
+}
+
+.collection-item-page__four-tiles-wrap
+{
+    margin-bottom: 80px;
 }
 
 .collection-item-page__other-collections-title
