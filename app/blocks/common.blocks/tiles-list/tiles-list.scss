@@ -33,8 +33,14 @@
 	}
 	&__six-tiles{
 		width: 100%;
-		height: 184px;
+		height: 134px;
 		display: flex;
+		@include breakpoint(md){
+			height: 140px;
+		}
+		@include breakpoint(lg){
+			height: 184px;
+		}
 	}
 }
 
@@ -43,13 +49,19 @@
 	display: flex;
 
 	& .swiper-wrapper{
-		height: 184px;
+		height: 134px;
+		@include breakpoint(md){
+			height: 140px;
+		}
+		@include breakpoint(lg){
+			height: 184px;
+		}
 	}
 	& .slider-button-prev,
 	& .slider-button-next{
 		z-index: 100;
 		position: absolute;
-		top: 70px;
+		top: 45px;
 		cursor: pointer;
 		width: 28px;
 		height: 50px;
@@ -57,6 +69,12 @@
 		border: none;
 		color: transparent;
 		outline: none;
+		@include breakpoint(md){
+			top: 50px;
+		}
+		@include breakpoint(lg){
+			top: 70px;
+		}
 	}
 	& .slider-button-prev{
 		left: 25px;

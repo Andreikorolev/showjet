@@ -11,7 +11,13 @@
 	&__three-tiles,
 	&__four-tiles,
 	&__six-tiles{
-		margin-bottom: 80px;
+		margin-bottom: 40px;
+		@include breakpoint(md){
+			margin-bottom: 60px;
+		}
+		@include breakpoint(lg){
+			margin-bottom: 80px;
+		}
 	}
 	&__about-serial{
 		width: 100%;

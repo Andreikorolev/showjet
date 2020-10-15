@@ -16,36 +16,80 @@
 		transition: all ease .3s;
 	}
 	&__sm{
-		width: 333px;
-		flex: 0 0 333px;
-		height: 184px;
-		clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+		// width: 259px;
+		flex: 0 0 259px;
+		height: 134px;
+		clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
+		@include breakpoint(md){
+			// width: 263px;
+			flex: 0 0 263px;
+			height: 140px;
+			clip-path: polygon(calc(0% + 28px) 0%, 100% 0%, calc(100% - 28px) 100%, 0% 100%);
+		}
+		@include breakpoint(lg){
+			// width: 333px;
+			flex: 0 0 333px;
+			height: 184px;
+			clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+		}
 
 		&:not(:last-child){
-			margin-right: -32px;
+			margin-right: -24px;
+			@include breakpoint(md){
+				margin-right: -25px;
+			}
+			@include breakpoint(lg){
+				margin-right: -32px;
+			}
 		}
 		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
+			@include breakpoint(md){
+				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 28px) 100%, 0% 100%);
+			}
+			@include breakpoint(lg){
+				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+			}
 		}
 		&:last-child{	
-			clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, 100% 100%, 0% 100%);
 			left: 0;
+			@include breakpoint(md){
+				clip-path: polygon(calc(0% + 28px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			}
+			@include breakpoint(lg){
+				clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+			}
 		}
 
 		&.tile-info:hover,
 		&.tile-info:active,
 		&.tile-info:focus{
-			width: 548px;
+			// width: 548px;
 			flex: 0 0 548px;
 			height: 284px;
 			top: -50px;
 			clip-path: polygon(calc(0% + 54px) 0%, 100% 0%, calc(100% - 54px) 100%, 0% 100%);
 			transition: all ease .6s;
 			transition-delay: .5s;
+			@include breakpoint(md){
+				// width: 463px;
+				flex: 0 0 463px;
+				height: 240px;
+				top: -50px;
+				clip-path: polygon(calc(0% + 46px) 0%, 100% 0%, calc(100% - 46px) 100%, 0% 100%);
+			}
+			@include breakpoint(lg){
+				// width: 548px;
+				flex: 0 0 548px;
+				height: 284px;
+				top: -50px;
+				clip-path: polygon(calc(0% + 54px) 0%, 100% 0%, calc(100% - 54px) 100%, 0% 100%);
+			}
 
 			
 			&:not(:last-child){
-				margin-right: -40px;
+				margin-right: -35px;
 			}
 			&:not(:first-child){
 				margin-left: -10px;

@@ -3193,7 +3193,7 @@ svg
     display: flex;
 
     width: 100%;
-    height: 184px;
+    height: 134px;
 }
 
 .tiles-list__slider
@@ -3205,7 +3205,7 @@ svg
 
 .tiles-list__slider .swiper-wrapper
 {
-    height: 184px;
+    height: 134px;
 }
 
 .tiles-list__slider .slider-button-prev,
@@ -3213,7 +3213,7 @@ svg
 {
     position: absolute;
     z-index: 100;
-    top: 70px;
+    top: 45px;
 
     width: 28px;
     height: 50px;
@@ -3337,33 +3337,32 @@ svg
 
 .tile__sm
 {
-    width: 333px;
-    height: 184px;
+    height: 134px;
 
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 333px;
-        flex: 0 0 333px;
-    -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+    -ms-flex: 0 0 259px;
+        flex: 0 0 259px;
+    -webkit-clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
 }
 
 .tile__sm:not(:last-child)
 {
-    margin-right: -32px;
+    margin-right: -24px;
 }
 
 .tile__sm:first-child
 {
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
 }
 
 .tile__sm:last-child
 {
     left: 0;
 
-    -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .tile__sm.tile-info:hover,
@@ -3372,7 +3371,6 @@ svg
 {
     top: -50px;
 
-    width: 548px;
     height: 284px;
 
     -webkit-transition: all ease .6s;
@@ -3393,7 +3391,7 @@ svg
 .tile__sm.tile-info:active:not(:last-child),
 .tile__sm.tile-info:focus:not(:last-child)
 {
-    margin-right: -40px;
+    margin-right: -35px;
 }
 
 .tile__sm.tile-info:hover:not(:first-child),
@@ -4579,7 +4577,7 @@ svg
 .serials-page__four-tiles,
 .serials-page__six-tiles
 {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .serials-page__about-serial
@@ -6341,6 +6339,65 @@ svg
         line-height: 26px;
     }
 
+    .tiles-list__six-tiles
+    {
+        height: 140px;
+    }
+
+    .tiles-list__slider .swiper-wrapper
+    {
+        height: 140px;
+    }
+
+    .tiles-list__slider .slider-button-prev,
+    .tiles-list__slider .slider-button-next
+    {
+        top: 50px;
+    }
+
+    .tile__sm
+    {
+        height: 140px;
+
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 263px;
+            flex: 0 0 263px;
+        -webkit-clip-path: polygon(calc(0% + 28px) 0%, 100% 0%, calc(100% - 28px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 28px) 0%, 100% 0%, calc(100% - 28px) 100%, 0% 100%);
+    }
+
+    .tile__sm:not(:last-child)
+    {
+        margin-right: -25px;
+    }
+
+    .tile__sm:first-child
+    {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 28px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 28px) 100%, 0% 100%);
+    }
+
+    .tile__sm:last-child
+    {
+        -webkit-clip-path: polygon(calc(0% + 28px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 28px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .tile__sm.tile-info:hover,
+    .tile__sm.tile-info:active,
+    .tile__sm.tile-info:focus
+    {
+        top: -50px;
+
+        height: 240px;
+
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 463px;
+            flex: 0 0 463px;
+        -webkit-clip-path: polygon(calc(0% + 46px) 0%, 100% 0%, calc(100% - 46px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 46px) 0%, 100% 0%, calc(100% - 46px) 100%, 0% 100%);
+    }
+
     .tile__md
     {
         height: 174px;
@@ -6446,6 +6503,14 @@ svg
         line-height: 23px;
 
         margin-bottom: 15px;
+    }
+
+    .serials-page__two-tiles,
+    .serials-page__three-tiles,
+    .serials-page__four-tiles,
+    .serials-page__six-tiles
+    {
+        margin-bottom: 60px;
     }
 }
 
@@ -7115,6 +7180,65 @@ svg
         line-height: 39px;
     }
 
+    .tiles-list__six-tiles
+    {
+        height: 184px;
+    }
+
+    .tiles-list__slider .swiper-wrapper
+    {
+        height: 184px;
+    }
+
+    .tiles-list__slider .slider-button-prev,
+    .tiles-list__slider .slider-button-next
+    {
+        top: 70px;
+    }
+
+    .tile__sm
+    {
+        height: 184px;
+
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 333px;
+            flex: 0 0 333px;
+        -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+    }
+
+    .tile__sm:not(:last-child)
+    {
+        margin-right: -32px;
+    }
+
+    .tile__sm:first-child
+    {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+    }
+
+    .tile__sm:last-child
+    {
+        -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .tile__sm.tile-info:hover,
+    .tile__sm.tile-info:active,
+    .tile__sm.tile-info:focus
+    {
+        top: -50px;
+
+        height: 284px;
+
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 548px;
+            flex: 0 0 548px;
+        -webkit-clip-path: polygon(calc(0% + 54px) 0%, 100% 0%, calc(100% - 54px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 54px) 0%, 100% 0%, calc(100% - 54px) 100%, 0% 100%);
+    }
+
     .tile__md
     {
         height: 265px;
@@ -7235,6 +7359,14 @@ svg
         line-height: 32px;
 
         margin-bottom: 21px;
+    }
+
+    .serials-page__two-tiles,
+    .serials-page__three-tiles,
+    .serials-page__four-tiles,
+    .serials-page__six-tiles
+    {
+        margin-bottom: 80px;
     }
 }
 
