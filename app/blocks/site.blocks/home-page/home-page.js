@@ -8,6 +8,20 @@ var homePageRecommendedSerials = new Swiper('.home-page__recommended-serials-sli
 		nextEl: '.slider-button-next',
 		prevEl: '.slider-button-prev',
 	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+		},
+		1280: {
+			slidesPerView: 5,
+			slidesPerGroup: 5,
+		},
+		1920: {
+			slidesPerView: 5,
+			slidesPerGroup: 5,
+		}
+	},
 });
 
 var homePageContinueWatching = new Swiper('.home-page__continue-watching-slider', {
@@ -19,6 +33,20 @@ var homePageContinueWatching = new Swiper('.home-page__continue-watching-slider'
 	navigation: {
 		nextEl: '.slider-button-next',
 		prevEl: '.slider-button-prev',
+	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+		},
+		1280: {
+			slidesPerView: 5,
+			slidesPerGroup: 5,
+		},
+		1920: {
+			slidesPerView: 5,
+			slidesPerGroup: 5,
+		}
 	},
 });
 
@@ -32,5 +60,19 @@ var homePageWatchingNowSerial = new Swiper('.home-page__watching-now-slider', {
 	navigation: {
 		nextEl: '.slider-button-next',
 		prevEl: '.slider-button-prev',
+	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+		},
+		1280: {
+			slidesPerView: 5,
+			slidesPerGroup: 5,
+		},
+		1920: {
+			slidesPerView: 5,
+			slidesPerGroup: 5,
+		}
 	},
 });

@@ -20,12 +20,12 @@
 		<div class="container">
 			<div class="collection-item-page__four-tiles-wrap tiles-list__four-tiles">
 				{% for item in 0..3 %}
-				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__md', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__md', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'collVideo1'~item }%}
 				{% endfor %}
 			</div>
 			<div class="collection-item-page__four-tiles-wrap tiles-list__four-tiles">
 				{% for item in 0..3 %}
-				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__md', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__md', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'collvideo2'~item }%}
 				{% endfor %}
 			</div>
 		</div>

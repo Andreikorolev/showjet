@@ -5,48 +5,49 @@ $( ".tile" ).each(function() {
 	$(this).find(".tile__progress-bar").width(progress + '%');
 });
 
-// $(".tile.innerInfo").hover(
-// 	function(){
-// 		var videoID = $(this).find('video').attr('id');
-// 		var player = videojs(videoID);
-// 		player.src({ type: 'application/x-mpegURL', src: $(this).data("videourl") });
-// 		player.play();
-// 		// player.muted(false);
+var delay=1000, setTimeoutConst;
+$('.img').on('hover', function() {
+	setTimeoutConst = setTimeout(function() {
+    // do something
+}, delay);
+}, function() {
+	clearTimeout(setTimeoutConst);
+});
 
-// 		// $(this).mousemove(function() {
-// 		// 	var tileElementHidden = false;
-// 		// 	var timerHidden;
-// 		// 	var activeTile = $(this).find(".tile__info-block");
-// 		// 	activeTile.show();
+$(".tile.tile-info").hover(
+	function(){
+		// variable for use it inside timer's function
+		var targetTile = $(this);
+		// set timer
+		timer = setTimeout(function() {
+			// find video id
+			var videoID = targetTile.find('video').attr('id');
+			// init videojs with this ID
+			var player = videojs(videoID);
+			// pass src and typ into video player
+			player.src({ type: 'application/x-mpegURL', src: $(targetTile).data("videourl") });
+			// start the player
+			player.play();
 
-// 		// 	if (!tileElementHidden) {
-// 		// 		tileElementHidden = false;
-// 		// 		activeTile.show();
-// 		// 		// console.log('show');
-// 		// 		clearTimeout(timerHidden);
-// 		// 		timerHidden = setTimeout(function() {
-// 		// 			activeTile.hide();
-// 		// 			// console.log('hide');
-// 		// 			tileElementHidden = true;
-// 		// 		}, 2000);
-// 		// 	}
-// 		// });
-
-// 		var isVolumeMuted = player.muted();
-
-// 		$(this).find('.tile__sound-button').click(function(){
-// 			console.log('sound button click');
-// 			var player = videojs('video1_html5_api');
-// 			$(".tile__video").attr('muted', false);
-// 			player.muted(false);
-// 			var isVolumeMuted = player.muted();
-// 			console.log(isVolumeMuted);
-// 		});
-
-// 	}, function() {
-// 		var videoID = $(this).find('video').attr('id');
-// 		var player = videojs(videoID);
-// 		player.reset();
-// 		player.muted(true);
-// 	}
-// );
+			// mouse move handler
+			setTimeout(function() {
+				tileInfoWrap.hide();
+			}, 1500)
+			tileInfoWrap = targetTile.find(".tile__info-wrap");
+			var mouseTimer;
+			document.onmousemove = function() {
+				tileInfoWrap.show();
+				clearTimeout(mouseTimer);
+				mouseTimer = setTimeout(function() {
+					tileInfoWrap.hide();
+				}, 1500)
+			};
+		}, 1000);
+	}, function() {
+		// reset timer
+		clearTimeout(timer);
+		var videoID = $(this).find('video').attr('id');
+		var player = videojs(videoID);
+		player.reset();
+	}
+	);

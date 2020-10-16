@@ -20,7 +20,7 @@
 				<div class="tiles-list__slider home-page__recommended-serials-slider">
 					<div class="swiper-wrapper">
 						{% for item in 0..12 %}
-						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'recVideo'~item }%}
 
 						{% endfor %}
 					</div>
@@ -39,7 +39,7 @@
 				<div class="tiles-list__slider home-page__continue-watching-slider">
 					<div class="swiper-wrapper">
 						{% for item in 0..8 %}
-						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'dataProgress':'data-progress="20"', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'dataProgress':'data-progress="20"', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'contVideo'~item }%}
 
 						{% endfor %}
 					</div>
@@ -64,7 +64,7 @@
 					<div class="swiper-wrapper">
 						<!-- Slides -->
 						{% for item in 0..8 %}
-						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'watchVideo'~item }%}
 
 						{% endfor %}
 					</div>

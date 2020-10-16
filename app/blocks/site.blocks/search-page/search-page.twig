@@ -15,16 +15,17 @@
 				<input type="text" class="search-page__search-input" value="">
 			</div>
 			<div class="search-page__search-result">
-				<div class="search-page__search-result-tiles-wrap tiles-wrap tiles-list__tiles-wrap">
-					{% for item in 0..1 %} 
-					{# TILE #}
-					
-					{% endfor %}
+				<div class="tiles-list__slider search-page__slider">
+					<div class="swiper-wrapper">
+						{% for item in 0..12 %}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'searchVideo'~item }%}
+
+						{% endfor %}
+					</div>
+					<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+					<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
 				</div>
 			</div>
-		</div>
-		<div class="search-page__maybe-like">	
-			
 		</div>
 		<div class="container">
 			<div class="search-page__often-search">

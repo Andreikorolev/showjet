@@ -75,7 +75,7 @@
 				<div class="tiles-list__slider article-page__tiles-slider">
 					<div class="swiper-wrapper">
 						{% for item in 0..15 %}
-						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'artVideo'~item }%}
 
 						{% endfor %}
 					</div>

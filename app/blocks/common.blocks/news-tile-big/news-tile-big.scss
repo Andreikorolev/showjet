@@ -1,34 +1,59 @@
 .news-tile-big{
 	display: flex;
 	width: 100%;
-	height: 382px;
+	height: 320px;
 	background-color: #F1F1F1;
+	@include breakpoint(lg){
+		height: 382px;
+	}
 
 	&__img{
-		flex: 0 0 643px;
-		clip-path: polygon(0% 0%, 100% 0%, calc(100% - 73px) 100%, 0% 100%);
+		flex: 0 0 530px;
+		clip-path: polygon(0% 0%, 100% 0%, calc(100% - 61px) 100%, 0% 100%);
 		background-size: cover;
 		background-position: center;
+		@include breakpoint(md){
+			flex: 0 0 643px;
+		}
+		@include breakpoint(lg){
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 73px) 100%, 0% 100%);
+		}
 	}
 	&__info-wrap{
-		padding: 54px 50px 0;
+		padding: 30px 30px 0;
+		@include breakpoint(lg){
+			padding: 54px 50px 0;
+		}
 	}
 	&__data{
 		font-family: $stem;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 16px;
-		line-height: 21px;
+		font-size: 12px;
+		line-height: 15px;
 		color: #000000;
 		margin-bottom: 15px;
+		@include breakpoint(md){
+			font-size: 16px;
+			line-height: 21px;
+		}
 	}
 	&__title{
 		font-family: $bebas;
 		font-weight: bold;
-		font-size: 50px;
-		line-height: 59px;
+		font-size: 25px;
+		line-height: 25px;
 		color: #000000;
 		margin-bottom: 15px;
+		@include breakpoint(md){
+			font-size: 35px;
+			line-height: 35px;
+		}
+		@include breakpoint(lg){
+			font-size: 50px;
+			line-height: 50px;
+			margin-bottom: 15px;
+		}
 	}
 	&__text{
 		font-family: $stem;
@@ -37,14 +62,19 @@
 		font-size: 20px;
 		line-height: 26px;
 		color: #000000;
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 		overflow: hidden;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 5;
+		@include breakpoint(lg){
+			font-size: 16px;
+			line-height: 21px;
+			margin-bottom: 25px;
+		}
 	}
 	&__button{
-		width: 191px;
+		width: 140px;
 		height: 44px;
 		display: flex;
 		align-items: center;
@@ -53,11 +83,16 @@
 		clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 		font-family: $bebas;
 		font-weight: normal;
-		font-size: 30px;
-		line-height: 35px;
+		font-size: 20px;
+		line-height: 20px;
 		color: #FFFFFF;
 		text-decoration: none;
 		transition: all ease .3s;
+		@include breakpoint(md){
+			width: 178px;
+			font-size: 30px;
+			line-height: 35px;
+		}
 
 		&:hover,
 		&:active,

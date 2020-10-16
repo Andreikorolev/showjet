@@ -23,21 +23,21 @@
 			{# SERIALS PAGE SIX TILE WRAP #}
 			<div class="serials-page__six-tiles tiles-list__six-tiles">
 				{% for item in 0..5 %}
-				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'sixXideo1'~item }%}
 				{% endfor %}
 			</div>
 
 			{# SERAILS PAGE THREE TILE WRAP #}
 			<div class="serials-page__three-tiles tiles-list__three-tiles">
 				{% for item in 0..2 %}
-				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__lg', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__lg', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'threeVideo1'~item }%}
 				{% endfor %}
 			</div>
 
 			{# SERIALS PAGE SIX TILE WRAP #}
 			<div class="serials-page__six-tiles tiles-list__six-tiles">
 				{% for item in 0..5 %}
-				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'sixVideo2'~item }%}
 				{% endfor %}
 			</div>
 
@@ -50,14 +50,14 @@
 			{# SERIALS PAGE TWO TILE WRAP #}
 			<div class="serials-page__two-tiles tiles-list__two-tiles">
 				{% for item in 0..1 %}
-				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__xl', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__xl', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'twoVideo1'~item }%}
 				{% endfor %}
 			</div>
 
 			{# SERIALS PAGE FOUR TILE WRAP #}
 			<div class="serials-page__four-tiles-wrap tiles-list__four-tiles">
 				{% for item in 0..3 %}
-				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__md', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'video1' }%}
+				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__md', 'infoClass':'tile-info', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID':'fourVideo1'~item }%}
 				{% endfor %}
 			</div>
 		</div>

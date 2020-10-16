@@ -1,8 +1,14 @@
 .news-page{
 
 	&__news-tile-big{
-		width: 1284px;
+		width: 100%;
 		margin: 0 auto 33px;
+		@include breakpoint(lg){
+			width: 1284px;
+		}
+	}
+	&__news-tile-video{
+		margin-bottom: 60px;
 	}
 	&__feed{
 		width: 1024px;
@@ -10,10 +16,11 @@
 		padding: 0 54px;
 		@include breakpoint(md){
 			width: 1281px;
-			padding: 0 28px;
+			padding: 0 32px;
 		}
 		@include breakpoint(lg){
 			width: 1284px;
+			padding: 0 32px;
 		}
 	}
 	&__navigation{
