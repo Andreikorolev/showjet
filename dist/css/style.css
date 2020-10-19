@@ -3875,6 +3875,15 @@ svg
     opacity: 0;
 }
 
+.tile__info-wrap.hide
+{
+    -webkit-transition: all ease 1s;
+         -o-transition: all ease 1s;
+            transition: all ease 1s;
+
+    opacity: 0 !important;
+}
+
 .tile__buttons-wrap
 {
     position: absolute;
@@ -4016,6 +4025,16 @@ svg
     cursor: pointer;
 }
 
+.tile__sound-button_on .tile__sound-button-img_on
+{
+    display: block;
+}
+
+.tile__sound-button_on .tile__sound-button-img_off
+{
+    display: none;
+}
+
 .tile__sound-button-img
 {
     width: 100%;
@@ -4023,12 +4042,12 @@ svg
 
 .tile__sound-button-img_on
 {
-    display: none !important;
+    display: none;
 }
 
 .tile__sound-button-img_off
 {
-    display: block !important;
+    display: block;
 }
 
 .tile.tile-info:hover:before,

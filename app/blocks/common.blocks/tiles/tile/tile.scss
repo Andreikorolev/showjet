@@ -300,6 +300,11 @@
 		top: 1000px;
 		left: 0;
 		transition: all ease .3s;
+
+		&.hide{
+			opacity: 0 !important;
+			transition: all ease 1s;
+		}
 	}
 	&__buttons-wrap{
 		display: flex;
@@ -385,15 +390,24 @@
 		position: absolute;
 		bottom: 25px;
 		right: 75px;
+
+		&_on{
+			& .tile__sound-button-img_on{
+				display: block;
+			}	
+			& .tile__sound-button-img_off{
+				display: none;
+			}	
+		}
 	}
 	&__sound-button-img{
 		width: 100%;
 
 		&_on{
-			display: none !important; 
+			display: none; 
 		}
 		&_off{
-			display: block !important;
+			display: block;
 		}
 	}
 	&.tile-info:hover,

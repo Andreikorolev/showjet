@@ -11,11 +11,9 @@
 					Рекомендуемые сериалы
 				</h3>
 				<div class="tiles-list__slider">
-					<!-- Additional required wrapper -->
 					<div class="swiper-wrapper">
-						<!-- Slides -->
 						{% for item in 1..8 %}
-						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'infoClass':'tile-info', 'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"', 'url':'https://strm-msknrd.showjet.ru/rc-01/noenc/hd_audio/afd9dd9f-bb23-4ffd-8823-94528b4866c1.ism/.m3u8', 'videoID': 'video'~item} %}
+						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'infoClass':'tile-info', 'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"', 'url':'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8', 'videoID': 'video'~item} %}
 						{% endfor %}
 
 					</div>
@@ -24,7 +22,11 @@
 				</div>
 			</div>
 		</div>
-
+		<div style="display:block;width:600px;height:300px;">
+			<!-- <video id="testVideo" class="video-js" loop preload="auto" autoplay="true" controls muted="true" width="600px" height="300px" poster="img/tile-bg.png" data-setup="{}" >
+				<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+			</video> -->
+		</div>
 
 	</div>
 </div> 
