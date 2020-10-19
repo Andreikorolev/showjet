@@ -4,28 +4,17 @@
 <div class="container-fluid">
 	<div class="row">
 
+		<div class="container">
+			<div class="tiles-list__slider test-page__recommended-serials">
+				<div class="swiper-wrapper">
+					{% for item in 0..12 %}
+					{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8', 'videoID':'recVideo'~item }%}
 
-		<div class="test-page__recommended-serials">
-			<div class="tiles-list">
-				<h3 class="tiles-list__title">
-					Рекомендуемые сериалы
-				</h3>
-				<div class="tiles-list__slider">
-					<div class="swiper-wrapper">
-						{% for item in 1..8 %}
-						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'infoClass':'tile-info', 'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"', 'url':'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8', 'videoID': 'video'~item} %}
-						{% endfor %}
-
-					</div>
-					<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
-					<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+					{% endfor %}
 				</div>
+				<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+				<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
 			</div>
-		</div>
-		<div style="display:block;width:600px;height:300px;">
-			<!-- <video id="testVideo" class="video-js" loop preload="auto" autoplay="true" controls muted="true" width="600px" height="300px" poster="img/tile-bg.png" data-setup="{}" >
-				<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
-			</video> -->
 		</div>
 
 	</div>

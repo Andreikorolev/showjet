@@ -60,27 +60,25 @@
 	& .slider-button-prev,
 	& .slider-button-next{
 		z-index: 100;
+		width: 130px;
+		height: 100%;
+		display: flex;
+		justify-content: center;
 		position: absolute;
-		top: 45px;
+		top: 0;
 		cursor: pointer;
-		width: 28px;
-		height: 50px;
 		background: none;
 		border: none;
 		color: transparent;
 		outline: none;
-		@include breakpoint(md){
-			top: 50px;
-		}
-		@include breakpoint(lg){
-			top: 70px;
-		}
 	}
 	& .slider-button-prev{
-		left: 25px;
+		left: calc(-100vw + 100%);
+		background: linear-gradient(to right, #141414, transparent);
 	}
 	& .slider-button-next{
-		right: 25px;
+		right: 0;
+		background: linear-gradient(to left, #141414, transparent);
 	}
 	& .swiper-button-disabled{
 		display: none !important;

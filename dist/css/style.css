@@ -2609,18 +2609,45 @@ svg
     border-radius: 4px;
 }
 
-.home-page-banner__meta-info-item_sound
+.home-page-banner__meta-info-item-icon
+{
+    margin-right: 10px;
+}
+
+.home-page-banner__sound-button
 {
     width: 93px;
     height: 104px;
     padding-left: 42px;
 
+    cursor: pointer;
+
     border-left: 3px solid #fff;
 }
 
-.home-page-banner__meta-info-item-icon
+.home-page-banner__sound-button_on .home-page-banner__sound-button-img_on
 {
-    margin-right: 10px;
+    display: block;
+}
+
+.home-page-banner__sound-button_on .home-page-banner__sound-button-img_off
+{
+    display: none;
+}
+
+.home-page-banner__sound-button-img
+{
+    width: 100%;
+}
+
+.home-page-banner__sound-button-img_on
+{
+    display: none;
+}
+
+.home-page-banner__sound-button-img_off
+{
+    display: block;
 }
 
 .news-tile-big
@@ -3480,10 +3507,14 @@ svg
 {
     position: absolute;
     z-index: 100;
-    top: 45px;
+    top: 0;
 
-    width: 28px;
-    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    width: 130px;
+    height: 100%;
 
     cursor: pointer;
 
@@ -3491,16 +3522,28 @@ svg
     border: none;
     outline: none;
     background: none;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .tiles-list__slider .slider-button-prev
 {
-    left: 25px;
+    left: calc(-100vw + 100%);
+
+    background: -webkit-gradient(linear, left top, right top, from(#141414), to(transparent));
+    background: -o-linear-gradient(left, #141414, transparent);
+    background:    linear-gradient(to right, #141414, transparent);
 }
 
 .tiles-list__slider .slider-button-next
 {
-    right: 25px;
+    right: 0;
+
+    background: -webkit-gradient(linear, right top, left top, from(#141414), to(transparent));
+    background: -o-linear-gradient(right, #141414, transparent);
+    background:    linear-gradient(to left, #141414, transparent);
 }
 
 .tiles-list__slider .swiper-button-disabled
@@ -4924,7 +4967,7 @@ svg
 .test-page__recommended-serials
 {
     width: 100%;
-    padding: 100px 0;
+    margin: 100px 0;
 }
 
 @media (min-width: 480px)
@@ -6738,12 +6781,6 @@ svg
         height: 140px;
     }
 
-    .tiles-list__slider .slider-button-prev,
-    .tiles-list__slider .slider-button-next
-    {
-        top: 50px;
-    }
-
     .tile__sm
     {
         height: 140px;
@@ -7622,12 +7659,6 @@ svg
     .tiles-list__slider .swiper-wrapper
     {
         height: 184px;
-    }
-
-    .tiles-list__slider .slider-button-prev,
-    .tiles-list__slider .slider-button-next
-    {
-        top: 70px;
     }
 
     .tile__sm

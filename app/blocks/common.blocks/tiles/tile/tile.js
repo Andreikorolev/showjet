@@ -1,5 +1,3 @@
-// https://codepen.io/imasdk/pen/qoZZgG
-
 $( ".tile" ).each(function() {
 	var progress = $(this).data("progress");
 	$(this).find(".tile__progress-bar").width(progress + '%');

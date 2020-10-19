@@ -147,14 +147,34 @@
 			border: 3px solid #FFFFFF;
 			border-radius: 4px
 		}
-		&_sound{
-			width: 93px;
-			height: 104px;
-			padding-left: 42px;
-			border-left: 3px solid #fff;
-		}
 	}
 	&__meta-info-item-icon{
 		margin-right: 10px;
+	}
+	&__sound-button{
+		cursor: pointer;
+		width: 93px;
+		height: 104px;
+		padding-left: 42px;
+		border-left: 3px solid #fff;
+
+		&_on{
+			& .home-page-banner__sound-button-img_on{
+				display: block;
+			}	
+			& .home-page-banner__sound-button-img_off{
+				display: none;
+			}	
+		}
+	}
+	&__sound-button-img{
+		width: 100%;
+
+		&_on{
+			display: none; 
+		}
+		&_off{
+			display: block;
+		}
 	}
 }

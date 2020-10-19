@@ -61,27 +61,6 @@ gulp.task('scss', function() {
     .pipe(reload({stream: true}));
 });
 
-gulp.task('sprite', function() {
-    var spriteData =
-        gulp.src('app/img/sprites/*')
-        .pipe(cache(imagemin([
-            pngquant()
-            ],
-            {
-                verbose:true
-            }
-            )))
-        .pipe(spritesmith({
-            imgName: 'sprite.png',
-            cssName: 'sprite.scss',
-            imgPath:'../img/sprite.png',
-            cssFormat: "scss"
-        }));
-
-    spriteData.img.pipe(gulp.dest('dist/img/'));
-    spriteData.css.pipe(gulp.dest('libs/mixins'));
-});
-
 gulp.task('js', function() {
     return gulp.src([
         'libs/other-libs/**/*.js',
@@ -93,9 +72,9 @@ gulp.task('js', function() {
     .on('error', function handleError() {
         this.emit('end'); 
     })
-    .pipe(uglify({
-        comments: false
-    }))
+    // .pipe(uglify({
+    //     comments: false
+    // }))
     .pipe(gulp.dest('dist/js'))
     .pipe(reload({stream: true}));
 });
@@ -124,7 +103,7 @@ gulp.task('fonts',function(){
     .pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('watch', ['img', 'sprite', 'fonts', 'scss','js','twig'],function(){
+gulp.task('watch', ['img', 'fonts', 'scss','js','twig'],function(){
 
     watch('app/blocks/**/*.+(scss|css)', function(event,cb){
         gulp.start('scss');
