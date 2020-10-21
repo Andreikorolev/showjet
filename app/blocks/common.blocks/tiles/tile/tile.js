@@ -17,15 +17,22 @@ $(".tile.tile-info").hover(
 			player.src({ type: 'application/x-mpegURL', src: $(targetTile).data("videourl") });
 			// start the player
 			player.play();
+			isVideoPlay = true;
 
 			//mute button handler
 			var muteButton = targetTile.find('.tile__sound-button');
-			muteButton.removeClass("tile__sound-button_on");
-			var videoMute = true;
+			if (isVideoMuted) {
+				muteButton.removeClass("tile__sound-button_on");
+			} else {
+				player.muted(isVideoMuted);
+				muteButton.addClass("tile__sound-button_on");
+			}
+
+			// var videoMute = true;
 			muteButton.on('click', function(){
-				videoMute ? muteButton.addClass("tile__sound-button_on") : muteButton.removeClass("tile__sound-button_on");
-				player.muted(!videoMute);
-				videoMute = !videoMute;
+				isVideoMuted ? muteButton.addClass("tile__sound-button_on") : muteButton.removeClass("tile__sound-button_on");
+				player.muted(!isVideoMuted);
+				isVideoMuted = !isVideoMuted;
           		player.volume(1);
 			});
 			// end mute button handler
@@ -34,14 +41,14 @@ $(".tile.tile-info").hover(
 			tileInfoWrap = targetTile.find(".tile__info-wrap");
 			setTimeout(function() {
 				tileInfoWrap.addClass("hide");
-			}, 1500)
+			}, 3000)
 			var mouseTimer;
 			document.onmousemove = function() {
 				tileInfoWrap.removeClass("hide");
 				clearTimeout(mouseTimer);
 				mouseTimer = setTimeout(function() {
 					tileInfoWrap.addClass("hide");
-				}, 1500)
+				}, 3000)
 			};
 			// end mouse move handler
 		}, 1000);
@@ -51,5 +58,6 @@ $(".tile.tile-info").hover(
 		var videoID = $(this).find('video').attr('id');
 		var player = videojs(videoID);
 		player.reset();
+		isVideoPlay = false;
 	}
 );
