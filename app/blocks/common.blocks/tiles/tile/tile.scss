@@ -1,6 +1,6 @@
 .tile{
 	top: 0;
-	transition: all ease .3s;
+	transition: all ease .2s;
 	&:before{
 		content: '';
 		display: block;
@@ -75,7 +75,7 @@
 			height: 284px;
 			top: -50px;
 			clip-path: polygon(calc(0% + 54px) 0%, 100% 0%, calc(100% - 54px) 100%, 0% 100%);
-			transition: all ease .6s;
+			transition: all ease .5s;
 			transition-delay: .5s;
 			@include breakpoint(md){
 				// width: 463px;
@@ -311,7 +311,6 @@
 		position: absolute;
 		top: 13px;
 		left: 65px;
-		transition: top .5s ease;
 	}
 	&__button{
 		cursor: pointer;
@@ -329,7 +328,6 @@
 		position: absolute;
 		bottom: 20px;
 		left: 65px;
-		transition: bottom .3s ease;
 	}
 	&__title{
 		font-family: $bebas;
@@ -421,18 +419,18 @@
 		}
 		& .tile__bg{
 			opacity: 0;
-			transition: all ease .6s;
+			transition: all ease .5s;
 			transition-delay: .5s;
 		}
 		& .tile__video{
 			opacity: 1;
-			transition: all ease .6s;
+			transition: all ease .5s;
 			transition-delay: .5s;
 		}
 		& .tile__info-wrap{
 			opacity: 1;
 			top: 0;
-			transition: all ease .6s;
+			transition: all ease .5s;
 			transition-delay: .5s;
 		}
 	}

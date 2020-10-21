@@ -2309,6 +2309,8 @@ svg
     font-weight: bold;
     line-height: 14px;
 
+    letter-spacing: .05rem;
+
     color: #fff;
 }
 
@@ -2345,7 +2347,7 @@ svg
          -o-transition: all ease .3s;
             transition: all ease .3s;
     text-decoration: none;
-    letter-spacing: .1rem;
+    letter-spacing: .05rem;
 
     color: rgba(255, 255, 255, .4);
     border-bottom: 2px solid transparent;
@@ -2487,7 +2489,7 @@ svg
 {
     font-family: 'Bebas Neue';
     font-size: 40px;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 47px;
 
     display: -webkit-box;
@@ -2523,12 +2525,6 @@ svg
 
 .home-page-banner__button-watch
 {
-    font-family: 'Bebas Neue';
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 47px;
-
-    color: #fff;
     background-color: #30c1d2;
 }
 
@@ -2604,6 +2600,7 @@ svg
 
     width: 61px;
     height: 48px;
+    padding-top: 6px;
 
     border: 3px solid #fff;
     border-radius: 4px;
@@ -3615,9 +3612,9 @@ svg
 {
     top: 0;
 
-    -webkit-transition: all ease .3s;
-         -o-transition: all ease .3s;
-            transition: all ease .3s;
+    -webkit-transition: all ease .2s;
+         -o-transition: all ease .2s;
+            transition: all ease .2s;
 }
 
 .tile:before
@@ -3689,9 +3686,9 @@ svg
 
     height: 284px;
 
-    -webkit-transition: all ease .6s;
-         -o-transition: all ease .6s;
-            transition: all ease .6s;
+    -webkit-transition: all ease .5s;
+         -o-transition: all ease .5s;
+            transition: all ease .5s;
     -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;
@@ -3936,10 +3933,6 @@ svg
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-
-    -webkit-transition: top .5s ease;
-         -o-transition: top .5s ease;
-            transition: top .5s ease;
 }
 
 .tile__button
@@ -3966,10 +3959,6 @@ svg
     left: 65px;
 
     display: block;
-
-    -webkit-transition: bottom .3s ease;
-         -o-transition: bottom .3s ease;
-            transition: bottom .3s ease;
 }
 
 .tile__title
@@ -4111,9 +4100,9 @@ svg
 .tile.tile-info:active .tile__bg,
 .tile.tile-info:focus .tile__bg
 {
-    -webkit-transition: all ease .6s;
-         -o-transition: all ease .6s;
-            transition: all ease .6s;
+    -webkit-transition: all ease .5s;
+         -o-transition: all ease .5s;
+            transition: all ease .5s;
     -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;
@@ -4125,9 +4114,9 @@ svg
 .tile.tile-info:active .tile__video,
 .tile.tile-info:focus .tile__video
 {
-    -webkit-transition: all ease .6s;
-         -o-transition: all ease .6s;
-            transition: all ease .6s;
+    -webkit-transition: all ease .5s;
+         -o-transition: all ease .5s;
+            transition: all ease .5s;
     -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;
@@ -4141,9 +4130,9 @@ svg
 {
     top: 0;
 
-    -webkit-transition: all ease .6s;
-         -o-transition: all ease .6s;
-            transition: all ease .6s;
+    -webkit-transition: all ease .5s;
+         -o-transition: all ease .5s;
+            transition: all ease .5s;
     -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;
@@ -4425,7 +4414,8 @@ svg
 .home-page__about-serial
 {
     width: 100%;
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .home-page__recommended-serials
