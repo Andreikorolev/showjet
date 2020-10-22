@@ -2,7 +2,6 @@ if ($(".home-page-banner").length){
 	//banner mute button handler
 	var bannerVideoID = $(".home-page-banner").find('video').attr('id');
 	var bannerPlayer = videojs(bannerVideoID);
-
 	var bannerMuteButton = $(".home-page-banner").find('.home-page-banner__sound-button');
 
 
@@ -25,15 +24,20 @@ if ($(".home-page-banner").length){
 	if ($('.home-page-banner').length) {
 		var bannerHeight = $('.home-page-banner').height();
 		$(window).scroll(function(){
-			console.log($(window).scrollTop());
 			var windowScrollTop = $(window).scrollTop();
 			if (windowScrollTop > 300 ) {
 				bannerPlayer.pause();
-				console.log('hidden');
+				$(".home-page-banner__tiles-cover").hide();
 			} else {
 				bannerPlayer.play();
-				console.log('visible');
+				$(".home-page-banner__tiles-cover").show();
 			}
+
+			if (windowScrollTop > 150 ) {
+				$(".home-page-banner__tiles-cover").hide();
+			} else {
+				$(".home-page-banner__tiles-cover").show();
+			}			
 		});
 	}
 

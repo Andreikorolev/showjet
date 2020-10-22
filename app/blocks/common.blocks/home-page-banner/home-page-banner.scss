@@ -26,7 +26,15 @@
 		background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 		opacity: 0.9;
 	}
-
+	&__tiles-cover{
+		width: 100%;
+		height: 190px;
+		background-color: transparent;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 10;
+	}
 	&__image{
 		width: 100%;
 		min-height: 100%;

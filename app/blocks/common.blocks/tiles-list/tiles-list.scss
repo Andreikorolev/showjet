@@ -50,6 +50,8 @@
 
 	& .swiper-wrapper{
 		height: 134px;
+		margin-left: 0;
+		transition: all ease .3s;
 		@include breakpoint(md){
 			height: 140px;
 		}

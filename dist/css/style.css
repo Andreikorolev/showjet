@@ -2423,6 +2423,19 @@ svg
     background:    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
 }
 
+.home-page-banner__tiles-cover
+{
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 190px;
+
+    background-color: transparent;
+}
+
 .home-page-banner__image
 {
     position: absolute;
@@ -3497,6 +3510,11 @@ svg
 .tiles-list__slider .swiper-wrapper
 {
     height: 134px;
+    margin-left: 0;
+
+    -webkit-transition: all ease .3s;
+         -o-transition: all ease .3s;
+            transition: all ease .3s;
 }
 
 .tiles-list__slider .slider-button-prev,
