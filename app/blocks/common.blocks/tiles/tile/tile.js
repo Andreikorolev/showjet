@@ -5,8 +5,8 @@ $( ".tile" ).each(function() {
 
 $(".tile.tile-info").hover(
 	function(){
-		// variable for use it inside timer's function
 		var targetTile = $(this);
+
 		// set timer
 		timer = setTimeout(function() {
 			// find video id
