@@ -261,6 +261,7 @@
 		height: 100%;
 		opacity: 1;
 		overflow: hidden;
+		z-index: 1;
 		transition: all ease .3s;
 	}
 	&__bg-img{
@@ -417,11 +418,11 @@
 			transition: all ease .4s;
 			transition-delay: .5s;
 		}
-		& .tile__bg{
-			opacity: 0;
-			transition: all ease .5s;
-			transition-delay: .5s;
-		}
+		// & .tile__bg{
+		// 	opacity: 0;
+		// 	transition: all ease .5s;
+		// 	transition-delay: .5s;
+		// }
 		& .tile__video{
 			opacity: 1;
 			transition: all ease .5s;

@@ -26,13 +26,10 @@ $(".tile.tile-info").hover(
 
 		// set timer
 		timer = setTimeout(function() {
-			// find video id
+			targetTile.find(".tile__bg").hide();
 			var videoID = targetTile.find('video').attr('id');
-			// init videojs with this ID
 			var player = videojs(videoID);
-			// pass src and typ into video player
 			player.src({ type: 'application/x-mpegURL', src: $(targetTile).data("videourl") });
-			// start the player
 			player.play();
 			isVideoPlay = true;
 
@@ -44,6 +41,11 @@ $(".tile.tile-info").hover(
 				player.muted(isVideoMuted);
 				muteButton.addClass("tile__sound-button_on");
 			}
+
+			// handler for video end
+			player.on('ended', function() {
+				targetTile.find(".tile__bg").show();
+			});
 
 			// var videoMute = true;
 			muteButton.on('click', function(){
@@ -76,6 +78,7 @@ $(".tile.tile-info").hover(
 		var player = videojs(videoID);
 		player.reset();
 		isVideoPlay = false;
+		$(this).find(".tile__bg").show();
 	}
 );
 
