@@ -1,25 +1,24 @@
 var gulp = require('gulp'),
-    browserSync = require('browser-sync'),
-    reload = browserSync.reload,
-    compass = require('compass-importer'),
-    del = require('del'),
-    prefixer = require('gulp-autoprefixer'),
-    cache = require('gulp-cache'),
-    concat = require('gulp-concat'),
-    csscomb = require('gulp-csscomb'),
-    imagemin = require('gulp-imagemin'),
-    flatten = require('gulp-flatten'),
-    mediacomb = require('gulp-group-css-media-queries'),
-    order = require('gulp-order'),
-    rename = require('gulp-rename'),
-    scss = require('gulp-sass'),
-    twig = require('gulp-twig'),
-    watch = require('gulp-watch'),
-    imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-    pngquant = require('imagemin-pngquant'),
-    plumber = require('gulp-plumber'),
-    notify = require('gulp-notify'),
-    beep = require('beepbeep');
+browserSync = require('browser-sync'),
+reload = browserSync.reload,
+compass = require('compass-importer'),
+del = require('del'),
+prefixer = require('gulp-autoprefixer'),
+cache = require('gulp-cache'),
+concat = require('gulp-concat'),
+csscomb = require('gulp-csscomb'),
+imagemin = require('gulp-imagemin'),
+flatten = require('gulp-flatten'),
+mediacomb = require('gulp-group-css-media-queries'),
+order = require('gulp-order'),
+rename = require('gulp-rename'),
+scss = require('gulp-sass'),
+twig = require('gulp-twig'),
+uglify = require('gulp-uglifyjs'),
+watch = require('gulp-watch'),
+spritesmith = require('gulp.spritesmith'),
+imageminJpegRecompress = require('imagemin-jpeg-recompress'),
+pngquant = require('imagemin-pngquant');
 
 var config = {
     server: {
@@ -31,15 +30,6 @@ var config = {
     logPrefix: "Frontend"
 };
 
-var onError = function(err) {
-    // notify.onError({
-    //     title:    "Error in " + err.plugin,
-    //     message: err.message
-    // })(err);
-    beep(2);
-    this.emit('end');
-};
-
 gulp.task('scss', function() {
     return gulp.src([
         'app/fonts/**/*.css',
@@ -49,7 +39,6 @@ gulp.task('scss', function() {
         'app/blocks/common.blocks/**/*.+(scss|css)',
         'app/blocks/site.blocks/**/*.+(scss|css)'
         ])
-    .pipe(plumber({ errorHandler: onError }))
     .pipe(order([
         'libs/mixins/**/*.+(scss|css)',
         'app/fonts/**/*.css',
@@ -59,6 +48,9 @@ gulp.task('scss', function() {
         'app/blocks/site.blocks/**/*.+(scss|css)'],{base: './'}))
     .pipe(concat('style.scss'))
     .pipe(scss({importer: compass, includePaths:['libs/mixins']}))
+    // .pipe(prefixer({
+    //     browsers: ['last 10 versions'],
+    // }))
     .pipe(prefixer({
             overrideBrowserslist:  ['last 10 versions'],
             cascade: false
@@ -80,6 +72,9 @@ gulp.task('js', function() {
     .on('error', function handleError() {
         this.emit('end'); 
     })
+    // .pipe(uglify({
+    //     comments: false
+    // }))
     .pipe(gulp.dest('dist/js'))
     .pipe(reload({stream: true}));
 });
@@ -108,24 +103,6 @@ gulp.task('fonts',function(){
     .pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('img', function() {
-    return gulp.src('app/img/**/*')
-    .pipe(cache(imagemin([
-        imageminJpegRecompress({
-            loops:4,
-            min: 50,
-            max: 95,
-            quality:'high'
-        }),
-        pngquant()
-        ],
-        {
-            verbose: true
-        }
-        )))
-    .pipe(gulp.dest('dist/img'));
-});
-
 gulp.task('watch', ['img', 'fonts', 'scss','js','twig'],function(){
 
     watch('app/blocks/**/*.+(scss|css)', function(event,cb){
@@ -146,6 +123,7 @@ gulp.task('watch', ['img', 'fonts', 'scss','js','twig'],function(){
 
     watch('app/img/**/*', function(event,cb){
         gulp.start('img');
+        gulp.start('sprite');
     });
 
     watch('app/fonts/**/*', function(event,cb){
@@ -158,6 +136,23 @@ gulp.task('clean', function() {
     return del.sync('dist');
 });
 
+gulp.task('img', function() {
+    return gulp.src(['app/img/**/*',"!app/img/{sprites,sprites/**}"])
+    .pipe(cache(imagemin([
+        imageminJpegRecompress({
+            loops:4,
+            min: 50,
+            max: 95,
+            quality:'high'
+        }),
+        pngquant()
+        ],
+        {
+            verbose: true
+        }
+        )))
+    .pipe(gulp.dest('dist/img'));
+});
 
 gulp.task('webserver', function() {
     browserSync(config);

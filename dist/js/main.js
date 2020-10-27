@@ -185,6 +185,17 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+$('.nav__menu a').each(function () {
+	if (this.href == location.href) $(this).addClass('active');
+});
+
+$(window).scroll(function(){
+	if ($(window).scrollTop() > 86) {
+		$(".header").addClass('fixed');
+	} else {
+		$(".header").removeClass('fixed');
+	}
+});
 if ($(".home-page-banner").length){
 	//banner mute button handler
 	var bannerVideoID = $(".home-page-banner").find('video').attr('id');
@@ -236,17 +247,6 @@ if ($(".home-page-banner").length){
 		isVideoMuted = !isVideoMuted;
 	});
 };
-$('.nav__menu a').each(function () {
-	if (this.href == location.href) $(this).addClass('active');
-});
-
-$(window).scroll(function(){
-	if ($(window).scrollTop() > 86) {
-		$(".header").addClass('fixed');
-	} else {
-		$(".header").removeClass('fixed');
-	}
-});
 if ($('.article-page__article').length) {
 	$(window).scroll(function(){
 		var windowScrollTop = $(window).scrollTop();
