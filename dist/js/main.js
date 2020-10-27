@@ -3,18 +3,16 @@ $(".light-page").parent("body").addClass("light");
 // global variables for video player
 var isVideoPlay = false;
 var isVideoMuted = true;
-var aboutSerialSlider = new Swiper('.video-list__tiles-wrap', {
-  direction: 'horizontal',
-  speed: 1000,
-  slidesPerView: 5,
-  slidesPerGroup: 5,
-  navigation: {
-    nextEl: '.slider-button-next',
-    prevEl: '.slider-button-prev',
-  },
+$(".about-serial__navigation-item").click(function(){
+	$( ".about-serial__navigation-item" ).each(function() {
+		$(this).removeClass("active");
+	});
+	$(".about-serial__tab").hide();
+
+	$(this).addClass("active");
+	var targetTab = $(this).attr("data-target");
+	$("#" + targetTab).show();
 });
-
-
 $( ".tile" ).each(function() {
 	var progress = $(this).data("progress");
 	$(this).find(".tile__progress-bar").width(progress + '%');
@@ -82,16 +80,18 @@ $(".tile.tile-info").hover(
 	}
 );
 
-$(".about-serial__navigation-item").click(function(){
-	$( ".about-serial__navigation-item" ).each(function() {
-		$(this).removeClass("active");
-	});
-	$(".about-serial__tab").hide();
-
-	$(this).addClass("active");
-	var targetTab = $(this).attr("data-target");
-	$("#" + targetTab).show();
+var aboutSerialSlider = new Swiper('.video-list__tiles-wrap', {
+  direction: 'horizontal',
+  speed: 1000,
+  slidesPerView: 5,
+  slidesPerGroup: 5,
+  navigation: {
+    nextEl: '.slider-button-next',
+    prevEl: '.slider-button-prev',
+  },
 });
+
+
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "filter": */
 x = document.getElementsByClassName("filter");
@@ -173,17 +173,6 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
-$('.nav__menu a').each(function () {
-	if (this.href == location.href) $(this).addClass('active');
-});
-
-$(window).scroll(function(){
-	if ($(window).scrollTop() > 86) {
-		$(".header").addClass('fixed');
-	} else {
-		$(".header").removeClass('fixed');
-	}
-});
 if ($(".home-page-banner").length){
 	//banner mute button handler
 	var bannerVideoID = $(".home-page-banner").find('video').attr('id');
@@ -235,6 +224,17 @@ if ($(".home-page-banner").length){
 		isVideoMuted = !isVideoMuted;
 	});
 };
+$('.nav__menu a').each(function () {
+	if (this.href == location.href) $(this).addClass('active');
+});
+
+$(window).scroll(function(){
+	if ($(window).scrollTop() > 86) {
+		$(".header").addClass('fixed');
+	} else {
+		$(".header").removeClass('fixed');
+	}
+});
 if ($('.article-page__article').length) {
 	$(window).scroll(function(){
 		var windowScrollTop = $(window).scrollTop();

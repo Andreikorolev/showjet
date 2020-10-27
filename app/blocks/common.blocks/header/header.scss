@@ -197,8 +197,8 @@
 	&__menu-item{
 		font-family: $bebas;
 		font-weight: bold;
-		font-size: 12px;
-		line-height: 14px;
+		font-size: 15px;
+		line-height: 18px;
 		color: rgba(255,255,255,.4);
 		text-decoration: none;
 		letter-spacing: 0.05rem;
@@ -209,10 +209,6 @@
 			@include breakpoint(lg){
 				margin-right: 30px;	
 			}
-		}
-		@include breakpoint(md){
-			font-size: 15px;
-			line-height: 18px;
 		}
 		@include breakpoint(lg){
 			font-size: 24px;

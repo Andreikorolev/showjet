@@ -1,7 +1,14 @@
 .home-page-banner{
 	width: 100%;
-	height: 1080px;
+	height: 512px;
 	overflow: hidden;
+
+	@include breakpoint(md){
+		height: 640px;
+	}
+	@include breakpoint(lg){
+		height: 1080px;
+	}
 
 	&:before{
 		content: '';
@@ -28,12 +35,18 @@
 	}
 	&__tiles-cover{
 		width: 100%;
-		height: 190px;
+		height: 50px;
 		background-color: transparent;
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		z-index: 10;
+		@include breakpoint(md){
+			height: 70px;
+		}
+		@include breakpoint(lg){
+			height: 190px;
+		}
 	}
 	&__image{
 		width: 100%;
@@ -46,57 +59,107 @@
 	&__description{
 		z-index: 2;
 		position: absolute;
-		bottom: 300px;
+		bottom: 89px;
 		left: 30px;
+		@include breakpoint(md){
+			bottom: 122px;
+		}
+		@include breakpoint(lg){
+			bottom: 300px;
+		}
 	}
 	&__title{
 		margin-bottom: 17px;
 	}
 	&__title-img{
-
+		max-width: 350px;
+		@include breakpoint(md){
+			max-width: 500px;
+		}
+		@include breakpoint(lg){
+			max-width: 750px;
+		}
 	}
 	&__text{
-		width: 744px;
+		width: 500px;
 		margin-bottom: 8px;
 		font-family: $stem;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 30px;
-		line-height: 39px;
+		font-size: 16px;
+		line-height: 21px;
 		color: #fff;
+		@include breakpoint(md){
+			font-size: 20px;
+			line-height: 26px;
+		}
+		@include breakpoint(lg){
+			width: 744px;
+			font-size: 30px;
+			line-height: 39px;
+		}
 	}
 	&__genre{
 		margin-bottom: 50px;
 		font-family: $stem;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 30px;
-		line-height: 39px;
+		font-size: 16px;
+		line-height: 21px;
 		color: #fff;
 		opacity: 0.5;
+		@include breakpoint(md){
+			font-size: 20px;
+			line-height: 26px;
+		}
+		@include breakpoint(lg){
+			font-size: 30px;
+			line-height: 39px;
+		}
 	}
 	&__buttons{
 		display: flex;
 	}
 	&__button{
 		width: auto;
-		height: 78px;
-		padding: 0 30px;
+		height: 42px;
+		padding: 0 18px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		background-color: rgba(255,255,255,.5);
-		clip-path: polygon(calc(0% + 15px) 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
+		clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 		font-family: $bebas;
 		font-weight: bold;
-		font-size: 40px;
-		line-height: 47px;
+		font-size: 20px;
+		line-height: 23px;
 		color: #FFFFFF;
 		text-decoration: none;
 		transition: all ease .3s;
+		@include breakpoint(md){
+			height: 52px;
+			padding: 0 24px;
+			font-size: 25px;
+			line-height: 29px;
+			clip-path: polygon(calc(0% + 10px) 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+		}
+		@include breakpoint(lg){
+			height: 78px;
+			padding: 0 30px;
+			font-size: 40px;
+			line-height: 47px;
+			clip-path: polygon(calc(0% + 15px) 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
+		}
 	}
 	&__button-icon{
+		width: 26px;
+		height: 26px;
 		margin-right: 13px;
+
+		@include breakpoint(lg){
+			width: 48px;
+			height: 48px;
+		}
 	}
 	&__button-watch{
 		background-color: #30C1D2;
@@ -118,10 +181,16 @@
 	&__meta-info{
 		z-index: 2;
 		position: absolute;
-		bottom: 300px;
+		bottom: 85px;
 		right: 30px;
 		display: flex;
 		align-items: center;
+		@include breakpoint(md){
+			bottom: 100px;
+		}
+		@include breakpoint(lg){
+			bottom: 300px;
+		}
 	}
 	&__meta-info-item{
 		display: flex;
@@ -129,38 +198,117 @@
 		justify-content: center;
 		font-family: $bebas;
 		font-weight: bold;
-		font-size: 26px;
-		line-height: 30px;
+		font-size: 16px;
+		line-height: 19px;
 		text-align: center;
 		color: #fff;
 		text-shadow: 0 0 2px #000;
+		@include breakpoint(md){
+			font-size: 18px;
+			line-height: 21px;
+		}
+		@include breakpoint(lg){
+			font-size: 26px;
+			line-height: 30px;
+		}
 
 		&:not(:last-child){
-			margin-right: 45px;
+			margin-right: 30px;
+			@include breakpoint(lg){
+				margin-right: 45px;
+			}
 		}
 		&_imdb,
 		&_kinopoisk{
-			font-size: 39px;
-			line-height: 46px;
+			font-size: 20px;
+			line-height: 23px;
+			@include breakpoint(md){
+				font-size: 26px;
+				line-height: 30px;
+			}
+			@include breakpoint(lg){
+				font-size: 39px;
+				line-height: 46px;
+			}
 		}
 		&_18{
-			width: 61px;
-			height: 48px;
-			padding-top: 6px;
-			font-size: 39px;
+			width: 36px;
+			height: 27px;
+			padding-top: 2px;
+			font-size: 20px;
+			line-height: 23px;
 			border: 3px solid #FFFFFF;
-			border-radius: 4px
+			border-radius: 4px;
+			@include breakpoint(md){
+				width: 41px;
+				height: 32px;
+				font-size: 26px;
+				line-height: 30px;
+			}
+			@include breakpoint(lg){
+				width: 61px;
+				height: 48px;
+				font-size: 39px;
+				padding-top: 6px;
+			}
+		}
+		&_sound-button{
+			width: 56px;
+			height: 54px;
+			display: flex;
+			align-items: center;
+			padding-left: 30px;
+			border-left: 3px solid #fff;
+			@include breakpoint(md){
+				width: 93px;
+				height: 70px;
+				padding-left: 42px;
+			}
+			@include breakpoint(lg){
+				height: 104px;
+			}
 		}
 	}
 	&__meta-info-item-icon{
 		margin-right: 10px;
+
+		&_kinopoisk{
+			width: 29px;
+			height: 29px;
+			@include breakpoint(md){
+				width: 38px;
+				height: 38px;
+			}
+			@include breakpoint(lg){
+				width: 58px;
+				height: 58px;
+			}
+		}
+		&_imdb{
+			width: 55px;
+			height: 27px;
+			@include breakpoint(md){
+				width: 65px;
+				height: 32px;
+			}
+			@include breakpoint(lg){
+				width: 98px;
+				height: 48px;
+			}
+		}
 	}
 	&__sound-button{
 		cursor: pointer;
-		width: 93px;
-		height: 104px;
-		padding-left: 42px;
-		border-left: 3px solid #fff;
+		width: 26px;
+		height: 26px;
+		@include breakpoint(md){
+			width: 32px;
+			height: 32px;
+		}
+		@include breakpoint(lg){
+			width: 48px;
+			height: 48px;
+		}
 
 		&_on{
 			& .home-page-banner__sound-button-img_on{
