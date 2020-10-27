@@ -1191,7 +1191,7 @@ svg
 .about-serial
 {
     width: 100%;
-    height: 794px;
+    height: 419px;
 }
 
 .about-serial__bg
@@ -1219,14 +1219,14 @@ svg
 .about-serial__top-wrap
 {
     position: absolute;
-    bottom: 260px;
+    bottom: 130px;
     left: 30px;
 }
 
 .about-serial__title
 {
-    width: 500px;
-    margin-bottom: 17px;
+    width: 230px;
+    margin-bottom: 5px;
 }
 
 .about-serial__title-img
@@ -1237,8 +1237,8 @@ svg
 .about-serial__title-text
 {
     font-family: 'Bebas Neue';
-    font-size: 40px;
-    line-height: 47px;
+    font-size: 20px;
+    line-height: 23px;
 
     margin-bottom: 12px;
 
@@ -1251,13 +1251,13 @@ svg
 .about-serial__text
 {
     font-family: 'Stem';
-    font-size: 25px;
+    font-size: 12px;
     font-weight: normal;
     font-style: normal;
-    line-height: 32px;
+    line-height: 15px;
 
-    width: 744px;
-    margin-bottom: 15px;
+    width: 350px;
+    margin-bottom: 10px;
 
     color: #fff;
 }
@@ -1265,12 +1265,12 @@ svg
 .about-serial__genre
 {
     font-family: 'Stem';
-    font-size: 25px;
+    font-size: 12px;
     font-weight: normal;
     font-style: normal;
-    line-height: 32px;
+    line-height: 15px;
 
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 
     opacity: .5;
     color: #fff;
@@ -1278,22 +1278,22 @@ svg
 
 .about-serial__meta-info
 {
-    margin-bottom: 62px;
+    margin-bottom: 25px;
 }
 
 .about-serial__button-watch
 {
     font-family: 'Bebas Neue';
-    font-size: 40px;
+    font-size: 20px;
     font-weight: normal;
-    line-height: 47px;
+    line-height: 23px;
 
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 
-    width: 360px;
-    height: 78px;
+    width: 180px;
+    height: 42px;
 
     -webkit-transition: all ease .3s;
          -o-transition: all ease .3s;
@@ -1309,8 +1309,8 @@ svg
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-clip-path: polygon(calc(0% + 15px) 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 15px) 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
+    -webkit-clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+            clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 }
 
 .about-serial__button-watch:hover,
@@ -1322,14 +1322,16 @@ svg
 
 .about-serial__button-watch-icon
 {
-    margin-right: 13px;
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
 }
 
 .about-serial__navigation
 {
     position: absolute;
-    right: 641px;
-    bottom: 206px;
+    right: 355px;
+    bottom: 110px;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1339,9 +1341,9 @@ svg
 .about-serial__navigation-item
 {
     font-family: 'Bebas Neue';
-    font-size: 24px;
+    font-size: 12px;
     font-weight: bold;
-    line-height: 28px;
+    line-height: 14px;
 
     cursor: pointer;
     -webkit-transition: all ease .3s;
@@ -1355,7 +1357,7 @@ svg
 
 .about-serial__navigation-item:not(:last-child)
 {
-    margin-right: 30px;
+    margin-right: 15px;
 }
 
 .about-serial__navigation-item:hover,
@@ -1379,8 +1381,8 @@ svg
 
     display: block;
 
-    width: 1129px;
-    height: 539px;
+    width: 601px;
+    height: 287px;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -1433,7 +1435,7 @@ svg
 .about-serial__video-list
 {
     position: absolute;
-    bottom: -20px;
+    bottom: -55px;
     left: 0;
 
     width: 100%;
@@ -1443,8 +1445,8 @@ svg
 {
     overflow-y: scroll;
 
-    width: 984px;
-    height: 494px;
+    width: 508px;
+    height: 250px;
     padding-right: 20px;
 }
 
@@ -1478,12 +1480,12 @@ svg
 .actors-creators__title
 {
     font-family: 'Stem';
-    font-size: 30px;
+    font-size: 14px;
     font-weight: bold;
     font-style: normal;
-    line-height: 39px;
+    line-height: 18px;
 
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
     color: #fff;
 }
@@ -1498,12 +1500,12 @@ svg
 .actors-creators__item
 {
     font-family: 'Stem';
-    font-size: 20px;
+    font-size: 10px;
     font-weight: bold;
     font-style: normal;
-    line-height: 26px;
+    line-height: 13px;
 
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 
     cursor: pointer;
 
@@ -1520,10 +1522,10 @@ svg
 .actors-creators__item-role
 {
     font-family: 'Stem';
-    font-size: 20px;
+    font-size: 10px;
     font-weight: normal;
     font-style: normal;
-    line-height: 26px;
+    line-height: 13px;
 
     display: block;
 
@@ -1533,19 +1535,39 @@ svg
     color: #fff;
 }
 
+.actors-creators__person
+{
+    z-index: -1;
+
+    -webkit-transition: all ease .3s;
+         -o-transition: all ease .3s;
+            transition: all ease .3s;
+
+    opacity: 0;
+}
+
+.actors-creators__person.active
+{
+    z-index: 1;
+
+    opacity: 1;
+}
+
 .actors-creators__person-back-button
 {
     font-family: 'Stem';
-    font-size: 30px;
+    font-size: 14px;
     font-weight: bold;
     font-style: normal;
-    line-height: 39px;
+    line-height: 18px;
 
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+
+    cursor: pointer;
 
     color: #fff;
 
@@ -1556,17 +1578,21 @@ svg
 
 .actors-creators__person-back-button svg
 {
+    width: 17px;
+    height: 17px;
     margin-right: 15px;
 }
 
 .actors-creators__person-img
 {
-    height: 266px;
-    margin-right: 30px;
+    overflow: hidden;
+
+    height: 160px;
+    margin-right: 15px;
 
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 200px;
-        flex: 0 0 200px;
+    -ms-flex: 0 0 120px;
+        flex: 0 0 120px;
 }
 
 .actors-creators__person-img img
@@ -1584,10 +1610,10 @@ svg
 .actors-creators__person-title
 {
     font-family: 'Stem';
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     font-style: normal;
-    line-height: 39px;
+    line-height: 26px;
 
     margin-bottom: 5px;
 
@@ -1597,10 +1623,10 @@ svg
 .actors-creators__person-subtitle
 {
     font-family: 'Stem';
-    font-size: 20px;
+    font-size: 10px;
     font-weight: normal;
     font-style: normal;
-    line-height: 26px;
+    line-height: 13px;
 
     margin-bottom: 15px;
 
@@ -1611,10 +1637,10 @@ svg
 .actors-creators__person-info
 {
     font-family: 'Stem';
-    font-size: 20px;
+    font-size: 10px;
     font-weight: normal;
     font-style: normal;
-    line-height: 26px;
+    line-height: 13px;
 
     color: #fff;
 }
@@ -1648,7 +1674,7 @@ svg
 
 .meta-info__right-wrap
 {
-    padding-left: 44px;
+    padding-left: 25px;
 
     border-left: 4px solid #fff;
 }
@@ -1656,11 +1682,11 @@ svg
 .meta-info__item
 {
     font-family: 'Bebas Neue';
-    font-size: 33px;
+    font-size: 16px;
     font-weight: bold;
-    line-height: 39px;
+    line-height: 19px;
 
-    margin-right: 45px;
+    margin-right: 25px;
 
     text-align: center;
 
@@ -1673,8 +1699,8 @@ svg
     display: -ms-flexbox;
     display: flex;
 
-    width: 48px;
-    height: 37px;
+    width: 26px;
+    height: 20px;
 
     border: 3px solid #fff;
     border-radius: 6px;
@@ -1684,19 +1710,66 @@ svg
     align-items: center;
 }
 
+.meta-info__item-icon_kinopoisk
+{
+    width: 13px;
+    height: 13px;
+}
+
+.meta-info__item-icon_imdb
+{
+    width: 33px;
+    height: 16px;
+}
+
+.meta-info__item-icon_like
+{
+    width: 20px;
+    height: 18px;
+}
+
+.meta-info__item-icon_share
+{
+    width: 15px;
+    height: 19px;
+}
+
 .text-about
 {
-    width: 984px;
-    height: 539px;
+    overflow-y: scroll;
+
+    width: 508px;
+    height: 250px;
+    padding-right: 15px;
+}
+
+.text-about::-webkit-scrollbar
+{
+    width: 4px;
+}
+
+.text-about::-webkit-scrollbar-track
+{
+    background: rgba(255, 255, 255, .4);
+}
+
+.text-about::-webkit-scrollbar-thumb
+{
+    background: #fff;
+}
+
+.text-about::-webkit-scrollbar-thumb:hover
+{
+    background: rgba(255, 255, 255, .8);
 }
 
 .text-about__title
 {
     font-family: 'Stem';
-    font-size: 30px;
+    font-size: 14px;
     font-weight: bold;
     font-style: normal;
-    line-height: 39px;
+    line-height: 18apx;
 
     margin-bottom: 10px;
 
@@ -1706,10 +1779,10 @@ svg
 .text-about__text-block
 {
     font-family: 'Stem';
-    font-size: 25px;
+    font-size: 12px;
     font-weight: normal;
     font-style: normal;
-    line-height: 32px;
+    line-height: 15px;
 
     margin-bottom: 20px;
 
@@ -3600,64 +3673,39 @@ svg
     display: none !important;
 }
 
-.tile-episode
-{
-    font-family: 'Stem';
-    font-size: 20px;
-    font-weight: bold;
-    font-style: normal;
-    line-height: 26px;
-
-    width: 333px;
-    height: 184px;
-
-    color: #fff;
-    text-shadow: 0 0 6px black;
-
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 333px;
-        flex: 0 0 333px;
-    -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-}
-
-.tile-episode:not(:last-child)
-{
-    margin-right: -32px;
-}
-
-.tile-episode:first-child
-{
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-}
-
 .tile-episode:first-child .tile-episode__episode-number,
 .tile-episode:first-child .tile-episode__episode-name
 {
     left: 15px;
 }
 
-.tile-episode:last-child
+.tile-episode__episode-number,
+.tile-episode__episode-name
 {
-    left: 0;
+    font-family: 'Stem';
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 18px;
 
-    -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    z-index: 2;
+    left: 45px;
+
+    color: #fff;
+    text-shadow: 0 0 6px black;
 }
 
 .tile-episode__episode-number
 {
-    position: absolute;
     top: 8px;
-    left: 45px;
+    left: 41px;
 }
 
 .tile-episode__episode-name
 {
-    position: absolute;
     bottom: 8px;
-    left: 45px;
+    left: 20px;
 }
 
 .tile
@@ -4453,7 +4501,6 @@ svg
 .home-page__about-serial
 {
     width: 100%;
-    margin-top: 100px;
     margin-bottom: 100px;
 }
 
@@ -4993,10 +5040,9 @@ svg
     margin-bottom: 80px;
 }
 
-.test-page__banner
+.test-page__about-serial
 {
     width: 100%;
-    margin-top: -115px;
 }
 
 @media (min-width: 480px)
@@ -6624,6 +6670,218 @@ svg
 
 @media (min-width: 1280px)
 {
+    .about-serial
+    {
+        height: 524px;
+    }
+
+    .about-serial__top-wrap
+    {
+        bottom: 176px;
+        left: 30px;
+    }
+
+    .about-serial__title
+    {
+        width: 340px;
+    }
+
+    .about-serial__title-text
+    {
+        font-size: 27px;
+        line-height: 32px;
+    }
+
+    .about-serial__text
+    {
+        font-size: 17px;
+        line-height: 22px;
+
+        width: 470px;
+        margin-bottom: 15px;
+    }
+
+    .about-serial__genre
+    {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .about-serial__meta-info
+    {
+        margin-bottom: 30px;
+    }
+
+    .about-serial__button-watch
+    {
+        font-size: 30px;
+        line-height: 35px;
+
+        width: 254px;
+        height: 52px;
+
+        -webkit-clip-path: polygon(calc(0% + 10px) 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 10px) 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+    }
+
+    .about-serial__button-watch-icon
+    {
+        width: 32px;
+        height: 32px;
+    }
+
+    .about-serial__navigation
+    {
+        bottom: 130px;
+    }
+
+    .about-serial__navigation-item
+    {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .about-serial__navigation-item:not(:last-child)
+    {
+        margin-right: 28px;
+    }
+
+    .about-serial__trailer
+    {
+        width: 752px;
+        height: 359px;
+    }
+
+    .about-serial__video-list
+    {
+        bottom: -37px;
+    }
+
+    .actors-creators
+    {
+        width: 642px;
+        height: 280px;
+    }
+
+    .actors-creators__title
+    {
+        font-size: 20px;
+        line-height: 26px;
+
+        margin-bottom: 15px;
+    }
+
+    .actors-creators__item
+    {
+        font-size: 14px;
+        line-height: 18px;
+
+        margin-bottom: 15px;
+    }
+
+    .actors-creators__item-role
+    {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .actors-creators__person-back-button
+    {
+        font-size: 20px;
+        line-height: 26px;
+
+        margin-bottom: 20px;
+    }
+
+    .actors-creators__person-back-button svg
+    {
+        width: 23px;
+        height: 23px;
+    }
+
+    .actors-creators__person-img
+    {
+        height: 200px;
+        margin-right: 20px;
+
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 150px;
+            flex: 0 0 150px;
+    }
+
+    .actors-creators__person-title
+    {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .actors-creators__person-subtitle
+    {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .actors-creators__person-info
+    {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .meta-info__right-wrap
+    {
+        padding-left: 30px;
+    }
+
+    .meta-info__item
+    {
+        font-size: 22px;
+        line-height: 26px;
+
+        margin-right: 30px;
+    }
+
+    .meta-info__item_18
+    {
+        width: 32px;
+        height: 35px;
+    }
+
+    .meta-info__item-icon_kinopoisk
+    {
+        width: 16px;
+        height: 16px;
+    }
+
+    .meta-info__item-icon_like
+    {
+        width: 26px;
+        height: 23px;
+    }
+
+    .meta-info__item-icon_share
+    {
+        width: 17px;
+        height: 22px;
+    }
+
+    .text-about
+    {
+        width: 642px;
+        height: 280px;
+    }
+
+    .text-about__title
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .text-about__text-block
+    {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
     .collection-tile
     {
         height: 174px;
@@ -7612,6 +7870,225 @@ svg
 
 @media (min-width: 1920px)
 {
+    .about-serial
+    {
+        height: 794px;
+    }
+
+    .about-serial__top-wrap
+    {
+        bottom: 260px;
+        left: 30px;
+    }
+
+    .about-serial__title
+    {
+        width: 500px;
+    }
+
+    .about-serial__title-text
+    {
+        font-size: 40px;
+        line-height: 47px;
+    }
+
+    .about-serial__text
+    {
+        font-size: 25px;
+        line-height: 32px;
+
+        width: 744px;
+    }
+
+    .about-serial__genre
+    {
+        font-size: 25px;
+        line-height: 32px;
+
+        margin-bottom: 35px;
+    }
+
+    .about-serial__meta-info
+    {
+        margin-bottom: 62px;
+    }
+
+    .about-serial__button-watch
+    {
+        font-size: 40px;
+        line-height: 47px;
+
+        width: 360px;
+        height: 78px;
+
+        -webkit-clip-path: polygon(calc(0% + 15px) 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
+                clip-path: polygon(calc(0% + 15px) 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
+    }
+
+    .about-serial__button-watch-icon
+    {
+        width: 48px;
+        height: 48px;
+        margin-right: 13px;
+    }
+
+    .about-serial__navigation
+    {
+        right: 641px;
+        bottom: 206px;
+    }
+
+    .about-serial__navigation-item
+    {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .about-serial__navigation-item:not(:last-child)
+    {
+        margin-right: 30px;
+    }
+
+    .about-serial__trailer
+    {
+        width: 1129px;
+        height: 539px;
+    }
+
+    .about-serial__video-list
+    {
+        bottom: -20px;
+    }
+
+    .actors-creators
+    {
+        width: 984px;
+        height: 539px;
+    }
+
+    .actors-creators__title
+    {
+        font-size: 30px;
+        line-height: 39px;
+    }
+
+    .actors-creators__item
+    {
+        font-size: 20px;
+        line-height: 26px;
+
+        margin-bottom: 25px;
+    }
+
+    .actors-creators__item-role
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .actors-creators__person-back-button
+    {
+        font-size: 30px;
+        line-height: 39px;
+
+        margin-bottom: 30px;
+    }
+
+    .actors-creators__person-back-button svg
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+    .actors-creators__person-img
+    {
+        height: 266px;
+        margin-right: 30px;
+
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 200px;
+            flex: 0 0 200px;
+    }
+
+    .actors-creators__person-title
+    {
+        font-size: 30px;
+        line-height: 39px;
+    }
+
+    .actors-creators__person-subtitle
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .actors-creators__person-info
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .meta-info__right-wrap
+    {
+        padding-left: 44px;
+    }
+
+    .meta-info__item
+    {
+        font-size: 33px;
+        line-height: 39px;
+
+        margin-right: 45px;
+    }
+
+    .meta-info__item_18
+    {
+        width: 48px;
+        height: 37px;
+    }
+
+    .meta-info__item-icon_kinopoisk
+    {
+        width: 24px;
+        height: 24px;
+    }
+
+    .meta-info__item-icon_imdb
+    {
+        width: 49px;
+        height: 24px;
+    }
+
+    .meta-info__item-icon_like
+    {
+        width: 39px;
+        height: 35px;
+    }
+
+    .meta-info__item-icon_share
+    {
+        width: 27px;
+        height: 35px;
+    }
+
+    .text-about
+    {
+        width: 984px;
+        height: 539px;
+    }
+
+    .text-about__title
+    {
+        font-size: 30px;
+        line-height: 39px;
+    }
+
+    .text-about__text-block
+    {
+        font-size: 25px;
+        line-height: 32px;
+    }
+
     .collection-tile
     {
         height: 265px;
@@ -7890,6 +8367,13 @@ svg
     .tiles-list__slider .swiper-wrapper
     {
         height: 184px;
+    }
+
+    .tile-episode__episode-number,
+    .tile-episode__episode-name
+    {
+        font-size: 20px;
+        line-height: 26px;
     }
 
     .tile__sm

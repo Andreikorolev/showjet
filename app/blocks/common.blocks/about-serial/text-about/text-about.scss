@@ -1,23 +1,62 @@
 .text-about{
-	width: 984px;
-	height: 539px;
+	width: 508px;
+	height: 250px;
+	padding-right: 15px;
+	overflow-y: scroll;
+	@include breakpoint(md){
+		width: 642px;
+		height: 280px;
+	}
+	@include breakpoint(lg){
+		width: 984px;
+		height: 539px;
+	}
+
+	&::-webkit-scrollbar {
+		width: 4px;
+	}
+	&::-webkit-scrollbar-track {
+		background: rgba(255,255,255,.4);
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #fff;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: rgba(255,255,255,.8);
+	}
 
 	&__title{
 		font-family: $stem;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 30px;
-		line-height: 39px;
+		font-size: 14px;
+		line-height: 18apx;
 		color: #FFFFFF;
 		margin-bottom: 10px;
+		@include breakpoint(md){
+			font-size: 20px;
+			line-height: 26px;
+		}
+		@include breakpoint(lg){
+			font-size: 30px;
+			line-height: 39px;
+		}
 	}
 	&__text-block{
 		font-family: $stem;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 25px;
-		line-height: 32px;
+		font-size: 12px;
+		line-height: 15px;
 		color: #FFFFFF;
 		margin-bottom: 20px;
+		@include breakpoint(md){
+			font-size: 17px;
+			line-height: 22px;
+		}
+		@include breakpoint(lg){
+			font-size: 25px;
+			line-height: 32px;
+		}
 	}
 }
