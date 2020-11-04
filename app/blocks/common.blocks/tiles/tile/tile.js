@@ -6,7 +6,6 @@ $( ".tile" ).each(function() {
 $(".tile.tile-info").hover(
 	function(){
 		var targetTile = $(this);
-
 		// set timer
 		timer = setTimeout(function() {
 			targetTile.find(".tile__bg").hide();
@@ -16,13 +15,13 @@ $(".tile.tile-info").hover(
 			player.play();
 			isVideoPlay = true;
 
-			//mute button handler
 			var muteButton = targetTile.find('.tile__sound-button');
 			if (isVideoMuted) {
 				muteButton.removeClass("tile__sound-button_on");
-			} else {
 				player.muted(isVideoMuted);
+			} else {
 				muteButton.addClass("tile__sound-button_on");
+				player.muted(isVideoMuted);
 			}
 
 			// handler for video end
@@ -30,7 +29,7 @@ $(".tile.tile-info").hover(
 				targetTile.find(".tile__bg").show();
 			});
 
-			// var videoMute = true;
+			//mute button handler
 			muteButton.on('click', function(){
 				isVideoMuted ? muteButton.addClass("tile__sound-button_on") : muteButton.removeClass("tile__sound-button_on");
 				player.muted(!isVideoMuted);
