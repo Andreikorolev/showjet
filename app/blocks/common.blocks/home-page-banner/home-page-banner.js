@@ -17,6 +17,7 @@ if ($(".home-page-banner").length){
 			bannerMuteButton.removeClass("home-page-banner__sound-button_on");
 		} else {
 			bannerMuteButton.addClass("home-page-banner__sound-button_on");
+			bannerPlayer.muted(isVideoMuted);
 		}
 	},500);
 
