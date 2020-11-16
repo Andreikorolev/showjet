@@ -15,6 +15,38 @@ var aboutSerialSlider = new Swiper('.video-list__tiles-wrap', {
 });
 
 
+// function for resizing md, lg, xl tiles 
+function resizeTile(tileSize, numberOfTiles) {
+	var body = document.querySelector('body');
+	var tile = $('.tile__' + tileSize);
+	var wrapperWidth = tile.parent().width();
+
+	var angleOffset = Math.sin((11*Math.PI)/180) * ( ( wrapperWidth / numberOfTiles ) / 1.8 );
+	var tileWidth = (wrapperWidth + (( angleOffset - 3 )  * (numberOfTiles -1))) / numberOfTiles;
+	var tileHeight = (wrapperWidth / numberOfTiles) / 1.8;
+	var infoOffset = angleOffset + 20;
+
+    body.style.setProperty('--' + tileSize + '-tile-width', tileWidth + 'px');
+    body.style.setProperty('--' + tileSize + '-tile-height', tileHeight + 'px');
+    body.style.setProperty('--' + tileSize + '-angle-offset', angleOffset + 'px');
+    body.style.setProperty('--' + tileSize + '-margin-right', -(angleOffset - 3) + 'px');
+    body.style.setProperty('--' + tileSize + '-info-offset', infoOffset + 'px');
+};
+
+
+$(window).on('load', function() {
+ 	resizeTile('md', 4);
+ 	resizeTile('lg', 3);
+ 	resizeTile('xl', 2);
+});
+
+
+
+$( window ).resize(function() {
+	resizeTile('md', 4);
+	resizeTile('lg', 3);
+	resizeTile('xl', 2);
+});
 $( ".tile" ).each(function() {
 	var progress = $(this).data("progress");
 	$(this).find(".tile__progress-bar").width(progress + '%');
@@ -291,7 +323,6 @@ $(window).on('load', function() {
 	var collectionTileWidth = ( collectionWrapperWidth + (( collectionAngleOffset - 3 )  * 3 )) / 4;
 	var collectionTileHeight = ( collectionWrapperWidth / 4 ) / 1.8;
 
-	// var collectionAngleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( collectionWrapperWidth / 6 ) / 1.8 ) * 1.9 );
 	var collectionHoverOffset = (((collectionTileWidth * 1.4) - collectionTileWidth) / 2) * 0.71;
 
 	body.style.setProperty('--collection-angle-offset', collectionAngleOffset + 'px');
@@ -299,7 +330,6 @@ $(window).on('load', function() {
 	body.style.setProperty('--collection-tile-height', collectionTileHeight + 'px');
 	body.style.setProperty('--collection-margin-right', -(collectionAngleOffset - 3) + 'px');
 
-    // body.style.setProperty('--collection-angle-hover-offset', collectionAngleHoverOffset + 'px');
     body.style.setProperty('--collection-hover-offset', collectionHoverOffset + 'px');
 });
 
@@ -314,7 +344,6 @@ $( window ).resize(function() {
 	var collectionTileWidth = ( collectionWrapperWidth + (( collectionAngleOffset - 3 )  * 3 )) / 4;
 	var collectionTileHeight = ( collectionWrapperWidth / 4 ) / 1.8;
 
-	// var collectionAngleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( collectionWrapperWidth / 6 ) / 1.8 ) * 1.9 );
 	var collectionHoverOffset = (((collectionTileWidth * 1.4) - collectionTileWidth) / 2) * 0.71;
 
 	body.style.setProperty('--collection-angle-offset', collectionAngleOffset + 'px');
@@ -322,7 +351,6 @@ $( window ).resize(function() {
 	body.style.setProperty('--collection-tile-height', collectionTileHeight + 'px');
 	body.style.setProperty('--collection-margin-right', -(collectionAngleOffset - 3) + 'px');
 
-    // body.style.setProperty('--collection-angle-hover-offset', collectionAngleHoverOffset + 'px');
     body.style.setProperty('--collection-hover-offset', collectionHoverOffset + 'px');
 });
 var homePageRecommendedSerials = new Swiper('.home-page__recommended-serials-slider', {
@@ -438,50 +466,50 @@ var searchSlider = new Swiper('.search-page__slider', {
 		}
 	},
 });
-$(window).on('load', function() {
-    var tileWrapper = document.querySelector('.testTile__wrap');
-	var tile = $('.testTile');
-	var wrapperWidth = tile.parent().width();
+// $(window).on('load', function() {
+//     var tileWrapper = document.querySelector('.testTile__wrap');
+// 	var tile = $('.testTile');
+// 	var wrapperWidth = tile.parent().width();
 
-	var angleOffset = Math.sin((11*Math.PI)/180) * ( ( wrapperWidth / 6 ) / 1.8 );
-	var tileWidth = ( wrapperWidth + (( angleOffset - 3 )  * 5 )) / 6;
-	var tileHeight = ( wrapperWidth / 6 ) / 1.8;
+// 	var angleOffset = Math.sin((11*Math.PI)/180) * ( ( wrapperWidth / 6 ) / 1.8 );
+// 	var tileWidth = ( wrapperWidth + (( angleOffset - 3 )  * 5 )) / 6;
+// 	var tileHeight = ( wrapperWidth / 6 ) / 1.8;
 
-	var angleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( wrapperWidth / 6 ) / 1.8 ) * 1.65 );
-	var tileHoverWidth = ((wrapperWidth + ((angleHoverOffset - 3) * 5)) / 6) * 1.65;
-	var tileHoverHeight = (( wrapperWidth / 6 ) / 1.8 ) * 1.65;
+// 	var angleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( wrapperWidth / 6 ) / 1.8 ) * 1.65 );
+// 	var tileHoverWidth = ((wrapperWidth + ((angleHoverOffset - 3) * 5)) / 6) * 1.65;
+// 	var tileHoverHeight = (( wrapperWidth / 6 ) / 1.8 ) * 1.65;
 
-    tileWrapper.style.setProperty('--tile-width', tileWidth + 'px');
-    tileWrapper.style.setProperty('--tile-height', tileHeight + 'px');
-    tileWrapper.style.setProperty('--angle-offset', angleOffset + 'px');
-    tileWrapper.style.setProperty('--margin-right', -(angleOffset - 3) + 'px');
+//     tileWrapper.style.setProperty('--tile-width', tileWidth + 'px');
+//     tileWrapper.style.setProperty('--tile-height', tileHeight + 'px');
+//     tileWrapper.style.setProperty('--angle-offset', angleOffset + 'px');
+//     tileWrapper.style.setProperty('--margin-right', -(angleOffset - 3) + 'px');
 
-    tileWrapper.style.setProperty('--tile-hover-width', tileHoverWidth + 'px');
-    tileWrapper.style.setProperty('--tile-hover-height', tileHoverHeight + 'px');
-    tileWrapper.style.setProperty('--angle-hover-offset', angleHoverOffset + 'px');
-});
+//     tileWrapper.style.setProperty('--tile-hover-width', tileHoverWidth + 'px');
+//     tileWrapper.style.setProperty('--tile-hover-height', tileHoverHeight + 'px');
+//     tileWrapper.style.setProperty('--angle-hover-offset', angleHoverOffset + 'px');
+// });
 
 
 
-$( window ).resize(function() {
-    var tileWrapper = document.querySelector('.testTile__wrap');
-	var tile = $('.testTile');
-	var wrapperWidth = tile.parent().width();
+// $( window ).resize(function() {
+//     var tileWrapper = document.querySelector('.testTile__wrap');
+// 	var tile = $('.testTile');
+// 	var wrapperWidth = tile.parent().width();
 
-	var angleOffset = Math.sin((11*Math.PI)/180) * ( ( wrapperWidth / 6 ) / 1.8 );
-	var tileWidth = ( wrapperWidth + (( angleOffset - 3 )  * 5 )) / 6;
-	var tileHeight = ( wrapperWidth / 6 ) / 1.8;
+// 	var angleOffset = Math.sin((11*Math.PI)/180) * ( ( wrapperWidth / 6 ) / 1.8 );
+// 	var tileWidth = ( wrapperWidth + (( angleOffset - 3 )  * 5 )) / 6;
+// 	var tileHeight = ( wrapperWidth / 6 ) / 1.8;
 
-	var angleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( wrapperWidth / 6 ) / 1.8 ) * 1.65 );
-	var tileHoverWidth = ((wrapperWidth + ((angleHoverOffset - 3) * 5)) / 6) * 1.65;
-	var tileHoverHeight = (( wrapperWidth / 6 ) / 1.8 ) * 1.65;
+// 	var angleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( wrapperWidth / 6 ) / 1.8 ) * 1.65 );
+// 	var tileHoverWidth = ((wrapperWidth + ((angleHoverOffset - 3) * 5)) / 6) * 1.65;
+// 	var tileHoverHeight = (( wrapperWidth / 6 ) / 1.8 ) * 1.65;
 
-    tileWrapper.style.setProperty('--tile-width', tileWidth + 'px');
-    tileWrapper.style.setProperty('--tile-height', tileHeight + 'px');
-    tileWrapper.style.setProperty('--angle-offset', angleOffset + 'px');
-    tileWrapper.style.setProperty('--margin-right', -(angleOffset - 3) + 'px');
+//     tileWrapper.style.setProperty('--tile-width', tileWidth + 'px');
+//     tileWrapper.style.setProperty('--tile-height', tileHeight + 'px');
+//     tileWrapper.style.setProperty('--angle-offset', angleOffset + 'px');
+//     tileWrapper.style.setProperty('--margin-right', -(angleOffset - 3) + 'px');
 
-    tileWrapper.style.setProperty('--tile-hover-width', tileHoverWidth + 'px');
-    tileWrapper.style.setProperty('--tile-hover-height', tileHoverHeight + 'px');
-    tileWrapper.style.setProperty('--angle-hover-offset', angleHoverOffset + 'px');
-});
+//     tileWrapper.style.setProperty('--tile-hover-width', tileHoverWidth + 'px');
+//     tileWrapper.style.setProperty('--tile-hover-height', tileHoverHeight + 'px');
+//     tileWrapper.style.setProperty('--angle-hover-offset', angleHoverOffset + 'px');
+// });

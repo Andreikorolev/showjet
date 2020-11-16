@@ -7,7 +7,6 @@ $(window).on('load', function() {
 	var collectionTileWidth = ( collectionWrapperWidth + (( collectionAngleOffset - 3 )  * 3 )) / 4;
 	var collectionTileHeight = ( collectionWrapperWidth / 4 ) / 1.8;
 
-	// var collectionAngleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( collectionWrapperWidth / 6 ) / 1.8 ) * 1.9 );
 	var collectionHoverOffset = (((collectionTileWidth * 1.4) - collectionTileWidth) / 2) * 0.71;
 
 	body.style.setProperty('--collection-angle-offset', collectionAngleOffset + 'px');
@@ -15,7 +14,6 @@ $(window).on('load', function() {
 	body.style.setProperty('--collection-tile-height', collectionTileHeight + 'px');
 	body.style.setProperty('--collection-margin-right', -(collectionAngleOffset - 3) + 'px');
 
-    // body.style.setProperty('--collection-angle-hover-offset', collectionAngleHoverOffset + 'px');
     body.style.setProperty('--collection-hover-offset', collectionHoverOffset + 'px');
 });
 
@@ -30,7 +28,6 @@ $( window ).resize(function() {
 	var collectionTileWidth = ( collectionWrapperWidth + (( collectionAngleOffset - 3 )  * 3 )) / 4;
 	var collectionTileHeight = ( collectionWrapperWidth / 4 ) / 1.8;
 
-	// var collectionAngleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( collectionWrapperWidth / 6 ) / 1.8 ) * 1.9 );
 	var collectionHoverOffset = (((collectionTileWidth * 1.4) - collectionTileWidth) / 2) * 0.71;
 
 	body.style.setProperty('--collection-angle-offset', collectionAngleOffset + 'px');
@@ -38,6 +35,5 @@ $( window ).resize(function() {
 	body.style.setProperty('--collection-tile-height', collectionTileHeight + 'px');
 	body.style.setProperty('--collection-margin-right', -(collectionAngleOffset - 3) + 'px');
 
-    // body.style.setProperty('--collection-angle-hover-offset', collectionAngleHoverOffset + 'px');
     body.style.setProperty('--collection-hover-offset', collectionHoverOffset + 'px');
 });

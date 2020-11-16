@@ -11,16 +11,11 @@
 		margin-bottom: 60px;
 	}
 	&__feed{
-		width: 1024px;
+		width: 100%;
 		margin: 0 auto;
-		padding: 0 54px;
-		@include breakpoint(md){
-			width: 1281px;
-			padding: 0 32px;
-		}
+		padding: 0 32px;
 		@include breakpoint(lg){
 			width: 1284px;
-			padding: 0 32px;
 		}
 	}
 	&__navigation{
