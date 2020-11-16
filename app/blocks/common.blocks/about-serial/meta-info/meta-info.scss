@@ -16,24 +16,95 @@
 	}
 	&__right-wrap{
 		border-left: 4px solid #fff;
-		padding-left: 44px;
+		padding-left: 25px;
+		@include breakpoint(md){
+			padding-left: 30px;
+		}
+		@include breakpoint(lg){
+			padding-left: 44px;
+		}
 	}
 	&__item{
-		margin-right: 45px;
+		margin-right: 25px;
 		font-family: $bebas;
 		font-weight: bold;
-		font-size: 33px;
-		line-height: 39px;
+		font-size: 16px;
+		line-height: 19px;
 		text-align: center;
 		color: #FFFFFF;
+		@include breakpoint(md){
+			font-size: 22px;
+			line-height: 26px;
+			margin-right: 30px;
+		}
+		@include breakpoint(lg){
+			font-size: 33px;
+			line-height: 39px;
+			margin-right: 45px;
+		}
 
 		&_18{
-			width: 48px;
-			height: 37px;
+			width: 26px;
+			height: 20px;
 			display: flex;
 			align-items: center;
 			border: 3px solid #FFFFFF;
 			border-radius: 6px;
+			@include breakpoint(md){
+				width: 35px;
+				height: 32px;
+			}
+			@include breakpoint(lg){
+				width: 48px;
+				height: 37px;
+			}
+		}
+	}
+	&__item-icon{
+
+		&_kinopoisk{
+			width: 13px;
+			height: 13px;
+			@include breakpoint(md){
+				width: 16px;
+				height: 16px;
+			}
+			@include breakpoint(lg){
+				width: 24px;
+				height: 24px;
+			}
+		}
+		&_imdb{
+			width: 33px;
+			height: 16px;
+			@include breakpoint(lg){
+				width: 49px;
+				height: 24px;
+			}
+		}
+		&_like{
+			width: 20px;
+			height: 18px;
+			@include breakpoint(md){
+				width: 26px;
+				height: 23px;
+			}
+			@include breakpoint(lg){
+				width: 39px;
+				height: 35px;
+			}
+		}
+		&_share{
+			width: 15px;
+			height: 19px;
+			@include breakpoint(md){
+				width: 17px;
+				height: 22px;
+			}
+			@include breakpoint(lg){
+				width: 27px;
+				height: 35px;
+			}
 		}
 	}
 }

@@ -1,41 +1,16 @@
 .collection-tile{
-	// width: 258px;
-	flex: 1 0 auto;
-	height: 134px;
+	flex: 0 0 var(--collection-tile-width);
+	height: var(--collection-tile-height);
 	background-size: cover;
 	background-position: center;
-	clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
+	clip-path: polygon(calc(0% + var(--collection-angle-offset)) 0%, 100% 0%, calc(100% - var(--collection-angle-offset)) 100%, 0% 100%);
 	transition: all ease .1s;
-	@include breakpoint(md){
-		// width: 327px;
-		flex: 1 0 auto;
-		height: 174px;
-		clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
-	}
-	@include breakpoint(lg){
-		// width: 501px;
-		flex: 1 0 auto;
-		height: 265px;
-		clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
-	}
 
 	&:not(:last-child){
-		margin-right: -24px;
-		@include breakpoint(md){
-			margin-right: -30px;			
-		}
-		@include breakpoint(lg){
-			margin-right: -48px;
-		}
+		margin-right: var(--collection-margin-right);
 	}
 	&:first-child{
-		clip-path: polygon(0% 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
-		@include breakpoint(md){
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
-		}
-		@include breakpoint(lg){
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
-		}
+		clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--collection-angle-offset)) 100%, 0% 100%);
 
 		& .collection-tile__text-wrap{
 			left: 10px;
@@ -45,13 +20,7 @@
 		}
 	}
 	&:last-child{	
-		clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, 100% 100%, 0% 100%);
-		@include breakpoint(md){
-			clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
-		}
-		@include breakpoint(lg){
-			clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
-		}
+		clip-path: polygon(calc(0% + var(--collection-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
 	}
 
 	&:hover,
@@ -59,38 +28,17 @@
 	&:focus{
 		transform: scale(1.4);
 		z-index: 100;
-		clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
+		// clip-path: polygon(calc(0% + var(--collection-angle-hover-offset)) 0%, 100% 0%, calc(100% - var(--collection-angle-hover-offset)) 100%, 0% 100%);
 		transition: all ease .3s;
-		@include breakpoint(md){
-			clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-		}
-		@include breakpoint(lg){
-			clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
-		}
 
 		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
-			transform: scale(1.4) translateX(37px);
-			@include breakpoint(md){
-				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-				transform: scale(1.4) translateX(46px);
-			}
-			@include breakpoint(lg){
-				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
-				transform: scale(1.4) translateX(71px);
-			}
+			// clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--collection-angle-hover-offset)) 100%, 0% 100%);
+			transform: scale(1.4) translateX(var(--collection-hover-offset));
 		}
 		&:last-child{	
-			clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			transform: scale(1.4) translateX(-37px);
-			@include breakpoint(md){
-				clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
-				transform: scale(1.4) translateX(-46px);
-			}
-			@include breakpoint(lg){
-				clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, 100% 100%, 0% 100%);
-				transform: scale(1.4) translateX(-71px);
-			}
+			// clip-path: polygon(calc(0% + var(--collection-angle-hover-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
+			// transform: scale(1.4) translateX(var(--collection-hover-offset));
+			transform: scale(1.4) translateX(calc(var(--collection-hover-offset) * -1));
 		}
 
 		& .collection-tile__subtitle{

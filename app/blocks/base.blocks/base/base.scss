@@ -6,8 +6,33 @@
 $bebas: 'Bebas Neue';
 $stem: 'Stem';
 
-// COLOR
 body{
+	// variables for md tiles
+	--md-tile-width: 0;
+	--md-tile-height: 0;
+	--md-angle-offset: 0;
+	--md-margin-right: 0;
+	--md-info-offset: 0;
+	// variables for lg tiles
+	--lg-tile-width: 0;
+	--lg-tile-height: 0;
+	--lg-angle-offset: 0;
+	--lg-margin-right: 0;
+	--lg-info-offset: 0;
+	// variables for xl tiles
+	--xl-tile-width: 0;
+	--xl-tile-height: 0;
+	--xl-angle-offset: 0;
+	--xl-margin-right: 0;
+	--xl-info-offset: 0;
+	// variables for collection tiles
+	--collection-tile-width: 0;
+	--collection-tile-height: 0;
+	--collection-angle-offset: 0;
+	--collection-margin-right: 0;
+	--collection-angle-hover-offset: 0;
+	--collection-hover-offset: 0;
+
 	background-color: #141414;
 
 	&.light{

@@ -6,11 +6,18 @@
 		{# HEADER #}
 		{% include 'blocks/common.blocks/header/header.twig'%}
 
-		<div class="test-page__banner">
-			<!-- HOME-PAGE-BANNER -->
-			{% include 'blocks/common.blocks/home-page-banner/home-page-banner.twig'%}
+		<div class="container">
+			<div class="testTile__wrap">
+				{% for item in 0..5 %}
+					<div class="testTile">
+
+					</div>
+				{% endfor %}
+			</div>
 		</div>
 
+		{# FOOTER #}
+		{% include 'blocks/common.blocks/footer/footer.twig'%}
 	</div>
 </div> 
 {% endblock %}

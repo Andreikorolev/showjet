@@ -1,8 +1,16 @@
 .actors-creators{
-	width: 984px;
-	height: 494px;
+	width: 508px;
+	height: 250px;
 	padding-right: 20px;
 	overflow-y: scroll;
+	@include breakpoint(md){
+		width: 642px;
+		height: 280px;
+	}
+	@include breakpoint(lg){
+		width: 984px;
+		height: 539px;
+	}
 
 	&::-webkit-scrollbar {
 		width: 4px;
@@ -25,10 +33,19 @@
 		font-family: $stem;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 30px;
-		line-height: 39px;
+		font-size: 14px;
+		line-height: 18px;
 		color: #FFFFFF;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
+		@include breakpoint(md){
+			font-size: 20px;
+			line-height: 26px;
+			margin-bottom: 15px;
+		}
+		@include breakpoint(lg){
+			font-size: 30px;
+			line-height: 39px;
+		}
 	}
 	&__items-wrap{
 		columns: 3;
@@ -38,10 +55,20 @@
 		font-family: $stem;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 20px;
-		line-height: 26px;
+		font-size: 10px;
+		line-height: 13px;
 		color: #FFFFFF;
-		margin-bottom: 25px;
+		margin-bottom: 10px;
+		@include breakpoint(md){
+			font-size: 14px;
+			line-height: 18px;
+			margin-bottom: 15px;
+		}
+		@include breakpoint(lg){
+			font-size: 20px;
+			line-height: 26px;
+			margin-bottom: 25px;
+		}
 
 		&:hover,
 		&:active,
@@ -54,34 +81,81 @@
 		font-family: $stem;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 20px;
-		line-height: 26px;
+		font-size: 10px;
+		line-height: 13px;
 		color: #FFFFFF;
 		opacity: 0.5;
 		margin-top: 5px;
+		@include breakpoint(md){
+			font-size: 14px;
+			line-height: 18px;
+		}
+		@include breakpoint(lg){
+			font-size: 20px;
+			line-height: 26px;
+		}
 	}
 	&__person{
+		opacity: 0;
+		z-index: -1;
+		transition: all ease .3s;
 
+		&.active{
+			opacity: 1;
+			z-index: 1;
+		}
 	}
 	&__person-back-button{
+		cursor: pointer;
 		display: flex;
 		align-items: center;
 		font-family: $stem;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 30px;
-		line-height: 39px;
+		font-size: 14px;
+		line-height: 18px;
 		color: #FFFFFF;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
+		@include breakpoint(md){
+			font-size: 20px;
+			line-height: 26px;
+			margin-bottom: 20px;
+		}
+		@include breakpoint(lg){
+			font-size: 30px;
+			line-height: 39px;
+			margin-bottom: 30px;
+		}
 
 		& svg{
+			width: 17px;
+			height: 17px;
 			margin-right: 15px;
+			@include breakpoint(md){
+				width: 23px;
+				height: 23px;
+			}
+			@include breakpoint(lg){
+				width: 40px;
+				height: 40px;
+			}
 		}
 	}
 	&__person-img{
-		flex: 0 0 200px;
-		height: 266px;
-		margin-right: 30px;
+		flex: 0 0 120px;
+		height: 160px;
+		margin-right: 15px;
+		overflow: hidden;
+		@include breakpoint(md){
+			flex: 0 0 150px;
+			height: 200px;
+			margin-right: 20px;
+		}
+		@include breakpoint(lg){
+			flex: 0 0 200px;
+			height: 266px;
+			margin-right: 30px;
+		}
 
 		& img{
 			width: 100%;
@@ -94,27 +168,51 @@
 		font-family: $stem;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 30px;
-		line-height: 39px;
+		font-size: 20px;
+		line-height: 26px;
 		color: #FFFFFF;
 		margin-bottom: 5px;
+		@include breakpoint(md){
+			font-size: 26px;
+			line-height: 34px;
+		}
+		@include breakpoint(lg){
+			font-size: 30px;
+			line-height: 39px;
+		}
 	}
 	&__person-subtitle{
 		font-family: $stem;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 20px;
-		line-height: 26px;
+		font-size: 10px;
+		line-height: 13px;
 		color: #FFFFFF;
 		opacity: 0.5;
 		margin-bottom: 15px;
+		@include breakpoint(md){
+			font-size: 14px;
+			line-height: 18px;
+		}
+		@include breakpoint(lg){
+			font-size: 20px;
+			line-height: 26px;
+		}
 	}
 	&__person-info{
 		font-family: $stem;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 20px;
-		line-height: 26px;
+		font-size: 10px;
+		line-height: 13px;
 		color: #FFFFFF;
+		@include breakpoint(md){
+			font-size: 14px;
+			line-height: 18px;
+		}
+		@include breakpoint(lg){
+			font-size: 20px;
+			line-height: 26px;
+		}
 	}
 }
