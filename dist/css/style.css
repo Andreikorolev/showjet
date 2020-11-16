@@ -210,6 +210,13 @@ elements-of-type(html5-block)
 body
 {
     background-color: #141414;
+
+    --collection-tile-width: 0;
+    --collection-tile-height: 0;
+    --collection-angle-offset: 0;
+    --collection-margin-right: 0;
+    --collection-angle-hover-offset: 0;
+    --collection-hover-offset: 0;
 }
 
 body.light
@@ -271,7 +278,6 @@ html
 .container
 {
     width: 100%;
-    max-width: 2500px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 30px;
@@ -1807,7 +1813,7 @@ svg
 
 .collection-tile
 {
-    height: 134px;
+    height: var(--collection-tile-height);
 
     -webkit-transition: all ease .1s;
          -o-transition: all ease .1s;
@@ -1816,22 +1822,22 @@ svg
     background-position: center;
     background-size: cover;
 
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
-        flex: 1 0 auto;
-    -webkit-clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 var(--collection-tile-width);
+        flex: 0 0 var(--collection-tile-width);
+    -webkit-clip-path: polygon(calc(0% + var(--collection-angle-offset)) 0%, 100% 0%, calc(100% - var(--collection-angle-offset)) 100%, 0% 100%);
+            clip-path: polygon(calc(0% + var(--collection-angle-offset)) 0%, 100% 0%, calc(100% - var(--collection-angle-offset)) 100%, 0% 100%);
 }
 
 .collection-tile:not(:last-child)
 {
-    margin-right: -24px;
+    margin-right: var(--collection-margin-right);
 }
 
 .collection-tile:first-child
 {
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--collection-angle-offset)) 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--collection-angle-offset)) 100%, 0% 100%);
 }
 
 .collection-tile:first-child .collection-tile__text-wrap
@@ -1841,8 +1847,8 @@ svg
 
 .collection-tile:last-child
 {
-    -webkit-clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(calc(0% + var(--collection-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(calc(0% + var(--collection-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .collection-tile:hover,
@@ -1857,33 +1863,24 @@ svg
     -webkit-transform: scale(1.4);
         -ms-transform: scale(1.4);
             transform: scale(1.4);
-
-    -webkit-clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
 }
 
 .collection-tile:hover:first-child,
 .collection-tile:active:first-child,
 .collection-tile:focus:first-child
 {
-    -webkit-transform: scale(1.4) translateX(37px);
-        -ms-transform: scale(1.4) translateX(37px);
-            transform: scale(1.4) translateX(37px);
-
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, calc(100% - 25px) 100%, 0% 100%);
+    -webkit-transform: scale(1.4) translateX(var(--collection-hover-offset));
+        -ms-transform: scale(1.4) translateX(var(--collection-hover-offset));
+            transform: scale(1.4) translateX(var(--collection-hover-offset));
 }
 
 .collection-tile:hover:last-child,
 .collection-tile:active:last-child,
 .collection-tile:focus:last-child
 {
-    -webkit-transform: scale(1.4) translateX(-37px);
-        -ms-transform: scale(1.4) translateX(-37px);
-            transform: scale(1.4) translateX(-37px);
-
-    -webkit-clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(calc(0% + 25px) 0%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-transform: scale(1.4) translateX(calc(var(--collection-hover-offset) * -1));
+        -ms-transform: scale(1.4) translateX(calc(var(--collection-hover-offset) * -1));
+            transform: scale(1.4) translateX(calc(var(--collection-hover-offset) * -1));
 }
 
 .collection-tile:hover .collection-tile__subtitle,
@@ -2070,7 +2067,7 @@ svg
     display: -ms-flexbox;
     display: flex;
 
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 .footer__menu-item
@@ -2091,7 +2088,7 @@ svg
 
 .footer__menu-item:not(:last-child)
 {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .footer__menu-item:hover,
@@ -2107,7 +2104,7 @@ svg
     display: -ms-flexbox;
     display: flex;
 
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 .footer__soc-item
@@ -2125,7 +2122,7 @@ svg
 
 .footer__soc-item:not(:last-child)
 {
-    margin-right: 10px;
+    margin-right: 1px;
 }
 
 .footer__soc-item:hover .footer__soc-item-icon g,
@@ -5027,7 +5024,7 @@ svg
     display: -ms-flexbox;
     display: flex;
 
-    margin: 20px 0 50px 0;
+    margin: 0 0 50px;
 }
 
 .serials-page__filter-wrap
@@ -5049,9 +5046,87 @@ svg
     margin-bottom: 80px;
 }
 
-.test-page__about-serial
+.testTile__wrap
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
     width: 100%;
+
+    --tile-width: 333px;
+    --tile-height: 184px;
+    --angle-offset: 26px;
+    --margin-right: -24px;
+    --tile-hover-width: 548px;
+    --tile-hover-height: 304px;
+    --angle-hover-offset: 54px;
+}
+
+.testTile
+{
+    height: var(--tile-height);
+
+    background-image: url('../img/tile-bg.png');
+    background-size: cover;
+
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 var(--tile-width);
+        flex: 0 0 var(--tile-width);
+    -webkit-clip-path: polygon(calc(0% + var(--angle-offset)) 0%, 100% 0%, calc(100% - var(--angle-offset)) 100%, 0% 100%);
+            clip-path: polygon(calc(0% + var(--angle-offset)) 0%, 100% 0%, calc(100% - var(--angle-offset)) 100%, 0% 100%);
+}
+
+.testTile:hover,
+.testTile:active,
+.testTile:focus
+{
+    top: -50px;
+
+    height: var(--tile-hover-height);
+
+    -webkit-transition: all ease .5s;
+         -o-transition: all ease .5s;
+            transition: all ease .5s;
+
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 var(--tile-hover-width);
+        flex: 0 0 var(--tile-hover-width);
+    -webkit-clip-path: polygon(calc(0% + var(--angle-hover-offset)) 0%, 100% 0%, calc(100% - var(--angle-hover-offset)) 100%, 0% 100%);
+            clip-path: polygon(calc(0% + var(--angle-hover-offset)) 0%, 100% 0%, calc(100% - var(--angle-hover-offset)) 100%, 0% 100%);
+}
+
+.testTile:hover:first-child,
+.testTile:active:first-child,
+.testTile:focus:first-child
+{
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--angle-hover-offset)) 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--angle-hover-offset)) 100%, 0% 100%);
+}
+
+.testTile:hover:last-child,
+.testTile:active:last-child,
+.testTile:focus:last-child
+{
+    -webkit-clip-path: polygon(calc(0% + var(--angle-hover-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(calc(0% + var(--angle-hover-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.testTile:not(:last-child)
+{
+    margin-right: var(--margin-right);
+}
+
+.testTile:first-child
+{
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--angle-offset)) 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--angle-offset)) 100%, 0% 100%);
+}
+
+.testTile:last-child
+{
+    -webkit-clip-path: polygon(calc(0% + var(--angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(calc(0% + var(--angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 @media (min-width: 480px)
@@ -6891,69 +6966,9 @@ svg
         line-height: 22px;
     }
 
-    .collection-tile
-    {
-        height: 174px;
-
-        -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-        -webkit-clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
-                clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
-    }
-
-    .collection-tile:not(:last-child)
-    {
-        margin-right: -30px;
-    }
-
-    .collection-tile:first-child
-    {
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
-                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 33px) 100%, 0% 100%);
-    }
-
     .collection-tile:first-child .collection-tile__text-wrap
     {
         left: 20px;
-    }
-
-    .collection-tile:last-child
-    {
-        -webkit-clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
-                clip-path: polygon(calc(0% + 33px) 0%, 100% 0%, 100% 100%, 0% 100%);
-    }
-
-    .collection-tile:hover,
-    .collection-tile:active,
-    .collection-tile:focus
-    {
-        -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-                clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-    }
-
-    .collection-tile:hover:first-child,
-    .collection-tile:active:first-child,
-    .collection-tile:focus:first-child
-    {
-        -webkit-transform: scale(1.4) translateX(46px);
-            -ms-transform: scale(1.4) translateX(46px);
-                transform: scale(1.4) translateX(46px);
-
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-    }
-
-    .collection-tile:hover:last-child,
-    .collection-tile:active:last-child,
-    .collection-tile:focus:last-child
-    {
-        -webkit-transform: scale(1.4) translateX(-46px);
-            -ms-transform: scale(1.4) translateX(-46px);
-                transform: scale(1.4) translateX(-46px);
-
-        -webkit-clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
-                clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
     .collection-tile__text-wrap
@@ -6967,6 +6982,11 @@ svg
         line-height: 23px;
     }
 
+    .footer__menu
+    {
+        margin-right: 40px;
+    }
+
     .footer__menu-item
     {
         font-size: 15px;
@@ -6975,7 +6995,17 @@ svg
 
     .footer__menu-item:not(:last-child)
     {
-        margin-right: 30px;
+        margin-right: 20px;
+    }
+
+    .footer__soc-buttons
+    {
+        margin-right: 40px;
+    }
+
+    .footer__soc-item:not(:last-child)
+    {
+        margin-right: 10px;
     }
 
     .header
@@ -8114,66 +8144,6 @@ svg
         line-height: 32px;
     }
 
-    .collection-tile
-    {
-        height: 265px;
-
-        -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-        -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
-                clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
-    }
-
-    .collection-tile:not(:last-child)
-    {
-        margin-right: -48px;
-    }
-
-    .collection-tile:first-child
-    {
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
-                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 51px) 100%, 0% 100%);
-    }
-
-    .collection-tile:last-child
-    {
-        -webkit-clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
-                clip-path: polygon(calc(0% + 51px) 0%, 100% 0%, 100% 100%, 0% 100%);
-    }
-
-    .collection-tile:hover,
-    .collection-tile:active,
-    .collection-tile:focus
-    {
-        -webkit-clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
-                clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
-    }
-
-    .collection-tile:hover:first-child,
-    .collection-tile:active:first-child,
-    .collection-tile:focus:first-child
-    {
-        -webkit-transform: scale(1.4) translateX(71px);
-            -ms-transform: scale(1.4) translateX(71px);
-                transform: scale(1.4) translateX(71px);
-
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
-                clip-path: polygon(0% 0%, 100% 0%, calc(100% - 71px) 100%, 0% 100%);
-    }
-
-    .collection-tile:hover:last-child,
-    .collection-tile:active:last-child,
-    .collection-tile:focus:last-child
-    {
-        -webkit-transform: scale(1.4) translateX(-71px);
-            -ms-transform: scale(1.4) translateX(-71px);
-                transform: scale(1.4) translateX(-71px);
-
-        -webkit-clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, 100% 100%, 0% 100%);
-                clip-path: polygon(calc(0% + 71px) 0%, 100% 0%, 100% 100%, 0% 100%);
-    }
-
     .collection-tile__title
     {
         font-size: 35px;
@@ -8184,6 +8154,11 @@ svg
     {
         font-size: 16px;
         line-height: 19px;
+    }
+
+    .footer__menu-item:not(:last-child)
+    {
+        margin-right: 30px;
     }
 
     .header__search-icon-wrap

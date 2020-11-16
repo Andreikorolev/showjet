@@ -247,6 +247,84 @@ if ($(".home-page-banner").length){
 		isVideoMuted = !isVideoMuted;
 	});
 };
+if ($('.article-page__article').length) {
+	$(window).scroll(function(){
+		var windowScrollTop = $(window).scrollTop();
+		if (windowScrollTop > 250 && windowScrollTop < ($('.article').height() + $(".article").offset().top) - $(".header").height() - $(".article__soc-buttons").height()) {
+			$(".article__soc-buttons").addClass('fixed');
+		} else {
+			$(".article__soc-buttons").removeClass('fixed');
+		}
+	});
+}
+var articlePageTiles = new Swiper('.article-page__tiles-slider', {
+	direction: 'horizontal',
+	speed: 1000,
+	// slidesPerView: 5,
+	// slidesPerGroup: 5,
+	slidesOffsetAfter: 10,
+	navigation: {
+		nextEl: '.slider-button-next',
+		prevEl: '.slider-button-prev',
+	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+		},
+		1280: {
+			slidesPerView: 5,
+			slidesPerGroup: 5,
+		},
+		1920: {
+			slidesPerView: 5,
+			slidesPerGroup: 5,
+		}
+	},
+});
+$(window).on('load', function() {
+	var body = document.querySelector('body');
+	var collectionTile = $('.collection-tile');
+	var collectionWrapperWidth = collectionTile.parent().width();
+
+	var collectionAngleOffset = Math.sin((11*Math.PI)/180) * ( ( collectionWrapperWidth / 4 ) / 1.8 );
+	var collectionTileWidth = ( collectionWrapperWidth + (( collectionAngleOffset - 3 )  * 3 )) / 4;
+	var collectionTileHeight = ( collectionWrapperWidth / 4 ) / 1.8;
+
+	// var collectionAngleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( collectionWrapperWidth / 6 ) / 1.8 ) * 1.9 );
+	var collectionHoverOffset = (((collectionTileWidth * 1.4) - collectionTileWidth) / 2) * 0.71;
+
+	body.style.setProperty('--collection-angle-offset', collectionAngleOffset + 'px');
+	body.style.setProperty('--collection-tile-width', collectionTileWidth + 'px');
+	body.style.setProperty('--collection-tile-height', collectionTileHeight + 'px');
+	body.style.setProperty('--collection-margin-right', -(collectionAngleOffset - 3) + 'px');
+
+    // body.style.setProperty('--collection-angle-hover-offset', collectionAngleHoverOffset + 'px');
+    body.style.setProperty('--collection-hover-offset', collectionHoverOffset + 'px');
+});
+
+
+
+$( window ).resize(function() {
+	var body = document.querySelector('body');
+	var collectionTile = $('.collection-tile');
+	var collectionWrapperWidth = collectionTile.parent().width();
+
+	var collectionAngleOffset = Math.sin((11*Math.PI)/180) * ( ( collectionWrapperWidth / 4 ) / 1.8 );
+	var collectionTileWidth = ( collectionWrapperWidth + (( collectionAngleOffset - 3 )  * 3 )) / 4;
+	var collectionTileHeight = ( collectionWrapperWidth / 4 ) / 1.8;
+
+	// var collectionAngleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( collectionWrapperWidth / 6 ) / 1.8 ) * 1.9 );
+	var collectionHoverOffset = (((collectionTileWidth * 1.4) - collectionTileWidth) / 2) * 0.71;
+
+	body.style.setProperty('--collection-angle-offset', collectionAngleOffset + 'px');
+	body.style.setProperty('--collection-tile-width', collectionTileWidth + 'px');
+	body.style.setProperty('--collection-tile-height', collectionTileHeight + 'px');
+	body.style.setProperty('--collection-margin-right', -(collectionAngleOffset - 3) + 'px');
+
+    // body.style.setProperty('--collection-angle-hover-offset', collectionAngleHoverOffset + 'px');
+    body.style.setProperty('--collection-hover-offset', collectionHoverOffset + 'px');
+});
 var homePageRecommendedSerials = new Swiper('.home-page__recommended-serials-slider', {
 	direction: 'horizontal',
 	speed: 1000,
@@ -325,6 +403,16 @@ var homePageWatchingNowSerial = new Swiper('.home-page__watching-now-slider', {
 		}
 	},
 });
+$(".news-page__navigation-item").click(function(){
+	$( ".news-page__navigation-item" ).each(function() {
+		$(this).removeClass("active");
+	});
+	$(".news-page__tab").removeClass('active-tab');
+
+	$(this).addClass("active");
+	var targetTab = $(this).attr("data-target");
+	$("#" + targetTab).addClass('active-tab');
+});
 var searchSlider = new Swiper('.search-page__slider', {
 	direction: 'horizontal',
 	speed: 1000,
@@ -350,74 +438,50 @@ var searchSlider = new Swiper('.search-page__slider', {
 		}
 	},
 });
-$(".news-page__navigation-item").click(function(){
-	$( ".news-page__navigation-item" ).each(function() {
-		$(this).removeClass("active");
-	});
-	$(".news-page__tab").removeClass('active-tab');
+$(window).on('load', function() {
+    var tileWrapper = document.querySelector('.testTile__wrap');
+	var tile = $('.testTile');
+	var wrapperWidth = tile.parent().width();
 
-	$(this).addClass("active");
-	var targetTab = $(this).attr("data-target");
-	$("#" + targetTab).addClass('active-tab');
-});
-var testSLider = new Swiper('.tiles-list__slider', {
-	direction: 'horizontal',
-	speed: 1000,
-	slidesPerView: 5,
-	slidesPerGroup: 5,
-	slidesOffsetAfter: 10,
-	navigation: {
-		nextEl: '.slider-button-next',
-		prevEl: '.slider-button-prev',
-	},
-	breakpoints: {
-		1024: {
-			slidesPerView: 4,
-			slidesPerGroup: 4,
-		},
-		1280: {
-			slidesPerView: 5,
-			slidesPerGroup: 5,
-		},
-		1920: {
-			slidesPerView: 5,
-			slidesPerGroup: 5,
-		}
-	},
+	var angleOffset = Math.sin((11*Math.PI)/180) * ( ( wrapperWidth / 6 ) / 1.8 );
+	var tileWidth = ( wrapperWidth + (( angleOffset - 3 )  * 5 )) / 6;
+	var tileHeight = ( wrapperWidth / 6 ) / 1.8;
+
+	var angleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( wrapperWidth / 6 ) / 1.8 ) * 1.65 );
+	var tileHoverWidth = ((wrapperWidth + ((angleHoverOffset - 3) * 5)) / 6) * 1.65;
+	var tileHoverHeight = (( wrapperWidth / 6 ) / 1.8 ) * 1.65;
+
+    tileWrapper.style.setProperty('--tile-width', tileWidth + 'px');
+    tileWrapper.style.setProperty('--tile-height', tileHeight + 'px');
+    tileWrapper.style.setProperty('--angle-offset', angleOffset + 'px');
+    tileWrapper.style.setProperty('--margin-right', -(angleOffset - 3) + 'px');
+
+    tileWrapper.style.setProperty('--tile-hover-width', tileHoverWidth + 'px');
+    tileWrapper.style.setProperty('--tile-hover-height', tileHoverHeight + 'px');
+    tileWrapper.style.setProperty('--angle-hover-offset', angleHoverOffset + 'px');
 });
 
-if ($('.article-page__article').length) {
-	$(window).scroll(function(){
-		var windowScrollTop = $(window).scrollTop();
-		if (windowScrollTop > 250 && windowScrollTop < ($('.article').height() + $(".article").offset().top) - $(".header").height() - $(".article__soc-buttons").height()) {
-			$(".article__soc-buttons").addClass('fixed');
-		} else {
-			$(".article__soc-buttons").removeClass('fixed');
-		}
-	});
-}
-var articlePageTiles = new Swiper('.article-page__tiles-slider', {
-	direction: 'horizontal',
-	speed: 1000,
-	// slidesPerView: 5,
-	// slidesPerGroup: 5,
-	slidesOffsetAfter: 10,
-	navigation: {
-		nextEl: '.slider-button-next',
-		prevEl: '.slider-button-prev',
-	},
-	breakpoints: {
-		1024: {
-			slidesPerView: 4,
-			slidesPerGroup: 4,
-		},
-		1280: {
-			slidesPerView: 5,
-			slidesPerGroup: 5,
-		},
-		1920: {
-			slidesPerView: 5,
-			slidesPerGroup: 5,
-		}
-	},
+
+
+$( window ).resize(function() {
+    var tileWrapper = document.querySelector('.testTile__wrap');
+	var tile = $('.testTile');
+	var wrapperWidth = tile.parent().width();
+
+	var angleOffset = Math.sin((11*Math.PI)/180) * ( ( wrapperWidth / 6 ) / 1.8 );
+	var tileWidth = ( wrapperWidth + (( angleOffset - 3 )  * 5 )) / 6;
+	var tileHeight = ( wrapperWidth / 6 ) / 1.8;
+
+	var angleHoverOffset = Math.sin((11*Math.PI)/180) * ( (( wrapperWidth / 6 ) / 1.8 ) * 1.65 );
+	var tileHoverWidth = ((wrapperWidth + ((angleHoverOffset - 3) * 5)) / 6) * 1.65;
+	var tileHoverHeight = (( wrapperWidth / 6 ) / 1.8 ) * 1.65;
+
+    tileWrapper.style.setProperty('--tile-width', tileWidth + 'px');
+    tileWrapper.style.setProperty('--tile-height', tileHeight + 'px');
+    tileWrapper.style.setProperty('--angle-offset', angleOffset + 'px');
+    tileWrapper.style.setProperty('--margin-right', -(angleOffset - 3) + 'px');
+
+    tileWrapper.style.setProperty('--tile-hover-width', tileHoverWidth + 'px');
+    tileWrapper.style.setProperty('--tile-hover-height', tileHoverHeight + 'px');
+    tileWrapper.style.setProperty('--angle-hover-offset', angleHoverOffset + 'px');
 });

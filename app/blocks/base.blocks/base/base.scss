@@ -6,8 +6,14 @@
 $bebas: 'Bebas Neue';
 $stem: 'Stem';
 
-// COLOR
 body{
+	--collection-tile-width: 0;
+	--collection-tile-height: 0;
+	--collection-angle-offset: 0;
+	--collection-margin-right: 0;
+	--collection-angle-hover-offset: 0;
+	--collection-hover-offset: 0;
+
 	background-color: #141414;
 
 	&.light{

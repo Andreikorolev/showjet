@@ -8,12 +8,15 @@
 
 	&__menu{
 		display: flex;
-		margin-right: 40px;
+		margin-right: 10px;
+		@include breakpoint(md){
+			margin-right: 40px;
+		}
 	}
 	&__menu-item{
 		font-family: $bebas;
 		font-weight: bold;
-		font-size:12px;
+		font-size: 12px;
 		letter-spacing: .1rem;
 		line-height: 14px;
 		color: #FFFFFF;
@@ -30,8 +33,11 @@
 		}
 
 		&:not(:last-child){
-			margin-right: 20px;
+			margin-right: 10px;
 			@include breakpoint(md){
+				margin-right: 20px;
+			}
+			@include breakpoint(lg){
 				margin-right: 30px;
 			}
 		}
@@ -44,7 +50,10 @@
 	}
 	&__soc-buttons{
 		display: flex;
-		margin-right: 40px;
+		margin-right: 10px;
+		@include breakpoint(md){
+			margin-right: 40px;
+		}
 	}
 	&__soc-item{
 		height: 22px;
@@ -52,7 +61,10 @@
 		align-items: center;
 		
 		&:not(:last-child){
-			margin-right: 10px;
+			margin-right: 1px;
+			@include breakpoint(md){
+				margin-right: 10px;
+			}
 		}		
 
 		&:hover,
