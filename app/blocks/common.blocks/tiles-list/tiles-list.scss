@@ -19,13 +19,21 @@
 			line-height: 39px;
 		}
 	}
-	&__two-tiles{
+	&__md-tiles,
+	&__lg-tiles,
+	&__xl-tiles{
 		width: 100%;
 		display: flex;
+		margin-bottom: calc(100vw * 0.05);
 	}
-	&__three-tiles{
-		width: 100%;
-		display: flex;
+	&__md-tiles{
+		height: var(--md-tile-height);
+	}
+	&__lg-tiles{
+		height: var(--lg-tile-height);
+	}
+	&__xl-tiles{
+		height: var(--xl-tile-height);
 	}
 	&__four-tiles{
 		width: 100%;
@@ -33,14 +41,8 @@
 	}
 	&__six-tiles{
 		width: 100%;
-		height: 134px;
+		height: var(--sm-tiles-wrapper-height);
 		display: flex;
-		@include breakpoint(md){
-			height: 140px;
-		}
-		@include breakpoint(lg){
-			height: 184px;
-		}
 	}
 }
 

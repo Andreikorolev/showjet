@@ -7,9 +7,6 @@
 	&__filter-wrap{
 		margin-right: 20px;
 	}
-	&__two-tiles,
-	&__three-tiles,
-	&__four-tiles,
 	&__six-tiles{
 		margin-bottom: 40px;
 		@include breakpoint(md){
@@ -22,5 +19,8 @@
 	&__about-serial{
 		width: 100%;
 		margin-bottom: 80px;
+		@include breakpoint(xl){
+			margin-bottom: 300px;
+		}
 	}
 }
