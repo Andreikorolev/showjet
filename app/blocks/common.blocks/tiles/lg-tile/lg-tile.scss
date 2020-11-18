@@ -1,0 +1,56 @@
+.tile__lg{
+	flex: 0 0 var(--lg-tile-width);
+	height: var(--lg-tile-height);
+	clip-path: polygon(calc(0% + var(--lg-angle-offset)) 0%, 100% 0%, calc(100% - var(--lg-angle-offset)) 100%, 0% 100%);
+
+	&:not(:last-child){
+		margin-right: var(--lg-margin-right);
+	}
+	&:first-child{
+		clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--lg-angle-offset)) 100%, 0% 100%);
+
+		& .tile__buttons-wrap,
+		& .tile__bottom-wrap{
+			left: calc(var(--lg-angle-offset) / 2);
+		}
+	}
+	&:last-child{	
+		clip-path: polygon(calc(0% + var(--lg-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
+		left: 0;
+
+		& .tile__bottom-wrap{
+			right: calc(var(--lg-angle-offset) / 2);
+		}
+	}	
+
+	&.tile-info:hover,
+	&.tile-info:active,
+	&.tile-info:focus{
+		z-index: 100;
+		flex: 0 0 var(--lg-tile-hover-width);
+		height: var(--lg-tile-hover-height);
+		top: var(--lg-tile-hover-top-offset);
+		clip-path: polygon(calc(0% + var(--lg-hover-angle-offset)) 0%, 100% 0%, calc(100% - var(--lg-hover-angle-offset)) 100%, 0% 100%);
+		transition: all ease .5s;
+		transition-delay: .5s;
+		
+		&:first-child{
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--lg-hover-angle-offset)) 100%, 0% 100%);
+		}
+		&:last-child{	
+			clip-path: polygon(calc(0% + var(--lg-hover-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
+		}
+	}
+
+	& .tile__buttons-wrap,
+	& .tile__bottom-wrap{
+		left: calc(var(--lg-angle-offset) * 1.5);
+	}
+	& .tile__buttons-wrap{
+		top: calc(var(--lg-angle-offset) / 2);
+	}
+	& .tile__bottom-wrap{
+		bottom: calc(var(--lg-angle-offset) / 2);
+		right: calc(var(--lg-angle-offset) * 1.5);
+	}
+}

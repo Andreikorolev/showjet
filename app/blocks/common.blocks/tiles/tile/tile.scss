@@ -19,231 +19,6 @@
 		height: calc(100% - 10px);
 		overflow: hidden;
 	}
-
-	&__sm{
-		// width: 259px;
-		flex: 0 0 259px;
-		height: 134px;
-		clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
-		@include breakpoint(md){
-			// width: 263px;
-			flex: 0 0 263px;
-			height: 140px;
-			clip-path: polygon(calc(0% + 28px) 0%, 100% 0%, calc(100% - 28px) 100%, 0% 100%);
-		}
-		@include breakpoint(lg){
-			// width: 333px;
-			flex: 0 0 333px;
-			height: 184px;
-			clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-		}
-
-		&:not(:last-child){
-			margin-right: -24px;
-			@include breakpoint(md){
-				margin-right: -25px;
-			}
-			@include breakpoint(lg){
-				margin-right: -32px;
-			}
-		}
-		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - 26px) 100%, 0% 100%);
-			@include breakpoint(md){
-				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 28px) 100%, 0% 100%);
-			}
-			@include breakpoint(lg){
-				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
-			}
-		}
-		&:last-child{	
-			clip-path: polygon(calc(0% + 26px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			left: 0;
-			@include breakpoint(md){
-				clip-path: polygon(calc(0% + 28px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			}
-			@include breakpoint(lg){
-				clip-path: polygon(calc(0% + 35px) 0%, 100% 0%, 100% 100%, 0% 100%);
-			}
-		}
-
-		&.tile-info:hover,
-		&.tile-info:active,
-		&.tile-info:focus{
-			// width: 548px;
-			flex: 0 0 548px;
-			height: 284px;
-			top: -50px;
-			clip-path: polygon(calc(0% + 54px) 0%, 100% 0%, calc(100% - 54px) 100%, 0% 100%);
-			transition: all ease .5s;
-			transition-delay: .5s;
-			@include breakpoint(md){
-				// width: 463px;
-				flex: 0 0 463px;
-				height: 240px;
-				top: -50px;
-				clip-path: polygon(calc(0% + 46px) 0%, 100% 0%, calc(100% - 46px) 100%, 0% 100%);
-			}
-			@include breakpoint(lg){
-				// width: 548px;
-				flex: 0 0 548px;
-				height: 284px;
-				top: -50px;
-				clip-path: polygon(calc(0% + 54px) 0%, 100% 0%, calc(100% - 54px) 100%, 0% 100%);
-			}
-
-			
-			&:not(:last-child){
-				margin-right: -35px;
-			}
-			&:not(:first-child){
-				margin-left: -10px;
-			}
-			&:first-child{
-				clip-path: polygon(0% 0%, 100% 0%, calc(100% - 54px) 100%, 0% 100%);
-			}
-			&:last-child{	
-				clip-path: polygon(calc(0% + 54px) 0%, 100% 0%, 100% 100%, 0% 100%);
-				left: -195px;
-			}
-		}
-	}
-	&__md{
-		flex: 0 0 var(--md-tile-width);
-		height: var(--md-tile-height);
-		clip-path: polygon(calc(0% + var(--md-angle-offset)) 0%, 100% 0%, calc(100% - var(--md-angle-offset)) 100%, 0% 100%);
-
-		&:not(:last-child){
-			margin-right: var(--md-margin-right);
-		}
-		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--md-angle-offset)) 100%, 0% 100%);
-			& .tile__buttons-wrap,
-			& .tile__meta-info-wrap{
-				left: 50px;
-			}
-			& .tile__meta-info-wrap{
-				bottom: 40px;
-			}
-			& .tile__sound-button{
-				bottom: 45px;
-				right: var(--md-info-offset);
-			}
-		}
-		&:last-child{	
-			clip-path: polygon(calc(0% + var(--md-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
-			& .tile__buttons-wrap,
-			& .tile__meta-info-wrap{
-				left: var(--md-info-offset);
-			}
-			& .tile__meta-info-wrap{
-				bottom: 40px;
-			}
-			& .tile__sound-button{
-				bottom: 45px;
-				right: 50px;
-			}
-		}	
-
-		& .tile__buttons-wrap,
-		& .tile__meta-info-wrap{
-			left: var(--md-info-offset);
-		}
-		& .tile__meta-info-wrap{
-			bottom: 40px;
-		}
-		& .tile__sound-button{
-			bottom: 45px;
-			right: var(--md-info-offset);
-		}		
-	}
-	&__lg{
-		flex: 0 0 var(--lg-tile-width);
-		height: var(--lg-tile-height);
-		clip-path: polygon(calc(0% + var(--lg-angle-offset)) 0%, 100% 0%, calc(100% - var(--lg-angle-offset)) 100%, 0% 100%);
-
-		&:not(:last-child){
-			margin-right: var(--lg-margin-right);
-		}
-		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--lg-angle-offset)) 100%, 0% 100%);
-			& .tile__buttons-wrap,
-			& .tile__meta-info-wrap{
-				left: 50px;
-			}
-			& .tile__meta-info-wrap{
-				bottom: 40px;
-			}
-			& .tile__sound-button{
-				bottom: 45px;
-				right: var(--lg-info-offset);
-			}
-		}
-		&:last-child{	
-			clip-path: polygon(calc(0% + var(--lg-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
-			& .tile__buttons-wrap,
-			& .tile__meta-info-wrap{
-				left: var(--lg-info-offset);
-			}
-			& .tile__meta-info-wrap{
-				bottom: 40px;
-			}
-			& .tile__sound-button{
-				bottom: 45px;
-				right: 50px;
-			}
-		}	
-
-		& .tile__buttons-wrap,
-		& .tile__meta-info-wrap{
-			left: var(--lg-info-offset);
-		}
-		& .tile__meta-info-wrap{
-			bottom: 40px;
-		}
-		& .tile__sound-button{
-			bottom: 45px;
-			right: var(--lg-info-offset);
-		}
-	}
-	&__xl{
-		flex: 0 0 var(--xl-tile-width);
-		height: var(--xl-tile-height);
-		clip-path: polygon(calc(0% + var(--xl-angle-offset)) 0%, 100% 0%, calc(100% - var(--xl-angle-offset)) 100%, 0% 100%);
-
-		&:not(:last-child){
-			margin-right: var(--xl-margin-right);
-		}
-		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--xl-angle-offset)) 100%, 0% 100%);
-
-			& .tile__buttons-wrap,
-			& .tile__meta-info-wrap{
-				left: 50px;
-			}
-			& .tile__meta-info-wrap{
-				bottom: 40px;
-			}
-			& .tile__sound-button{
-				bottom: 45px;
-				right: var(--xl-info-offset);
-			}
-		}
-		&:last-child{	
-			clip-path: polygon(calc(0% + var(--xl-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
-			& .tile__buttons-wrap,
-			& .tile__meta-info-wrap{
-				left: var(--xl-info-offset);
-			}
-			& .tile__meta-info-wrap{
-				bottom: 40px;
-			}
-			& .tile__sound-button{
-				bottom: 45px;
-				right: 50px;
-			}
-		}	
-	}
 	&__bg{
 		position: absolute;
 		top: 0;
@@ -294,7 +69,7 @@
 		transition: all ease .3s;
 
 		&.hide{
-			opacity: 0 !important;
+			// opacity: 0 !important;
 			transition: all ease 1s;
 		}
 	}
@@ -306,38 +81,66 @@
 	}
 	&__button{
 		cursor: pointer;
-		width: 39px;
+		width: 26px;
+		@include breakpoint(lg){
+			width: 39px;
+		}
+		@include breakpoint(xl){
+			width: 55px;
+		}
 
 		&:not(:last-child){
-			margin-right: 30px;
+			margin-right: 20px;
+			@include breakpoint(lg){
+				margin-right: 30px;
+			}
 		}
 	}
 	&__button-icon{
 		width: 100%;
 	}
-	&__meta-info-wrap{
-		display: block;
+	&__bottom-wrap{
+		width: auto;
 		position: absolute;
-		bottom: 20px;
-		left: 65px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	&__meta-info-wrap{
+		position: relative;
+		display: block;
 	}
 	&__title{
 		font-family: $bebas;
 		font-weight: bold;
-		font-size: 32px;
-		line-height: 30px;
+		font-size: 24px;
 		color: #fff;
-		margin-bottom: 13px;
+		margin-bottom: 5px;
+		@include breakpoint(lg){
+			font-size: 32px;
+			margin-bottom: 15px;
+		}
+		@include breakpoint(xl){
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
 	}
 	&__meta-info{
 		display: flex;
-		margin-bottom: 12px;
 		font-family: $bebas;
 		font-weight: bold;
 		font-size: 22px;
 		line-height: 26px;
 		text-align: center;
 		color: #fff;
+		margin-bottom: 5px;
+		@include breakpoint(lg){
+			margin-bottom: 15px;
+		}
+		@include breakpoint(xl){
+			margin-bottom: 20px;
+			font-size: 28px;
+		}
 	}
 	&__meta-info-item{
 		display: flex;
@@ -345,18 +148,29 @@
 		justify-content: center;
 
 		&:not(:last-child){
-			margin-right: 30px;
+			margin-right: 20px;
+			@include breakpoint(md){
+				margin-right: 30px;
+			}
 		}
 		&_18{
 			width: 32px;
 			height: 25px;
+			padding-top: 3px;
 			border: 2px solid #fff;
-			border-radius: 4px
+			border-radius: 4px;
+			@include breakpoint(xl){
+				width: 44px;
+				height: 36px;
+			}
 		}
 	}
 	&__meta-info-item-icon{
 		height: 16px;
 		margin-right: 5px;
+		@include breakpoint(xl){
+			height: 24px;
+		}
 	}
 	&__text{
 		display: flex;
@@ -366,23 +180,30 @@
 		font-size: 16px;
 		line-height: 21px;
 		color: #fff;
+		@include breakpoint(xl){
+			font-size: 28px;
+		}
 	}
 	&__text-item{
-
 		&:not(:last-child){
-			margin-right: 25px;
+			margin-right: 20px;
+			@include breakpoint(lg){
+				margin-right: 25px;
+			}
 		}
 	}
 	&__sound-button{
 		cursor: pointer;
 		width: 32px;
 		height: 32px;
-		position: absolute;
-		bottom: 25px;
-		right: 75px;
+		position: relative;
 		@include breakpoint(lg){
 			width: 48px;
 			height: 48px;
+		}
+		@include breakpoint(xl){
+			width: 60px;
+			height: 60px;
 		}
 
 		&_on{
@@ -413,11 +234,6 @@
 			transition: all ease .4s;
 			transition-delay: .5s;
 		}
-		// & .tile__bg{
-		// 	opacity: 0;
-		// 	transition: all ease .5s;
-		// 	transition-delay: .5s;
-		// }
 		& .tile__video{
 			opacity: 1;
 			transition: all ease .5s;

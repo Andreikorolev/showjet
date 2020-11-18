@@ -20,6 +20,9 @@
 	@else if $class == lg {
 		@media (min-width: 1920px) {@content;}
 	}
+  @else if $class == xl {
+    @media (min-width: 2500px) {@content;}
+  }
 	@else
 	{
 		@warn "breakpoint mixin supports only xs, lt, sm, md, lg";
