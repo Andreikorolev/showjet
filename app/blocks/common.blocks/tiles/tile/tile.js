@@ -6,6 +6,17 @@ $( ".tile" ).each(function() {
 $(".tile.tile-info").hover(
 	function(){
 		var targetTile = $(this);
+		var targetTileIndex = targetTile.index();
+		var lengthOfParent = targetTile.parent().children().length;
+
+		timerAddClass = setTimeout(function(){
+			if (targetTileIndex != 0 && targetTileIndex != (lengthOfParent - 1)) {
+				targetTile.parent().addClass('hovered-child');
+			} else if (targetTileIndex != 0 && targetTileIndex === (lengthOfParent - 1)) {
+				targetTile.parent().addClass('hovered-last-child');
+			}
+		}, 500);
+
 		// set timer
 		timer = setTimeout(function() {
 			targetTile.find(".tile__bg").hide();
@@ -54,6 +65,9 @@ $(".tile.tile-info").hover(
 			// end mouse move handler
 		}, 1000);
 	}, function() {
+		$(this).parent().removeClass('hovered-child');
+		$(this).parent().removeClass('hovered-last-child');
+		clearTimeout(timerAddClass);
 		// reset timer
 		clearTimeout(timer);
 		var videoID = $(this).find('video').attr('id');

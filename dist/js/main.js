@@ -23,6 +23,17 @@ $( ".tile" ).each(function() {
 $(".tile.tile-info").hover(
 	function(){
 		var targetTile = $(this);
+		var targetTileIndex = targetTile.index();
+		var lengthOfParent = targetTile.parent().children().length;
+
+		timerAddClass = setTimeout(function(){
+			if (targetTileIndex != 0 && targetTileIndex != (lengthOfParent - 1)) {
+				targetTile.parent().addClass('hovered-child');
+			} else if (targetTileIndex != 0 && targetTileIndex === (lengthOfParent - 1)) {
+				targetTile.parent().addClass('hovered-last-child');
+			}
+		}, 500);
+
 		// set timer
 		timer = setTimeout(function() {
 			targetTile.find(".tile__bg").hide();
@@ -71,6 +82,9 @@ $(".tile.tile-info").hover(
 			// end mouse move handler
 		}, 1000);
 	}, function() {
+		$(this).parent().removeClass('hovered-child');
+		$(this).parent().removeClass('hovered-last-child');
+		clearTimeout(timerAddClass);
 		// reset timer
 		clearTimeout(timer);
 		var videoID = $(this).find('video').attr('id');
@@ -253,19 +267,17 @@ function resizeTile(tileSize, numberOfTiles) {
 	var windowWidth = window.innerWidth;
 	var tile = $('.tile__' + tileSize);
 	var wrapperWidth = tile.parent().width();
-	// console.log(wrapperWidth);
 
 	var tileHeight = (wrapperWidth / numberOfTiles) / 1.8;
 	var angleOffset = Math.sin((11*Math.PI)/180) * tileHeight;
 	var tileWidth = (wrapperWidth + (( angleOffset - 3 )  * (numberOfTiles -1))) / numberOfTiles;
 
 	//width of gap between tiles row
-	var gapWidth = windowWidth * 0.05;
+	var gapWidth = windowWidth * 0.042;
 
-	var tileHoverHeight = ((wrapperWidth / numberOfTiles) / 1.8) + (gapWidth * 2);
+	var tileHoverHeight = ((wrapperWidth / numberOfTiles) / 1.8) + (gapWidth * 1.22);
 	var hoverAngleOffset = Math.sin((11*Math.PI)/180) * tileHoverHeight;
 	var tileHoverWidth = ((wrapperWidth + ((hoverAngleOffset - 3) * (numberOfTiles -1))) / numberOfTiles) * (tileHoverHeight / tileHeight);
-	var tileLastHoverOffset = tileHoverWidth - tileWidth;
 
     body.style.setProperty('--' + tileSize + '-tile-width', tileWidth + 'px');
     body.style.setProperty('--' + tileSize + '-tile-height', tileHeight + 'px');
@@ -276,7 +288,6 @@ function resizeTile(tileSize, numberOfTiles) {
     body.style.setProperty('--' + tileSize + '-tile-hover-height', tileHoverHeight + 'px');
     body.style.setProperty('--' + tileSize + '-hover-angle-offset', hoverAngleOffset + 'px');
     body.style.setProperty('--' + tileSize + '-tile-hover-top-offset', -((tileHoverHeight - tileHeight) / 2) + 'px');
-    body.style.setProperty('--' + tileSize + '-tile-last-hover-offset', -tileLastHoverOffset + 'px');
 };
 
 // function for resizing sm tiles 
@@ -289,32 +300,32 @@ function resizeSMTile() {
 	} else if (windowWidth < 1280 && windowWidth >= 1024) {
 		numberOfTiles = 4;
 	}
+
 	var body = document.querySelector('body');
+	var windowWidth = window.innerWidth;
 	var tile = $('.tile__sm');
 	var wrapperWidth = tile.parent().width();
 
-	var angleOffset = Math.sin((11*Math.PI)/180) * ( ( wrapperWidth / numberOfTiles ) / 1.8 );
-	var tileWidth = (wrapperWidth + (( angleOffset - 3 )  * (numberOfTiles -1))) / numberOfTiles;
 	var tileHeight = (wrapperWidth / numberOfTiles) / 1.8;
+	var angleOffset = Math.sin((11*Math.PI)/180) * tileHeight;
+	var tileWidth = (wrapperWidth + (( angleOffset - 3 )  * (numberOfTiles -1))) / numberOfTiles;
 
-	var hoverAngleOffset = Math.sin((11*Math.PI)/180) * ( (( wrapperWidth / numberOfTiles ) / 1.8 ) * 1.65 );
-	var tileHoverWidth = ((wrapperWidth + ((hoverAngleOffset - 3) * (numberOfTiles -1))) / numberOfTiles) * 1.65;
-	var tileHoverHeight = ((wrapperWidth / numberOfTiles) / 1.8 ) * 1.65;
-	var infoOffset = hoverAngleOffset + 20;
-	var tileLastHoverOffset = tileHoverWidth - tileWidth - 10;
+	//width of gap between tiles row
+	var gapWidth = windowWidth * 0.042;
+
+	var tileHoverHeight = ((wrapperWidth / numberOfTiles) / 1.8) + (gapWidth * 1.22);
+	var hoverAngleOffset = Math.sin((11*Math.PI)/180) * tileHoverHeight;
+	var tileHoverWidth = ((wrapperWidth + ((hoverAngleOffset - 3) * (numberOfTiles -1))) / numberOfTiles) * (tileHoverHeight / tileHeight);
 
     body.style.setProperty('--sm-tile-width', tileWidth + 'px');
     body.style.setProperty('--sm-tile-height', tileHeight + 'px');
-    body.style.setProperty('--sm-tiles-wrapper-height', tileHeight + 'px');
-    body.style.setProperty('--sm-tile-hover-top-offset', -((tileHoverHeight - tileHeight) / 2) + 'px');
     body.style.setProperty('--sm-angle-offset', angleOffset + 'px');
     body.style.setProperty('--sm-margin-right', -(angleOffset - 3) + 'px');
 
-	body.style.setProperty('--sm-tile-hover-width', tileHoverWidth + 'px');
-	body.style.setProperty('--sm-tile-hover-height', tileHoverHeight + 'px');
-	body.style.setProperty('--sm-hover-angle-offset', hoverAngleOffset + 'px');
-    body.style.setProperty('--sm-info-offset', infoOffset + 'px');
-    body.style.setProperty('--sm-tile-last-hover-offset', -tileLastHoverOffset + 'px');
+    body.style.setProperty('--sm-tile-hover-width', tileHoverWidth + 'px');
+    body.style.setProperty('--sm-tile-hover-height', tileHoverHeight + 'px');
+    body.style.setProperty('--sm-hover-angle-offset', hoverAngleOffset + 'px');
+    body.style.setProperty('--sm-tile-hover-top-offset', -((tileHoverHeight - tileHeight) / 2) + 'px');
 };
 
 

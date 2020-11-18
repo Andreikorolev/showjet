@@ -19,85 +19,6 @@
 		height: calc(100% - 10px);
 		overflow: hidden;
 	}
-
-	&__sm{
-		flex: 0 0 var(--sm-tile-width);
-		height: var(--sm-tile-height);
-		clip-path: polygon(calc(0% + var(--sm-angle-offset)) 0%, 100% 0%, calc(100% - var(--sm-angle-offset)) 100%, 0% 100%);
-
-		&:not(:last-child){
-			margin-right: var(--sm-margin-right);
-		}
-		&:first-child{
-			clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--sm-angle-offset)) 100%, 0% 100%);
-		}
-		&:last-child{	
-			clip-path: polygon(calc(0% + var(--sm-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
-			left: 0;
-		}
-
-		&.tile-info:hover,
-		&.tile-info:active,
-		&.tile-info:focus{
-			z-index: 100;
-			flex: 0 0 var(--sm-tile-hover-width);
-			height: var(--sm-tile-hover-height);
-			top: var(--sm-tile-hover-top-offset);
-			clip-path: polygon(calc(0% + var(--sm-hover-angle-offset)) 0%, 100% 0%, calc(100% - var(--sm-hover-angle-offset)) 100%, 0% 100%);
-			transition: all ease .5s;
-			transition-delay: .5s;
-			
-			&:not(:last-child){
-				margin-right: -35px;
-			}
-			&:not(:first-child){
-				margin-left: -10px;
-			}
-			&:first-child{
-				clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--sm-hover-angle-offset)) 100%, 0% 100%);
-
-				& .tile__buttons-wrap,
-				& .tile__meta-info-wrap{
-					left: 20px;
-				}
-				& .tile__meta-info-wrap{
-					bottom: 20px;
-				}
-				& .tile__sound-button{
-					bottom: 25px;
-					right: var(--sm-info-offset);
-				}
-			}
-			&:last-child{	
-				clip-path: polygon(calc(0% + var(--sm-hover-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
-				left: var(--sm-tile-last-hover-offset);
-
-				& .tile__buttons-wrap,
-				& .tile__meta-info-wrap{
-					left: var(--sm-info-offset);
-				}
-				& .tile__meta-info-wrap{
-					bottom: 20px;
-				}
-				& .tile__sound-button{
-					bottom: 25px;
-					right: 20px;
-				}
-			}
-
-			& .tile__buttons-wrap,
-			& .tile__meta-info-wrap{
-				left: var(--sm-info-offset);
-			}
-			& .tile__meta-info-wrap{
-				bottom: 20px;
-			}
-			& .tile__sound-button{
-				bottom: 25px;
-				right: var(--sm-info-offset);
-			}
-		}
-	}
 	&__bg{
 		position: absolute;
 		top: 0;
@@ -148,7 +69,7 @@
 		transition: all ease .3s;
 
 		&.hide{
-			opacity: 0 !important;
+			// opacity: 0 !important;
 			transition: all ease 1s;
 		}
 	}
@@ -160,16 +81,16 @@
 	}
 	&__button{
 		cursor: pointer;
-		width: 30px;
+		width: 26px;
 		@include breakpoint(lg){
 			width: 39px;
 		}
 		@include breakpoint(xl){
-			width: 60px;
+			width: 55px;
 		}
 
 		&:not(:last-child){
-			margin-right: 15px;
+			margin-right: 20px;
 			@include breakpoint(lg){
 				margin-right: 30px;
 			}
@@ -178,35 +99,47 @@
 	&__button-icon{
 		width: 100%;
 	}
-	&__meta-info-wrap{
-		display: block;
+	&__bottom-wrap{
+		width: auto;
 		position: absolute;
-		bottom: 20px;
-		left: 65px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	&__meta-info-wrap{
+		position: relative;
+		display: block;
 	}
 	&__title{
 		font-family: $bebas;
 		font-weight: bold;
-		font-size: 32px;
-		line-height: 30px;
+		font-size: 24px;
 		color: #fff;
-		margin-bottom: 13px;
+		margin-bottom: 5px;
+		@include breakpoint(lg){
+			font-size: 32px;
+			margin-bottom: 15px;
+		}
 		@include breakpoint(xl){
-			font-size: 44px;
-			line-height: 40px;
+			font-size: 40px;
+			margin-bottom: 20px;
 		}
 	}
 	&__meta-info{
 		display: flex;
-		margin-bottom: 12px;
 		font-family: $bebas;
 		font-weight: bold;
 		font-size: 22px;
 		line-height: 26px;
 		text-align: center;
 		color: #fff;
+		margin-bottom: 5px;
+		@include breakpoint(lg){
+			margin-bottom: 15px;
+		}
 		@include breakpoint(xl){
-			font-size: 32px;
+			margin-bottom: 20px;
+			font-size: 28px;
 		}
 	}
 	&__meta-info-item{
@@ -215,11 +148,15 @@
 		justify-content: center;
 
 		&:not(:last-child){
-			margin-right: 30px;
+			margin-right: 20px;
+			@include breakpoint(md){
+				margin-right: 30px;
+			}
 		}
 		&_18{
 			width: 32px;
 			height: 25px;
+			padding-top: 3px;
 			border: 2px solid #fff;
 			border-radius: 4px;
 			@include breakpoint(xl){
@@ -244,22 +181,22 @@
 		line-height: 21px;
 		color: #fff;
 		@include breakpoint(xl){
-			font-size: 24px;
+			font-size: 28px;
 		}
 	}
 	&__text-item{
-
 		&:not(:last-child){
-			margin-right: 25px;
+			margin-right: 20px;
+			@include breakpoint(lg){
+				margin-right: 25px;
+			}
 		}
 	}
 	&__sound-button{
 		cursor: pointer;
 		width: 32px;
 		height: 32px;
-		position: absolute;
-		bottom: 25px;
-		right: 75px;
+		position: relative;
 		@include breakpoint(lg){
 			width: 48px;
 			height: 48px;
@@ -297,11 +234,6 @@
 			transition: all ease .4s;
 			transition-delay: .5s;
 		}
-		// & .tile__bg{
-		// 	opacity: 0;
-		// 	transition: all ease .5s;
-		// 	transition-delay: .5s;
-		// }
 		& .tile__video{
 			opacity: 1;
 			transition: all ease .5s;

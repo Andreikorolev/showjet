@@ -7,55 +7,6 @@ $bebas: 'Bebas Neue';
 $stem: 'Stem';
 
 body{
-	// variables for md tiles
-	--sm-tile-width: 0;
-	--sm-tile-height: 0;
-	--sm-tiles-wrapper-height: 0;
-	--sm-angle-offset: 0;
-	--sm-tile-hover-width: 0;
-	--sm-tile-hover-height: 0;
-	--sm-hover-angle-offset: 0;
-	--sm-tile-hover-top-offset: 0;
-	--sm-margin-right: 0;
-	--sm-tile-last-hover-offset: 0;
-	// variables for md tiles
-	// --md-tile-width: 0;
-	// --md-tile-height: 0;
-	// --md-angle-offset: 0;
-	// --md-margin-right: 0;
-	// --md-tile-hover-width: 0;
-	// --md-tile-hover-height: 0;
-	// --md-hover-angle-offset: 0;
-	// --md-tile-hover-top-offset: 0;
-	// --md-tile-last-hover-offset: 0;
-	// // variables for lg tiles
-	// --lg-tile-width: 0;
-	// --lg-tile-height: 0;
-	// --lg-angle-offset: 0;
-	// --lg-margin-right: 0;
-	// --lg-tile-hover-width: 0;
-	// --lg-tile-hover-height: 0;
-	// --lg-hover-angle-offset: 0;
-	// --lg-tile-hover-top-offset: 0;
-	// --lg-tile-last-hover-offset: 0;
-	// // variables for xl tiles
-	// --xl-tile-width: 0;
-	// --xl-tile-height: 0;
-	// --xl-angle-offset: 0;
-	// --xl-margin-right: 0;
-	// --xl-tile-hover-width: 0;
-	// --xl-tile-hover-height: 0;
-	// --xl-hover-angle-offset: 0;
-	// --xl-tile-hover-top-offset: 0;
-	// --xl-tile-last-hover-offset: 0;
-	// variables for collection tiles
-	--collection-tile-width: 0;
-	--collection-tile-height: 0;
-	--collection-angle-offset: 0;
-	--collection-margin-right: 0;
-	--collection-angle-hover-offset: 0;
-	--collection-hover-offset: 0;
-
 	background-color: #141414;
 
 	&.light{

@@ -1,0 +1,56 @@
+.tile__sm{
+	flex: 0 0 var(--sm-tile-width);
+	height: var(--sm-tile-height);
+	clip-path: polygon(calc(0% + var(--sm-angle-offset)) 0%, 100% 0%, calc(100% - var(--sm-angle-offset)) 100%, 0% 100%);
+
+	&:not(:last-child){
+		margin-right: var(--sm-margin-right);
+	}
+	&:first-child{
+		clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--sm-angle-offset)) 100%, 0% 100%);
+
+		& .tile__buttons-wrap,
+		& .tile__bottom-wrap{
+			left: calc(var(--sm-angle-offset) / 2);
+		}
+	}
+	&:last-child{	
+		clip-path: polygon(calc(0% + var(--sm-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
+		left: 0;
+
+		& .tile__bottom-wrap{
+			right: calc(var(--sm-angle-offset) / 2);
+		}
+	}	
+
+	&.tile-info:hover,
+	&.tile-info:active,
+	&.tile-info:focus{
+		z-index: 100;
+		flex: 0 0 var(--sm-tile-hover-width);
+		height: var(--sm-tile-hover-height);
+		top: var(--sm-tile-hover-top-offset);
+		clip-path: polygon(calc(0% + var(--sm-hover-angle-offset)) 0%, 100% 0%, calc(100% - var(--sm-hover-angle-offset)) 100%, 0% 100%);
+		transition: all ease .5s;
+		transition-delay: .5s;
+		
+		&:first-child{
+			clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--sm-hover-angle-offset)) 100%, 0% 100%);
+		}
+		&:last-child{	
+			clip-path: polygon(calc(0% + var(--sm-hover-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%);
+		}
+	}
+
+	& .tile__buttons-wrap,
+	& .tile__bottom-wrap{
+		left: calc(var(--sm-angle-offset) * 1.5);
+	}
+	& .tile__buttons-wrap{
+		top: calc(var(--sm-angle-offset) / 2);
+	}
+	& .tile__bottom-wrap{
+		bottom: calc(var(--sm-angle-offset) / 2);
+		right: calc(var(--sm-angle-offset) * 1.5);
+	}
+}

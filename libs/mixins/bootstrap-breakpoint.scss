@@ -21,7 +21,7 @@
 		@media (min-width: 1920px) {@content;}
 	}
   @else if $class == xl {
-    @media (min-width: 2800px) {@content;}
+    @media (min-width: 2500px) {@content;}
   }
 	@else
 	{
