@@ -40,7 +40,14 @@
 		padding-left: 30px;
 	}
 	&__info-wrap{
+		height: calc((100vw / 1.7) / 2.09);
+		display: flex;
+		flex-direction: column;
+		// justify-content: space-between;
+
 		@include breakpoint(xl){
+			height: auto;
+			display: block;
 			transform: scale(var(--about-serial-left-wrap-scale));
 			transform-origin: top left;
 		}
@@ -50,17 +57,19 @@
 		flex-direction: column;
 	}
 	&__title{
-		width: 230px;
+		width: auto;
+		height: 500px;
+		max-height: 70px;
+		flex-shrink: 0;
 		margin-bottom: 5px;
+		background-size: contain;
+		background-repeat: no-repeat;
 		@include breakpoint(md){
-			width: 340px;
+			max-height: 70px;
 		}
 		@include breakpoint(lg){
-			width: 500px;
+			max-height: 110px;
 		}
-	}
-	&__title-img{
-		width: 100%;
 	}
 	&__title-text{
 		font-family: $bebas;
@@ -81,6 +90,7 @@
 	}
 	&__text{
 		width: 350px;
+		overflow: hidden;
 		font-family: $stem;
 		font-style: normal;
 		font-weight: normal;
@@ -101,7 +111,7 @@
 		}
 	}
 	&__genre{
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		font-family: $stem;
 		font-style: normal;
 		font-weight: normal;
@@ -110,6 +120,7 @@
 		color: #FFFFFF;
 		opacity: 0.5;
 		@include breakpoint(md){
+			margin-bottom: 20px;
 			font-size: 17px;
 			line-height: 22px;
 		}
@@ -120,9 +131,10 @@
 		}
 	}
 	&__meta-info{
-		margin-bottom: 25px;
+		margin-bottom: 15px;
+		margin-top: auto;
 		@include breakpoint(md){
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 		}
 		@include breakpoint(lg){
 			margin-bottom: 62px;
@@ -132,6 +144,7 @@
 		width: 180px;
 		height: 42px;
 		display: flex;
+		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
 		background-color: #30C1D2;
@@ -221,7 +234,7 @@
 
 		&.active{
 			opacity: 1;
-			border-bottom: 1px solid #fff;
+			text-decoration: underline;
 		}
 	}
 	&__trailer,
@@ -229,7 +242,7 @@
 	&__actors-creators{
 		width: calc(100vw / 1.7);
 		height: calc((100vw / 1.7) / 2.09);
-		margin-bottom: calc(50vw * 0.042);
+		margin-bottom: calc(30vw * 0.042);
 	}
 	&__trailer{
 		display: block;
@@ -243,7 +256,7 @@
 		right: 25px;
 		display: flex;
 		padding: 15px;
-    	background: radial-gradient(closest-side, rgba(0,0,0,.5), transparent);
+		background: radial-gradient(closest-side, rgba(0,0,0,.5), transparent);
 	}
 	&__trailer-icon{
 		cursor: pointer;

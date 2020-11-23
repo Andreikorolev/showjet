@@ -23,7 +23,7 @@ function scaleAboutSerialInfoWrap() {
 	var body = document.querySelector('body');
 	var infoWrapHeight = $('.about-serial__info-wrap').height();
 	var trailerHeight = $('.about-serial__trailer').height();
-	body.style.setProperty('--about-serial-left-wrap-scale', (trailerHeight / infoWrapHeight));
+	body.style.setProperty('--about-serial-left-wrap-scale', (trailerHeight / infoWrapHeight) - 0.1);
 }
 
 $(window).on('load', function() {

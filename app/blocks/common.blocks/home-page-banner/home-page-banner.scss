@@ -11,7 +11,7 @@
 		max-height: 100vh;
 		z-index: 1;
 		position: absolute;
-		bottom: calc((var(--sm-tile-height) / 2) + (60vw * 0.042));
+		bottom: calc((var(--sm-tile-height) / 1.5) + (100vw * 0.042));
 		left: 30px;
 		transform: translate(-50%, 50%);
 		background: radial-gradient(48.66% 48.66% at 49.28% 50%, #141414 0%, rgba(20, 20, 20, 0.79) 57.81%, rgba(20, 20, 20, 0.0001) 100%);
@@ -56,7 +56,7 @@
 	&__description{
 		z-index: 2;
 		position: absolute;
-		bottom: calc((var(--sm-tile-height) / 2) + (60vw * 0.042));
+		bottom: calc((var(--sm-tile-height) / 1.6) + (100vw * 0.042));
 		left: 30px;
 	}
 	&__title{
@@ -172,16 +172,10 @@
 	&__meta-info{
 		z-index: 2;
 		position: absolute;
-		bottom: 85px;
+		bottom: calc((var(--sm-tile-height) / 1.5) + (100vw * 0.042));
 		right: 30px;
 		display: flex;
 		align-items: center;
-		@include breakpoint(md){
-			bottom: 100px;
-		}
-		@include breakpoint(lg){
-			bottom: 300px;
-		}
 	}
 	&__meta-info-item{
 		display: flex;
