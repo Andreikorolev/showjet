@@ -28,18 +28,18 @@
 		display: flex;
 		margin-bottom: calc(100vw * 0.042);
 		margin-left: 0;
-		transition: all ease .2s;
+		transition: all ease .2s, transform ease 1s !important;
 	}
 	&__sm-tiles{
 		height: var(--sm-tile-height);
 
 		&.hovered-child{
 			margin-left: calc((var(--sm-tile-hover-width) - var(--sm-tile-width)) / -2);
-			transition: all ease .5s;
+			transition: all ease .5s !important;
 		}
 		&.hovered-last-child{
 			margin-left: calc((var(--sm-tile-hover-width) - var(--sm-tile-width)) / -1);
-			transition: all ease .5s;
+			transition: all ease .5s !important;
 		}
 	}
 	&__md-tiles{
@@ -85,21 +85,25 @@
 	display: flex;
 
 	& .swiper-wrapper{
-		height: 134px;
-		margin-left: 0;
-		transition: all ease .3s;
-		@include breakpoint(md){
-			height: 140px;
-		}
-		@include breakpoint(lg){
-			height: 184px;
+		&:hover,
+		&:active,
+		&:focus{
+			transition: all 0ms ease 0s;
+
+			& ~ .slider-button-prev,
+			& ~ .slider-button-next{
+				opacity: 1;
+				transition-delay: 0s;
+			}
 		}
 	}
+
 	& .slider-button-prev,
 	& .slider-button-next{
+		opacity: 0;
 		z-index: 100;
 		width: 130px;
-		height: 100%;
+		height: var(--sm-tile-height);
 		display: flex;
 		justify-content: center;
 		position: absolute;
@@ -109,6 +113,15 @@
 		border: none;
 		color: transparent;
 		outline: none;
+		transition: all ease .3s;
+		transition-delay: 0.5s;
+
+		&:hover,
+		&:active,
+		&:focus{
+			opacity: 1;
+			transition-delay: 0s;
+		}
 	}
 	& .slider-button-prev{
 		left: calc(-100vw + 100%);

@@ -4,7 +4,7 @@
 
 		& .tile-episode__episode-number,
 		& .tile-episode__episode-name{
-			left: 15px;
+			left: calc(var(--sm-angle-offset) / 2);
 		}
 
 	}
@@ -28,10 +28,10 @@
 	}
 	&__episode-number{
 		top: 8px;
-		left: 41px;
+		left: calc(var(--sm-angle-offset) * 1.7);
 	}
 	&__episode-name{
 		bottom: 8px;
-		left: 20px;
+		left: calc(var(--sm-angle-offset) * 1.7);
 	}
 }

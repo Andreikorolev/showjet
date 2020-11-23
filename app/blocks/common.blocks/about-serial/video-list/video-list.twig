@@ -4,10 +4,10 @@
 			Сезон
 		</h3>
 		<div class="video-list__tiles-wrap tiles-list__slider">
-			<div class="swiper-wrapper">
+			<div class="swiper-wrapper tiles-list__sm-tiles">
 				{# TILE #}
 				{% for item in 0..8 %}
-				{% include 'blocks/common.blocks/tiles/tile-episode/tile-episode.twig' with {'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"'}%}
+				{% include 'blocks/common.blocks/tiles/tile-episode/tile-episode.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"'}%}
 				{% endfor %}
 			</div>
 			<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>

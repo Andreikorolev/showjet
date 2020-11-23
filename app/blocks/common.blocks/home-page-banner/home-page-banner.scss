@@ -1,23 +1,19 @@
 .home-page-banner{
 	width: 100%;
-	height: 512px;
+	height: calc(100vw / (1920 / 1080));
+	max-height: 100vh;
 	overflow: hidden;
-
-	@include breakpoint(md){
-		height: 640px;
-	}
-	@include breakpoint(lg){
-		height: 1080px;
-	}
 
 	&:before{
 		content: '';
 		width: 100%;
-		height: 1080px;
+		height: calc(100vw / (1920 / 1080));
+		max-height: 100vh;
 		z-index: 1;
 		position: absolute;
-		top: 234px;
-		left: -960px;
+		bottom: calc((var(--sm-tile-height) / 2) + (60vw * 0.042));
+		left: 30px;
+		transform: translate(-50%, 50%);
 		background: radial-gradient(48.66% 48.66% at 49.28% 50%, #141414 0%, rgba(20, 20, 20, 0.79) 57.81%, rgba(20, 20, 20, 0.0001) 100%);
 		mix-blend-mode: normal;
 		opacity: 0.8;
@@ -49,6 +45,7 @@
 		}
 	}
 	&__image{
+		z-index: 0;
 		width: 100%;
 		min-height: 100%;
 		position: absolute;
@@ -59,14 +56,8 @@
 	&__description{
 		z-index: 2;
 		position: absolute;
-		bottom: 89px;
+		bottom: calc((var(--sm-tile-height) / 2) + (60vw * 0.042));
 		left: 30px;
-		@include breakpoint(md){
-			bottom: 122px;
-		}
-		@include breakpoint(lg){
-			bottom: 300px;
-		}
 	}
 	&__title{
 		margin-bottom: 17px;
