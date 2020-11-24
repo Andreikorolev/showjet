@@ -3,29 +3,13 @@
 	&__banner{
 		width: 100%;	
 		margin-top: -115px;
-		margin-bottom: -50px;
-		@include breakpoint(md){
-			margin-bottom: -70px;
-		}
-		@include breakpoint(lg){
-			margin-bottom: -223px;
-		}
+		margin-bottom: calc(var(--sm-tile-height) / -2);
+		z-index: 0;
 	}
-	&__about-serial{
-		width: 100%;
-		margin-bottom: 100px;
-	}
-	&__recommended-serials{
-		width: 100%;
-		z-index: 3;
-		margin-bottom: 50px;
-	}
-	&__continue-watching{
-		width: 100%;
-		margin-bottom: 50px;
-	}
+	&__recommended-serials,
+	&__continue-watching,
+	&__about-serial,
 	&__watching-now{
 		width: 100%;
-		margin-bottom: 50px;
 	}
 }

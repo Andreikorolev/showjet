@@ -1,5 +1,9 @@
 // function for resizing md, lg, xl tiles 
 function resizeTile(tileSize, numberOfTiles) {
+	// swithc (tileSize) {
+	// 	case 'sm':
+	// 		return nuambreOfTiles = 2;
+	// }
 	var body = document.querySelector('body');
 	var windowWidth = window.innerWidth;
 	var tile = $('.tile__' + tileSize);

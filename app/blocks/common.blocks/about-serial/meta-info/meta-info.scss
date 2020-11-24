@@ -46,17 +46,22 @@
 		&_18{
 			width: 26px;
 			height: 20px;
+			padding-top: 1px;
 			display: flex;
 			align-items: center;
-			border: 3px solid #FFFFFF;
-			border-radius: 6px;
+			justify-content: center;
+			border: 2px solid #FFFFFF;
+			border-radius: 4px;
 			@include breakpoint(md){
 				width: 35px;
-				height: 32px;
+				height: 27px;
+				border: 3px solid #FFFFFF;
+				border-radius: 6px;
 			}
 			@include breakpoint(lg){
 				width: 48px;
 				height: 37px;
+				padding-top: 2px;
 			}
 		}
 	}

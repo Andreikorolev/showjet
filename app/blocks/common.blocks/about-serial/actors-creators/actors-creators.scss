@@ -97,11 +97,14 @@
 	}
 	&__person{
 		opacity: 0;
+		position: absolute;
+		top: 0;
 		z-index: -1;
 		transition: all ease .3s;
 
 		&.active{
 			opacity: 1;
+			position: relative;
 			z-index: 1;
 		}
 	}

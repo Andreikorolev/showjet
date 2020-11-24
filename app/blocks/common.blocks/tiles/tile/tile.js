@@ -3,23 +3,15 @@ $( ".tile" ).each(function() {
 	$(this).find(".tile__progress-bar").width(progress + '%');
 });
 
+
 $(".tile.tile-info").hover(
 	function(){
 		var targetTile = $(this);
 		var targetTileIndex = targetTile.index();
 		var lengthOfParent = targetTile.parent().children().length;
-
-		timerAddClass = setTimeout(function(){
-			if (targetTileIndex != 0 && targetTileIndex != (lengthOfParent - 1)) {
-				targetTile.parent().addClass('hovered-child');
-			} else if (targetTileIndex != 0 && targetTileIndex === (lengthOfParent - 1)) {
-				targetTile.parent().addClass('hovered-last-child');
-			}
-		}, 500);
-
 		// set timer
 		timer = setTimeout(function() {
-			targetTile.find(".tile__bg").hide();
+			targetTile.find(".tile__bg").fadeOut(1000);
 			var videoID = targetTile.find('video').attr('id');
 			var player = videojs(videoID);
 			player.src({ type: 'application/x-mpegURL', src: $(targetTile).data("videourl") });
@@ -74,6 +66,27 @@ $(".tile.tile-info").hover(
 		var player = videojs(videoID);
 		player.reset();
 		isVideoPlay = false;
-		$(this).find(".tile__bg").show();
+		$(this).find(".tile__bg").fadeIn(100).show();
+	}
+);
+
+$(".tile").hover(
+	function(){
+		var targetTile = $(this);
+		var targetTileIndex = targetTile.index();
+		var lengthOfParent = targetTile.parent().children().length;
+
+		timerAddClass = setTimeout(function(){
+			if (targetTileIndex != 0 && targetTileIndex != (lengthOfParent - 1)) {
+				targetTile.parent().addClass('hovered-child');
+			} else if (targetTileIndex != 0 && targetTileIndex === (lengthOfParent - 1)) {
+				targetTile.parent().addClass('hovered-last-child');
+			}
+		}, 500);
+
+	}, function() {
+		$(this).parent().removeClass('hovered-child');
+		$(this).parent().removeClass('hovered-last-child');
+		clearTimeout(timerAddClass);
 	}
 );
