@@ -1,9 +1,7 @@
 {% extends 'blocks/base.blocks/base/base.twig' %}
-
 {% block content %}
 <div class="container-fluid">
 	<div class="row">
-
 		{# HEADER #}
 		{% include 'blocks/common.blocks/header/header.twig'%}
 		
@@ -19,21 +17,26 @@
 					{% include 'blocks/common.blocks/filter/filter.twig'%}
 				</div>
 			</div>
-
+		</div>
+		<div class="container">
 			{# SERIALS PAGE SIX TILE WRAP #}
 			<div class="tiles-list__sm-tiles">
 				{% for item in 0..5 %}
 				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'infoClass':'tile-info', 'url':'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8', 'videoID':'sixXideo1'~item }%}
 				{% endfor %}
 			</div>
-
+		</div>
+		<div class="container">
 			{# SERAILS PAGE THREE TILE WRAP #}
 			<div class="tiles-list__lg-tiles">
 				{% for item in 0..2 %}
 				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__lg', 'infoClass':'tile-info', 'url':'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8', 'videoID':'threeVideo1'~item }%}
 				{% endfor %}
 			</div>
-
+		</div>
+		<!-- SINGLE-SERIAL-TILE -->
+		{% include 'blocks/common.blocks/tiles/single-serial-tile/single-serial-tile.twig'%}
+		<div class="container">
 			{# SERIALS PAGE SIX TILE WRAP #}
 			<div class="tiles-list__sm-tiles">
 				{% for item in 0..5 %}
@@ -41,13 +44,8 @@
 				{% endfor %}
 			</div>
 		</div>
-		
-		<!-- SERIALS PAGE ABOUT SERIAL -->
-		<div class="serials-page__about-serial">
-			<!-- ABOUT SERIAL -->
-			{% include 'blocks/common.blocks/about-serial/about-serial.twig'%}
-		</div>
-
+		<!-- ABOUT SERIAL -->
+		{% include 'blocks/common.blocks/about-serial/about-serial.twig'%}
 		<div class="container">
 			{# SERIALS PAGE TWO TILE WRAP #}
 			<div class="tiles-list__xl-tiles">
@@ -55,7 +53,8 @@
 				{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__xl', 'infoClass':'tile-info', 'url':'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8', 'videoID':'twoVideo1'~item }%}
 				{% endfor %}
 			</div>
-
+		</div>
+		<div class="container">
 			{# SERIALS PAGE FOUR TILE WRAP #}
 			<div class="tiles-list__md-tiles">
 				{% for item in 0..3 %}
@@ -63,11 +62,8 @@
 				{% endfor %}
 			</div>
 		</div>
-
 		{# FOOTER #}
 		{% include 'blocks/common.blocks/footer/footer.twig'%}
 	</div>
 </div> 
-
-
 {% endblock %}

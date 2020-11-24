@@ -7,20 +7,4 @@
 	&__filter-wrap{
 		margin-right: 20px;
 	}
-	&__six-tiles{
-		margin-bottom: 40px;
-		@include breakpoint(md){
-			margin-bottom: 60px;
-		}
-		@include breakpoint(lg){
-			margin-bottom: 80px;
-		}
-	}
-	&__about-serial{
-		width: 100%;
-		margin-bottom: 80px;
-		@include breakpoint(xl){
-			margin-bottom: 300px;
-		}
-	}
 }
