@@ -54,10 +54,21 @@
 		transform: translateX(-50%);
 	}
 	&__description{
+		width: 100%;
 		z-index: 2;
 		position: absolute;
 		bottom: calc((var(--sm-tile-height) / 1.6) + (100vw * 0.042));
-		left: 30px;
+		left: 0px;
+		padding: 0 30px;
+		--scale-koef: calc(3170 / 1920);
+		--revert-scale-koef: calc(1920 / 3170);
+
+		&>div{
+			@include breakpoint(xl){
+				transform: scale(var(--scale-koef));
+				transform-origin: bottom left;
+			}
+		}
 	}
 	&__title{
 		margin-bottom: 17px;
@@ -110,6 +121,19 @@
 	}
 	&__buttons{
 		display: flex;
+		@include breakpoint(xl){
+			transform: scale(var(--scale-koef));
+			transform-origin: bottom left;
+		}
+	}
+	&__description-bottom-wrap{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include breakpoint(xl){
+			transform: scale(var(--revert-scale-koef));
+			transform-origin: bottom left;
+		}
 	}
 	&__button{
 		width: auto;
@@ -171,11 +195,12 @@
 	}
 	&__meta-info{
 		z-index: 2;
-		position: absolute;
-		bottom: calc((var(--sm-tile-height) / 1.5) + (100vw * 0.042));
-		right: 30px;
 		display: flex;
 		align-items: center;
+		@include breakpoint(xl){
+			transform: scale(var(--scale-koef));
+			transform-origin: bottom right;
+		}
 	}
 	&__meta-info-item{
 		display: flex;

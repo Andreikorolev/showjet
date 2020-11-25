@@ -1,16 +1,8 @@
 .text-about{
-	width: 508px;
-	height: 250px;
+	height: 100%;
 	padding-right: 15px;
+	padding-bottom: 30px;
 	overflow-y: scroll;
-	@include breakpoint(md){
-		width: 642px;
-		height: 280px;
-	}
-	@include breakpoint(lg){
-		width: 984px;
-		height: 539px;
-	}
 
 	&::-webkit-scrollbar {
 		width: 4px;
@@ -41,6 +33,10 @@
 			font-size: 30px;
 			line-height: 39px;
 		}
+		@include breakpoint(xl){
+			font-size: 44px;
+			line-height: 50px;
+		}
 	}
 	&__text-block{
 		font-family: $stem;
@@ -57,6 +53,10 @@
 		@include breakpoint(lg){
 			font-size: 25px;
 			line-height: 32px;
+		}
+		@include breakpoint(xl){
+			font-size: 32px;
+			line-height: 40px;
 		}
 	}
 }

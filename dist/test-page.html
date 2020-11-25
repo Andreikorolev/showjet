@@ -89,13 +89,72 @@
 		
 	</div>
 </header>
-		
-		<div class="home-page__watching-now">	
+
+		<div class="home-page__banner">
+			<!-- HOME-PAGE-BANNER -->
+			<div class="home-page-banner">
+	<div class="home-page-banner__tiles-cover"></div>
+	<img src="img/home-page-banner.jpg" alt="" class="home-page-banner__image">
+	<video id="bannerVideo" class="video-js" fluid="true" loop autoplay preload="auto" muted="mute" width="100%" height="100%" poster="img/home-page-banner.jpg" data-setup="{}" >
+		<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+	</video>
+	<div class="home-page-banner__description">
+		<div>
+			<div class="home-page-banner__title">
+				<img src="img/home-page-banner-title.png" alt="" class="home-page-banner__title-img">
+			</div>
+			<div class="home-page-banner__text">
+				Продолжение скандального сериала "Молодой Папа" с Джудом Лоу и Джоном Малковичем.
+			</div>
+			<div class="home-page-banner__genre">
+				Драма
+			</div>
+
+			<div class="home-page-banner__description-bottom-wrap">
+				<div class="home-page-banner__buttons">
+					<a href="#" class="home-page-banner__button home-page-banner__button-watch">
+						<img src="img/play-icon.svg" alt="" class="home-page-banner__button-icon">
+						Смотреть сериал
+					</a>
+					<a href="#" class="home-page-banner__button home-page-banner__button-about">О сериале</a>
+				</div>
+				<div class="home-page-banner__meta-info">
+					<div class="home-page-banner__meta-info-item home-page-banner__meta-info-item_kinopoisk">
+						<img src="img/kinopoisk-icon.svg" alt="" class="home-page-banner__meta-info-item-icon home-page-banner__meta-info-item-icon_kinopoisk">
+						8,8
+					</div>
+					<div class="home-page-banner__meta-info-item home-page-banner__meta-info-item_imdb">
+						<img src="img/imdb-icon.svg" alt="" class="home-page-banner__meta-info-item-icon home-page-banner__meta-info-item-icon_imdb">
+						8,5
+					</div>
+					<div class="home-page-banner__meta-info-item">
+						1080p<br/>fullhd
+					</div>
+					<div class="home-page-banner__meta-info-item">
+						5,1<br/>audio
+					</div>
+					<div class="home-page-banner__meta-info-item home-page-banner__meta-info-item_18">
+						18+
+					</div>
+					<div class="home-page-banner__meta-info-item_sound-button">
+						<div class="home-page-banner__sound-button">
+							<img class="home-page-banner__sound-button-img home-page-banner__sound-button-img_on" src="img/sound-on-icon.svg" alt="">
+							<img class="home-page-banner__sound-button-img home-page-banner__sound-button-img_off" src="img/sound-off-icon.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		</div>
+
+		<div class="home-page__recommended-serials">
 			<div class="tiles-list">
 				<h3 class="tiles-list__title">
-					Сейчас смотрят
+					Рекомендуемые сериалы
 				</h3>
-				<div class="tiles-list__slider home-page__watching-now-slider">
+				<div class="tiles-list__slider home-page__recommended-serials-slider">
 					<div class="swiper-wrapper tiles-list__sm-tiles">
 						
 						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
@@ -106,7 +165,7 @@
 		<div class="tile__bg">
 			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
 		</div>
-		<video id="watchVideo0" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
+		<video id="recVideo0" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
 			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
 		</video>
 		<div class="tile__info-wrap">
@@ -163,7 +222,7 @@
 		<div class="tile__bg">
 			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
 		</div>
-		<video id="watchVideo1" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
+		<video id="recVideo1" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
 			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
 		</video>
 		<div class="tile__info-wrap">
@@ -220,7 +279,7 @@
 		<div class="tile__bg">
 			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
 		</div>
-		<video id="watchVideo2" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
+		<video id="recVideo2" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
 			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
 		</video>
 		<div class="tile__info-wrap">
@@ -277,7 +336,7 @@
 		<div class="tile__bg">
 			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
 		</div>
-		<video id="watchVideo3" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
+		<video id="recVideo3" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
 			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
 		</video>
 		<div class="tile__info-wrap">
@@ -334,7 +393,7 @@
 		<div class="tile__bg">
 			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
 		</div>
-		<video id="watchVideo4" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
+		<video id="recVideo4" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
 			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
 		</video>
 		<div class="tile__info-wrap">
@@ -391,7 +450,7 @@
 		<div class="tile__bg">
 			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
 		</div>
-		<video id="watchVideo5" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
+		<video id="recVideo5" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
 			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
 		</video>
 		<div class="tile__info-wrap">
@@ -448,7 +507,7 @@
 		<div class="tile__bg">
 			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
 		</div>
-		<video id="watchVideo6" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
+		<video id="recVideo6" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
 			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
 		</video>
 		<div class="tile__info-wrap">
@@ -505,7 +564,7 @@
 		<div class="tile__bg">
 			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
 		</div>
-		<video id="watchVideo7" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
+		<video id="recVideo7" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
 			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
 		</video>
 		<div class="tile__info-wrap">
@@ -562,7 +621,64 @@
 		<div class="tile__bg">
 			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
 		</div>
-		<video id="watchVideo8" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
+		<video id="recVideo8" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							18+
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo9" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg"}' >
 			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
 		</video>
 		<div class="tile__info-wrap">
@@ -617,6 +733,7 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
 </div> 
 
