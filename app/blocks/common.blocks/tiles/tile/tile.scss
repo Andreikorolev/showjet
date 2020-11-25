@@ -153,15 +153,9 @@
 			}
 		}
 		&_18{
-			width: 32px;
-			height: 25px;
-			padding-top: 3px;
+			padding: 1px 4px 0;
 			border: 2px solid #fff;
 			border-radius: 4px;
-			@include breakpoint(xl){
-				width: 44px;
-				height: 36px;
-			}
 		}
 	}
 	&__meta-info-item-icon{

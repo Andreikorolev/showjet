@@ -47,11 +47,11 @@
 
 		&.hovered-child{
 			margin-left: calc((var(--md-tile-hover-width) - var(--md-tile-width)) / -2);
-			transition: all ease .5s;
+			transition: all ease .5s !important;
 		}
 		&.hovered-last-child{
 			margin-left: calc((var(--md-tile-hover-width) - var(--md-tile-width)) / -1);
-			transition: all ease .5s;
+			transition: all ease .5s !important;
 		}
 	}
 	&__lg-tiles{
@@ -59,11 +59,11 @@
 
 		&.hovered-child{
 			margin-left: calc((var(--lg-tile-hover-width) - var(--lg-tile-width)) / -2);
-			transition: all ease .5s;
+			transition: all ease .5s !important;
 		}
 		&.hovered-last-child{
 			margin-left: calc((var(--lg-tile-hover-width) - var(--lg-tile-width)) / -1);
-			transition: all ease .5s;
+			transition: all ease .5s !important;
 		}
 	}
 	&__xl-tiles{
@@ -71,11 +71,11 @@
 
 		&.hovered-child{
 			margin-left: calc((var(--xl-tile-hover-width) - var(--xl-tile-width)) / -2);
-			transition: all ease .5s;
+			transition: all ease .5s !important;
 		}
 		&.hovered-last-child{
 			margin-left: calc((var(--xl-tile-hover-width) - var(--xl-tile-width)) / -1);
-			transition: all ease .5s;
+			transition: all ease .5s !important;
 		}
 	}
 }
@@ -85,6 +85,16 @@
 	display: flex;
 
 	& .swiper-wrapper{
+		&.hovered-child{
+			& ~ .slider-button-prev,
+			& ~ .slider-button-next{
+				opacity: 0;
+				z-index: -1;
+				transition-delay: 0s;
+			}
+		}
+
+
 		&:hover,
 		&:active,
 		&:focus{

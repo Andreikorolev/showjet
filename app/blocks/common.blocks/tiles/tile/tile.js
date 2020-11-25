@@ -73,15 +73,25 @@ $(".tile.tile-info").hover(
 $(".tile").hover(
 	function(){
 		var targetTile = $(this);
-		var targetTileIndex = targetTile.index();
-		var lengthOfParent = targetTile.parent().children().length;
+
+		var targetTileWidth = targetTile.width();
+		var targetTileOffset = targetTile.offset();
+		var windowWidth = window.innerWidth;
+
+		var isTileRightEdge = (windowWidth - targetTileOffset.left) < (targetTileWidth * 1.5);
+		var isTileLeftEdge = targetTileOffset.left < (targetTileWidth / 2);
 
 		timerAddClass = setTimeout(function(){
-			if (targetTileIndex != 0 && targetTileIndex != (lengthOfParent - 1)) {
-				targetTile.parent().addClass('hovered-child');
-			} else if (targetTileIndex != 0 && targetTileIndex === (lengthOfParent - 1)) {
+			if (isTileRightEdge) {
 				targetTile.parent().addClass('hovered-last-child');
+			} else if (isTileLeftEdge) {
+				return 0;
+			} else if (!isTileLeftEdge && !isTileRightEdge) {
+				targetTile.parent().addClass('hovered-child');
 			}
+
+
+
 		}, 500);
 
 	}, function() {

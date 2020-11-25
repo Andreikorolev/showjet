@@ -1,4 +1,5 @@
 .single-serial-tile{
+	z-index: 0;
 	width: 100%;
 	height: calc(100vw / 2.616);
 	margin-top: calc(100vw * -0.042);
@@ -36,7 +37,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
-		opacity: 0.4;
+		opacity: 0.2;
 	}
 	&__wrap{
 		display: flex;
@@ -103,8 +104,15 @@
 		margin-bottom: 56px;
 	}
 	&__description{
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		padding-bottom: 20px;
+		@include breakpoint(xl){
+			display: block;
+			height: auto;
+			transform: scale(var(--single-serila-tile-description-scale));
+		    transform-origin: top left;
+		}
 	}
 }

@@ -1511,9 +1511,9 @@ svg
 {
     overflow-y: scroll;
 
-    width: 508px;
-    height: 250px;
+    height: 100%;
     padding-right: 20px;
+    padding-bottom: 30px;
 }
 
 .actors-creators::-webkit-scrollbar
@@ -1811,9 +1811,9 @@ svg
 {
     overflow-y: scroll;
 
-    width: 508px;
-    height: 250px;
+    height: 100%;
     padding-right: 15px;
+    padding-bottom: 30px;
 }
 
 .text-about::-webkit-scrollbar
@@ -2602,6 +2602,9 @@ svg
 
     width: 100%;
     padding: 0 30px;
+
+    --scale-koef: calc(3170 / 1920);
+    --revert-scale-koef: calc(1920 / 3170);
 }
 
 .home-page-banner__title
@@ -3707,18 +3710,18 @@ svg
 {
     margin-left: calc((var(--md-tile-hover-width) - var(--md-tile-width)) / -2);
 
-    -webkit-transition: all ease .5s;
-         -o-transition: all ease .5s;
-            transition: all ease .5s;
+    -webkit-transition: all ease .5s !important;
+         -o-transition: all ease .5s !important;
+            transition: all ease .5s !important;
 }
 
 .tiles-list__md-tiles.hovered-last-child
 {
     margin-left: calc((var(--md-tile-hover-width) - var(--md-tile-width)) / -1);
 
-    -webkit-transition: all ease .5s;
-         -o-transition: all ease .5s;
-            transition: all ease .5s;
+    -webkit-transition: all ease .5s !important;
+         -o-transition: all ease .5s !important;
+            transition: all ease .5s !important;
 }
 
 .tiles-list__lg-tiles
@@ -3730,18 +3733,18 @@ svg
 {
     margin-left: calc((var(--lg-tile-hover-width) - var(--lg-tile-width)) / -2);
 
-    -webkit-transition: all ease .5s;
-         -o-transition: all ease .5s;
-            transition: all ease .5s;
+    -webkit-transition: all ease .5s !important;
+         -o-transition: all ease .5s !important;
+            transition: all ease .5s !important;
 }
 
 .tiles-list__lg-tiles.hovered-last-child
 {
     margin-left: calc((var(--lg-tile-hover-width) - var(--lg-tile-width)) / -1);
 
-    -webkit-transition: all ease .5s;
-         -o-transition: all ease .5s;
-            transition: all ease .5s;
+    -webkit-transition: all ease .5s !important;
+         -o-transition: all ease .5s !important;
+            transition: all ease .5s !important;
 }
 
 .tiles-list__xl-tiles
@@ -3753,18 +3756,18 @@ svg
 {
     margin-left: calc((var(--xl-tile-hover-width) - var(--xl-tile-width)) / -2);
 
-    -webkit-transition: all ease .5s;
-         -o-transition: all ease .5s;
-            transition: all ease .5s;
+    -webkit-transition: all ease .5s !important;
+         -o-transition: all ease .5s !important;
+            transition: all ease .5s !important;
 }
 
 .tiles-list__xl-tiles.hovered-last-child
 {
     margin-left: calc((var(--xl-tile-hover-width) - var(--xl-tile-width)) / -1);
 
-    -webkit-transition: all ease .5s;
-         -o-transition: all ease .5s;
-            transition: all ease .5s;
+    -webkit-transition: all ease .5s !important;
+         -o-transition: all ease .5s !important;
+            transition: all ease .5s !important;
 }
 
 .tiles-list__slider
@@ -3772,6 +3775,18 @@ svg
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+
+.tiles-list__slider .swiper-wrapper.hovered-child ~ .slider-button-prev,
+.tiles-list__slider .swiper-wrapper.hovered-child ~ .slider-button-next
+{
+    z-index: -1;
+
+    -webkit-transition-delay: 0s;
+         -o-transition-delay: 0s;
+            transition-delay: 0s;
+
+    opacity: 0;
 }
 
 .tiles-list__slider .swiper-wrapper:hover,
@@ -4195,6 +4210,8 @@ svg
 
 .single-serial-tile
 {
+    z-index: 0;
+
     width: 100%;
     height: calc(100vw / 2.616);
     margin-top: calc(100vw * -.042);
@@ -4247,7 +4264,7 @@ svg
     width: 100%;
     height: 100%;
 
-    opacity: .4;
+    opacity: .2;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -4344,6 +4361,7 @@ svg
     display: flex;
         flex-direction: column;
 
+    height: 100%;
     padding-bottom: 20px;
 
     -webkit-box-orient: vertical;
@@ -4712,9 +4730,7 @@ svg
 
 .tile__meta-info-item_18
 {
-    width: 32px;
-    height: 25px;
-    padding-top: 3px;
+    padding: 1px 4px 0;
 
     border: 2px solid #fff;
     border-radius: 4px;
@@ -7391,12 +7407,6 @@ svg
         margin-right: 28px;
     }
 
-    .actors-creators
-    {
-        width: 642px;
-        height: 280px;
-    }
-
     .actors-creators__title
     {
         font-size: 20px;
@@ -7499,12 +7509,6 @@ svg
     {
         width: 17px;
         height: 22px;
-    }
-
-    .text-about
-    {
-        width: 642px;
-        height: 280px;
     }
 
     .text-about__title
@@ -8428,12 +8432,6 @@ svg
         margin-right: 45px;
     }
 
-    .actors-creators
-    {
-        width: 984px;
-        height: 539px;
-    }
-
     .actors-creators__title
     {
         font-size: 30px;
@@ -8538,12 +8536,6 @@ svg
     {
         width: 27px;
         height: 35px;
-    }
-
-    .text-about
-    {
-        width: 984px;
-        height: 539px;
     }
 
     .text-about__title
@@ -8928,6 +8920,111 @@ svg
         font-size: 44px;
     }
 
+    .actors-creators__title
+    {
+        font-size: 44px;
+        line-height: 50px;
+    }
+
+    .actors-creators__item
+    {
+        font-size: 32px;
+        line-height: 40px;
+
+        margin-bottom: 30px;
+    }
+
+    .actors-creators__item-role
+    {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .actors-creators__person
+    {
+        width: 70%;
+    }
+
+    .actors-creators__person-img
+    {
+        height: 400px;
+        margin-right: 45px;
+
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+    }
+
+    .actors-creators__person-title
+    {
+        font-size: 44px;
+        line-height: 50px;
+    }
+
+    .actors-creators__person-subtitle
+    {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .actors-creators__person-info
+    {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .text-about__title
+    {
+        font-size: 44px;
+        line-height: 50px;
+    }
+
+    .text-about__text-block
+    {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .home-page-banner__description > div
+    {
+        -webkit-transform: scale(var(--scale-koef));
+            -ms-transform: scale(var(--scale-koef));
+                transform: scale(var(--scale-koef));
+        -webkit-transform-origin: bottom left;
+            -ms-transform-origin: bottom left;
+                transform-origin: bottom left;
+    }
+
+    .home-page-banner__buttons
+    {
+        -webkit-transform: scale(var(--scale-koef));
+            -ms-transform: scale(var(--scale-koef));
+                transform: scale(var(--scale-koef));
+        -webkit-transform-origin: bottom left;
+            -ms-transform-origin: bottom left;
+                transform-origin: bottom left;
+    }
+
+    .home-page-banner__description-bottom-wrap
+    {
+        -webkit-transform: scale(var(--revert-scale-koef));
+            -ms-transform: scale(var(--revert-scale-koef));
+                transform: scale(var(--revert-scale-koef));
+        -webkit-transform-origin: bottom left;
+            -ms-transform-origin: bottom left;
+                transform-origin: bottom left;
+    }
+
+    .home-page-banner__meta-info
+    {
+        -webkit-transform: scale(var(--scale-koef));
+            -ms-transform: scale(var(--scale-koef));
+                transform: scale(var(--scale-koef));
+        -webkit-transform-origin: bottom right;
+            -ms-transform-origin: bottom right;
+                transform-origin: bottom right;
+    }
+
     .single-serial-tile__title
     {
         max-height: 200px;
@@ -8937,6 +9034,20 @@ svg
     {
         width: 65px;
         height: 65px;
+    }
+
+    .single-serial-tile__description
+    {
+        display: block;
+
+        height: auto;
+
+        -webkit-transform: scale(var(--single-serila-tile-description-scale));
+            -ms-transform: scale(var(--single-serila-tile-description-scale));
+                transform: scale(var(--single-serila-tile-description-scale));
+        -webkit-transform-origin: top left;
+            -ms-transform-origin: top left;
+                transform-origin: top left;
     }
 
     .tile__button
@@ -8956,12 +9067,6 @@ svg
         font-size: 28px;
 
         margin-bottom: 20px;
-    }
-
-    .tile__meta-info-item_18
-    {
-        width: 44px;
-        height: 36px;
     }
 
     .tile__meta-info-item-icon

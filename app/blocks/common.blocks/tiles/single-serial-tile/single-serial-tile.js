@@ -36,3 +36,23 @@ if ($(".single-serial-tile").length){
 		isVideoMuted = !isVideoMuted;
 	});
 };
+
+function scaleSingleSerialTileDescription() {
+	var body = document.querySelector('body');
+	var descriptionHeight = $('.single-serial-tile__description').height();
+	var trailerHeight = $('.single-serial-tile__trailer').height();
+	body.style.setProperty('--single-serila-tile-description-scale', (trailerHeight / descriptionHeight) - 0.1);
+}
+
+$(window).on('load', function() {
+	var windowWidth = window.innerWidth;
+	if (windowWidth >= 2500) {
+		scaleSingleSerialTileDescription();
+	}
+});
+$(window).resize(function() {
+	var windowWidth = window.innerWidth;
+	if (windowWidth >= 2500) {
+		scaleSingleSerialTileDescription();
+	}
+});
