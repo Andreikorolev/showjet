@@ -67,8 +67,8 @@
 		cursor: pointer;
 		z-index: 100;
 		position: absolute;
-		top: 30px;
-		left: 30px;
+		bottom: 20px;
+		right: calc((0.190808 * (100vw / 3.596) + 20px));
 		width: 32px;
 		height: 32px;
 		@include breakpoint(lg){

@@ -244,6 +244,10 @@
 		height: calc((100vw / 1.7) / 2.09);
 		margin-bottom: calc(15vw * 0.042);
 	}
+	&__text-about,
+	&__actors-creators{
+		padding-right: 30px;
+	}
 	&__trailer{
 		display: block;
 		background-repeat: no-repeat;

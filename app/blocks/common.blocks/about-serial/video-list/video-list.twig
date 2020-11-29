@@ -1,13 +1,46 @@
 <div class="video-list">
 	<div class="video-list container tiles-list">
-		<h3 class="video-list tiles-list__title">
+		<h3 class="video-list__title tiles-list__title">
 			Сезон
+			<div class="video-list__season-navigation">
+				<!-- для добавления сезона добавляем элемент и указывает параметр data-target в формате season-(number). Он указывает какой список карточек открыть -->
+				<button class="video-list__season-navitaion-item active" data-target="season-1">
+					1
+				</button>
+				<button class="video-list__season-navitaion-item" data-target="season-2">
+					2
+				</button>
+				<button class="video-list__season-navitaion-item" data-target="season-3">
+					3
+				</button>
+			</div>
 		</h3>
-		<div class="video-list__tiles-wrap tiles-list__slider">
+<!-- для добавления карточек сезона, добавляем блок. В параметре id передаем ему номер сезона в формате season-(number) -->
+		<div id="season-1" class="video-list__tiles-wrap tiles-list__slider video-list__season-wrap">
 			<div class="swiper-wrapper tiles-list__sm-tiles">
 				{# TILE #}
 				{% for item in 0..8 %}
-				{% include 'blocks/common.blocks/tiles/tile-episode/tile-episode.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"'}%}
+				{% include 'blocks/common.blocks/tiles/tile-episode/tile-episode.twig' with {'season':'1', 'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"'}%}
+				{% endfor %}
+			</div>
+			<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+			<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+		</div>
+		<div id="season-2" class="video-list__tiles-wrap tiles-list__slider video-list__season-wrap">
+			<div class="swiper-wrapper tiles-list__sm-tiles">
+				{# TILE #}
+				{% for item in 0..8 %}
+				{% include 'blocks/common.blocks/tiles/tile-episode/tile-episode.twig' with {'season':'2', 'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"'}%}
+				{% endfor %}
+			</div>
+			<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+			<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+		</div>
+		<div id="season-3" class="video-list__tiles-wrap tiles-list__slider video-list__season-wrap">
+			<div class="swiper-wrapper tiles-list__sm-tiles">
+				{# TILE #}
+				{% for item in 0..8 %}
+				{% include 'blocks/common.blocks/tiles/tile-episode/tile-episode.twig' with {'season':'3', 'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'dataProgress':'data-progress="20"'}%}
 				{% endfor %}
 			</div>
 			<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>

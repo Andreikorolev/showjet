@@ -10,10 +10,11 @@ $(".tile.tile-info").hover(
 		var targetTileIndex = targetTile.index();
 		var lengthOfParent = targetTile.parent().children().length;
 		// set timer
+
 		timer = setTimeout(function() {
-			targetTile.find(".tile__bg").fadeOut(1000);
 			var videoID = targetTile.find('video').attr('id');
 			var player = videojs(videoID);
+			targetTile.find(".tile__bg").addClass("hide");
 			player.src({ type: 'application/x-mpegURL', src: $(targetTile).data("videourl") });
 			player.play();
 			isVideoPlay = true;
@@ -66,7 +67,7 @@ $(".tile.tile-info").hover(
 		var player = videojs(videoID);
 		player.reset();
 		isVideoPlay = false;
-		$(this).find(".tile__bg").fadeIn(100).show();
+		$(this).find(".tile__bg").removeClass("hide");
 	}
 );
 

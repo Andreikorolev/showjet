@@ -28,6 +28,12 @@
 		opacity: 1;
 		overflow: hidden;
 		z-index: 1;
+		transition: all ease .5s;
+
+		&.hide{
+			opacity: 0;
+			transition: all ease 2s;
+		}
 	}
 	&__bg-img{
 		width: 100%;
@@ -68,7 +74,7 @@
 		transition: all ease .3s;
 
 		&.hide{
-			// opacity: 0 !important;
+			opacity: 0 !important;
 			transition: all ease 1s;
 		}
 	}
@@ -235,7 +241,7 @@
 		& .tile__info-wrap{
 			opacity: 1;
 			top: 0;
-			transition: all ease .5s;
+			transition: all ease 2s;
 			transition-delay: .5s;
 		}
 	}
