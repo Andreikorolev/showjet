@@ -1444,6 +1444,12 @@ svg
     margin-bottom: calc(15vw * .042);
 }
 
+.about-serial__text-about,
+.about-serial__actors-creators
+{
+    padding-right: 30px;
+}
+
 .about-serial__trailer
 {
     display: block;
@@ -1512,7 +1518,7 @@ svg
     overflow-y: scroll;
 
     height: 100%;
-    padding-right: 20px;
+    padding-right: 15px;
     padding-bottom: 30px;
 }
 
@@ -1862,11 +1868,70 @@ svg
     color: #fff;
 }
 
+.video-list__title
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .video-list__tiles-wrap
 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+
+.video-list__season-navigation
+{
+    margin-left: 25px;
+}
+
+.video-list__season-navitaion-item
+{
+    font-family: 'Stem';
+    font-size: 30px;
+    line-height: 39px;
+
+    padding: 0 15px;
+
+    cursor: pointer;
+    -webkit-transition: all ease .3s;
+         -o-transition: all ease .3s;
+            transition: all ease .3s;
+
+    color: rgba(255, 255, 255, .5);
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.video-list__season-navitaion-item:hover,
+.video-list__season-navitaion-item:active,
+.video-list__season-navitaion-item:focus
+{
+    color: #fff;
+}
+
+.video-list__season-navitaion-item.active
+{
+    text-decoration: underline;
+
+    color: #fff;
+}
+
+.video-list__season-wrap
+{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.video-list__season-wrap.hide
+{
+    position: absolute;
+
+    opacity: 0;
 }
 
 .collection-tile
@@ -2591,6 +2656,13 @@ svg
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+}
+
+.home-page-banner video
+{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .home-page-banner__description
@@ -4314,8 +4386,8 @@ svg
 {
     position: absolute;
     z-index: 100;
-    top: 30px;
-    left: 30px;
+    right: calc((.190808 * (100vw / 3.596) + 20px));
+    bottom: 20px;
 
     width: 32px;
     height: 32px;
@@ -4553,7 +4625,20 @@ svg
     width: 100%;
     height: 100%;
 
+    -webkit-transition: all ease .5s;
+         -o-transition: all ease .5s;
+            transition: all ease .5s;
+
     opacity: 1;
+}
+
+.tile__bg.hide
+{
+    -webkit-transition: all ease 2s;
+         -o-transition: all ease 2s;
+            transition: all ease 2s;
+
+    opacity: 0;
 }
 
 .tile__bg-img
@@ -4625,6 +4710,8 @@ svg
     -webkit-transition: all ease 1s;
          -o-transition: all ease 1s;
             transition: all ease 1s;
+
+    opacity: 0 !important;
 }
 
 .tile__buttons-wrap
@@ -4831,9 +4918,9 @@ svg
 {
     top: 0;
 
-    -webkit-transition: all ease .5s;
-         -o-transition: all ease .5s;
-            transition: all ease .5s;
+    -webkit-transition: all ease 2s;
+         -o-transition: all ease 2s;
+            transition: all ease 2s;
     -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;

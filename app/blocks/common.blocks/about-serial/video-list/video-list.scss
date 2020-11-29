@@ -1,6 +1,42 @@
 .video-list{
 
+	&__title{
+		display: flex;
+	}
 	&__tiles-wrap{
 		display: flex;
+	}
+	&__season-navigation{
+		margin-left: 25px;
+	}
+	&__season-navitaion-item{
+		cursor: pointer;
+		background: none;
+		border: none;
+		outline: none;
+		padding: 0 15px;
+		font-family: $stem;
+		font-size: 30px;
+		line-height: 39px;
+		color: rgba(255,255,255,.5);
+		transition: all ease .3s;
+		&:hover,
+		&:active,
+		&:focus{
+			color: #fff;
+		}
+
+		&.active{
+			color: #fff;
+			text-decoration: underline;
+		}
+	}
+	&__season-wrap{
+		display: flex !important;
+
+		&.hide{
+			opacity: 0;
+			position: absolute;
+		}
 	}
 }
