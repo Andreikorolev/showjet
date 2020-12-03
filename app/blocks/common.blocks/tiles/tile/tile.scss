@@ -28,7 +28,7 @@
 		opacity: 1;
 		overflow: hidden;
 		z-index: 1;
-		transition: all ease .5s;
+		transition: all ease 2s;
 
 		&.hide{
 			opacity: 0;
@@ -43,7 +43,7 @@
 		bottom: 3px;
 		left: 11px;
 		display: none;
-		width: calc(100% - 50px);
+		width: calc(100% - var(--sm-angle-offset) - 22px);
 		height: 3px;
 		background-color: rgba(255,255,255,.3);
 	}
@@ -53,6 +53,7 @@
 	}
 	&[data-progress] .tile__progress{
 		display: block;
+		transition: all ease .2s;
 	}
 	&__video{
 		opacity: 0;
@@ -69,7 +70,7 @@
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		top: 1000px;
+		// top: 1000px;
 		left: 0;
 		transition: all ease .3s;
 
@@ -158,11 +159,6 @@
 				margin-right: 30px;
 			}
 		}
-		&_18{
-			padding: 1px 4px 0;
-			border: 2px solid #fff;
-			border-radius: 4px;
-		}
 	}
 	&__meta-info-item-icon{
 		height: 16px;
@@ -240,9 +236,18 @@
 		}
 		& .tile__info-wrap{
 			opacity: 1;
-			top: 0;
+			// top: 0;
 			transition: all ease 2s;
 			transition-delay: .5s;
+		}
+	}
+	&[data-progress]:hover,
+	&[data-progress]:active,
+	&[data-progress]:focus{
+		& .tile__progress{
+			width: calc(100% - var(--sm-hover-angle-offset) - 22px);
+			transition: all ease .3s;
+			transition-delay: 0.5s;
 		}
 	}
 }

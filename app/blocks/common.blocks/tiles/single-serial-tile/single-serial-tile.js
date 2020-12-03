@@ -29,7 +29,7 @@ if ($(".single-serial-tile").length){
 		}
 	},500);
 
-	singleSerialTileMuteButton.on('click', function(){
+	singleSerialTileMuteButton.unbind("click").on('click', function(){
 		isVideoMuted ? singleSerialTileMuteButton.addClass("single-serial-tile__sound-button_on") : singleSerialTileMuteButton.removeClass("single-serial-tile__sound-button_on");
 		singleSerialTilePlayer.muted(!isVideoMuted);
 		singleSerialTilePlayer.volume(1);

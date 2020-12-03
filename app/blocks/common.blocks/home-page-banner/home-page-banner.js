@@ -44,7 +44,7 @@ if ($(".home-page-banner").length){
 	}
 
 
-	bannerMuteButton.on('click', function(){
+	bannerMuteButton.unbind("click").on('click', function(){
 		isVideoMuted ? bannerMuteButton.addClass("home-page-banner__sound-button_on") : bannerMuteButton.removeClass("home-page-banner__sound-button_on");
 		bannerPlayer.muted(!isVideoMuted);
 		bannerPlayer.volume(1);
