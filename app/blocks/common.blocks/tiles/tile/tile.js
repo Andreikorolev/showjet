@@ -34,7 +34,7 @@ $(".tile.tile-info").hover(
 			});
 
 			//mute button handler
-			muteButton.on('click', function(){
+			muteButton.unbind("click").on('click', function(){
 				isVideoMuted ? muteButton.addClass("tile__sound-button_on") : muteButton.removeClass("tile__sound-button_on");
 				player.muted(!isVideoMuted);
 				isVideoMuted = !isVideoMuted;

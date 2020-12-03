@@ -2,6 +2,7 @@
 
 	&__title{
 		display: flex;
+		margin-top: 0 !important;
 	}
 	&__tiles-wrap{
 		display: flex;
@@ -14,12 +15,24 @@
 		background: none;
 		border: none;
 		outline: none;
-		padding: 0 15px;
+		padding: 0 8px;
 		font-family: $stem;
-		font-size: 30px;
-		line-height: 39px;
+		font-size: 14px;
+		line-height: 18px;
 		color: rgba(255,255,255,.5);
+		border-bottom: 3px solid transparent;
 		transition: all ease .3s;
+		@include breakpoint(md){
+			font-size: 20px;
+			line-height: 26px;
+			padding: 0 10px;
+		}
+		@include breakpoint(lg){
+			font-size: 30px;
+			line-height: 39px;
+			padding: 0 15px;
+		}
+
 		&:hover,
 		&:active,
 		&:focus{
@@ -28,7 +41,7 @@
 
 		&.active{
 			color: #fff;
-			text-decoration: underline;
+			border-bottom: 3px solid white;
 		}
 	}
 	&__season-wrap{

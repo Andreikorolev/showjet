@@ -110,6 +110,10 @@
 			line-height: 47px;
 			clip-path: polygon(calc(0% + 15px) 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
 		}
+
+		& div{
+			height: 1.05em;
+		}
 	}
 	&__button-icon{
 		width: 26px;

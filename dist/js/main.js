@@ -3,6 +3,23 @@ $(".light-page").parent("body").addClass("light");
 // global variables for video player
 var isVideoPlay = false;
 var isVideoMuted = true;
+
+
+//hadle focus/unfocus on browser tab
+function hiddenBrowserTab() {
+    isVideoPlay = true;
+};
+function visibleBrowserTab(){
+    isVideoPlay = false;
+};
+
+if (/*@cc_on!@*/false) { // check for Internet Explorer
+    document.onfocusin = visibleBrowserTab;
+    document.onfocusout = hiddenBrowserTab;
+} else {
+    window.onfocus = visibleBrowserTab;
+    window.onblur = hiddenBrowserTab;
+}
 var seasonNumber = $(".video-list__season-wrap").length;
 
 $(".video-list__season-wrap").each(function(index) {
@@ -68,7 +85,7 @@ if ($(".single-serial-tile").length){
 		}
 	},500);
 
-	singleSerialTileMuteButton.on('click', function(){
+	singleSerialTileMuteButton.unbind("click").on('click', function(){
 		isVideoMuted ? singleSerialTileMuteButton.addClass("single-serial-tile__sound-button_on") : singleSerialTileMuteButton.removeClass("single-serial-tile__sound-button_on");
 		singleSerialTilePlayer.muted(!isVideoMuted);
 		singleSerialTilePlayer.volume(1);
@@ -131,7 +148,7 @@ $(".tile.tile-info").hover(
 			});
 
 			//mute button handler
-			muteButton.on('click', function(){
+			muteButton.unbind("click").on('click', function(){
 				isVideoMuted ? muteButton.addClass("tile__sound-button_on") : muteButton.removeClass("tile__sound-button_on");
 				player.muted(!isVideoMuted);
 				isVideoMuted = !isVideoMuted;
@@ -376,7 +393,7 @@ if ($(".home-page-banner").length){
 	}
 
 
-	bannerMuteButton.on('click', function(){
+	bannerMuteButton.unbind("click").on('click', function(){
 		isVideoMuted ? bannerMuteButton.addClass("home-page-banner__sound-button_on") : bannerMuteButton.removeClass("home-page-banner__sound-button_on");
 		bannerPlayer.muted(!isVideoMuted);
 		bannerPlayer.volume(1);

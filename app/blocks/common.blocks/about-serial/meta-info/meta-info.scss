@@ -44,24 +44,24 @@
 		}
 
 		&_18{
-			width: 26px;
-			height: 20px;
-			padding-top: 1px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border: 2px solid #FFFFFF;
-			border-radius: 4px;
-			@include breakpoint(md){
-				width: 35px;
-				height: 27px;
-				border: 3px solid #FFFFFF;
-				border-radius: 6px;
+			& img{
+				width: 26px;
+				@include breakpoint(md){
+					width: 35px;
+				}
+				@include breakpoint(lg){
+					width: 48px;
+				}		
 			}
-			@include breakpoint(lg){
-				width: 48px;
-				height: 37px;
-				padding-top: 2px;
+		}
+		&_share{
+			&:hover,
+			&:active,
+			&:focus{
+				& .meta-info__share{
+					z-index: 1;
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -111,5 +111,45 @@
 				height: 35px;
 			}
 		}
+	}
+	&__share{
+		z-index: -1;
+		display: flex;
+		opacity: 0;
+		width: 195px;
+		height: 52px;
+		align-items: center;
+		justify-content: space-around;
+		position: absolute;
+		top: -75px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #000;
+		border: 2px solid white;
+		border-radius: 4px;
+		transition: all ease .3s;
+
+		&:before{
+			content: '';
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			bottom: -15px;
+			left: 50%;
+			background-color: #000;
+			border-right: 2px solid white;
+			border-bottom: 2px solid white;
+			transform: rotate(45deg) translateX(-50%);
+			transform-origin: center center;
+		}
+	}
+	&__share-item{
+		opacity: 0.5;
+		transition: all ease .3s;
+		&:hover,
+		&:active,
+		&:focus{
+			opacity: 1;
+		}	
 	}
 }
