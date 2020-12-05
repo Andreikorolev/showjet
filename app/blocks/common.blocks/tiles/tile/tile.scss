@@ -1,253 +1,252 @@
-.tile{
-	top: 0;
-	transition: all ease .2s;
-	&:before{
-		content: '';
-		display: block;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		bottom: 10px;
-		left: 0;
-		z-index: 1;
-		background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-		opacity: 0;
-		transition: all ease .3s;
-	}
-	&__inner{
-		width: 100%;
-		height: calc(100% - 10px);
-		overflow: hidden;
-	}
-	&__bg{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 1;
-		overflow: hidden;
-		z-index: 1;
-		transition: all ease 2s;
+.tile {
+  top: 0;
+  transition: all ease 0.2s;
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0;
+    transition: all ease 0.3s;
+  }
+  &__inner {
+    width: 100%;
+    height: calc(100% - 10px);
+    overflow: hidden;
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 1;
+    transition: all ease 1s;
 
-		&.hide{
-			opacity: 0;
-			transition: all ease 2s;
-		}
-	}
-	&__bg-img{
-		width: 100%;
-	}
-	&__progress{
-		position: absolute;
-		bottom: 3px;
-		left: 11px;
-		display: none;
-		width: calc(100% - var(--sm-angle-offset) - 22px);
-		height: 3px;
-		background-color: rgba(255,255,255,.3);
-	}
-	&__progress-bar{
-		height: 100%;
-		background-color: #30C1D2;		
-	}
-	&[data-progress] .tile__progress{
-		display: block;
-		transition: all ease .2s;
-	}
-	&__video{
-		opacity: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: calc(100% - 10px);	
-		transition: all ease .3s;
-	}
-	&__info-wrap{
-		z-index: 10;
-		opacity: 0;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		// top: 1000px;
-		left: 0;
-		transition: all ease .3s;
+    &.hide {
+      opacity: 0;
+      transition: all ease 2s;
+    }
+  }
+  &__bg-img {
+    width: 100%;
+  }
+  &__progress {
+    position: absolute;
+    bottom: 3px;
+    left: 11px;
+    display: none;
+    width: calc(100% - var(--sm-angle-offset) - 22px);
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  &__progress-bar {
+    height: 100%;
+    background-color: #30c1d2;
+  }
+  &[data-progress] .tile__progress {
+    display: block;
+    transition: all ease 0.2s;
+  }
+  &__video {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 10px);
+    transition: all ease 0.3s;
+  }
+  &__info-wrap {
+    z-index: 10;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // top: 1000px;
+    left: 0;
+    transition: all ease 0.3s;
 
-		&.hide{
-			opacity: 0 !important;
-			transition: all ease 1s;
-		}
-	}
-	&__buttons-wrap{
-		display: flex;
-		position: absolute;
-		top: 13px;
-		left: 65px;
-	}
-	&__button{
-		cursor: pointer;
-		width: 26px;
-		@include breakpoint(lg){
-			width: 39px;
-		}
-		@include breakpoint(xl){
-			width: 55px;
-		}
+    &.hide {
+      opacity: 0 !important;
+      transition: all ease 1s;
+    }
+  }
+  &__buttons-wrap {
+    display: flex;
+    position: absolute;
+    top: 13px;
+    left: 65px;
+  }
+  &__button {
+    cursor: pointer;
+    width: 26px;
+    @include breakpoint(lg) {
+      width: 39px;
+    }
+    @include breakpoint(xl) {
+      width: 55px;
+    }
 
-		&:not(:last-child){
-			margin-right: 20px;
-			@include breakpoint(lg){
-				margin-right: 30px;
-			}
-		}
-	}
-	&__button-icon{
-		width: 100%;
-	}
-	&__bottom-wrap{
-		width: auto;
-		position: absolute;
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-	}
-	&__meta-info-wrap{
-		position: relative;
-		display: block;
-	}
-	&__title{
-		font-family: $bebas;
-		font-weight: bold;
-		font-size: 24px;
-		color: #fff;
-		margin-bottom: 5px;
-		@include breakpoint(lg){
-			font-size: 32px;
-			margin-bottom: 15px;
-		}
-		@include breakpoint(xl){
-			font-size: 40px;
-			margin-bottom: 20px;
-		}
-	}
-	&__meta-info{
-		display: flex;
-		font-family: $bebas;
-		font-weight: bold;
-		font-size: 22px;
-		line-height: 26px;
-		text-align: center;
-		color: #fff;
-		margin-bottom: 5px;
-		@include breakpoint(lg){
-			margin-bottom: 15px;
-		}
-		@include breakpoint(xl){
-			margin-bottom: 20px;
-			font-size: 28px;
-		}
-	}
-	&__meta-info-item{
-		display: flex;
-		align-items: center;
-		justify-content: center;
+    &:not(:last-child) {
+      margin-right: 20px;
+      @include breakpoint(lg) {
+        margin-right: 30px;
+      }
+    }
+  }
+  &__button-icon {
+    width: 100%;
+  }
+  &__bottom-wrap {
+    width: auto;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__meta-info-wrap {
+    position: relative;
+    display: block;
+  }
+  &__title {
+    font-family: $bebas;
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 5px;
+    @include breakpoint(lg) {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    @include breakpoint(xl) {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+  }
+  &__meta-info {
+    display: flex;
+    font-family: $bebas;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5px;
+    @include breakpoint(lg) {
+      margin-bottom: 15px;
+    }
+    @include breakpoint(xl) {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+  }
+  &__meta-info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-		&:not(:last-child){
-			margin-right: 20px;
-			@include breakpoint(md){
-				margin-right: 30px;
-			}
-		}
-	}
-	&__meta-info-item-icon{
-		height: 16px;
-		margin-right: 5px;
-		@include breakpoint(xl){
-			height: 24px;
-		}
-	}
-	&__text{
-		display: flex;
-		font-family: $stem;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 16px;
-		line-height: 21px;
-		color: #fff;
-		@include breakpoint(xl){
-			font-size: 28px;
-		}
-	}
-	&__text-item{
-		&:not(:last-child){
-			margin-right: 20px;
-			@include breakpoint(lg){
-				margin-right: 25px;
-			}
-		}
-	}
-	&__sound-button{
-		cursor: pointer;
-		width: 32px;
-		height: 32px;
-		position: relative;
-		@include breakpoint(lg){
-			width: 48px;
-			height: 48px;
-		}
-		@include breakpoint(xl){
-			width: 60px;
-			height: 60px;
-		}
+    &:not(:last-child) {
+      margin-right: 20px;
+      @include breakpoint(md) {
+        margin-right: 30px;
+      }
+    }
+  }
+  &__meta-info-item-icon {
+    height: 16px;
+    margin-right: 5px;
+    @include breakpoint(xl) {
+      height: 24px;
+    }
+  }
+  &__text {
+    display: flex;
+    font-family: $stem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: #fff;
+    @include breakpoint(xl) {
+      font-size: 28px;
+    }
+  }
+  &__text-item {
+    &:not(:last-child) {
+      margin-right: 20px;
+      @include breakpoint(lg) {
+        margin-right: 25px;
+      }
+    }
+  }
+  &__sound-button {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    @include breakpoint(lg) {
+      width: 48px;
+      height: 48px;
+    }
+    @include breakpoint(xl) {
+      width: 60px;
+      height: 60px;
+    }
 
-		&_on{
-			& .tile__sound-button-img_on{
-				display: block;
-			}	
-			& .tile__sound-button-img_off{
-				display: none;
-			}	
-		}
-	}
-	&__sound-button-img{
-		width: 100%;
+    &_on {
+      & .tile__sound-button-img_on {
+        display: block;
+      }
+      & .tile__sound-button-img_off {
+        display: none;
+      }
+    }
+  }
+  &__sound-button-img {
+    width: 100%;
 
-		&_on{
-			display: none; 
-		}
-		&_off{
-			display: block;
-		}
-	}
-	&.tile-info:hover,
-	&.tile-info:active,
-	&.tile-info:focus{
-		
-		&:before{
-			opacity: .9;
-			transition: all ease .4s;
-			transition-delay: .5s;
-		}
-		& .tile__video{
-			opacity: 1;
-			transition: all ease .5s;
-			transition-delay: .5s;
-		}
-		& .tile__info-wrap{
-			opacity: 1;
-			// top: 0;
-			transition: all ease 2s;
-			transition-delay: .5s;
-		}
-	}
-	&[data-progress]:hover,
-	&[data-progress]:active,
-	&[data-progress]:focus{
-		& .tile__progress{
-			width: calc(100% - var(--sm-hover-angle-offset) - 22px);
-			transition: all ease .3s;
-			transition-delay: 0.5s;
-		}
-	}
+    &_on {
+      display: none;
+    }
+    &_off {
+      display: block;
+    }
+  }
+  &.tile-info:hover,
+  &.tile-info:active,
+  &.tile-info:focus {
+    &:before {
+      opacity: 0.9;
+      transition: all ease 0.4s;
+      transition-delay: 0.5s;
+    }
+    & .tile__video {
+      opacity: 1;
+      transition: all ease 0.5s;
+      transition-delay: 0.5s;
+    }
+    & .tile__info-wrap {
+      opacity: 1;
+      // top: 0;
+      transition: all ease 2s;
+      transition-delay: 0.5s;
+    }
+  }
+  &[data-progress]:hover,
+  &[data-progress]:active,
+  &[data-progress]:focus {
+    & .tile__progress {
+      width: calc(100% - var(--sm-hover-angle-offset) - 22px);
+      transition: all ease 0.3s;
+      transition-delay: 0.5s;
+    }
+  }
 }
