@@ -32,7 +32,7 @@
 
     &.hide {
       opacity: 0;
-      transition: all ease 2s;
+      transition: all ease 1s;
     }
   }
   &__bg-img {
@@ -70,7 +70,6 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    // top: 1000px;
     left: 0;
     transition: all ease 0.3s;
 
@@ -235,9 +234,8 @@
     }
     & .tile__info-wrap {
       opacity: 1;
-      // top: 0;
-      transition: all ease 2s;
-      transition-delay: 0.5s;
+      transition: all ease 1s;
+      transition-delay: 1s;
     }
   }
   &[data-progress]:hover,

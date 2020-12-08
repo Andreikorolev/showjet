@@ -1,13 +1,21 @@
-.collection-page{
+.collection-page {
+  &__tiles-wrap {
+    display: flex;
+    height: var(--collection-tile-height);
+    margin-bottom: calc((100vw * 0.042) + 10px);
+    transition: all ease 0.2s;
 
-	&__tiles-wrap{
-		display: flex;
-		margin-bottom: 30px;
-		@include breakpoint(md){
-			margin-bottom: 50px;
-		}
-		@include breakpoint(lg){
-			margin-bottom: 75px;
-		}
-	}
+    &.hovered-child {
+      margin-left: calc(
+        (var(--collection-tile-hover-width) - var(--collection-tile-width)) / -2
+      );
+      transition: all ease 0.5s !important;
+    }
+    &.hovered-last-child {
+      margin-left: calc(
+        (var(--collection-tile-hover-width) - var(--collection-tile-width)) / -1
+      );
+      transition: all ease 0.5s !important;
+    }
+  }
 }

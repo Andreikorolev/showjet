@@ -2,21 +2,16 @@
     <head>
     	<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <script>
-            // if (screen.width > 2500){
-            //     document.querySelector("meta[name=viewport]").setAttribute("content", "width=2500");
-            // } else if (screen.width < 1024) {
-            //     document.querySelector("meta[name=viewport]").setAttribute("content", "width=1024");
-            // }
-        </script>
     	<title>ShowJet</title>
+
+
         <!-- SWIPER SLIDER STYLEs -->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
         <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
         <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-        <link href="css/style.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -77,16 +72,143 @@
 
 	<div class="header__popups">
 		
-		
+		<!-- <div class="popup popup-singin">
+	<form action="" class="popup__form">
+		<div class="popup__input-wrap">
+			<input class="popup__input" type="text" placeholder="Телефон или Email">
+		</div>
+		<div class="popup__input-wrap error">
+			<input class="popup__input" type="password" placeholder="Пароль">
+		</div>
+		<button class="popup__button">
+			Войти или Зарегистрироваться
+		</button>
+		<button class="popup__button-text">
+			Забыли пароль?
+		</button>
+	</form>
+	<div class="popup__soc-buttons">
+		<div class="popup__soc-button">
+			<svg class="popup__soc-button-icon" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M31.4615 20.7432C32.838 22.2584 33.7456 23.4925 33.8035 23.5925C34.5328 24.8479 32.9969 24.943 32.9969 24.943L30.0604 24.988C30.0604 24.988 29.4277 25.118 28.5969 24.5228C27.4957 23.7476 26.4621 21.7169 25.6507 21.977C24.8345 22.2471 24.8586 24.0777 24.8586 24.0777C24.8586 24.0777 24.8635 24.3978 24.6799 24.6078C24.4771 24.8279 24.081 24.8079 24.081 24.8079H22.7625C22.7625 24.8079 19.8597 25.058 17.3047 22.3021C14.5179 19.2961 12.0595 13.3691 12.0595 13.3691C12.0595 13.3691 11.9194 12.9939 12.0691 12.8039C12.243 12.5938 12.7164 12.5838 12.7164 12.5838L15.8606 12.5688C15.8606 12.5688 16.1552 12.6238 16.3677 12.7839C16.5416 12.9139 16.643 13.164 16.643 13.164C16.643 13.164 17.1502 14.4995 17.8215 15.6999C19.1352 18.0506 19.7486 18.5658 20.193 18.3157C20.845 17.9456 20.647 14.9946 20.647 14.9946C20.647 14.9946 20.6615 13.9193 20.3186 13.4391C20.0577 13.074 19.5651 12.9639 19.3429 12.9339C19.1642 12.9089 19.4588 12.4838 19.8356 12.2937C20.4007 12.0086 21.4004 11.9886 22.5789 12.0036C23.4966 12.0136 23.7622 12.0736 24.1197 12.1637C25.2064 12.4338 24.8393 13.4791 24.8393 15.9899C24.8393 16.7952 24.6992 17.9256 25.2595 18.3007C25.501 18.4608 26.0902 18.3257 27.5585 15.7349C28.2588 14.5045 28.7805 13.064 28.7805 13.064C28.7805 13.064 28.8964 12.8039 29.0751 12.6938C29.2586 12.5838 29.5049 12.6188 29.5049 12.6188L32.8134 12.5938C32.8134 12.5938 33.8035 12.4738 33.9677 12.9389C34.1368 13.4241 33.5958 14.5645 32.2435 16.4301C30.0217 19.4911 30.085 19.228 31.4615 20.7432Z" fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_d" x="0" y="0" width="46" height="37" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+						<feOffset/>
+						<feGaussianBlur stdDeviation="6"/>
+						<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.95 0"/>
+						<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+					</filter>
+				</defs>
+			</svg>
+		</div>
+		<div class="popup__soc-button">
+			<svg class="popup__soc-button-icon" width="37" height="46" viewBox="0 0 37 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M18.4295 23.2156C15.361 23.2052 12.8449 20.6648 12.8628 17.5954C12.8805 14.4922 15.3982 11.9914 18.4969 12C21.6018 12.0084 24.0939 14.5451 24.0783 17.6806C24.0625 20.7437 21.529 23.2263 18.4295 23.2156ZM17.4097 27.5774C15.739 27.4018 14.2326 26.987 12.9428 25.9702C12.9107 25.9449 12.8785 25.9197 12.8462 25.8945C12.7173 25.794 12.5883 25.6934 12.4715 25.5805C11.907 25.034 11.8501 24.408 12.2968 23.763C12.679 23.2111 13.3204 23.0634 13.9872 23.3803C14.1163 23.4418 14.2393 23.5184 14.3572 23.6008C16.7608 25.2656 20.0628 25.3115 22.4755 23.6757C22.7145 23.4909 22.97 23.3403 23.2661 23.2634C23.8419 23.1144 24.3789 23.3275 24.6879 23.8354C25.0409 24.4153 25.0364 24.9814 24.6015 25.4317C23.9342 26.122 23.1318 26.6214 22.2403 26.9699C21.3972 27.2994 20.4738 27.4653 19.5599 27.5754L19.6525 27.6773C19.7322 27.7653 19.7847 27.8233 19.849 27.8884C20.3012 28.3464 20.754 28.8036 21.2069 29.2608L21.2075 29.2614C21.9974 30.0589 22.7873 30.8564 23.5733 31.6576C23.9947 32.0871 24.0828 32.6198 23.8507 33.1194C23.597 33.6655 23.0291 34.0247 22.4723 33.9863C22.1195 33.9617 21.8444 33.7847 21.5999 33.5364C21.293 33.2252 20.9842 32.9158 20.6755 32.6064L20.6754 32.6063C20.042 31.9716 19.4086 31.337 18.7918 30.6863C18.5248 30.4048 18.3963 30.4581 18.1607 30.7024C17.2185 31.6801 16.2611 32.6427 15.2979 33.5999C14.8655 34.0297 14.3508 34.1071 13.8493 33.8616C13.3162 33.6011 12.9769 33.0525 13.0031 32.5012C13.0211 32.1283 13.2031 31.8435 13.457 31.588C14.4461 30.5924 15.4329 29.5949 16.4196 28.5975L16.421 28.5961L17.135 27.8743C17.1849 27.8237 17.2327 27.7711 17.2896 27.7085L17.2898 27.7083C17.3253 27.6693 17.3644 27.6263 17.4097 27.5774ZM18.4745 14.8642C19.9975 14.8656 21.2128 16.0789 21.2181 17.6028C21.2232 19.1266 20.0112 20.3477 18.4887 20.3531C16.9616 20.3587 15.7358 19.154 15.7245 17.6358C15.7126 16.0979 16.9388 14.8626 18.4745 14.8642Z" fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_d" x="0" y="0" width="36.9412" height="46" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+						<feOffset/>
+						<feGaussianBlur stdDeviation="6"/>
+						<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.95 0"/>
+						<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+					</filter>
+				</defs>
+			</svg>
+		</div>
+		<div class="popup__soc-button">
+			<svg class="popup__soc-button-icon" width="34" height="44" viewBox="0 0 34 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M14.6087 32V21.9961H12V18.6667H14.6087V16.3221C14.6087 14.069 15.854 12 19.202 12C20.558 12 21.565 12.1302 21.565 12.1302V15.1955C21.565 15.1955 20.141 15.1856 19.202 15.1856C18.263 15.1856 17.833 15.8125 17.833 16.7382V18.6667H21.619L21.167 21.9961H17.833V32H14.6087Z" fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_d" x="0" y="0" width="33.619" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+						<feOffset/>
+						<feGaussianBlur stdDeviation="6"/>
+						<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.95 0"/>
+						<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+					</filter>
+				</defs>
+			</svg>
+		</div>
+		<div class="popup__soc-button">
+			<svg class="popup__soc-button-icon" width="44" height="40" viewBox="0 0 44 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M29.643 14.5455C30.49 14.0426 31.141 13.2462 31.448 12.2971C30.655 12.7628 29.777 13.1011 28.842 13.2833C28.093 12.4934 27.027 12 25.847 12C23.581 12 21.743 13.8195 21.743 16.0638C21.743 16.3823 21.78 16.6925 21.85 16.9899C18.44 16.8205 15.416 15.2025 13.392 12.7438C13.039 13.344 12.837 14.042 12.837 14.7868C12.837 16.1968 13.561 17.4407 14.662 18.1695C13.99 18.1483 13.357 17.9656 12.804 17.6611C12.803 17.6782 12.803 17.6951 12.803 17.7124C12.803 19.6813 14.218 21.3237 16.095 21.6972C15.75 21.79 15.388 21.8397 15.014 21.8397C14.749 21.8397 14.492 21.8143 14.242 21.7668C14.764 23.3813 16.279 24.5564 18.075 24.5891C16.67 25.6791 14.901 26.3288 12.979 26.3288C12.648 26.3288 12.321 26.3095 12 26.2719C13.816 27.425 15.973 28 18.29 28C25.837 28 29.965 21.9053 29.965 16.535C29.965 16.3589 29.96 16.1835 29.952 16.0092C30.754 15.4363 31.45 14.7206 32 13.9056C31.264 14.2288 30.473 14.4472 29.643 14.5455Z" fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_d" x="0" y="0" width="44" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+						<feOffset/>
+						<feGaussianBlur stdDeviation="6"/>
+						<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.95 0"/>
+						<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+					</filter>
+				</defs>
+			</svg>
+		</div>
+	</div>
+</div> -->
 
 		
-		
+		<!-- <div class="popup popup-forgot-password">
+	<form action="" class="popup__form">
+		<div class="popup__text">
+			Введите адрес почты или телефон, указанный при регистрации. 
+			Мы вышлем новый пароль
+		</div>
+		<div class="popup__input-wrap">
+			<input class="popup__input" type="text" placeholder="Телефон или Email">
+		</div>
+		<button class="popup__button">
+			Отправить
+		</button>
+	</form>
+</div> -->
 
 		
-		
+		<!-- <div class="popup popup-send-password">
+	<form action="" class="popup__form">
+		<div class="popup__password-success-send">
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#76FF57"/>
+				<path d="M5.80029 9.92432L9.99219 14.2163L16.2876 7.29199" stroke="#76FF57" stroke-width="2"/>
+			</svg>
+			Пароль отправлен
+		</div>
+		<button class="popup__button">
+			Вернуться к авторизации
+		</button>
+	</form>
+</div> -->
 
 		
-		
+		<!-- <div class="popup popup-send-password">
+	<form action="" class="popup__form">
+		<div class="popup__text">
+			Придумайте себе имя
+		</div>
+		<div class="popup__input-wrap">
+			<input class="popup__input" type="text">
+		</div>
+		<button class="popup__button">
+			Завершить регистрацию
+		</button>
+	</form>
+</div> -->
 	</div>
 </header>
 
@@ -95,7 +217,6 @@
 			<div class="home-page-banner">
 	<div class="home-page-banner__tiles-cover"></div>
 	<img src="img/home-page-banner.jpg" alt="" class="home-page-banner__image">
-	
 	<video id="bannerVideo" class="video-js" fluid="true" loop autoplay preload="auto" muted="mute" width="100%" height="100%"  data-setup='{"loadingSpinner":false}' >
 		<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
 	</video>
@@ -148,6 +269,591 @@
 		</div>
 	</div>
 </div>
+		</div>
+
+		<div class="home-page__recommended-serials">
+			<div class="tiles-list">
+				<h3 class="tiles-list__title">
+					Рекомендуемые сериалы
+				</h3>
+				<div class="tiles-list__slider home-page__recommended-serials-slider">
+					<div class="swiper-wrapper tiles-list__sm-tiles">
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo0" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg", "loadingSpinner":false}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							<img src="img/18-icon.svg" alt="">
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo1" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg", "loadingSpinner":false}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							<img src="img/18-icon.svg" alt="">
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo2" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg", "loadingSpinner":false}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							<img src="img/18-icon.svg" alt="">
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo3" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg", "loadingSpinner":false}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							<img src="img/18-icon.svg" alt="">
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo4" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg", "loadingSpinner":false}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							<img src="img/18-icon.svg" alt="">
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo5" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg", "loadingSpinner":false}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							<img src="img/18-icon.svg" alt="">
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo6" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg", "loadingSpinner":false}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							<img src="img/18-icon.svg" alt="">
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo7" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg", "loadingSpinner":false}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							<img src="img/18-icon.svg" alt="">
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo8" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg", "loadingSpinner":false}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							<img src="img/18-icon.svg" alt="">
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+						<div class="tile tile__sm swiper-slide tile-info"  data-videourl="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8">
+	<div class="tile__progress">
+		<div class="tile__progress-bar"></div>
+	</div>
+	<div class="tile__inner">
+		<div class="tile__bg">
+			<img src="img/tile-bg.jpg" alt="" class="tile__bg-img">
+		</div>
+		<video id="recVideo9" class="tile__video video-js" fluid="true" preload="none" muted="mute" width="100%" height="100%" data-setup='{"poster":"img/tile-bg.jpg", "loadingSpinner":false}' >
+			<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL" />
+		</video>
+		<div class="tile__info-wrap">
+			<div class="tile__buttons-wrap">
+				<div class="tile__button tile__button_play" title="Смотреть сериал">
+					<img src="img/play-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_info" title="Информация о сериале">
+					<img src="img/info-icon.svg" alt="" class="tile__button-icon">
+				</div>
+				<div class="tile__button tile__button_like" title="Добавить в мое">
+					<img src="img/heart-icon.svg" alt="" class="tile__button-icon">
+				</div>
+			</div>
+			<div class="tile__bottom-wrap">
+				<div class="tile__meta-info-wrap">
+					<div class="tile__title">
+						Новый папа Новый папа Новый папа 
+					</div>
+					<div class="tile__meta-info">
+						<div class="tile__meta-info-item tile__meta-info-item_18">
+							<img src="img/18-icon.svg" alt="">
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/kinopoisk-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,8
+						</div>
+						<div class="tile__meta-info-item">
+							<img src="img/imdb-icon.svg" alt="" class="tile__meta-info-item-icon">
+							8,5
+						</div>
+					</div>
+					<div class="tile__text">
+						<div class="tile__text-item">lavish</div>
+						<div class="tile__text-item">Exiting</div>
+						<div class="tile__text-item">Fantasy tv</div>
+					</div>
+				</div>
+				<div class="tile__sound-button">
+					<img class="tile__sound-button-img tile__sound-button-img_on" src="img/sound-on-icon.svg" alt="" title="Выключить звук">
+					<img class="tile__sound-button-img tile__sound-button-img_off" src="img/sound-off-icon.svg" alt="" title="Включить звук">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+					</div>
+					<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+					<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+				</div>
+			</div>
 		</div>
 
 	</div>

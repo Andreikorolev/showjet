@@ -1,10 +1,17 @@
-.serials-page{
-
-	&__filters-wrap{
-		display: flex;
-		margin: 0 0 50px;
-	}
-	&__filter-wrap{
-		margin-right: 20px;
-	}
+.serials-page {
+  &__filters-wrap {
+    display: flex;
+    margin: 0 0 50px;
+  }
+  &__filter-wrap {
+    margin-right: 20px;
+  }
+  &__slider {
+    & .slider-button-prev,
+    & .slider-button-next {
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+  }
 }

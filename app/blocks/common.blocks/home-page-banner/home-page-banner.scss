@@ -66,20 +66,24 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    animation: fadeOut ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
+
+    &.fadeOut {
+      animation: fadeOut ease-in 1;
+      animation-fill-mode: forwards;
+      animation-duration: 2s;
+    }
   }
-  video {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
+  // video {
+  //   background-repeat: no-repeat;
+  //   background-position: center center;
+  //   background-size: cover;
+  // }
   &__description {
     width: 100%;
-    z-index: 2;
+    z-index: 100;
     position: absolute;
-    bottom: calc((var(--sm-tile-height) / 1.6) + (100vw * 0.042));
+    // bottom: calc((var(--sm-tile-height) / 1.6) + (100vw * 0.042));
+    bottom: calc((100vw / (6 * 1.8 * 1.6)) + (100vw * 0.042));
     left: 0px;
     padding: 0 30px;
     --scale-koef: calc(3170 / 1920);
