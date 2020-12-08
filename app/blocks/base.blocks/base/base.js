@@ -4,19 +4,19 @@ $(".light-page").parent("body").addClass("light");
 var isVideoPlay = false;
 var isVideoMuted = true;
 
-
 //hadle focus/unfocus on browser tab
 function hiddenBrowserTab() {
-    isVideoPlay = true;
-};
-function visibleBrowserTab(){
-    isVideoPlay = false;
-};
+  isVideoPlay = true;
+}
+function visibleBrowserTab() {
+  isVideoPlay = false;
+}
 
-if (/*@cc_on!@*/false) { // check for Internet Explorer
-    document.onfocusin = visibleBrowserTab;
-    document.onfocusout = hiddenBrowserTab;
+if (/*@cc_on!@*/ false) {
+  // check for Internet Explorer
+  document.onfocusin = visibleBrowserTab;
+  document.onfocusout = hiddenBrowserTab;
 } else {
-    window.onfocus = visibleBrowserTab;
-    window.onblur = hiddenBrowserTab;
+  window.onfocus = visibleBrowserTab;
+  window.onblur = hiddenBrowserTab;
 }

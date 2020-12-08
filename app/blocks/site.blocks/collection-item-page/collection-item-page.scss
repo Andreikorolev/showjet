@@ -1,66 +1,68 @@
-.collection-item-page{
+.collection-item-page {
+  &__top-banner {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -115px;
+    margin-bottom: -200px;
+  }
+  &__top-banner-info-wrap {
+    position: absolute;
+    bottom: 304px;
+    left: 30px;
 
-	&__top-banner{
-		width: 100%;
-		height: 100vh;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		margin-top: -115px;
-		margin-bottom: -200px;
-	}
-	&__top-banner-info-wrap{
-		position: absolute;
-		bottom: 304px;
-		left: 30px;
-
-		&:before{
-			content: '';
-			width: 1920px;
-			height: 1080px;
-			z-index: 0;
-			position: absolute;
-			top: -300px;
-			left: -640px;
-			background: radial-gradient(48.66% 48.66% at 49.28% 50%, #141414 0%, rgba(20, 20, 20, 0.79) 57.81%, rgba(20, 20, 20, 0.0001) 100%);
-			mix-blend-mode: normal;
-			opacity: 0.8;
-		}
-	}
-	&__top-banner-title{
-		font-family: $bebas;
-		font-weight: bold;
-		font-size: 47px;
-		line-height: 55px;
-		color: #FFFFFF;
-		margin-bottom: 10px;
-		@include breakpoint(md){
-			font-size: 60px;
-			line-height: 70px;
-		}
-		@include breakpoint(lg){
-			font-size: 100px;
-			line-height: 117px;
-		}
-	}
-	&__top-banner-subtitle{
-		font-family: $stem;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 30px;
-		line-height: 39px;
-		color: #FFFFFF;
-	}
-	&__four-tiles-wrap{
-		margin-bottom: 80px;
-	}
-	&__other-collections-title{
-		font-family: $stem;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 40px;
-		line-height: 52px;
-		color: rgba(255,255,255,.5);
-		margin-bottom: 14px;
-	}
+    &:before {
+      content: "";
+      width: 1920px;
+      height: 1080px;
+      z-index: 0;
+      position: absolute;
+      top: -300px;
+      left: -640px;
+      background: radial-gradient(
+        48.66% 48.66% at 49.28% 50%,
+        #141414 0%,
+        rgba(20, 20, 20, 0.79) 57.81%,
+        rgba(20, 20, 20, 0.0001) 100%
+      );
+      mix-blend-mode: normal;
+      opacity: 0.8;
+    }
+  }
+  &__top-banner-title {
+    font-family: $bebas;
+    font-weight: bold;
+    font-size: 47px;
+    line-height: 55px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    @include breakpoint(md) {
+      font-size: 60px;
+      line-height: 70px;
+    }
+    @include breakpoint(lg) {
+      font-size: 100px;
+      line-height: 117px;
+    }
+  }
+  &__top-banner-subtitle {
+    font-family: $stem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 39px;
+    color: #ffffff;
+  }
+  &__other-collections-title {
+    font-family: $stem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 52px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: calc(30vw * -0.042);
+    margin-bottom: 14px;
+  }
 }
