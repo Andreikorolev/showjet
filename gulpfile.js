@@ -19,9 +19,7 @@ const scss = require("gulp-sass");
 const twig = require("gulp-twig");
 const watch = require("gulp-watch");
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
-const pngquant = require("imagemin-pngquant");
 const plumber = require("gulp-plumber");
-const notify = require("gulp-notify");
 const beep = require("beepbeep");
 
 const onError = (err) => {
@@ -43,7 +41,6 @@ function img() {
               max: 95,
               quality: "high",
             }),
-            pngquant(),
           ],
           {
             verbose: true,
@@ -81,6 +78,14 @@ function scssFunc() {
     )
     .pipe(concat("style.scss"))
     .pipe(scss({ importer: compass, includePaths: ["libs/mixins"] }))
+    .pipe(
+      prefixer({
+        overrideBrowserslist: ["last 10 versions"],
+        cascade: false,
+      })
+    )
+    .pipe(mediacomb())
+    .pipe(csscomb())
     .pipe(gulp.dest("./dist/css/"));
 }
 

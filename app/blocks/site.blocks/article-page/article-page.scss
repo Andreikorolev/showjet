@@ -55,8 +55,6 @@
     text-align: center;
     margin-bottom: 17px;
   }
-  &__img-soc-wrap {
-  }
   &__img {
     width: 100%;
     height: 720px;
@@ -67,7 +65,7 @@
   &__soc-buttons {
     position: absolute;
     top: 20px;
-    right: 20px;
+    transform: translateX(1240px);
     display: flex;
     flex-direction: column;
 
@@ -79,11 +77,6 @@
     &.fixed {
       position: fixed;
       top: 86px;
-      right: 20px;
-
-      @include breakpoint(lg) {
-        right: calc(50% - 668px);
-      }
     }
     &.bottom-sticky {
       top: auto;

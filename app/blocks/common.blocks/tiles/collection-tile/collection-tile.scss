@@ -72,6 +72,11 @@
       );
     }
 
+    & .collection-tile__text-wrap {
+      bottom: 20px;
+      transition: all ease 0.5s;
+      transition-delay: 0.5s;
+    }
     & .collection-tile__subtitle {
       top: 0;
       transition: all ease 0.5s;
@@ -81,8 +86,9 @@
 
   &__text-wrap {
     position: absolute;
-    bottom: 20px;
+    bottom: -10px;
     left: 20px;
+    transition: all ease 0.2s;
     @include breakpoint(md) {
       left: 51px;
     }

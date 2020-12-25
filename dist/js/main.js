@@ -662,10 +662,23 @@ $(window).resize(function () {
 if ($(".article-page__article").length) {
   $(window).scroll(function () {
     var windowScrollTop = $(window).scrollTop();
-    var socButtonsOffset = $(".article__img-soc-wrap").offset();
-    var socButtonsHeight = $(".article__soc-buttons").height();
+    var socButtonsOffset = $(
+      ".article__soc-buttons"
+    )[0].getBoundingClientRect();
+    // var socButtonsHeight = $(".article__soc-buttons").height();
     var headerHeight = $(".header").height();
-    if (windowScrollTop > socButtonsOffset.top - headerHeight) {
+    var articlePos = $(".article")[0].getBoundingClientRect();
+
+    console.log("socButtonTop: " + socButtonsOffset.top);
+    console.log(
+      "socButtonBottom: " + (socButtonsOffset.bottom + windowScrollTop)
+    );
+    console.log("articleBottom: " + articlePos.bottom);
+
+    if (
+      socButtonsOffset.top < headerHeight &&
+      socButtonsOffset.bottom + windowScrollTop < articlePos.bottom
+    ) {
       $(".article__soc-buttons").addClass("fixed");
       $(".article__soc-buttons").removeClass("bottom-sticky");
     } else {
@@ -700,84 +713,6 @@ var articlePageTiles = new Swiper(".article-page__tiles-slider", {
   },
 });
 
-var homePageRecommendedSerials = new Swiper('.home-page__recommended-serials-slider', {
-	direction: 'horizontal',
-	speed: 1000,
-	slidesPerView: 5,
-	slidesPerGroup: 5,
-	slidesOffsetAfter: 10,
-	navigation: {
-		nextEl: '.slider-button-next',
-		prevEl: '.slider-button-prev',
-	},
-	breakpoints: {
-		1024: {
-			slidesPerView: 4,
-			slidesPerGroup: 4,
-		},
-		1280: {
-			slidesPerView: 5,
-			slidesPerGroup: 5,
-		},
-		1920: {
-			slidesPerView: 5,
-			slidesPerGroup: 5,
-		}
-	},
-});
-
-var homePageContinueWatching = new Swiper('.home-page__continue-watching-slider', {
-	direction: 'horizontal',
-	speed: 1000,
-	slidesPerView: 5,
-	slidesPerGroup: 5,
-	slidesOffsetAfter: 10,
-	navigation: {
-		nextEl: '.slider-button-next',
-		prevEl: '.slider-button-prev',
-	},
-	breakpoints: {
-		1024: {
-			slidesPerView: 4,
-			slidesPerGroup: 4,
-		},
-		1280: {
-			slidesPerView: 5,
-			slidesPerGroup: 5,
-		},
-		1920: {
-			slidesPerView: 5,
-			slidesPerGroup: 5,
-		}
-	},
-});
-
-
-var homePageWatchingNowSerial = new Swiper('.home-page__watching-now-slider', {
-	direction: 'horizontal',
-	speed: 1000,
-	slidesPerView: 5,
-	slidesPerGroup: 5,
-	slidesOffsetAfter: 10,
-	navigation: {
-		nextEl: '.slider-button-next',
-		prevEl: '.slider-button-prev',
-	},
-	breakpoints: {
-		1024: {
-			slidesPerView: 4,
-			slidesPerGroup: 4,
-		},
-		1280: {
-			slidesPerView: 5,
-			slidesPerGroup: 5,
-		},
-		1920: {
-			slidesPerView: 5,
-			slidesPerGroup: 5,
-		}
-	},
-});
 $(".news-page__navigation-item").click(function(){
 	$( ".news-page__navigation-item" ).each(function() {
 		$(this).removeClass("active");
@@ -788,6 +723,89 @@ $(".news-page__navigation-item").click(function(){
 	var targetTab = $(this).attr("data-target");
 	$("#" + targetTab).addClass('active-tab');
 });
+var homePageRecommendedSerials = new Swiper(
+  ".home-page__recommended-serials-slider",
+  {
+    direction: "horizontal",
+    speed: 1000,
+    slidesPerView: 6,
+    slidesPerGroup: 6,
+    navigation: {
+      nextEl: ".slider-button-next",
+      prevEl: ".slider-button-prev",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      },
+      1280: {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+      },
+      1920: {
+        slidesPerView: 6,
+        slidesPerGroup: 6,
+      },
+    },
+  }
+);
+
+var homePageContinueWatching = new Swiper(
+  ".home-page__continue-watching-slider",
+  {
+    direction: "horizontal",
+    speed: 1000,
+    slidesPerView: 5,
+    slidesPerGroup: 5,
+    slidesOffsetAfter: 10,
+    navigation: {
+      nextEl: ".slider-button-next",
+      prevEl: ".slider-button-prev",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      },
+      1280: {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+      },
+      1920: {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+      },
+    },
+  }
+);
+
+var homePageWatchingNowSerial = new Swiper(".home-page__watching-now-slider", {
+  direction: "horizontal",
+  speed: 1000,
+  slidesPerView: 5,
+  slidesPerGroup: 5,
+  slidesOffsetAfter: 10,
+  navigation: {
+    nextEl: ".slider-button-next",
+    prevEl: ".slider-button-prev",
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    },
+    1280: {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+    },
+    1920: {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+    },
+  },
+});
+
 $('.profile-page__setting-button-item_stat').on('click', function(){
 	$('.profile-page__wrap').hide();
 	$('.profile-page__stat').addClass('open');

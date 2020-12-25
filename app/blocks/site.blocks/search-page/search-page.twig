@@ -14,9 +14,12 @@
 				</h1>
 				<input type="text" class="search-page__search-input" value="">
 			</div>
-			<div class="search-page__search-result">
+			<div class="search-page__search-result tiles-list">
+				<div class="tiles-list__title">
+					К сожалению мы ничего не нашли, возможно Вас заинтересует:
+				</div>
 				<div class="tiles-list__slider search-page__slider">
-					<div class="swiper-wrapper">
+					<div class="swiper-wrapper tiles-list__sm-tiles">
 						{% for item in 0..12 %}
 						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8', 'videoID':'searchVideo'~item }%}
 
