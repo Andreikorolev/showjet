@@ -1,0 +1,84 @@
+.delete-popup-wrap{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1001;
+	display: none;
+}
+.delete-popup{
+	z-index: 100;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	border: 1px solid #fff;
+	background-color: #000;
+	padding: 30px 30px 35px;
+
+	&__overlay{
+		z-index: 99;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #141414;
+		opacity: .8;
+	}	
+	&__title{
+		font-family: $stem;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+		margin-bottom: 15px;
+	}
+	&__buttons{
+		display: flex;
+	}
+	&__button {
+		width: auto;
+		height: 44px;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255, 255, 255, 0.5);
+		clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+		font-family: $bebas;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 23px;
+		color: #ffffff;
+		text-decoration: none;
+		transition: all ease 0.3s;
+
+		& div {
+			height: 1.05em;
+		}
+	}
+	&__button-yes {
+		background-color: #30c1d2;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: rgba(48, 193, 210, 0.6);
+		}
+	}
+	&__button-cancel {
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: rgba(255, 255, 255, 0.65);
+		}
+	}
+	&__close-button{
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		right: -20px;
+	}
+}

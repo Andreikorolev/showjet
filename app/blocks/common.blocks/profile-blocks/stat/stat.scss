@@ -1,0 +1,171 @@
+.stat{
+	&__top-wrap{
+		display: flex;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+	&__back-button{
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		font-family: $stem;
+		font-size: 12px;
+		line-height: 15px;
+		color: #FFFFFF;
+		margin-right: 50px;
+		&:hover,
+		&:active,
+		&:focus{
+			text-decoration: underline;
+		}
+		@include breakpoint(lg){
+			font-size: 24px;
+			line-height: 31px;
+		}
+
+		& svg{
+			margin-right: 17px;
+			width: 24px;
+			@include breakpoint(md){
+				width: 36px;
+			}
+		}
+	}
+	&__title{
+		font-family: $bebas;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 35px;
+		color: #FFFFFF;
+		@include breakpoint(md){
+			font-size: 35px;
+			line-height: 41px;
+		}
+		@include breakpoint(lg){
+			font-size: 45px;
+			line-height: 53px;
+		}
+	}
+	&__wrap{
+		width: 100%;
+		border-bottom: 1px solid #fff;
+		padding-bottom: 90px;
+		margin-bottom: 40px;
+	}
+	&__chart{
+		height: 100%;
+		display: flex;
+		align-items: flex-end;
+		padding: 0 40px 0 50px;
+	}
+	&__chart-grid{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	&__grid-line{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		font-family: $stem;
+		font-size: 12px;
+		line-height: 15px;
+		color: #FFFFFF;
+		border-bottom: 1px solid #fff;
+		@include breakpoint(md){
+			font-size: 18px;
+			line-height: 23px;
+		}
+	}
+	&__grid-max{
+		top: 0;
+	}
+	&__grid-mid{
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&__grid-min{
+		bottom: 0;
+	}
+	&__chart-element{
+		width: calc(100% / 6);
+		min-height: 2px;
+		background-color: #30C1D2;
+		&:not(:last-child){
+			margin-right: 10px;
+		}
+
+		& span{
+			position: absolute;
+			bottom: -40px;
+			left: 50%;
+			transform: translateX(-50%);
+			font-family: $stem;
+			font-size: 12px;
+			color: rgba(255,255,255,.5);
+			@include breakpoint(md){
+				font-size: 18px;
+			}
+		}
+	}
+	&__list-item{
+		display: flex;
+		justify-content: space-between;
+		font-family: $stem;
+		font-size: 12px;
+		line-height: 15px;
+		color: rgba(255,255,255,.5);
+		@include breakpoint(md){
+			font-size: 18px;
+			line-height: 23px;
+		}
+		@include breakpoint(lg){
+			font-size: 24px;
+			line-height: 31px;
+		}
+
+		&:not(:last-child){
+			margin-bottom: 20px;
+			@include breakpoint(md){
+				margin-bottom: 25px;
+			}
+			@include breakpoint(lg){
+				margin-bottom: 40px;
+			}
+		}
+
+		& div:last-child{
+			font-weight: bold;
+			color: #fff;
+			text-align: right;
+		}
+	}
+	&__delete-button {
+		width: 191px;
+		height: 44px;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #30c1d2;
+		clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+		font-family: $bebas;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 23px;
+		color: #ffffff;
+		text-decoration: none;
+		transition: all ease 0.3s;
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: rgba(48, 193, 210, 0.6);
+		}
+
+		& div {
+			height: 1.05em;
+		}
+	}
+}

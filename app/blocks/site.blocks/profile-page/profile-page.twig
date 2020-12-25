@@ -1,186 +1,117 @@
-{% extends 'blocks/base.blocks/base/base.twig' %}
+{% extends 'blocks/base.blocks/base/base.twig' %} 
 
 {% block content %}
 <div class="container-fluid">
-	<div class="row">
+  <div class="row">
+    {# HEADER #}
+    {% include 'blocks/common.blocks/header/header.twig'%}
+    <!-- DELETE POPUP -->
+    {% include 'blocks/common.blocks/profile-blocks/delete-popup/delete-popup.twig' with {'title':'Удалить вашу историю просмотра?', 'class':'delete-popup-history'} %}
+    {% include 'blocks/common.blocks/profile-blocks/delete-popup/delete-popup.twig' with {'title':'Удалить всё из вашего списка «Моё»?', 'class':'delete-popup-mine'} %}
+    {% include 'blocks/common.blocks/profile-blocks/trouble-popup/trouble-popup.twig' %}
+    <!-- END DELETE POPUP -->
+    <div class="profile-page__wrap container">
+      <div class="profile-page__settings row">
+        <div class="col-6">
+          <div class="profile-page__title">Настройки профиля</div>
+          <div class="profile-page__input-wrap">
+            <label class="profile-page__label" for="name">Имя</label>
+            <input class="profile-page__input" type="text" id="name" />
+          </div>
+          <div class="profile-page__input-wrap">
+            <label class="profile-page__label" for="email">Email</label>
+            <input class="profile-page__input" type="email" id="email" />
+          </div>
+          <div class="profile-page__input-wrap">
+            <label class="profile-page__label" for="old-pass"
+            >Старый пароль</label
+            >
+            <input class="profile-page__input" type="password" id="old-pass" />
+          </div>
+          <div class="profile-page__input-wrap">
+            <label class="profile-page__label" for="new-pass"
+            >Новый пароль</label
+            >
+            <input class="profile-page__input" type="password" id="new-pass" />
+          </div>
+          <div class="profile-page__input-wrap">
+            <label class="profile-page__label" for="repeat-pass"
+            >Повтор пароля</label
+            >
+            <input
+            class="profile-page__input"
+            type="password"
+            id="repeat-pass"
+            />
+          </div>
+          <div class="profile-page__checkbox-wrap">
+            <input
+            id="autoplay"
+            class="profile-page__checkbox"
+            type="checkbox"
+            />
+            <label class="profile-page__checkbox-label" for="autoplay"
+            >Автовоспроизведение трейлеров</label
+            >
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="profile-page__title">Список устройств</div>
+          <div class="profile-page__text">
+            Вы можете использовать свой аккаунт на 5-ти устройствах. Если
+            солкнулись с этим ограничением при входе в ShowJet, деактивируйте
+            одно из устройств:
+          </div>
+          <div class="profile-page__devices">
+            {% include 'blocks/common.blocks/profile-blocks/device/device.twig' with {'active': 'active'} %} 
+            {% include 'blocks/common.blocks/profile-blocks/device/device.twig'%}
+            {% include 'blocks/common.blocks/profile-blocks/device/device.twig'%}
+            {% include 'blocks/common.blocks/profile-blocks/device/device.twig'%}
+          </div>
+          <div class="profile-page__add-device">
+            {% include 'blocks/common.blocks/profile-blocks/add-device/add-device.twig'%}
+          </div>
+          <div class="profile-page__access-code">
+            {% include 'blocks/common.blocks/profile-blocks/access-code/access-code.twig'%}
+          </div>
+        </div>
+      </div>
+      <div class="profile-page__settings-buttons">
+        <div class="profile-page__setting-button-item profile-page__setting-button-item_history">
+          <img src="img/minus-icon.svg" alt="" />
+          Очистить историю просмотра
+        </div>
+        <div class="profile-page__setting-button-item profile-page__setting-button-item_mine">
+          <img src="img/minus-icon.svg" alt="" />
+          Очистить раздел «Моё»
+        </div>
+        <div class="profile-page__setting-button-item profile-page__setting-button-item_stat">
+          <img src="img/stats-icon.svg" alt="" />
+          Статистика просмотров
+        </div>
+        <div class="profile-page__setting-button-item profile-page__setting-button-item_trouble">
+          <img src="img/warning-icon.svg" alt="" />
+          Что-то не работает?
+        </div>
+      </div>
+      <div class="profile-page__buttons">
+        <a href="#" class="profile-page__button profile-page__button-save">
+          Сохранить изменения
+        </a>
+        <a href="#" class="profile-page__button profile-page__button-exit">
+          Выйти из профиля
+        </a>
+        <div class="profile-page__support">
+          Служба поддержки
+          <a href="email:support@showjet.ru">support@showjet.ru</a>
+        </div>
+      </div>
+    </div>
+    <div class="profile-page__stat">
+      {# FOOTER #} {% include 'blocks/common.blocks/profile-blocks/stat/stat.twig'%}
+    </div>
 
-		{# HEADER #}
-		{% include 'blocks/common.blocks/header/header.twig'%}
-		<div class="profile-page__wrap container">
-			<div class="profile-page__settings row">
-				<div class="col-6">
-					<div class="profile-page__title">
-						Настройки профиля
-					</div>
-					<div class="profile-page__input-wrap">
-						<label class="profile-page__label" for="name">Имя</label>
-						<input class="profile-page__input" type="text" id="name">
-					</div>
-					<div class="profile-page__input-wrap">
-						<label class="profile-page__label" for="email">Email</label>
-						<input class="profile-page__input" type="email" id="email">
-					</div>
-					<div class="profile-page__input-wrap">
-						<label class="profile-page__label" for="old-pass">Старый пароль</label>
-						<input class="profile-page__input" type="password" id="old-pass">
-					</div>
-					<div class="profile-page__input-wrap">
-						<label class="profile-page__label" for="new-pass">Новый пароль</label>
-						<input class="profile-page__input" type="password" id="new-pass">
-					</div>
-					<div class="profile-page__input-wrap">
-						<label class="profile-page__label" for="repeat-pass">Повтор пароля</label>
-						<input class="profile-page__input" type="password" id="repeat-pass">
-					</div>
-					<div class="profile-page__checkbox-wrap">
-						<input id="autoplay" class="profile-page__checkbox" type="checkbox">
-						<label class="profile-page__checkbox-label" for="autoplay">Автовоспроизведение трейлеров</label>
-					</div>
-				</div>
-				<div class="col-6">
-					<div class="profile-page__title">
-						Список устройств
-					</div>
-					<div class="profile-page__text">
-						Вы можете использовать свой аккаунт на 5-ти устройствах. Если солкнулись с этим ограничением при входе в ShowJet, деактивируйте одно из устройств:
-					</div>
-					<div class="profile-page__device-wrap profile-page__device-wrap_active">
-						<div class="profile-page__device-title">
-							Opera Web Browser
-						</div>
-						<div class="profile-page__device-delete">
-							<svg class="profile-page__device-delete-img" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g>
-									<path d="M36 26H19V30H36V26Z" fill="white"/>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M44 28C44 36.8365 36.8365 44 28 44C19.1635 44 12 36.8365 12 28C12 19.1635 19.1635 12 28 12C36.8365 12 44 19.1635 44 28ZM41 28C41 35.1797 35.1797 41 28 41C20.8203 41 15 35.1797 15 28C15 20.8203 20.8203 15 28 15C35.1797 15 41 20.8203 41 28Z" fill="white"/>
-								</g>
-								<defs>
-									<filter id="filter0_d" x="0" y="0" width="56" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-										<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-										<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-										<feOffset/>
-										<feGaussianBlur stdDeviation="6"/>
-										<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.95 0"/>
-										<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-										<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-									</filter>
-								</defs>
-							</svg>
-						</div>
-					</div>
-					<div class="profile-page__device-wrap">
-						<div class="profile-page__device-title">
-							Android Phone SM-G950F
-						</div>
-						<div class="profile-page__device-delete">
-							<svg class="profile-page__device-delete-img" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g>
-									<path d="M36 26H19V30H36V26Z" fill="white"/>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M44 28C44 36.8365 36.8365 44 28 44C19.1635 44 12 36.8365 12 28C12 19.1635 19.1635 12 28 12C36.8365 12 44 19.1635 44 28ZM41 28C41 35.1797 35.1797 41 28 41C20.8203 41 15 35.1797 15 28C15 20.8203 20.8203 15 28 15C35.1797 15 41 20.8203 41 28Z" fill="white"/>
-								</g>
-								<defs>
-									<filter id="filter0_d" x="0" y="0" width="56" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-										<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-										<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-										<feOffset/>
-										<feGaussianBlur stdDeviation="6"/>
-										<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.95 0"/>
-										<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-										<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-									</filter>
-								</defs>
-							</svg>
-						</div>
-					</div>
-					<div class="profile-page__device-wrap">
-						<div class="profile-page__device-title">
-							AppleTv
-						</div>
-						<div class="profile-page__device-delete">
-							<svg class="profile-page__device-delete-img" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g>
-									<path d="M36 26H19V30H36V26Z" fill="white"/>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M44 28C44 36.8365 36.8365 44 28 44C19.1635 44 12 36.8365 12 28C12 19.1635 19.1635 12 28 12C36.8365 12 44 19.1635 44 28ZM41 28C41 35.1797 35.1797 41 28 41C20.8203 41 15 35.1797 15 28C15 20.8203 20.8203 15 28 15C35.1797 15 41 20.8203 41 28Z" fill="white"/>
-								</g>
-								<defs>
-									<filter id="filter0_d" x="0" y="0" width="56" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-										<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-										<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-										<feOffset/>
-										<feGaussianBlur stdDeviation="6"/>
-										<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.95 0"/>
-										<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-										<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-									</filter>
-								</defs>
-							</svg>
-						</div>
-					</div>
-					<div class="profile-page__device-wrap">
-						<div class="profile-page__device-title">
-							SmartTV Samsung
-						</div>
-						<div class="profile-page__device-delete">
-							<svg class="profile-page__device-delete-img" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g>
-									<path d="M36 26H19V30H36V26Z" fill="white"/>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M44 28C44 36.8365 36.8365 44 28 44C19.1635 44 12 36.8365 12 28C12 19.1635 19.1635 12 28 12C36.8365 12 44 19.1635 44 28ZM41 28C41 35.1797 35.1797 41 28 41C20.8203 41 15 35.1797 15 28C15 20.8203 20.8203 15 28 15C35.1797 15 41 20.8203 41 28Z" fill="white"/>
-								</g>
-								<defs>
-									<filter id="filter0_d" x="0" y="0" width="56" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-										<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-										<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-										<feOffset/>
-										<feGaussianBlur stdDeviation="6"/>
-										<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.95 0"/>
-										<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-										<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-									</filter>
-								</defs>
-							</svg>
-						</div>
-					</div>
-					<div class="profile-page__device-wrap">
-						<div class="profile-page__device-title">
-							iPhone
-						</div>
-						<div class="profile-page__device-delete">
-							<svg class="profile-page__device-delete-img" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g>
-									<path d="M36 26H19V30H36V26Z" fill="white"/>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M44 28C44 36.8365 36.8365 44 28 44C19.1635 44 12 36.8365 12 28C12 19.1635 19.1635 12 28 12C36.8365 12 44 19.1635 44 28ZM41 28C41 35.1797 35.1797 41 28 41C20.8203 41 15 35.1797 15 28C15 20.8203 20.8203 15 28 15C35.1797 15 41 20.8203 41 28Z" fill="white"/>
-								</g>
-								<defs>
-									<filter id="filter0_d" x="0" y="0" width="56" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-										<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-										<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-										<feOffset/>
-										<feGaussianBlur stdDeviation="6"/>
-										<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.95 0"/>
-										<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-										<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-									</filter>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="profile-page__buttons">
-				<a href="#" class="profile-page__button profile-page__button-save">
-					Сохранить изменения
-				</a>
-				<a href="#" class="profile-page__button profile-page__button-exit">
-					Выйти из профиля
-				</a>
-				<div class="profile-page__support">
-					Служба поддержки <a href="email:support@showjet.ru">support@showjet.ru</a>
-				</div>
-			</div>
-		</div>
-
-		{# FOOTER #}
-		{% include 'blocks/common.blocks/footer/footer.twig'%}
-	</div>
-</div> 
+    {# FOOTER #} {% include 'blocks/common.blocks/footer/footer.twig'%}
+  </div>
+</div>
 {% endblock %}
