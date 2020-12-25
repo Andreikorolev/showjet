@@ -2605,11 +2605,10 @@ svg {
     font-family: "Bebas Neue";
     font-weight: bold;
     font-size: 12px;
-    letter-spacing: .1rem;
     line-height: 14px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
-    transition: all ease .3s; }
+    transition: all ease 0.3s; }
     @media (min-width: 1280px) {
       .footer__menu-item {
         font-size: 15px;
@@ -2627,7 +2626,7 @@ svg {
         .footer__menu-item:not(:last-child) {
           margin-right: 30px; } }
     .footer__menu-item:hover, .footer__menu-item:active, .footer__menu-item:focus {
-      opacity: .5; }
+      opacity: 0.5; }
   .footer__soc-buttons {
     display: flex;
     margin-right: 10px; }
@@ -2646,13 +2645,13 @@ svg {
     .footer__soc-item:hover .footer__soc-item-icon g, .footer__soc-item:active .footer__soc-item-icon g, .footer__soc-item:focus .footer__soc-item-icon g {
       filter: url(#filter0_d); }
   .footer__soc-item-icon {
-    transition: all ease .3s;
+    transition: all ease 0.3s;
     filter: none; }
   .footer__stores-icon {
     display: flex; }
   .footer__store-item {
     border-radius: 6px;
-    transition: all ease .3s; }
+    transition: all ease 0.3s; }
     .footer__store-item:not(:last-child) {
       margin-right: 10px; }
     .footer__store-item:hover, .footer__store-item:active, .footer__store-item:focus {
@@ -3121,18 +3120,18 @@ svg {
   display: flex;
   width: 100%;
   height: 320px;
-  background-color: #F1F1F1; }
+  background-color: #f1f1f1; }
   @media (min-width: 1920px) {
     .news-tile-big {
       height: 382px; } }
   .news-tile-big__img {
-    flex: 0 0 530px;
+    flex: 0 0 560px;
     clip-path: polygon(0% 0%, 100% 0%, calc(100% - 61px) 100%, 0% 100%);
     background-size: cover;
     background-position: center; }
     @media (min-width: 1280px) {
       .news-tile-big__img {
-        flex: 0 0 643px; } }
+        flex: 0 0 680px; } }
     @media (min-width: 1920px) {
       .news-tile-big__img {
         clip-path: polygon(0% 0%, 100% 0%, calc(100% - 73px) 100%, 0% 100%); } }
@@ -3192,15 +3191,15 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #30C1D2;
+    background-color: #30c1d2;
     clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
     font-family: "Bebas Neue";
-    font-weight: normal;
+    font-weight: bold;
     font-size: 20px;
     line-height: 20px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
-    transition: all ease .3s; }
+    transition: all ease 0.3s; }
     @media (min-width: 1280px) {
       .news-tile-big__button {
         width: 178px;
@@ -3208,14 +3207,16 @@ svg {
         line-height: 35px; } }
     .news-tile-big__button:hover, .news-tile-big__button:active, .news-tile-big__button:focus {
       background-color: rgba(48, 193, 210, 0.6); }
+    .news-tile-big__button div {
+      height: 1.05em; }
 
 .news-tile-video {
   display: flex;
   width: 100%;
   height: 320px;
-  background-color: #F1F1F1; }
+  background-color: #f1f1f1; }
   .news-tile-video__left-wrap {
-    flex: 0 0 633px;
+    flex: 0 0 640px;
     clip-path: polygon(0% 0%, 100% 0%, calc(100% - 61px) 100%, 0% 100%);
     background-size: cover;
     background-position: center; }
@@ -3224,7 +3225,7 @@ svg {
     bottom: 30px;
     left: 20px; }
     .news-tile-video__description:before {
-      content: '';
+      content: "";
       width: 200%;
       height: 200%;
       position: absolute;
@@ -3238,7 +3239,7 @@ svg {
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 10px; }
   .news-tile-video__description-title {
     font-family: "Bebas Neue";
@@ -3246,7 +3247,7 @@ svg {
     font-weight: bold;
     font-size: 50px;
     line-height: 50px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 25px; }
   .news-tile-video__description-button {
     width: 254px;
@@ -3254,33 +3255,35 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #30C1D2;
+    background-color: #30c1d2;
     clip-path: polygon(calc(0% + 10px) 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
     font-family: "Bebas Neue";
     font-weight: bold;
     font-size: 30px;
     line-height: 30px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
-    transition: all ease .3s; }
+    transition: all ease 0.3s; }
     .news-tile-video__description-button:hover, .news-tile-video__description-button:active, .news-tile-video__description-button:focus {
       color: #fff;
       background-color: rgba(48, 193, 210, 0.6); }
+    .news-tile-video__description-button div {
+      height: 0.9em; }
   .news-tile-video__description-button-icon {
     width: 32px;
     height: 32px;
     margin-right: 9px; }
   .news-tile-video__sound-off-button {
     position: absolute;
-    top: 14px;
-    left: 15px; }
+    bottom: 30px;
+    right: 70px; }
   .news-tile-video__sound-off-button-icon {
     width: 32px;
     height: 32px; }
   .news-tile-video__meta-info-wrap {
     position: absolute;
     top: 14px;
-    left: 77px; }
+    left: 15px; }
   .news-tile-video__meta-info-item:not(:last-child) {
     margin-right: 15px; }
   .news-tile-video__meta-info-item_18 {
@@ -3289,14 +3292,14 @@ svg {
     display: flex;
     vertical-align: middle;
     justify-content: center;
-    border: 3px solid #FFFFFF;
+    border: 3px solid #ffffff;
     border-radius: 4px;
     font-family: "Bebas Neue";
     font-style: normal;
     font-weight: bold;
     font-size: 26px;
     line-height: 31px;
-    color: #FFFFFF; }
+    color: #ffffff; }
   .news-tile-video__description-button-icon {
     margin-right: 13px; }
   .news-tile-video__info-wrap {
@@ -3354,47 +3357,51 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #A9A9A9;
+    background-color: #a9a9a9;
     clip-path: polygon(calc(0% + 10px) 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
     font-family: "Bebas Neue";
     font-weight: bold;
     font-size: 20px;
     line-height: 20px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
-    transition: all ease .3s; }
+    transition: all ease 0.3s; }
     @media (min-width: 1280px) {
       .news-tile-video__info-button {
         width: 178px;
         font-size: 30px;
         line-height: 35px; } }
     .news-tile-video__info-button:hover, .news-tile-video__info-button:active, .news-tile-video__info-button:focus {
-      opacity: .8; }
+      opacity: 0.8; }
+    .news-tile-video__info-button div {
+      height: 1.05em; }
 
 .news-tile {
   width: calc(100% / 4);
+  --news-tile-angle-offset: calc(0.190808995 * 184px);
   height: 382px;
   background-color: #f2f2f2;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: var(--news-tile-angle-offset); }
   .news-tile:hover .news-tile__img, .news-tile:active .news-tile__img, .news-tile:focus .news-tile__img {
     height: 135px; }
   .news-tile:hover .news-tile__title, .news-tile:active .news-tile__title, .news-tile:focus .news-tile__title {
     text-decoration: underline; }
   .news-tile:hover .news-tile__info-wrap, .news-tile:active .news-tile__info-wrap, .news-tile:focus .news-tile__info-wrap {
-    top: -35px; }
+    top: -15px; }
   .news-tile:hover .news-tile__text, .news-tile:active .news-tile__text, .news-tile:focus .news-tile__text {
     -webkit-line-clamp: 8; }
   .news-tile__img {
     width: 100%;
     height: 184px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 58px));
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--news-tile-angle-offset)));
     background-size: cover;
     background-position: center;
-    transition: all ease .3s; }
+    transition: all ease 0.3s; }
   .news-tile__info-wrap {
     top: 0;
     padding: 0 20px 20px;
-    transition: all ease .3s; }
+    transition: all ease 0.3s; }
   .news-tile__data {
     font-family: "Stem";
     font-style: normal;
@@ -3421,7 +3428,7 @@ svg {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
-    transition: all ease .3s; }
+    transition: all ease 0.3s; }
 
 .popup {
   width: 360px;
@@ -3539,6 +3546,400 @@ svg {
     color: #76FF57; }
     .popup__password-success-send svg {
       margin-right: 10px; }
+
+.access-code__title {
+  font-family: "Stem";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin-bottom: 15px; }
+  .access-code__title button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-left: 9px; }
+
+.access-code__number {
+  font-family: "Bebas Neue";
+  font-size: 57px;
+  line-height: 67px;
+  letter-spacing: 12px;
+  color: #FFFFFF; }
+
+.add-device {
+  cursor: pointer;
+  display: flex;
+  align-items: center; }
+  .add-device:hover .add-device__title, .add-device:active .add-device__title, .add-device:focus .add-device__title {
+    text-decoration: underline; }
+  .add-device__title {
+    width: 225px;
+    font-family: "Stem";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff; }
+    .add-device__title:after {
+      display: none;
+      content: "Это устройство";
+      font-family: "Stem";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+      color: rgba(255, 255, 255, 0.5); }
+  .add-device__icon {
+    cursor: pointer;
+    width: 32px;
+    height: 32px; }
+  .add-device__icon-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.delete-popup-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: none; }
+
+.delete-popup {
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border: 1px solid #fff;
+  background-color: #000;
+  padding: 30px 30px 35px; }
+  .delete-popup__overlay {
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #141414;
+    opacity: .8; }
+  .delete-popup__title {
+    font-family: "Stem";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-bottom: 15px; }
+  .delete-popup__buttons {
+    display: flex; }
+  .delete-popup__button {
+    width: auto;
+    height: 44px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    font-family: "Bebas Neue";
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all ease 0.3s; }
+    .delete-popup__button div {
+      height: 1.05em; }
+  .delete-popup__button-yes {
+    background-color: #30c1d2; }
+    .delete-popup__button-yes:hover, .delete-popup__button-yes:active, .delete-popup__button-yes:focus {
+      background-color: rgba(48, 193, 210, 0.6); }
+  .delete-popup__button-cancel:hover, .delete-popup__button-cancel:active, .delete-popup__button-cancel:focus {
+    background-color: rgba(255, 255, 255, 0.65); }
+  .delete-popup__close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: -20px; }
+
+.device__wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px; }
+  .device__wrap.active .device__title:after {
+    display: block; }
+
+.device__title {
+  width: 225px;
+  font-family: "Stem";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff; }
+  .device__title:after {
+    display: none;
+    content: "Это устройство";
+    font-family: "Stem";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 0.5); }
+
+.device__delete {
+  cursor: pointer;
+  width: 32px;
+  height: 32px; }
+
+.device__delete-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.stat__top-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px; }
+
+.stat__back-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: "Stem";
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  margin-right: 50px; }
+  .stat__back-button:hover, .stat__back-button:active, .stat__back-button:focus {
+    text-decoration: underline; }
+  @media (min-width: 1920px) {
+    .stat__back-button {
+      font-size: 24px;
+      line-height: 31px; } }
+  .stat__back-button svg {
+    margin-right: 17px;
+    width: 24px; }
+    @media (min-width: 1280px) {
+      .stat__back-button svg {
+        width: 36px; } }
+
+.stat__title {
+  font-family: "Bebas Neue";
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  color: #FFFFFF; }
+  @media (min-width: 1280px) {
+    .stat__title {
+      font-size: 35px;
+      line-height: 41px; } }
+  @media (min-width: 1920px) {
+    .stat__title {
+      font-size: 45px;
+      line-height: 53px; } }
+
+.stat__wrap {
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 90px;
+  margin-bottom: 40px; }
+
+.stat__chart {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 40px 0 50px; }
+
+.stat__chart-grid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.stat__grid-line {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  font-family: "Stem";
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  border-bottom: 1px solid #fff; }
+  @media (min-width: 1280px) {
+    .stat__grid-line {
+      font-size: 18px;
+      line-height: 23px; } }
+
+.stat__grid-max {
+  top: 0; }
+
+.stat__grid-mid {
+  top: 50%;
+  transform: translateY(-50%); }
+
+.stat__grid-min {
+  bottom: 0; }
+
+.stat__chart-element {
+  width: calc(100% / 6);
+  min-height: 2px;
+  background-color: #30C1D2; }
+  .stat__chart-element:not(:last-child) {
+    margin-right: 10px; }
+  .stat__chart-element span {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Stem";
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5); }
+    @media (min-width: 1280px) {
+      .stat__chart-element span {
+        font-size: 18px; } }
+
+.stat__list-item {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Stem";
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 0.5); }
+  @media (min-width: 1280px) {
+    .stat__list-item {
+      font-size: 18px;
+      line-height: 23px; } }
+  @media (min-width: 1920px) {
+    .stat__list-item {
+      font-size: 24px;
+      line-height: 31px; } }
+  .stat__list-item:not(:last-child) {
+    margin-bottom: 20px; }
+    @media (min-width: 1280px) {
+      .stat__list-item:not(:last-child) {
+        margin-bottom: 25px; } }
+    @media (min-width: 1920px) {
+      .stat__list-item:not(:last-child) {
+        margin-bottom: 40px; } }
+  .stat__list-item div:last-child {
+    font-weight: bold;
+    color: #fff;
+    text-align: right; }
+
+.stat__delete-button {
+  width: 191px;
+  height: 44px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #30c1d2;
+  clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  font-family: "Bebas Neue";
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all ease 0.3s; }
+  .stat__delete-button:hover, .stat__delete-button:active, .stat__delete-button:focus {
+    background-color: rgba(48, 193, 210, 0.6); }
+  .stat__delete-button div {
+    height: 1.05em; }
+
+.trouble-popup-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: none; }
+
+.trouble-popup {
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border: 1px solid #fff;
+  background-color: #000;
+  padding: 30px 30px 35px; }
+  .trouble-popup__overlay {
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #141414;
+    opacity: .8; }
+  .trouble-popup__form {
+    margin-bottom: 20px; }
+  .trouble-popup__textarea {
+    resize: none;
+    width: 540px;
+    height: 150px;
+    display: block;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-family: "Stem";
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.5); }
+  .trouble-popup__input {
+    width: 300px;
+    height: 36px;
+    font-family: "Stem";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    padding: 0 15px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px; }
+  .trouble-popup__buttons {
+    display: flex; }
+  .trouble-popup__button {
+    width: auto;
+    height: 44px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    font-family: "Bebas Neue";
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all ease 0.3s; }
+    .trouble-popup__button div {
+      height: 1.05em; }
+  .trouble-popup__button-submit {
+    background-color: #30c1d2; }
+    .trouble-popup__button-submit:hover, .trouble-popup__button-submit:active, .trouble-popup__button-submit:focus {
+      background-color: rgba(48, 193, 210, 0.6); }
+  .trouble-popup__button-cancel:hover, .trouble-popup__button-cancel:active, .trouble-popup__button-cancel:focus {
+    background-color: rgba(255, 255, 255, 0.65); }
+  .trouble-popup__close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: -20px; }
 
 .tiles-list {
   padding: 0 30px; }
@@ -3680,7 +4081,9 @@ svg {
     .collection-tile:hover:last-child, .collection-tile:active:last-child, .collection-tile:focus:last-child {
       clip-path: polygon(calc(0% + var(--collection-tile-hover-angle-offset)) 0%, 100% 0%, 100% 100%, 0% 100%); }
     .collection-tile:hover .collection-tile__subtitle, .collection-tile:active .collection-tile__subtitle, .collection-tile:focus .collection-tile__subtitle {
-      display: block; }
+      top: 0;
+      transition: all ease 0.5s;
+      transition-delay: 0.5s; }
   .collection-tile__text-wrap {
     position: absolute;
     bottom: 20px;
@@ -3700,14 +4103,16 @@ svg {
         font-size: 35px;
         line-height: 41px; } }
   .collection-tile__subtitle {
-    display: none;
+    display: block;
+    top: 100px;
     font-family: "Stem";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
-    text-shadow: 0 0 4px black; }
+    text-shadow: 0 0 4px black;
+    transition: all ease 0.2s; }
     @media (min-width: 1280px) {
       .collection-tile__subtitle {
         font-size: 16px;
@@ -4061,7 +4466,7 @@ svg {
 .tile-episode:active .tile-episode__episode-name, .tile-episode:focus .tile-episode__episode-number,
 .tile-episode:focus .tile-episode__episode-name {
   left: calc(var(--sm-hover-angle-offset) * 1.5);
-  transition: all ease .3s;
+  transition: all ease 0.3s;
   transition-delay: 0.5s; }
 
 .tile-episode:first-child .tile-episode__episode-number,
@@ -4070,16 +4475,16 @@ svg {
 
 .tile-episode__episode-number, .tile-episode__episode-name {
   position: absolute;
-  left: 45px;
+  left: calc(var(--sm-angle-offset) * 1.5);
   z-index: 2;
   font-family: "Stem";
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-  color: #FFFFFF;
-  text-shadow: 0px 0px 6px black;
-  transition: all ease .2s; }
+  color: #ffffff;
+  text-shadow: 0px 0px 10px black;
+  transition: all ease 0.2s; }
   @media (min-width: 1920px) {
     .tile-episode__episode-number, .tile-episode__episode-name {
       font-size: 20px;
@@ -4090,12 +4495,10 @@ svg {
       line-height: 30px; } }
 
 .tile-episode__episode-number {
-  top: 15px;
-  left: calc(var(--sm-angle-offset) * 1.5); }
+  top: 15px; }
 
 .tile-episode__episode-name {
-  bottom: 15px;
-  left: calc(var(--sm-angle-offset) * 1.5); }
+  bottom: 15px; }
 
 .tile {
   top: 0;
@@ -4348,7 +4751,7 @@ svg {
 
 .article-page__tiles-slider:before {
   z-index: 2;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -4400,11 +4803,14 @@ svg {
       right: -58px; } }
   .article__soc-buttons.fixed {
     position: fixed;
-    top: 100px;
+    top: 86px;
     right: 20px; }
     @media (min-width: 1920px) {
       .article__soc-buttons.fixed {
         right: calc(50% - 668px); } }
+  .article__soc-buttons.bottom-sticky {
+    top: auto;
+    bottom: 0; }
 
 .article__soc-button {
   cursor: pointer;
@@ -4556,10 +4962,10 @@ svg {
   font-family: "Bebas Neue";
   font-weight: bold;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 24px;
   color: rgba(0, 0, 0, 0.4);
   border-bottom: 2px solid transparent;
-  transition: all ease .3; }
+  transition: all ease 0.3s; }
   .news-page__navigation-item:not(:last-child) {
     margin-right: 30px; }
   .news-page__navigation-item:hover, .news-page__navigation-item:active, .news-page__navigation-item:focus {
@@ -4580,8 +4986,19 @@ svg {
     margin-right: 3px; }
 
 .profile-page__wrap {
-  width: 988px;
-  height: calc(100vh - 208px); }
+  width: 988px; }
+
+.profile-page__stat {
+  width: 100%;
+  position: absolute;
+  opacity: 0; }
+  .profile-page__stat.open {
+    position: relative;
+    opacity: 1; }
+
+.profile-page__popups {
+  width: 100%;
+  height: 100%; }
 
 .profile-page__settings {
   padding-bottom: 44px;
@@ -4593,7 +5010,7 @@ svg {
   font-weight: bold;
   font-size: 30px;
   line-height: 35px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 24px; }
 
 .profile-page__input-wrap {
@@ -4608,7 +5025,7 @@ svg {
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-  color: #FFFFFF; }
+  color: #ffffff; }
 
 .profile-page__input {
   width: 300px;
@@ -4622,8 +5039,8 @@ svg {
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-  color: #FFFFFF; }
-  .profile-page__input[type=password] {
+  color: #ffffff; }
+  .profile-page__input[type="password"] {
     font-size: 50px; }
 
 .profile-page__checkbox-wrap {
@@ -4640,24 +5057,24 @@ svg {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-left: 29px; }
   .profile-page__checkbox-label:before {
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     position: absolute;
     top: 0;
     left: 0;
     background-color: transparent;
-    border: 2px solid #FFFFFF;
+    border: 2px solid #ffffff;
     border-radius: 4px;
-    transition: all ease .3s; }
+    transition: all ease 0.3s; }
   .profile-page__checkbox-label:hover:before, .profile-page__checkbox-label:active:before, .profile-page__checkbox-label:focus:before {
     box-shadow: 0 0px 6px 3px rgba(255, 255, 255, 0.2), inset 0 0 6px 7px rgba(255, 255, 255, 0.2); }
 
 .profile-page__checkbox:checked + .profile-page__checkbox-label:before {
-  background-color: #30C1D2;
+  background-color: #30c1d2;
   background-image: url("../img/ok-icon.svg");
   background-repeat: no-repeat;
   background-position: center; }
@@ -4671,45 +5088,18 @@ svg {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 20px; }
 
-.profile-page__device-wrap {
-  display: flex;
-  align-items: center;
-  margin-bottom: 14px; }
-  .profile-page__device-wrap_active .profile-page__device-title:before {
-    display: block; }
-
-.profile-page__device-title {
-  width: 225px;
-  font-family: "Stem";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
-  color: #FFFFFF; }
-  .profile-page__device-title:before {
-    display: none;
-    content: 'Это устройство';
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    font-family: "Stem";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
-    color: rgba(255, 255, 255, 0.5); }
-
-.profile-page__device-delete {
-  cursor: pointer;
-  width: 32px;
-  height: 32px; }
-
 .profile-page__buttons {
-  display: flex; }
+  display: flex;
+  margin-bottom: 60px; }
+
+.profile-page__devices {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #fff; }
 
 .profile-page__button {
-  width: 191px;
+  width: auto;
   height: 44px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4719,12 +5109,12 @@ svg {
   font-weight: normal;
   font-size: 20px;
   line-height: 23px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
-  transition: all ease .3s; }
+  transition: all ease 0.3s; }
 
 .profile-page__button-save {
-  background-color: #30C1D2; }
+  background-color: #30c1d2; }
   .profile-page__button-save:hover, .profile-page__button-save:active, .profile-page__button-save:focus {
     background-color: rgba(48, 193, 210, 0.6); }
 
@@ -4746,6 +5136,31 @@ svg {
     margin-left: 12px; }
     .profile-page__support a:hover, .profile-page__support a:active, .profile-page__support a:focus {
       text-decoration: underline; }
+
+.profile-page__settings-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 44px;
+  margin-bottom: 30px; }
+
+.profile-page__setting-button-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: "Stem";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  margin-right: 35px;
+  margin-bottom: 20px; }
+  .profile-page__setting-button-item:hover, .profile-page__setting-button-item:active, .profile-page__setting-button-item:focus {
+    text-decoration: underline; }
+  .profile-page__setting-button-item img {
+    margin-right: 10px; }
 
 .search-page__fixed-wrap {
   width: 100%;

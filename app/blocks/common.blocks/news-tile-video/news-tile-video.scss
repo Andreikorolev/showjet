@@ -1,193 +1,215 @@
-.news-tile-video{
-	display: flex;
-	width: 100%;
-	height: 320px;
-	background-color: #F1F1F1;
+.news-tile-video {
+  display: flex;
+  width: 100%;
+  height: 320px;
+  background-color: #f1f1f1;
 
-	&__left-wrap{
-		flex: 0 0 633px;
-		clip-path: polygon(0% 0%, 100% 0%, calc(100% - 61px) 100%, 0% 100%);
-		background-size: cover;
-		background-position: center;
-	}
-	&__description{
-		position: absolute;
-		bottom: 30px;
-		left: 20px;
+  &__left-wrap {
+    flex: 0 0 640px;
+    clip-path: polygon(0% 0%, 100% 0%, calc(100% - 61px) 100%, 0% 100%);
+    background-size: cover;
+    background-position: center;
+  }
+  &__description {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
 
-		&:before{
-			content: '';
-			width: 200%;
-			height: 200%;
-			position: absolute;
-			bottom: -90%;
-			left: -50%;
-			background: radial-gradient(48.66% 48.66% at 49.28% 50%, #000000 0%, rgba(0, 0, 0, 0.79) 57.81%, rgba(0, 0, 0, 0.0001) 100%);
-			opacity: 0.8;
-		}
-	}
-	&__description-genre{
-		font-family: $stem;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 16px;
-		line-height: 21px;
-		color: #FFFFFF;
-		margin-bottom: 10px;
-	}
-	&__description-title{
-		font-family: $bebas;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 50px;
-		line-height: 50px;
-		color: #FFFFFF;
-		margin-bottom: 25px;
-	}
-	&__description-button{
-		width: 254px;
-		height: 52px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #30C1D2;
-		clip-path: polygon(calc(0% + 10px) 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
-		font-family: $bebas;
-		font-weight: bold;
-		font-size: 30px;
-		line-height: 30px;
-		color: #FFFFFF;
-		text-decoration: none;
-		transition: all ease .3s;
+    &:before {
+      content: "";
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      bottom: -90%;
+      left: -50%;
+      background: radial-gradient(
+        48.66% 48.66% at 49.28% 50%,
+        #000000 0%,
+        rgba(0, 0, 0, 0.79) 57.81%,
+        rgba(0, 0, 0, 0.0001) 100%
+      );
+      opacity: 0.8;
+    }
+  }
+  &__description-genre {
+    font-family: $stem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  &__description-title {
+    font-family: $bebas;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    margin-bottom: 25px;
+  }
+  &__description-button {
+    width: 254px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #30c1d2;
+    clip-path: polygon(
+      calc(0% + 10px) 0%,
+      100% 0%,
+      calc(100% - 10px) 100%,
+      0% 100%
+    );
+    font-family: $bebas;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all ease 0.3s;
 
-		&:hover,
-		&:active,
-		&:focus{
-			color: #fff;
-			background-color: rgba(48,193,210,.6);
-		}
-	}
-	&__description-button-icon{
-		width: 32px;
-		height: 32px;
-		margin-right: 9px;
-	}
-	&__sound-off-button{
-		position: absolute;
-		top: 14px;
-		left: 15px;
-	}
-	&__sound-off-button-icon{
-		width: 32px;
-		height: 32px;
-	}
-	&__meta-info-wrap{
-		position: absolute;
-		top: 14px;
-		left: 77px;
-	}
-	&__meta-info-item{
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+      background-color: rgba(48, 193, 210, 0.6);
+    }
 
-		&:not(:last-child){
-			margin-right: 15px;
-		}
-		&_18{
-			width: 41px;
-			height: 32px;
-			display: flex;
-			vertical-align: middle;
-			justify-content: center;
-			border: 3px solid #FFFFFF;
-			border-radius: 4px;
-			font-family: $bebas;
-			font-style: normal;
-			font-weight: bold;
-			font-size: 26px;
-			line-height: 31px;
-			color: #FFFFFF;
-		}
-	}
-	&__description-button-icon{
-		margin-right: 13px;
-	}
-	&__info-wrap{
-		padding: 17px 10px 0;
-		@include breakpoint(md){
-			padding: 33px 33px 0;
-		}
-	}
-	&__info-data{
-		font-family: $stem;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 12px;
-		line-height: 15px;
-		color: #000000;
-		margin-bottom: 10px;
-		@include breakpoint(md){
-			font-size: 16px;
-			line-height: 21px;
-			margin-bottom: 15px;
-		}
-	}
-	&__info-title{
-		font-family: $bebas;
-		font-weight: bold;
-		font-size: 25px;
-		line-height: 25px;
-		color: #000000;
-		margin-bottom: 10px;
-		@include breakpoint(md){
-			font-size: 35px;
-			line-height: 35px;
-		}
-		@include breakpoint(lg){
-			font-size: 50px;
-			line-height: 50px;
-			margin-bottom: 15px;
-		}
-	}
-	&__info-text{
-		font-family: $stem;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 16px;
-		line-height: 21px;
-		color: #000000;
-		margin-bottom: 20px;
-		overflow: hidden;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 4;
-		@include breakpoint(lg){
-			margin-bottom: 25px;
-		}
-	}
-	&__info-button{
-		width: 178px;
-		height: 52px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #A9A9A9;
-		clip-path: polygon(calc(0% + 10px) 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
-		font-family: $bebas;
-		font-weight: bold;
-		font-size: 20px;
-		line-height: 20px;
-		color: #FFFFFF;
-		text-decoration: none;
-		transition: all ease .3s;
-		@include breakpoint(md){
-			width: 178px;
-			font-size: 30px;
-			line-height: 35px;
-		}
+    & div {
+      height: 0.9em;
+    }
+  }
+  &__description-button-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 9px;
+  }
+  &__sound-off-button {
+    position: absolute;
+    bottom: 30px;
+    right: 70px;
+  }
+  &__sound-off-button-icon {
+    width: 32px;
+    height: 32px;
+  }
+  &__meta-info-wrap {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+  }
+  &__meta-info-item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    &_18 {
+      width: 41px;
+      height: 32px;
+      display: flex;
+      vertical-align: middle;
+      justify-content: center;
+      border: 3px solid #ffffff;
+      border-radius: 4px;
+      font-family: $bebas;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 31px;
+      color: #ffffff;
+    }
+  }
+  &__description-button-icon {
+    margin-right: 13px;
+  }
+  &__info-wrap {
+    padding: 17px 10px 0;
+    @include breakpoint(md) {
+      padding: 33px 33px 0;
+    }
+  }
+  &__info-data {
+    font-family: $stem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    margin-bottom: 10px;
+    @include breakpoint(md) {
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 15px;
+    }
+  }
+  &__info-title {
+    font-family: $bebas;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 10px;
+    @include breakpoint(md) {
+      font-size: 35px;
+      line-height: 35px;
+    }
+    @include breakpoint(lg) {
+      font-size: 50px;
+      line-height: 50px;
+      margin-bottom: 15px;
+    }
+  }
+  &__info-text {
+    font-family: $stem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    @include breakpoint(lg) {
+      margin-bottom: 25px;
+    }
+  }
+  &__info-button {
+    width: 178px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a9a9a9;
+    clip-path: polygon(
+      calc(0% + 10px) 0%,
+      100% 0%,
+      calc(100% - 10px) 100%,
+      0% 100%
+    );
+    font-family: $bebas;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all ease 0.3s;
+    @include breakpoint(md) {
+      width: 178px;
+      font-size: 30px;
+      line-height: 35px;
+    }
 
-		&:hover,
-		&:active,
-		&:focus{
-			opacity: .8;
-		}
-	}
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    & div {
+      height: 1.05em;
+    }
+  }
 }

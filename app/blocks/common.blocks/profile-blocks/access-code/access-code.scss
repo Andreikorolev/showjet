@@ -1,0 +1,25 @@
+.access-code{
+
+	&__title{
+		font-family: $stem;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+		margin-bottom: 15px;
+
+		& button{
+			cursor: pointer;
+			background: none;
+			border: none;
+			margin-left: 9px;
+		}
+	}
+	&__number{
+		font-family: $bebas;
+		font-size: 57px;
+		line-height: 67px;
+		letter-spacing: 12px;
+		color: #FFFFFF;
+	}
+}

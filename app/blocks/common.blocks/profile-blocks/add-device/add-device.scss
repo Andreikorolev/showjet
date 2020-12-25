@@ -1,0 +1,44 @@
+.add-device {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  &:hover,
+  &:active,
+  &:focus {
+    & .add-device__title {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    width: 225px;
+    font-family: $stem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+
+    &:after {
+      display: none;
+      content: "Это устройство";
+      font-family: $stem;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &__icon {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+  }
+  &__icon-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

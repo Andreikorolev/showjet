@@ -1,61 +1,55 @@
-.tile-episode{
+.tile-episode {
+  &:hover,
+  &:active,
+  &:focus {
+    &:first-child {
+      & .tile-episode__episode-number,
+      & .tile-episode__episode-name {
+        left: calc(var(--sm-hover-angle-offset) / 2);
+      }
+    }
 
-	&:hover,
-	&:active,
-	&:focus{
-		&:first-child{
-			& .tile-episode__episode-number,
-			& .tile-episode__episode-name{
-				left: calc(var(--sm-hover-angle-offset) / 2);
-			}
+    & .tile-episode__episode-number,
+    & .tile-episode__episode-name {
+      left: calc(var(--sm-hover-angle-offset) * 1.5);
+      transition: all ease 0.3s;
+      transition-delay: 0.5s;
+    }
+  }
 
-		}
+  &:first-child {
+    & .tile-episode__episode-number,
+    & .tile-episode__episode-name {
+      left: calc(var(--sm-angle-offset) / 2);
+    }
+  }
 
-		& .tile-episode__episode-number,
-		& .tile-episode__episode-name{
-			left: calc(var(--sm-hover-angle-offset) * 1.5);
-			transition: all ease .3s;
-			transition-delay: 0.5s;
-		}		
-	}
-
-	&:first-child{
-
-		& .tile-episode__episode-number,
-		& .tile-episode__episode-name{
-			left: calc(var(--sm-angle-offset) / 2);
-		}
-
-	}
-
-	&__episode-number,
-	&__episode-name{
-		position: absolute;
-		left: 45px;
-		z-index: 2;
-		font-family: $stem;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 14px;
-		line-height: 18px;
-		color: #FFFFFF;
-		text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
-		transition: all ease .2s;
-		@include breakpoint(lg){
-			font-size: 20px;
-			line-height: 26px;
-		}
-		@include breakpoint(xl){
-			font-size: 28px;
-			line-height: 30px;
-		}
-	}
-	&__episode-number{
-		top: 15px;
-		left: calc(var(--sm-angle-offset) * 1.5);
-	}
-	&__episode-name{
-		bottom: 15px;
-		left: calc(var(--sm-angle-offset) * 1.5);
-	}
+  &__episode-number,
+  &__episode-name {
+    position: absolute;
+    left: calc(var(--sm-angle-offset) * 1.5);
+    z-index: 2;
+    font-family: $stem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    transition: all ease 0.2s;
+    @include breakpoint(lg) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    @include breakpoint(xl) {
+      font-size: 28px;
+      line-height: 30px;
+    }
+  }
+  &__episode-number {
+    top: 15px;
+  }
+  &__episode-name {
+    bottom: 15px;
+  }
 }

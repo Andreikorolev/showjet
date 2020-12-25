@@ -73,7 +73,9 @@
     }
 
     & .collection-tile__subtitle {
-      display: block;
+      top: 0;
+      transition: all ease 0.5s;
+      transition-delay: 0.5s;
     }
   }
 
@@ -98,7 +100,8 @@
     }
   }
   &__subtitle {
-    display: none;
+    display: block;
+    top: 100px;
     font-family: $stem;
     font-style: normal;
     font-weight: normal;
@@ -106,6 +109,7 @@
     line-height: 18px;
     color: #ffffff;
     text-shadow: 0 0 4px rgba(0, 0, 0, 1);
+    transition: all ease 0.2s;
     @include breakpoint(md) {
       font-size: 16px;
       line-height: 23px;
