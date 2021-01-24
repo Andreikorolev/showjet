@@ -210,14 +210,31 @@
 </div> -->
 	</div>
 </header>    <!-- DELETE POPUP -->
-    <div class="delete-popup-wrap delete-popup-history">
+    <div class="delete-popup-wrap delete-popup-device-delete">
+	<div class="delete-popup">
+		<div class="delete-popup__title">
+			Удалить это устройство?
+		</div>
+		<div class="delete-popup__buttons">
+			<button class="delete-popup__button delete-popup__button-yes"><div>Да</div></button>
+			<button class="delete-popup__button delete-popup__button-cancel"><div>Отмена</div></button>		
+		</div>
+		<div class="delete-popup__close-button">
+			<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<line x1="1.70711" y1="1.29289" x2="11.7071" y2="11.2929" stroke="white" stroke-width="2"/>
+				<line x1="1.29289" y1="11.2929" x2="11.2929" y2="1.29289" stroke="white" stroke-width="2"/>
+			</svg>
+		</div>
+	</div>
+	<div class="delete-popup__overlay"></div>
+</div>    <div class="delete-popup-wrap delete-popup-history">
 	<div class="delete-popup">
 		<div class="delete-popup__title">
 			Удалить вашу историю просмотра?
 		</div>
 		<div class="delete-popup__buttons">
-			<a href="#" class="delete-popup__button delete-popup__button-yes"><div>Да</div></a>
-			<a href="#" class="delete-popup__button delete-popup__button-cancel"><div>Отмена</div></a>		
+			<button class="delete-popup__button delete-popup__button-yes"><div>Да</div></button>
+			<button class="delete-popup__button delete-popup__button-cancel"><div>Отмена</div></button>		
 		</div>
 		<div class="delete-popup__close-button">
 			<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -233,8 +250,8 @@
 			Удалить всё из вашего списка «Моё»?
 		</div>
 		<div class="delete-popup__buttons">
-			<a href="#" class="delete-popup__button delete-popup__button-yes"><div>Да</div></a>
-			<a href="#" class="delete-popup__button delete-popup__button-cancel"><div>Отмена</div></a>		
+			<button class="delete-popup__button delete-popup__button-yes"><div>Да</div></button>
+			<button class="delete-popup__button delete-popup__button-cancel"><div>Отмена</div></button>		
 		</div>
 		<div class="delete-popup__close-button">
 			<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -251,8 +268,8 @@
 			<input type="text" placeholder="телефон или email для связи" class="trouble-popup__input">
 		</form>
 		<div class="trouble-popup__buttons">
-			<a href="#" class="trouble-popup__button trouble-popup__button-submit"><div>Отправить</div></a>
-			<a href="#" class="trouble-popup__button trouble-popup__button-cancel"><div>Отмена</div></a>		
+			<button class="trouble-popup__button trouble-popup__button-submit"><div>Отправить</div></button>
+			<button class="trouble-popup__button trouble-popup__button-cancel"><div>Отмена</div></button>		
 		</div>
 		<div class="trouble-popup__close-button">
 			<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
