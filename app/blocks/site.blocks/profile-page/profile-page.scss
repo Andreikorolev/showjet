@@ -2,14 +2,17 @@
   &__wrap {
     width: 988px;
   }
-  &__stat{
-    width: 100%;
+  &__stat {
+    // width: 100%;
+    width: 988px;
     position: absolute;
     opacity: 0;
+    z-index: -100;
 
-    &.open{
+    &.open {
       position: relative;
       opacity: 1;
+      z-index: auto;
     }
   }
   &__popups {
@@ -187,7 +190,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-bottom: 1px solid #fff;
     padding-bottom: 44px;
     margin-bottom: 30px;
   }
@@ -201,12 +203,11 @@
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
-    margin-right: 35px;
     margin-bottom: 20px;
 
     &:hover,
     &:active,
-    &:focus{
+    &:focus {
       text-decoration: underline;
     }
 

@@ -19,32 +19,34 @@ for (i = 0; i < l; i++) {
     c = document.createElement("DIV");
     c.setAttribute("class", "filter__item");
     c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        /* When an item is clicked, update the original select box,
+    c.setAttribute("value", selElmnt.options[j].value);
+    c.addEventListener("click", function (e) {
+      /* When an item is clicked, update the original select box,
         and the selected item: */
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("filter__item_selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].classList.remove("filter__item_selected");
-            }
-            this.classList.add("filter__item_selected");
-            break;
+      var y, i, k, s, h, sl, yl;
+      s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+      sl = s.length;
+      h = this.parentNode.previousSibling;
+      for (i = 0; i < sl; i++) {
+        if (s.options[i].innerHTML == this.innerHTML) {
+          s.selectedIndex = i;
+          h.innerHTML = this.innerHTML;
+          y = this.parentNode.getElementsByClassName("filter__item_selected");
+          yl = y.length;
+          for (k = 0; k < yl; k++) {
+            y[k].classList.remove("filter__item_selected");
           }
+          this.classList.add("filter__item_selected");
+          alert($(this).attr("value"));
+          break;
         }
-        h.click();
+      }
+      h.click();
     });
     b.appendChild(c);
   }
   x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
+  a.addEventListener("click", function (e) {
     /* When the select box is clicked, close any other select boxes,
     and open/close the current select box: */
     e.stopPropagation();
@@ -57,14 +59,19 @@ for (i = 0; i < l; i++) {
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
-  var x, y, i, xl, yl, arrNo = [];
+  var x,
+    y,
+    i,
+    xl,
+    yl,
+    arrNo = [];
   x = document.getElementsByClassName("filter__items");
   y = document.getElementsByClassName("filter__selected");
   xl = x.length;
   yl = y.length;
   for (i = 0; i < yl; i++) {
     if (elmnt == y[i]) {
-      arrNo.push(i)
+      arrNo.push(i);
     } else {
       y[i].classList.remove("select-arrow-active");
     }

@@ -76,6 +76,14 @@
           </div>
         </div>
       </div>
+      <div class="profile-page__buttons">
+        <a href="#" class="profile-page__button profile-page__button-save">
+          Сохранить изменения
+        </a>
+        <a href="#" class="profile-page__button profile-page__button-exit">
+          Выйти из профиля
+        </a>
+      </div>
       <div class="profile-page__settings-buttons">
         <div class="profile-page__setting-button-item profile-page__setting-button-item_history">
           <img src="img/minus-icon.svg" alt="" />
@@ -93,25 +101,17 @@
           <img src="img/warning-icon.svg" alt="" />
           Что-то не работает?
         </div>
-      </div>
-      <div class="profile-page__buttons">
-        <a href="#" class="profile-page__button profile-page__button-save">
-          Сохранить изменения
-        </a>
-        <a href="#" class="profile-page__button profile-page__button-exit">
-          Выйти из профиля
-        </a>
         <div class="profile-page__support">
           Служба поддержки
           <a href="email:support@showjet.ru">support@showjet.ru</a>
         </div>
       </div>
     </div>
-    <div class="profile-page__stat">
-      {# FOOTER #} {% include 'blocks/common.blocks/profile-blocks/stat/stat.twig'%}
+    <div class="profile-page__stat container">
+      {% include 'blocks/common.blocks/profile-blocks/stat/stat.twig'%}
     </div>
 
-    {# FOOTER #} {% include 'blocks/common.blocks/footer/footer.twig'%}
+    {% include 'blocks/common.blocks/footer/footer.twig'%}
   </div>
 </div>
 {% endblock %}

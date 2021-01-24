@@ -3,30 +3,32 @@
 @import "compass/css3";
 
 // FONTS
-$bebas: 'Bebas Neue';
-$stem: 'Stem';
+$bebas: "Bebas Neue";
+$stem: "Stem";
 
-body{
-	background-color: #141414;
+body {
+  background-color: #141414;
 
-	&.light{
-		background-color: #fff;
-	}
+  &.light {
+    background-color: #fff;
+  }
+  &.noscroll {
+    overflow: hidden;
+  }
 }
-div{
-	position: relative;
+div {
+  position: relative;
 }
-.container-fluid{
-	min-height: calc(100vh + 1px);
-	overflow: hidden;
+.container-fluid {
+  min-height: calc(100vh + 1px);
+  overflow: hidden;
 }
-.light-page{
-
-	& .header,
-	& .footer{
-		filter: invert(1);
-	}
-	& .footer__stores-icon{
-		filter: invert(1);
-	}
+.light-page {
+  & .header,
+  & .footer {
+    filter: invert(1);
+  }
+  & .footer__stores-icon {
+    filter: invert(1);
+  }
 }

@@ -1,35 +1,37 @@
 {% extends 'blocks/base.blocks/base/base.twig' %}
-
 {% block content %}
 <div class="container-fluid">
 	<div class="row">
 		{# HEADER #}
 		{% include 'blocks/common.blocks/header/header.twig'%}
-
-		<div class="home-page__banner">
-			<!-- HOME-PAGE-BANNER -->
-			{% include 'blocks/common.blocks/home-page-banner/home-page-banner.twig'%}
-		</div>
-
-		<div class="home-page__recommended-serials">
-			<div class="tiles-list">
-				<h3 class="tiles-list__title">
-					Рекомендуемые сериалы
-				</h3>
-				<div class="tiles-list__slider home-page__recommended-serials-slider">
-					<div class="swiper-wrapper tiles-list__sm-tiles">
-						{% for item in 0..9 %}
-						{% include 'blocks/common.blocks/tiles/tile/tile.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8', 'videoID':'recVideo'~item }%}
-
-						{% endfor %}
-					</div>
-					<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
-					<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+		
+		<div class="container">
+			<div class="serials-page__filters-wrap ">
+				<div class="serials-page__filter-wrap">
+					{% include 'blocks/common.blocks/filter/filter.twig' with {'name':'name1'} %}
+				</div>
+				<div class="serials-page__filter-wrap">
+					{% include 'blocks/common.blocks/filter/filter.twig' with {'name':'name2'} %}
+				</div>
+				<div class="serials-page__filter-wrap">
+					{% include 'blocks/common.blocks/filter/filter.twig' with {'name':'name3'} %}
 				</div>
 			</div>
 		</div>
 
+		<div class="container">
+			<select name="newFilter" class="new-filter"> 
+				<option disabled selected>Жанр</option>
+				<option value="all">Все</option>
+				<option value="thriller">Триллер</option>
+				<option value="comedy">Комедия</option>
+				<option value="adventure">Приключения</option>
+				<option value="war">Военный</option>
+			</select>
+		</div>
+
+		{# FOOTER #}
+		{% include 'blocks/common.blocks/footer/footer.twig'%}
 	</div>
 </div> 
 {% endblock %}
-

@@ -55,11 +55,18 @@ $(window).on('load', function() {
 	var targetTab = $(".video-list__season-navitaion-item.active").attr("data-target");
 	$("#" + targetTab).removeClass('hide');	
 });
-$('.delete-popup__close-button').on('click', function(){
-	$('.delete-popup-wrap').hide();
+$(".delete-popup__close-button").on("click", function () {
+  $(".delete-popup-wrap").hide();
 });
-$('.delete-popup__button-cancel').on('click', function(){
-	$('.delete-popup-wrap').hide();
+$(".delete-popup__button-cancel").on("click", function () {
+  $(".delete-popup-wrap").hide();
+});
+
+$('.trouble-popup__close-button').on('click', function(){
+	$('.trouble-popup-wrap').hide();
+});
+$('.trouble-popup__button-cancel').on('click', function(){
+	$('.trouble-popup-wrap').hide();
 });
 if ($('.stat__chart').length) {
 	var chartData = $('.stat__chart').data("chart").split(',').map(function(item){return +item});
@@ -98,12 +105,6 @@ if ($('.stat__chart').length) {
 		i++
 	});
 }
-$('.trouble-popup__close-button').on('click', function(){
-	$('.trouble-popup-wrap').hide();
-});
-$('.trouble-popup__button-cancel').on('click', function(){
-	$('.trouble-popup-wrap').hide();
-});
 function resizeCollectionTile() {
   var body = document.querySelector("body");
   var windowWidth = window.innerWidth;
@@ -424,32 +425,34 @@ for (i = 0; i < l; i++) {
     c = document.createElement("DIV");
     c.setAttribute("class", "filter__item");
     c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        /* When an item is clicked, update the original select box,
+    c.setAttribute("value", selElmnt.options[j].value);
+    c.addEventListener("click", function (e) {
+      /* When an item is clicked, update the original select box,
         and the selected item: */
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("filter__item_selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].classList.remove("filter__item_selected");
-            }
-            this.classList.add("filter__item_selected");
-            break;
+      var y, i, k, s, h, sl, yl;
+      s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+      sl = s.length;
+      h = this.parentNode.previousSibling;
+      for (i = 0; i < sl; i++) {
+        if (s.options[i].innerHTML == this.innerHTML) {
+          s.selectedIndex = i;
+          h.innerHTML = this.innerHTML;
+          y = this.parentNode.getElementsByClassName("filter__item_selected");
+          yl = y.length;
+          for (k = 0; k < yl; k++) {
+            y[k].classList.remove("filter__item_selected");
           }
+          this.classList.add("filter__item_selected");
+          alert($(this).attr("value"));
+          break;
         }
-        h.click();
+      }
+      h.click();
     });
     b.appendChild(c);
   }
   x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
+  a.addEventListener("click", function (e) {
     /* When the select box is clicked, close any other select boxes,
     and open/close the current select box: */
     e.stopPropagation();
@@ -462,14 +465,19 @@ for (i = 0; i < l; i++) {
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
-  var x, y, i, xl, yl, arrNo = [];
+  var x,
+    y,
+    i,
+    xl,
+    yl,
+    arrNo = [];
   x = document.getElementsByClassName("filter__items");
   y = document.getElementsByClassName("filter__selected");
   xl = x.length;
   yl = y.length;
   for (i = 0; i < yl; i++) {
     if (elmnt == y[i]) {
-      arrNo.push(i)
+      arrNo.push(i);
     } else {
       y[i].classList.remove("select-arrow-active");
     }
@@ -484,6 +492,7 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+
 $('.nav__menu a').each(function () {
 	if (this.href == location.href) $(this).addClass('active');
 });
@@ -660,30 +669,29 @@ $(window).resize(function () {
 });
 
 if ($(".article-page__article").length) {
+  var headerHeight = $(".header").height();
   $(window).scroll(function () {
-    var windowScrollTop = $(window).scrollTop();
-    var socButtonsOffset = $(
-      ".article__soc-buttons"
-    )[0].getBoundingClientRect();
-    // var socButtonsHeight = $(".article__soc-buttons").height();
-    var headerHeight = $(".header").height();
-    var articlePos = $(".article")[0].getBoundingClientRect();
+    var imgSocWrap = $(".article__img-soc-wrap")[0].getBoundingClientRect();
+    var socButtons = $(".article__soc-buttons")[0].getBoundingClientRect();
+    var article = $(".article")[0].getBoundingClientRect();
 
-    console.log("socButtonTop: " + socButtonsOffset.top);
-    console.log(
-      "socButtonBottom: " + (socButtonsOffset.bottom + windowScrollTop)
-    );
-    console.log("articleBottom: " + articlePos.bottom);
-
-    if (
-      socButtonsOffset.top < headerHeight &&
-      socButtonsOffset.bottom + windowScrollTop < articlePos.bottom
-    ) {
-      $(".article__soc-buttons").addClass("fixed");
-      $(".article__soc-buttons").removeClass("bottom-sticky");
+    if (headerHeight >= imgSocWrap.top) {
+      if (article.top + article.height < socButtons.height + 106) {
+        $(".article__soc-buttons").removeClass("fixed-top");
+        $(".article__soc-buttons").css({
+          top: article.height - socButtons.height + "px",
+        });
+        $(".article__img-soc-wrap").addClass("static");
+      } else {
+        $(".article__soc-buttons").addClass("fixed-top");
+        $(".article__img-soc-wrap").removeClass("static");
+        $(".article__soc-buttons").css({
+          top: ``,
+        });
+      }
     } else {
-      $(".article__soc-buttons").removeClass("fixed");
-      $(".article__soc-buttons").removeClass("bottom-sticky");
+      $(".article__soc-buttons").removeClass("fixed-top");
+      $(".article__img-soc-wrap").removeClass("static");
     }
   });
 }
@@ -806,25 +814,26 @@ var homePageWatchingNowSerial = new Swiper(".home-page__watching-now-slider", {
   },
 });
 
-$('.profile-page__setting-button-item_stat').on('click', function(){
-	$('.profile-page__wrap').hide();
-	$('.profile-page__stat').addClass('open');
+$(".profile-page__setting-button-item_stat").on("click", function () {
+  $(".profile-page__wrap").hide();
+  $(".profile-page__stat").addClass("open");
 });
 
-$('.stat__back-button').on('click', function(){
-	$('.profile-page__wrap').show();
-	$('.profile-page__stat').removeClass('open');
+$(".stat__back-button").on("click", function () {
+  $(".profile-page__wrap").show();
+  $(".profile-page__stat").removeClass("open");
 });
 
-$('.profile-page__setting-button-item_history').on('click', function(){
-	$('.delete-popup-history').show();
+$(".profile-page__setting-button-item_history").on("click", function () {
+  $(".delete-popup-history").show();
 });
-$('.profile-page__setting-button-item_mine').on('click', function(){
-	$('.delete-popup-mine').show();
+$(".profile-page__setting-button-item_mine").on("click", function () {
+  $(".delete-popup-mine").show();
 });
-$('.profile-page__setting-button-item_trouble').on('click', function(){
-	$('.trouble-popup-wrap').show();
+$(".profile-page__setting-button-item_trouble").on("click", function () {
+  $(".trouble-popup-wrap").show();
 });
+
 var searchSlider = new Swiper('.search-page__slider', {
 	direction: 'horizontal',
 	speed: 1000,
@@ -850,39 +859,6 @@ var searchSlider = new Swiper('.search-page__slider', {
 		}
 	},
 });
-var serialsPageSlider = new Swiper(".serials-page__slider", {
-  breakpoints: {
-    1024: {
-      speed: 1000,
-      direction: "horizontal",
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      navigation: {
-        nextEl: ".slider-button-next",
-        prevEl: ".slider-button-prev",
-      },
-    },
-    1280: {
-      slidesPerView: 5,
-      slidesPerGroup: 5,
-      navigation: {
-        nextEl: ".slider-button-next",
-        prevEl: ".slider-button-prev",
-      },
-    },
-    1920: {
-      loop: false,
-      slidesPerView: 6,
-      slidesPerGroup: 6,
-      navigation: {
-        nextEl: null,
-        prevEl: null,
-      },
-      slidesOffsetAfter: 0,
-    },
-  },
-});
-
 // $(window).on('load', function() {
 //     var tileWrapper = document.querySelector('.testTile__wrap');
 // 	var tile = $('.testTile');
@@ -930,3 +906,35 @@ var serialsPageSlider = new Swiper(".serials-page__slider", {
 //     tileWrapper.style.setProperty('--tile-hover-height', tileHoverHeight + 'px');
 //     tileWrapper.style.setProperty('--angle-hover-offset', angleHoverOffset + 'px');
 // });
+var serialsPageSlider = new Swiper(".serials-page__slider", {
+  breakpoints: {
+    1024: {
+      speed: 1000,
+      direction: "horizontal",
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      navigation: {
+        nextEl: ".slider-button-next",
+        prevEl: ".slider-button-prev",
+      },
+    },
+    1280: {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+      navigation: {
+        nextEl: ".slider-button-next",
+        prevEl: ".slider-button-prev",
+      },
+    },
+    1920: {
+      loop: false,
+      slidesPerView: 6,
+      slidesPerGroup: 6,
+      navigation: {
+        nextEl: null,
+        prevEl: null,
+      },
+      slidesOffsetAfter: 0,
+    },
+  },
+});
