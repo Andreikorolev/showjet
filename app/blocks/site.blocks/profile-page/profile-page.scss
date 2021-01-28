@@ -1,13 +1,23 @@
 .profile-page {
   &__wrap {
     width: 988px;
+    margin-bottom: 100px;
+    @include breakpoint(xl) {
+      transform: scale(2);
+      transform-origin: center top;
+      margin-bottom: 800px;
+    }
   }
   &__stat {
-    // width: 100%;
     width: 988px;
     position: absolute;
     opacity: 0;
     z-index: -100;
+    @include breakpoint(xl) {
+      transform: scale(1.5);
+      transform-origin: center top;
+      margin-bottom: 600px;
+    }
 
     &.open {
       position: relative;
