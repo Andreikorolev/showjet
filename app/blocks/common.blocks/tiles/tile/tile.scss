@@ -58,8 +58,9 @@
   &__video {
     opacity: 0;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: calc(100% - 10px);
     transition: all ease 0.3s;

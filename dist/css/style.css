@@ -4642,7 +4642,7 @@ svg
     display: -ms-flexbox;
     display: flex;
 
-    width: 50px;
+    width: 80px;
     height: var(--sm-tile-height);
 
     cursor: pointer;
@@ -4672,6 +4672,12 @@ svg
             transition-delay: 0s;
 
     opacity: 1;
+}
+
+.tiles-list__slider .slider-button-prev > img,
+.tiles-list__slider .slider-button-next > img
+{
+    width: 30px;
 }
 
 .tiles-list__slider .slider-button-prev
@@ -5611,8 +5617,8 @@ svg
 .tile__video
 {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
 
     width: 100%;
     height: calc(100% - 10px);
@@ -5620,6 +5626,9 @@ svg
     -webkit-transition: all ease .3s;
          -o-transition: all ease .3s;
             transition: all ease .3s;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 
     opacity: 0;
 }
