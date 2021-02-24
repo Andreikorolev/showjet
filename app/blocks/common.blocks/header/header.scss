@@ -1,236 +1,235 @@
-.header-margin-bottom-block{
-	width: 100%;
-	margin-bottom: 115px;
+.header-margin-bottom-block {
+  width: 100%;
+  margin-bottom: 115px;
 }
-.header{
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 60px;
-	z-index: 1000;
-	display: flex;
-	background: linear-gradient(180deg, #141414 0%, rgba(20, 20, 20, 0) 100%);
-	transition: all ease .5s;
-	@include breakpoint(md){
-		height: 86px;
-	}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  display: flex;
+  // background: linear-gradient(180deg, #141414 0%, rgba(20, 20, 20, 0) 100%);
+  background-color: #141414;
+  transition: all ease 0.5s;
+  @include breakpoint(md) {
+    height: 86px;
+  }
 
-	&.fixed{
-		background-color: #141414;
-	}
-	&.header-search-page{
+  &.fixed {
+    // background-color: #141414;
+  }
+  &.header-search-page {
+    & .header__search {
+      &:hover,
+      &:active,
+      &:focus {
+        & .header__search-input {
+          width: 0;
+        }
+        & .header__search-underline {
+          width: 0;
+        }
+      }
+    }
+  }
 
-		& .header__search{
-			&:hover,
-			&:active,
-			&:focus{
+  &__popups {
+    position: absolute;
+    top: 80px;
+    right: 30px;
+  }
+  &__search-wrap {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  &__search {
+    height: 32px;
+    display: flex;
+    align-items: center;
 
-				& .header__search-input{
-					width: 0;
-				}
-				& .header__search-underline{
-					width: 0;
-				}
-			}
-		}
-	}
+    &:hover,
+    &:active,
+    &:focus {
+      & .header__search-input {
+        width: 225px;
+      }
+      & .header__search-underline {
+        width: 100%;
+      }
+    }
+  }
+  &__search-input {
+    width: 0;
+    margin-right: 16px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    font-family: $stem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all ease 0.3s;
 
-	&__popups{
-		position: absolute;
-		top: 80px;
-		right: 30px;
-	}
-	&__search-wrap{
-		display: flex;
-		align-items: center;
-		margin-left: auto;
-	}
-	&__search{
-		height: 32px;
-		display: flex;
-		align-items: center;
+    &:focus {
+      width: 225px;
+    }
+  }
+  &__search-input:focus + .header__search-underline {
+    width: 100%;
+  }
+  &__search-underline {
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    transition: all ease 0.3s;
+  }
+  &__search-icon-wrap {
+    width: 13px;
+    height: 13px;
 
-		&:hover,
-		&:active,
-		&:focus{
-			
-			& .header__search-input{
-				width: 225px;
-			}
-			& .header__search-underline{
-				width: 100%;
-			}
-		}
-	}
-	&__search-input{
-		width: 0;
-		margin-right: 16px;
-		background-color: transparent;
-		outline: none;
-		border: none;
-		border-radius: 0;
-		font-family: $stem;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 15px;
-		line-height: 19px;
-		color: rgba(255,255,255,.5);
-		transition: all ease .3s;
+    @include breakpoint(lg) {
+      width: 19px;
+      height: 19px;
+    }
+  }
+  &__search-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__user {
+    margin-left: 30px;
+    cursor: pointer;
 
-		&:focus{
-			width: 225px;
-		}
-	}
-	&__search-input:focus + .header__search-underline{
-		width: 100%;
-	}
-	&__search-underline{
-		width: 0;
-		height: 1px;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		background-color: #fff;
-		transition: all ease .3s;
-	}
-	&__search-icon-wrap{
-		width: 13px;
-		height: 13px;
+    @include breakpoint(md) {
+      margin-left: 20px;
+    }
+    @include breakpoint(lg) {
+      margin-left: 30px;
+    }
 
-		@include breakpoint(lg){
-			width: 19px;
-			height: 19px;			
-		}
-	}
-	&__search-icon{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-	}
-	&__user{
-		margin-left: 30px;
-		cursor: pointer;
+    &:hover,
+    &:active,
+    &:focus {
+      & .header__user-icon {
+        opacity: 1;
+      }
+    }
 
-		@include breakpoint(md){
-			margin-left: 20px;
-		}
-		@include breakpoint(lg){
-			margin-left: 30px;
-		}
+    & .link {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__user-icon {
+    margin-right: 10px;
+    opacity: 0.8;
+    transition: all ease 0.3s;
 
-		&:hover,
-		&:active,
-		&:focus{
-			& .header__user-icon{
-				opacity: 1;
-			}
-		}
+    @include breakpoint(md) {
+      width: 26px;
+      height: 26px;
+    }
+    @include breakpoint(lg) {
+      width: 34px;
+      height: 34px;
+    }
 
-		& .link{
-			display: flex;
-			align-items: center;
-		}
-	}
-	&__user-icon{
-		margin-right: 10px;
-		opacity: .8;
-		transition: all ease .3s;
+    &:hover,
+    &:active,
+    &:focus {
+      & g {
+        filter: url(#filter0_d);
+      }
+    }
 
-		@include breakpoint(md){
-			width: 26px;
-			height: 26px;
-		}
-		@include breakpoint(lg){
-			width: 34px;
-			height: 34px;
-		}
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__user-name {
+    font-family: $bebas;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05rem;
+    color: #fff;
 
-		&:hover,
-		&:active,
-		&:focus{
-			& g{
-				filter: url(#filter0_d);
-			}
-		}
-
-		& img{
-			width: 100%;
-			height: 100%;
-		}
-	}
-	&__user-name{
-		font-family: $bebas;
-		font-weight: bold;
-		font-size: 12px;
-		line-height: 14px;
-		letter-spacing: .05rem;
-		color: #fff;
-
-		@include breakpoint(md){
-			font-size: 15px;
-			line-height: 18px;
-		}
-		@include breakpoint(lg){
-			font-size: 24px;
-			line-height: 28px;
-		}
-	}
+    @include breakpoint(md) {
+      font-size: 15px;
+      line-height: 18px;
+    }
+    @include breakpoint(lg) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
 }
-.nav{
-	display: flex;
-	align-items: center;
+.nav {
+  display: flex;
+  align-items: center;
 
-	&__logo{
-		height: 32px;
-		margin-right: 40px;
-		@include breakpoint(md){
-			height: 40px;
-			margin-right: 50px;
-		}
-		@include breakpoint(lg){
-			height: 60px;
-			margin-right: 70px;
-		}
+  &__logo {
+    height: 32px;
+    margin-right: 40px;
+    @include breakpoint(md) {
+      height: 40px;
+      margin-right: 50px;
+    }
+    @include breakpoint(lg) {
+      height: 60px;
+      margin-right: 70px;
+    }
 
-		& img{
-			height: 100%;
-		}
-	}
-	&__menu-item{
-		font-family: $bebas;
-		font-weight: bold;
-		font-size: 15px;
-		line-height: 18px;
-		color: rgba(255,255,255,.4);
-		text-decoration: none;
-		letter-spacing: 0.05rem;
-		border-bottom: 2px solid transparent;
-		transition: all ease .3s;
-		&:not(:last-child){
-			margin-right: 20px;
-			@include breakpoint(lg){
-				margin-right: 30px;	
-			}
-		}
-		@include breakpoint(lg){
-			font-size: 24px;
-			line-height: 28px;
-		}
+    & img {
+      height: 100%;
+    }
+  }
+  &__menu-item {
+    font-family: $bebas;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+    border-bottom: 2px solid transparent;
+    transition: all ease 0.3s;
+    &:not(:last-child) {
+      margin-right: 20px;
+      @include breakpoint(lg) {
+        margin-right: 30px;
+      }
+    }
+    @include breakpoint(lg) {
+      font-size: 24px;
+      line-height: 28px;
+    }
 
-		&:hover,
-		&:focus{
-			color: #fff;
-		}
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
 
-		&:active{
-			color: #fff;
-			text-decoration: none;
-		}
+    &:active {
+      color: #fff;
+      text-decoration: none;
+    }
 
-		&.active{
-			color: #fff;
-			text-decoration: underline;
-		}
-	}
+    &.active {
+      color: #fff;
+      // text-decoration: underline;
+      border-bottom: 1px solid #fff;
+    }
+  }
 }

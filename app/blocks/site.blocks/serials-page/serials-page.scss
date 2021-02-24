@@ -1,7 +1,15 @@
 .serials-page {
+  &__filters-margin-bottom {
+    width: 100%;
+    margin-bottom: 75px;
+  }
   &__filters-wrap {
+    z-index: 1000;
     display: flex;
-    margin: 0 0 50px;
+    position: fixed;
+    top: 86px;
+    padding-bottom: 15px;
+    background-color: #141414;
   }
   &__filter-wrap {
     margin-right: 20px;

@@ -45,8 +45,8 @@ var articlePageTiles = new Swiper(".article-page__tiles-slider", {
       slidesPerGroup: 5,
     },
     1920: {
-      slidesPerView: 5,
-      slidesPerGroup: 5,
+      slidesPerView: 6,
+      slidesPerGroup: 6,
     },
   },
 });

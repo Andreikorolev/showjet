@@ -8,6 +8,11 @@ $(".stat__back-button").on("click", function () {
   $(".profile-page__stat").removeClass("open");
 });
 
+$(".stat__delete-button").on("click", function () {
+  $(".delete-popup-stat").show();
+  $("body").addClass("noscroll");
+});
+
 $(".device__delete").on("click", function () {
   $(".delete-popup-device-delete").show();
   $("body").addClass("noscroll");

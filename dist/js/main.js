@@ -101,6 +101,15 @@ if ($('.stat__chart').length) {
 		i++
 	});
 }
+$(".trouble-popup__close-button").on("click", function () {
+  $(".trouble-popup-wrap").hide();
+  $("body").removeClass("noscroll");
+});
+$(".trouble-popup__button-cancel").on("click", function () {
+  $(".trouble-popup-wrap").hide();
+  $("body").removeClass("noscroll");
+});
+
 function resizeCollectionTile() {
   var body = document.querySelector("body");
   var windowWidth = window.innerWidth;
@@ -196,15 +205,6 @@ $(".collection-tile").hover(
     clearTimeout(timerAddClass);
   }
 );
-
-$(".trouble-popup__close-button").on("click", function () {
-  $(".trouble-popup-wrap").hide();
-  $("body").removeClass("noscroll");
-});
-$(".trouble-popup__button-cancel").on("click", function () {
-  $(".trouble-popup-wrap").hide();
-  $("body").removeClass("noscroll");
-});
 
 if ($(".single-serial-tile").length){
 	//banner mute button handler
@@ -409,6 +409,17 @@ $(window).resize(function() {
 		scaleAboutSerialInfoWrap();
 	}
 });
+$('.nav__menu a').each(function () {
+	if (this.href == location.href) $(this).addClass('active');
+});
+
+$(window).scroll(function(){
+	if ($(window).scrollTop() > 86) {
+		$(".header").addClass('fixed');
+	} else {
+		$(".header").removeClass('fixed');
+	}
+});
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "filter": */
 x = document.getElementsByClassName("filter");
@@ -498,17 +509,6 @@ function closeAllSelect(elmnt) {
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
 
-$('.nav__menu a').each(function () {
-	if (this.href == location.href) $(this).addClass('active');
-});
-
-$(window).scroll(function(){
-	if ($(window).scrollTop() > 86) {
-		$(".header").addClass('fixed');
-	} else {
-		$(".header").removeClass('fixed');
-	}
-});
 if ($(".home-page-banner").length) {
   //banner mute button handler
   var bannerVideoID = $(".home-page-banner").find("video").attr("id");
@@ -720,8 +720,8 @@ var articlePageTiles = new Swiper(".article-page__tiles-slider", {
       slidesPerGroup: 5,
     },
     1920: {
-      slidesPerView: 5,
-      slidesPerGroup: 5,
+      slidesPerView: 6,
+      slidesPerGroup: 6,
     },
   },
 });
@@ -827,6 +827,11 @@ $(".profile-page__setting-button-item_stat").on("click", function () {
 $(".stat__back-button").on("click", function () {
   $(".profile-page__wrap").show();
   $(".profile-page__stat").removeClass("open");
+});
+
+$(".stat__delete-button").on("click", function () {
+  $(".delete-popup-stat").show();
+  $("body").addClass("noscroll");
 });
 
 $(".device__delete").on("click", function () {
