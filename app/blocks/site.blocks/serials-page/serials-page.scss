@@ -4,12 +4,16 @@
     margin-bottom: 75px;
   }
   &__filters-wrap {
+    width: 100%;
     z-index: 1000;
     display: flex;
     position: fixed;
-    top: 86px;
+    top: 60px;
     padding-bottom: 15px;
     background-color: #141414;
+    @include breakpoint(md) {
+      top: 86px;
+    }
   }
   &__filter-wrap {
     margin-right: 20px;

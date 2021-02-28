@@ -73,7 +73,7 @@
     }
 
     & .collection-tile__text-wrap {
-      bottom: 20px;
+      transform: translateY(-100%);
       transition: all ease 0.5s;
       transition-delay: 0.5s;
     }
@@ -85,8 +85,12 @@
   }
 
   &__text-wrap {
+    width: calc(
+      var(--collection-tile-hover-width) -
+        (var(--collection-tile-hover-angle-offset) * 2)
+    );
     position: absolute;
-    bottom: -10px;
+    top: calc(100% - 40px);
     left: 20px;
     transition: all ease 0.2s;
     @include breakpoint(md) {
