@@ -2347,6 +2347,13 @@ svg
          -o-transition: all ease .5s;
             transition: all ease .5s;
 
+    background: -webkit-gradient(linear, left top, left bottom, from(#141414), to(rgba(20, 20, 20, 0)));
+    background: -o-linear-gradient(top, #141414 0%, rgba(20, 20, 20, 0) 100%);
+    background:    linear-gradient(180deg, #141414 0%, rgba(20, 20, 20, 0) 100%);
+}
+
+.header.fixed
+{
     background-color: #141414;
 }
 
@@ -4475,7 +4482,7 @@ svg
     margin-top: calc(30vw * -.042);
     margin-bottom: 10px;
 
-    color: rgba(255, 255, 255, .5);
+    color: #fff;
 }
 
 .tiles-list__sm-tiles,
@@ -4793,14 +4800,15 @@ svg
 .collection-tile:active .collection-tile__text-wrap,
 .collection-tile:focus .collection-tile__text-wrap
 {
-    bottom: 20px;
-
     -webkit-transition: all ease .5s;
          -o-transition: all ease .5s;
             transition: all ease .5s;
     -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
 }
 
 .collection-tile:hover .collection-tile__subtitle,
@@ -4820,8 +4828,10 @@ svg
 .collection-tile__text-wrap
 {
     position: absolute;
-    bottom: -10px;
+    top: calc(100% - 40px);
     left: 20px;
+
+    width: calc( var(--collection-tile-hover-width) - (var(--collection-tile-hover-angle-offset) * 2));
 
     -webkit-transition: all ease .2s;
          -o-transition: all ease .2s;
@@ -5988,6 +5998,9 @@ svg
 .article-page__tiles-wrap .slider-button-next
 {
     height: calc(var(--sm-tile-height) - 10px);
+
+    -webkit-filter: invert(1);
+            filter: invert(1);
 }
 
 .article-page__tiles-wrap .slider-button-prev:before,
@@ -6820,12 +6833,13 @@ svg
 {
     position: fixed;
     z-index: 1000;
-    top: 86px;
+    top: 60px;
 
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 
+    width: 100%;
     padding-bottom: 15px;
 
     background-color: #141414;
@@ -8970,6 +8984,11 @@ svg
         line-height: 23px;
 
         margin-bottom: 15px;
+    }
+
+    .serials-page__filters-wrap
+    {
+        top: 86px;
     }
 }
 

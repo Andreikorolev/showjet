@@ -3,7 +3,7 @@ var serialsPageSlider = new Swiper(".serials-page__slider", {
     1024: {
       speed: 1000,
       direction: "horizontal",
-      slidesPerView: 4,
+      slidesPerView: "auto",
       slidesPerGroup: 4,
       navigation: {
         nextEl: ".slider-button-next",
@@ -11,7 +11,7 @@ var serialsPageSlider = new Swiper(".serials-page__slider", {
       },
     },
     1280: {
-      slidesPerView: 5,
+      slidesPerView: "auto",
       slidesPerGroup: 5,
       navigation: {
         nextEl: ".slider-button-next",
@@ -20,13 +20,13 @@ var serialsPageSlider = new Swiper(".serials-page__slider", {
     },
     1920: {
       loop: false,
-      slidesPerView: 6,
+      slidesPerView: "auto",
       slidesPerGroup: 6,
       navigation: {
         nextEl: null,
         prevEl: null,
       },
-      slidesOffsetAfter: 0,
+      // slidesOffsetAfter: 0,
     },
   },
 });

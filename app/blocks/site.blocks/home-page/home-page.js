@@ -3,7 +3,7 @@ var homePageRecommendedSerials = new Swiper(
   {
     direction: "horizontal",
     speed: 1000,
-    slidesPerView: 6,
+    slidesPerView: "auto",
     slidesPerGroup: 6,
     navigation: {
       nextEl: ".slider-button-next",
@@ -11,15 +11,15 @@ var homePageRecommendedSerials = new Swiper(
     },
     breakpoints: {
       1024: {
-        slidesPerView: 4,
+        slidesPerView: "auto",
         slidesPerGroup: 4,
       },
       1280: {
-        slidesPerView: 5,
+        slidesPerView: "auto",
         slidesPerGroup: 5,
       },
       1920: {
-        slidesPerView: 6,
+        slidesPerView: "auto",
         slidesPerGroup: 6,
       },
     },
@@ -31,24 +31,24 @@ var homePageContinueWatching = new Swiper(
   {
     direction: "horizontal",
     speed: 1000,
-    slidesPerView: 5,
+    slidesPerView: "auto",
     slidesPerGroup: 5,
-    slidesOffsetAfter: 10,
+    // slidesOffsetAfter: 10,
     navigation: {
       nextEl: ".slider-button-next",
       prevEl: ".slider-button-prev",
     },
     breakpoints: {
       1024: {
-        slidesPerView: 4,
+        slidesPerView: "auto",
         slidesPerGroup: 4,
       },
       1280: {
-        slidesPerView: 5,
+        slidesPerView: "auto",
         slidesPerGroup: 5,
       },
       1920: {
-        slidesPerView: 5,
+        slidesPerView: "auto",
         slidesPerGroup: 5,
       },
     },
@@ -58,24 +58,24 @@ var homePageContinueWatching = new Swiper(
 var homePageWatchingNowSerial = new Swiper(".home-page__watching-now-slider", {
   direction: "horizontal",
   speed: 1000,
-  slidesPerView: 5,
+  slidesPerView: "auto",
   slidesPerGroup: 5,
-  slidesOffsetAfter: 10,
+  // slidesOffsetAfter: 10,
   navigation: {
     nextEl: ".slider-button-next",
     prevEl: ".slider-button-prev",
   },
   breakpoints: {
     1024: {
-      slidesPerView: 4,
+      slidesPerView: "auto",
       slidesPerGroup: 4,
     },
     1280: {
-      slidesPerView: 5,
+      slidesPerView: "auto",
       slidesPerGroup: 5,
     },
     1920: {
-      slidesPerView: 5,
+      slidesPerView: "auto",
       slidesPerGroup: 5,
     },
   },

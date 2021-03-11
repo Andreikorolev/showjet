@@ -18,6 +18,18 @@
 			</div>
 		</div>
 		<div class="container">
+			{# TOP-10 BLOCKS #}
+			<div class="tiles-list__slider serials-page__slider">
+				<div class="swiper-wrapper tiles-list__sm-tiles">
+					{% for item in 0..9 %}
+					{% include 'blocks/common.blocks/tiles/tile-top10/tile-top10.twig' with {'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'dataProgress':'data-progress="20"', 'url':'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8', 'videoID':'contVideo'~item }%}
+
+					{% endfor %}
+				</div>
+				<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+				<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+			</div>
+
 			{# SERIALS PAGE SIX TILE WRAP #}
 			<div class="tiles-list__slider serials-page__slider">
 				<div class="swiper-wrapper tiles-list__sm-tiles">

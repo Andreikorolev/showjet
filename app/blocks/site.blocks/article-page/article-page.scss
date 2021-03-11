@@ -18,10 +18,11 @@
 
     & .slider-button-prev,
     & .slider-button-next {
+      filter: invert(1);
       height: calc(var(--sm-tile-height) - 10px);
 
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 10px;

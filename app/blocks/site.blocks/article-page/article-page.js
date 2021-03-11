@@ -30,22 +30,22 @@ var articlePageTiles = new Swiper(".article-page__tiles-slider", {
   speed: 1000,
   // slidesPerView: 5,
   // slidesPerGroup: 5,
-  slidesOffsetAfter: 10,
+  // slidesOffsetAfter: 10,
   navigation: {
     nextEl: ".slider-button-next",
     prevEl: ".slider-button-prev",
   },
   breakpoints: {
     1024: {
-      slidesPerView: 4,
+      slidesPerView: "auto",
       slidesPerGroup: 4,
     },
     1280: {
-      slidesPerView: 5,
+      slidesPerView: "auto",
       slidesPerGroup: 5,
     },
     1920: {
-      slidesPerView: 6,
+      slidesPerView: "auto",
       slidesPerGroup: 6,
     },
   },
