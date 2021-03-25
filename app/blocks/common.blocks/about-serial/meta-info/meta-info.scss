@@ -6,13 +6,19 @@
     height: 45px;
     display: flex;
     align-items: center;
-  }
-  &__left-wrap {
-    & .meta-info__item-icon {
-      height: 24px;
-      margin-right: 6px;
+    @include breakpoint(xl) {
+      height: 67px;
+    }
+    @include breakpoint(fk) {
+      height: 90px;
     }
   }
+  // &__left-wrap {
+  //   & .meta-info__item-icon {
+  //     height: 24px;
+  //     margin-right: 6px;
+  //   }
+  // }
   &__right-wrap {
     border-left: 4px solid #fff;
     padding-left: 25px;
@@ -21,6 +27,12 @@
     }
     @include breakpoint(lg) {
       padding-left: 44px;
+    }
+    @include breakpoint(xl) {
+      padding-left: 68px;
+    }
+    @include breakpoint(fk) {
+      padding-left: 88px;
     }
   }
   &__item {
@@ -41,6 +53,16 @@
       line-height: 39px;
       margin-right: 45px;
     }
+    @include breakpoint(xl) {
+      font-size: 50px;
+      line-height: 1.1;
+      margin-right: 60px;
+    }
+    @include breakpoint(fk) {
+      font-size: 66px;
+      line-height: 1.1;
+      margin-right: 90px;
+    }
 
     &_18 {
       & img {
@@ -50,6 +72,12 @@
         }
         @include breakpoint(lg) {
           width: 48px;
+        }
+        @include breakpoint(xl) {
+          width: 72px;
+        }
+        @include breakpoint(fk) {
+          width: 96px;
         }
       }
     }
@@ -79,6 +107,14 @@
         width: 24px;
         height: 24px;
       }
+      @include breakpoint(xl) {
+        width: 36px;
+        height: 36px;
+      }
+      @include breakpoint(fk) {
+        width: 48px;
+        height: 48px;
+      }
     }
     &_imdb {
       width: 33px;
@@ -86,6 +122,14 @@
       @include breakpoint(lg) {
         width: 49px;
         height: 24px;
+      }
+      @include breakpoint(xl) {
+        width: 75px;
+        height: 36px;
+      }
+      @include breakpoint(fk) {
+        width: 100px;
+        height: 48px;
       }
     }
     &_like {
@@ -99,6 +143,14 @@
         width: 39px;
         height: 35px;
       }
+      @include breakpoint(xl) {
+        width: 60px;
+        height: 52px;
+      }
+      @include breakpoint(fk) {
+        width: 80px;
+        height: 70px;
+      }
     }
     &_share {
       width: 15px;
@@ -110,6 +162,14 @@
       @include breakpoint(lg) {
         width: 27px;
         height: 35px;
+      }
+      @include breakpoint(xl) {
+        width: 40px;
+        height: 52px;
+      }
+      @include breakpoint(fk) {
+        width: 54px;
+        height: 70px;
       }
     }
   }

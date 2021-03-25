@@ -14,6 +14,13 @@
     opacity: 0;
     transition: all ease 0.3s;
   }
+  &.covered-hide {
+    &:before {
+      opacity: 0 !important;
+      transition: all ease 1s;
+    }
+  }
+
   &__inner {
     width: 100%;
     height: calc(100% - 10px);

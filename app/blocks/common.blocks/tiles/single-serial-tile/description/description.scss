@@ -1,145 +1,209 @@
-.single-serial-tile{
+.single-serial-tile {
+  &__title {
+    width: auto;
+    height: 500px;
+    max-height: 70px;
+    margin-bottom: 10px;
+    @include breakpoint(md) {
+      max-height: 70px;
+    }
+    @include breakpoint(lg) {
+      max-height: 110px;
+    }
+    @include breakpoint(xl) {
+      max-height: 220px;
+    }
+    @include breakpoint(fk) {
+      max-height: 330px;
+    }
 
-	&__title{
-		width: auto;
-		height: 500px;
-		max-height: 70px;
-		flex-shrink: 0;
-		margin-bottom: 5px;
-		background-size: contain;
-		background-repeat: no-repeat;
-		@include breakpoint(md){
-			max-height: 70px;
-		}
-		@include breakpoint(lg){
-			max-height: 110px;
-		}
-		@include breakpoint(xl){
-			max-height: 200px;
-		}
-	}
-	&__title-text{
-		font-family: $bebas;
-		font-size: 20px;
-		line-height: 23px;
-		color: #FFFFFF;
-		opacity: 0.5;
-		text-transform: uppercase;
-		margin-bottom: 12px;
-		@include breakpoint(md){
-			font-size: 27px;
-			line-height: 32px;
-		}
-		@include breakpoint(lg){
-			font-size: 40px;
-			line-height: 47px;
-		}
-	}
-	&__text{
-		width: 350px;
-		overflow: hidden;
-		font-family: $stem;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 12px;
-		line-height: 15px;
-		color: #FFFFFF;
-		margin-bottom: 10px;
-		@include breakpoint(md){
-			width: 470px;
-			font-size: 17px;
-			line-height: 22px;
-			margin-bottom: 15px;
-		}
-		@include breakpoint(lg){
-			width: 744px;
-			font-size: 25px;
-			line-height: 32px;
-		}
-	}
-	&__genre{
-		margin-bottom: 10px;
-		font-family: $stem;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 12px;
-		line-height: 15px;
-		color: #FFFFFF;
-		opacity: 0.5;
-		@include breakpoint(md){
-			margin-bottom: 20px;
-			font-size: 17px;
-			line-height: 22px;
-		}
-		@include breakpoint(lg){
-			font-size: 25px;
-			line-height: 32px;
-			margin-bottom: 35px;
-		}
-	}
-	&__buttons{
-		display: flex;
-	}
-	&__button{
-		width: auto;
-		height: 42px;
-		padding: 0 18px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: rgba(255,255,255,.5);
-		clip-path: polygon(calc(0% + 8px) 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
-		font-family: $bebas;
-		font-weight: bold;
-		font-size: 20px;
-		line-height: 23px;
-		color: #FFFFFF;
-		text-decoration: none;
-		transition: all ease .3s;
-		@include breakpoint(md){
-			height: 52px;
-			padding: 0 24px;
-			font-size: 25px;
-			line-height: 29px;
-			clip-path: polygon(calc(0% + 10px) 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
-		}
-		@include breakpoint(lg){
-			height: 78px;
-			padding: 0 30px;
-			font-size: 40px;
-			line-height: 47px;
-			clip-path: polygon(calc(0% + 15px) 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
-		}
+    & img {
+      height: 100%;
+    }
+  }
+  &__title-text {
+    font-family: $bebas;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    opacity: 0.5;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    @include breakpoint(md) {
+      font-size: 27px;
+      line-height: 32px;
+    }
+    @include breakpoint(lg) {
+      font-size: 40px;
+      line-height: 47px;
+    }
+    @include breakpoint(fk) {
+      font-size: 80px;
+      line-height: 1.1;
+    }
+  }
+  &__text {
+    width: 350px;
+    overflow: hidden;
+    font-family: $stem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    @include breakpoint(md) {
+      width: 470px;
+      font-size: 17px;
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+    @include breakpoint(lg) {
+      width: 744px;
+      font-size: 25px;
+      line-height: 32px;
+    }
+    @include breakpoint(fk) {
+      width: 1300px;
+      font-size: 50px;
+      line-height: 1.1;
+    }
+  }
+  &__genre {
+    margin-bottom: 10px;
+    font-family: $stem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+    opacity: 0.5;
+    @include breakpoint(md) {
+      margin-bottom: 20px;
+      font-size: 17px;
+      line-height: 22px;
+    }
+    @include breakpoint(lg) {
+      font-size: 25px;
+      line-height: 32px;
+      margin-bottom: 35px;
+    }
+    @include breakpoint(fk) {
+      font-size: 50px;
+      line-height: 1.1;
+    }
+  }
+  &__buttons {
+    display: flex;
+  }
+  &__button {
+    width: auto;
+    height: 42px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    clip-path: polygon(
+      calc(0% + 8px) 0%,
+      100% 0%,
+      calc(100% - 8px) 100%,
+      0% 100%
+    );
+    font-family: $bebas;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all ease 0.3s;
+    @include breakpoint(md) {
+      height: 52px;
+      padding: 0 24px;
+      font-size: 25px;
+      line-height: 29px;
+      clip-path: polygon(
+        calc(0% + 10px) 0%,
+        100% 0%,
+        calc(100% - 10px) 100%,
+        0% 100%
+      );
+    }
+    @include breakpoint(lg) {
+      height: 78px;
+      padding: 0 30px;
+      font-size: 40px;
+      line-height: 47px;
+      clip-path: polygon(
+        calc(0% + 15px) 0%,
+        100% 0%,
+        calc(100% - 15px) 100%,
+        0% 100%
+      );
+    }
+    @include breakpoint(xl) {
+      height: 120px;
+      padding: 0 40px;
+      font-size: 60px;
+      line-height: 70px;
+      clip-path: polygon(
+        calc(0% + 23px) 0%,
+        100% 0%,
+        calc(100% - 23px) 100%,
+        0% 100%
+      );
+    }
+    @include breakpoint(fk) {
+      height: 150px;
+      padding: 0 50px;
+      font-size: 70px;
+      line-height: 80px;
+      clip-path: polygon(
+        calc(0% + 28px) 0%,
+        100% 0%,
+        calc(100% - 28px) 100%,
+        0% 100%
+      );
+    }
 
-		& div{
-			height: 1.05em;
-		}
-	}
-	&__button-icon{
-		width: 26px;
-		height: 26px;
-		margin-right: 13px;
+    & div {
+      height: 1.05em;
+    }
+  }
+  &__button-icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 13px;
 
-		@include breakpoint(lg){
-			width: 48px;
-			height: 48px;
-		}
-	}
-	&__button-watch{
-		background-color: #30C1D2;
+    @include breakpoint(lg) {
+      width: 48px;
+      height: 48px;
+    }
+    @include breakpoint(xl) {
+      width: 75px;
+      height: 75px;
+      margin-right: 20px;
+    }
+    @include breakpoint(fk) {
+      width: 90px;
+      height: 90px;
+      margin-right: 30px;
+    }
+  }
+  &__button-watch {
+    background-color: #30c1d2;
 
-		&:hover,
-		&:active,
-		&:focus{
-			background-color: rgba(48,193,210,.6);
-		}
-	}
-	&__button-about{
-
-		&:hover,
-		&:active,
-		&:focus{
-			background-color: rgba(255,255,255,.65);
-		}
-	}
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba(48, 193, 210, 0.6);
+    }
+  }
+  &__button-about {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.65);
+    }
+  }
 }

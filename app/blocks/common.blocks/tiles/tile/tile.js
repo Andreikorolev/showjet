@@ -32,7 +32,7 @@ $(".tile.tile-info").hover(
 
       // handler for video end
       player.on("ended", function () {
-        targetTile.find(".tile__bg").show();
+        targetTile.find(".tile__bg").removeClass("hide");
       });
 
       //mute button handler
@@ -50,14 +50,17 @@ $(".tile.tile-info").hover(
       tileInfoWrap = targetTile.find(".tile__info-wrap");
       setTimeout(function () {
         tileInfoWrap.addClass("hide");
-      }, 3000);
+        targetTile.addClass("covered-hide");
+      }, 2000);
       var mouseTimer;
       document.onmousemove = function () {
         tileInfoWrap.removeClass("hide");
+        targetTile.removeClass("covered-hide");
         clearTimeout(mouseTimer);
         mouseTimer = setTimeout(function () {
           tileInfoWrap.addClass("hide");
-        }, 3000);
+          targetTile.addClass("covered-hide");
+        }, 2000);
       };
       // end mouse move handler
     }, 1000);
