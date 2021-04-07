@@ -74,6 +74,26 @@
 			</div>
 		</div>
 
+		<div class="home-page__top10">	
+			<div class="tiles-list">
+				<h3 class="tiles-list__title">
+					ТОП-10 криминальных сериалов
+				</h3>
+				<div class="tiles-list__slider home-page__top10-slider">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper tiles-list__sm-tiles">
+						<!-- Slides -->
+						{% for item in 1..10 %}
+						{% include 'blocks/common.blocks/tiles/tile-top10/tile-top10.twig' with {'item':'top10-'~item,'tileSize':'tile__sm', 'sliderClass':'swiper-slide', 'infoClass':'tile-info', 'url':'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8', 'videoID':'recVideo'~item}%}
+
+						{% endfor %}
+					</div>
+					<div class="slider-button-prev"><img src="img/prev-arrow.svg"></div>
+					<div class="slider-button-next"><img src="img/next-arrow.svg"></div>
+				</div>
+			</div>
+		</div>
+
 		{# FOOTER #}
 		{% include 'blocks/common.blocks/footer/footer.twig'%}
 	</div>

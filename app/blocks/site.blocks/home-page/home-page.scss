@@ -1,14 +1,14 @@
-.home-page{
-
-	&__banner{
-		width: 100%;	
-		margin-top: -115px;
-		margin-bottom: calc(var(--sm-tile-height) / -2);
-		z-index: 0;
-	}
-	&__recommended-serials,
-	&__continue-watching,
-	&__watching-now{
-		width: 100%;
-	}
+.home-page {
+  &__banner {
+    width: 100%;
+    margin-top: -115px;
+    margin-bottom: calc(var(--sm-tile-height) / -2);
+    z-index: 0;
+  }
+  &__recommended-serials,
+  &__continue-watching,
+  &__watching-now,
+  &__top10 {
+    width: 100%;
+  }
 }

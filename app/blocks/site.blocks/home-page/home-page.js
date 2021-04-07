@@ -80,3 +80,32 @@ var homePageWatchingNowSerial = new Swiper(".home-page__watching-now-slider", {
     },
   },
 });
+
+var homePageWatchingNowSerialTop10 = new Swiper(".home-page__top10-slider", {
+  direction: "horizontal",
+  speed: 1000,
+  slidesPerView: "auto",
+  // slidesPerGroup: 6,
+  slidesPerGroup: 2,
+  navigation: {
+    nextEl: ".slider-button-next",
+    prevEl: ".slider-button-prev",
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: "auto",
+      // slidesPerGroup: 4,
+      slidesPerGroup: 2,
+    },
+    1280: {
+      slidesPerView: "auto",
+      // slidesPerGroup: 5,
+      slidesPerGroup: 2,
+    },
+    1920: {
+      slidesPerView: "auto",
+      // slidesPerGroup: 6,
+      slidesPerGroup: 2,
+    },
+  },
+});
