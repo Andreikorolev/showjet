@@ -1,0 +1,41 @@
+.tile-top10 {
+  margin-right: 0px !important;
+
+  &__rating {
+    z-index: -1;
+    height: calc(var(--sm-tile-height) - 10px);
+    width: auto;
+    margin-right: -20px;
+  }
+  &__rating-substrate {
+    overflow: hidden;
+    width: 170%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    z-index: -1;
+
+    & img {
+      height: 100%;
+      filter: blur(20px);
+    }
+  }
+  &__rating-img-substrate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    height: 100%;
+    filter: drop-shadow(-10px 0px #c4c4c4) drop-shadow(4px 0px #c4c4c4)
+      drop-shadow(6px 0px #c4c4c4) drop-shadow(8px 0px #c4c4c4)
+      drop-shadow(10px 0px #c4c4c4) drop-shadow(12px 0px #c4c4c4)
+      drop-shadow(14px 0px #c4c4c4) drop-shadow(16px 0px #c4c4c4)
+      drop-shadow(16px 0px #c4c4c4) drop-shadow(18px 0px #c4c4c4)
+      drop-shadow(20px 0px #c4c4c4) drop-shadow(22px 0px #c4c4c4);
+  }
+  &__rating-img {
+    height: 100%;
+    z-index: 1;
+  }
+}
